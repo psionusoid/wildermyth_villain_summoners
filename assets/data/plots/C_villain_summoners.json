@@ -14,10 +14,15 @@
 				},
 				{
 					"sites": [
-						{ "role": "site3", "siteType": "fancyStation", "placement": "remote" },
-						{ "role": "otherSite" },
-						{ "role": "otherSite" },
-						{ "role": "site2" },
+						{
+							"role": "site3",
+							"siteType": "fancyStation",
+							"placement": "remote",
+							"foes": "secondaryEnemy"
+						},
+						{ "role": "site2", "placement": "semiRemote" },
+						{ "role": "otherSite", "foes": "secondaryEnemy" },
+						{ "role": "otherSite", "foes": "secondaryEnemy" },
 						{ "role": "otherSite", "foes": "secondaryEnemy" }
 					]
 				},
