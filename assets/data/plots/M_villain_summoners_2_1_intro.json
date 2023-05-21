@@ -19,7 +19,7 @@
 				"customResults": [
 					{
 						"class": "StepM_Event",
-						"roles": [ "party" ],
+						"roles": null,
 						"eventIds": [ "plot_villain_summoners_2_1_intro_victory" ]
 					}
 				]
