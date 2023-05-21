@@ -1,0 +1,27 @@
+{
+"scenarioInfo": {
+	"id": "villain_summoners_2_2_keystone",
+	"type": "MISSION",
+	"nameKey": "villain_summoners_2_2_keystone.name",
+	"blurbKey": "villain_summoners_2_2_keystone.blurb",
+	"rosterSlots": [
+		{ "type": "greenhorn", "archetype": "warrior" },
+		{ "type": "greenhorn", "archetype": "warrior" },
+		{ "type": "greenhorn", "archetype": "hunter" },
+		{ "type": "greenhorn", "archetype": "hunter" },
+		{ "type": "greenhorn", "archetype": "mystic" }
+	]
+},
+"playableFactions": [
+	{ "factionRole": "HERO", "plotRole": "attacker" },
+	{ "factionRole": "VILLAIN", "plotRole": "defender" }
+],
+"site": { "type": "SITE", "siteMissionPlanId": "villain_summoners_2_2_keystone" },
+"inhabitants": [
+	{
+		"factionRole": "VILLAIN",
+		"threat": { "flavor": "thrixl", "strength": 6 },
+		"calamities": 6
+	}
+]
+}

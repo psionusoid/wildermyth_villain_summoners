@@ -25,7 +25,7 @@
 					"sites": [
 						{ "role": "town", "siteType": "town", "placement": "nearbyTown", "foes": "none" },
 						{ "role": "site3", "siteType": "fancyStation", "placement": "remote" },
-						{ "role": "otherSite" },
+						{ "role": "site2", "placement": "semiRemote" },
 						{ "role": "otherSite" },
 						{ "role": "otherSite" },
 						{ "role": "otherSite", "foes": "secondaryEnemy" }
@@ -63,7 +63,8 @@
 				"tidingId": [ "plot_villain_summoners_1_3_tiding" ]
 			}
 		],
-		"omen": [ "plot_villain_summoners_2_1_omen" ],
+		"omen": null,
+		"fallbackShowDefaultOmen": false,
 		"nextChapter": "two"
 	},
 	{ "class": "Step_SubPlot", "plotId": "C_villain_summoners_2" },
