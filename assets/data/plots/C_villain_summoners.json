@@ -70,7 +70,8 @@
 		],
 		"omen": null,
 		"fallbackShowDefaultOmen": false,
-		"nextChapter": "two"
+		"nextChapter": "two",
+		"overrideYearsOfPeace": "5"
 	},
 	{ "class": "Step_SubPlot", "plotId": "C_villain_summoners_2" },
 	{
@@ -81,7 +82,8 @@
 			}
 		],
 		"omen": [ "plot_villain_summoners_3_1_omen" ],
-		"nextChapter": "three"
+		"nextChapter": "three",
+		"overrideYearsOfPeace": "2"
 	},
 	{ "class": "Step_SubPlot", "plotId": "C_villain_summoners_3" },
 	{ "class": "StepC_Victory" }
