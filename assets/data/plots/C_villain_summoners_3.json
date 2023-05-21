@@ -20,7 +20,7 @@
 				"role": "site"
 			}
 		],
-		"site": "site2",
+		"site": "folk3",
 		"arriveEvent": [ "plot_villain_summoners_3_1_keystone_arrive" ],
 		"results": [
 			{},
@@ -102,35 +102,27 @@
 	}
 ],
 "steps": [
-	{ "class": "StepC_BeginChapter", "chapter": "three" },
 	{
-		"class": "StepC_PickSite",
-		"fromRoles": [ "otherSite" ],
-		"notAlreadyMatchedAs": [ "site2" ],
-		"customScoring": [
-			{
-				"placementScoring": { "otherRole": "source" },
-				"lookupScoring": "10*((((cavern+quarry)+earthworks)+primalAltar)+mine)"
-			},
-			{
-				"placementScoring": { "otherRole": "npc" }
-			},
-			{
-				"placementScoring": { "otherRole": "town" }
-			},
-			{
-				"placementScoring": { "otherRole": "site2" }
-			}
-		],
-		"rememberAs": "site2"
+		"class": "StepC_BeginChapter",
+		"chapter": "three",
+		"sitesFromOtherChapters": [
+			{ "chapter": "introduction", "fromRole": "town", "toRole": "folk1" },
+			{ "chapter": "two", "fromRole": "town", "toRole": "folk2" },
+			{ "chapter": "two", "fromRole": "site2", "toRole": "folk3" }
+		]
+	},
+	{
+		"class": "StepC_MoveToTile",
+		"specificTile": "folk2",
+		"moveHeroes": "allLiving"
 	},
 	{
 		"class": "Step_AddObjectives",
 		"objectives": [
 			"Objective_CampaignDefeat",
 			"campaignUpkeep",
-			"Objective_AssaultJob.villain_summoners_2.keystone",
-			"capstone.findSite.villain_summoners_2"
+			"Objective_AssaultJob.villain_summoners_3.keystone1",
+			"capstone.findSite.villain_summoners_3"
 		]
 	},
 	{
