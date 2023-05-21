@@ -1,0 +1,45 @@
+{
+"id": "plot_villain_summoners_2_1_omen",
+"info": {
+	"dataVersion": 1,
+	"sourceFile": "plotEvent/villain_summoners_2_1_omen",
+	"modId": "villain_summoners",
+	"author": "psionusoid"
+},
+"type": "PLOT_OMEN",
+"verb": "MANEUVER",
+"ability": { "icon": "melee", "priority": "1", "cooldown": "oncePerGame" },
+"targets": [
+	{ "template": "EVENT" },
+	{ "template": "COMPANY" },
+	{ "role": "town", "template": "INJECTED_SITE", "injectedRole": "town" },
+	{
+		"role": "site3",
+		"template": "INJECTED_ENTITY",
+		"type": "ANY_STATUS",
+		"injectedRole": "site3"
+	},
+	{ "template": "INJECTED_THREAT", "choose": "ANY" }
+],
+"outcomes": [
+	{
+		"class": "Description",
+		"script": [
+			{
+				"class": "comicNode_Panel",
+				"panel": {
+					"size": "full",
+					"showNameTags": false,
+					"textSlots": [
+						{
+							"textSourceFile": "plotEvent/villain_summoners_2_1_omen",
+							"textKey": "~01~~panel_001~1_narration",
+							"style": "narration"
+						}
+					]
+				}
+			}
+		]
+	}
+]
+}

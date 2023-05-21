@@ -1,0 +1,96 @@
+{
+"objectives": [
+	{
+		"class": "Objective_CampaignDefeat",
+		"onFail": [
+			{ "class": "StepC_Defeat" }
+		]
+	},
+	{ "class": "Objective_CampaignUpkeep" },
+	{
+		"class": "Objective_ClearAllHostileSites",
+		"objectiveId": "Objective_ClearAllHostileSites.villain_summoners_2",
+		"onSuccess": []
+	},
+	{
+		"class": "Objective_LocateAndUnlockSite",
+		"objectiveId": "capstone.findSite.villain_summoners_2",
+		"feedback": [
+			{
+				"overland": {
+					"color": { "r": 1, "g": 1, "b": 1, "a": 0.5 },
+					"sprite": "plot_locked",
+					"anchor": { "x": 0.5, "y": 0.5 }
+				},
+				"role": "site"
+			}
+		],
+		"onSuccess": [
+			{
+				"class": "Step_AddObjectives",
+				"objectives": [ "Objective_AssaultJob.villain_summoners_2" ]
+			}
+		],
+		"target": "site3",
+		"lockUntilObjectiveComplete": "Objective_ClearAllHostileSites.villain_summoners_2",
+		"unlockedFeedback": [
+			{
+				"overland": {
+					"color": { "r": 1, "g": 1, "b": 1, "a": 0.5 },
+					"sprite": "plot_battle",
+					"anchor": { "x": 0.5, "y": 0.5 }
+				},
+				"role": "site"
+			}
+		]
+	},
+	{
+		"class": "Objective_AssaultJob",
+		"objectiveId": "Objective_AssaultJob.villain_summoners_2",
+		"feedback": [
+			{
+				"overland": {
+					"color": { "r": 1, "g": 1, "b": 1, "a": 0.5 },
+					"sprite": "plot_battle",
+					"anchor": { "x": 0.5, "y": 0.5 }
+				},
+				"role": "site"
+			}
+		],
+		"site": "site3",
+		"arriveEvent": [ "plot_villain_summoners_2_3_capstone_arrive" ],
+		"isCapstoneFight": true,
+		"results": [
+			{
+				"customResults": [
+					{ "class": "Step_SetPlotResult" }
+				]
+			},
+			{
+				"result": "defeat",
+				"customResults": [
+					{ "class": "StepC_Defeat" }
+				]
+			}
+		]
+	}
+],
+"steps": [
+	{
+		"class": "StepC_BeginChapter",
+		"chapter": "two",
+		"sitesFromOtherChapters": [
+			{ "chapter": "introduction", "fromRole": "town", "toRole": "folk1" }
+		]
+	},
+	{
+		"class": "Step_AddObjectives",
+		"objectives": [
+			"Objective_CampaignDefeat",
+			"campaignUpkeep",
+			"Objective_ClearAllHostileSites.villain_summoners_2",
+			"capstone.findSite.villain_summoners_2"
+		]
+	}
+]
+}

@@ -1,0 +1,54 @@
+{
+"objectives": [
+	{
+		"class": "Objective_CampaignDefeat",
+		"onFail": [
+			{ "class": "StepC_Defeat" }
+		]
+	},
+	{ "class": "Objective_CampaignUpkeep" },
+	{
+		"class": "Objective_AssaultJob",
+		"objectiveId": "Objective_AssaultJob.villain_summoners_3",
+		"feedback": [
+			{
+				"overland": {
+					"color": { "r": 1, "g": 1, "b": 1, "a": 0.5 },
+					"sprite": "plot_battle",
+					"anchor": { "x": 0.5, "y": 0.5 }
+				},
+				"role": "site"
+			}
+		],
+		"site": "site3",
+		"arriveEvent": [ "plot_villain_summoners_3_3_capstone_arrive" ],
+		"isCapstoneFight": true,
+		"isFinalFight": true,
+		"finalPreparationsEvent": [ "plot_villain_summoners_3_2_finalPreparations" ],
+		"results": [
+			{
+				"customResults": [
+					{ "class": "Step_SetPlotResult" }
+				]
+			},
+			{
+				"result": "defeat",
+				"customResults": [
+					{ "class": "StepC_Defeat" }
+				]
+			}
+		]
+	}
+],
+"steps": [
+	{ "class": "StepC_BeginChapter", "chapter": "three" },
+	{
+		"class": "Step_AddObjectives",
+		"objectives": [
+			"Objective_CampaignDefeat",
+			"campaignUpkeep",
+			"Objective_AssaultJob.villain_summoners_3"
+		]
+	}
+]
+}

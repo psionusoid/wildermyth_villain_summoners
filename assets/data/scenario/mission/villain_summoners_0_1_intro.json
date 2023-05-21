@@ -1,0 +1,27 @@
+{
+"scenarioInfo": {
+	"id": "villain_summoners_0_1_intro",
+	"type": "MISSION",
+	"nameKey": "villain_summoners_0_1_intro.name",
+	"blurbKey": "villain_summoners_0_1_intro.blurb",
+	"rosterSlots": [
+		{ "type": "legacyHeroNoReset" },
+		{ "type": "legacyHeroNoReset" },
+		{ "type": "legacyHeroNoReset" },
+		{ "type": "legacyHeroNoReset" },
+		{ "type": "legacyHeroNoReset" }
+	]
+},
+"playableFactions": [
+	{ "factionRole": "HERO", "plotRole": "attacker" },
+	{ "factionRole": "VILLAIN", "plotRole": "defender" }
+],
+"site": { "type": "SITE", "siteMissionPlanId": "villain_summoners_0_1_intro" },
+"inhabitants": [
+	{
+		"factionRole": "VILLAIN",
+		"threat": { "strength": 6 },
+		"calamities": 6
+	}
+]
+}

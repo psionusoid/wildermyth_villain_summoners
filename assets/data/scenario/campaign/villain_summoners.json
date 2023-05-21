@@ -1,0 +1,27 @@
+{
+"scenarioInfo": {
+	"id": "villain_summoners",
+	"type": "CAMPAIGN",
+	"nameKey": "villain_summoners.name",
+	"blurbKey": "villain_summoners.blurb",
+	"sortNumber": 109,
+	"lockMainEnemy": "drauven",
+	"requireSecondaryEnemies": [ "gorgon", "cultist", "thrixl" ],
+	"rosterSlots": [
+		{
+			"type": "legacyHero",
+			"plotRoles": [ "party", "warrior" ]
+		},
+		{
+			"type": "legacyHero",
+			"plotRoles": [ "party", "hunter" ]
+		},
+		{
+			"type": "legacyHero",
+			"plotRoles": [ "party", "mystic" ]
+		}
+	],
+	"legacyAspectPrerequisites": [ "legacy_beatTutorial" ]
+},
+"villainPlotId": "C_villain_summoners"
+}

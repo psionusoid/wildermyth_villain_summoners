@@ -1,0 +1,66 @@
+{
+"id": "plot_villain_summoners_3_2_finalPreparations",
+"info": {
+	"dataVersion": 1,
+	"sourceFile": "plotEvent/villain_summoners_3_2_finalPreparations",
+	"modId": "villain_summoners",
+	"author": "psionusoid"
+},
+"type": "PLOT_ARRIVE",
+"verb": "MANEUVER",
+"ability": { "icon": "melee", "priority": "1" },
+"targets": [
+	{ "template": "EVENT" },
+	{ "template": "COMPANY" },
+	{ "template": "INJECTED_SITE" },
+	{ "template": "INJECTED_PARTY" }
+],
+"outcomes": [
+	{
+		"class": "Description",
+		"blockOtherChanges": true,
+		"script": [
+			{
+				"class": "comicNode_Panel",
+				"panel": {
+					"size": "full",
+					"showNameTags": false,
+					"actorSlots": [
+						{
+							"assetSpec": "scenery:campfireOn.png",
+							"role": null,
+							"focus": "foot",
+							"anchor": { "x": 0.575, "y": 0.031 },
+							"size": 0.238,
+							"drawDepth": 1,
+							"nameTag": "none"
+						},
+						{
+							"role": "party",
+							"form": "frame-skeptical",
+							"equipment": {},
+							"focus": "foot",
+							"anchor": { "x": 0.448, "y": -0.046 },
+							"size": 0.303,
+							"nameTag": "none",
+							"head": { "rotate": -15.571 }
+						}
+					],
+					"textSlots": [
+						{
+							"textSourceFile": "plotEvent/villain_summoners_3_2_finalPreparations",
+							"textKey": "~01~~panel_001~1_narration",
+							"style": "narration",
+							"backgroundColor": { "r": "0.32263023", "g": "0.14478043", "b": "0.07043335", "a": "0.76878613" },
+							"padXFraction": 0.496,
+							"padYFraction": 0.07,
+							"widthFraction": 0.4729136,
+							"shrinkToFitText": true
+						}
+					]
+				}
+			}
+		]
+	}
+]
+}

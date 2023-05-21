@@ -1,0 +1,83 @@
+{
+"steps": [
+	{
+		"class": "StepC_MapConfig",
+		"mapConfig": {
+			"mapRadius": 22,
+			"customChapters": [
+				{
+					"sites": [
+						{ "role": "town", "siteType": "town", "foes": "none" },
+						{ "role": "otherSite" }
+					],
+					"extraTiles": 0
+				},
+				{
+					"sites": [
+						{ "role": "site3", "siteType": "fancyStation", "placement": "remote" },
+						{ "role": "otherSite" },
+						{ "role": "otherSite" },
+						{ "role": "site2" },
+						{ "role": "otherSite", "foes": "secondaryEnemy" }
+					]
+				},
+				{
+					"sites": [
+						{ "role": "town", "siteType": "town", "placement": "nearbyTown", "foes": "none" },
+						{ "role": "site3", "siteType": "fancyStation", "placement": "remote" },
+						{ "role": "otherSite" },
+						{ "role": "otherSite" },
+						{ "role": "otherSite" },
+						{ "role": "otherSite", "foes": "secondaryEnemy" }
+					]
+				},
+				{
+					"sites": [
+						{ "role": "town", "siteType": "town", "placement": "nearbyTown", "foes": "none" },
+						{ "role": "site3", "siteType": "fancyStation", "placement": "remote" },
+						{ "role": "otherSite" },
+						{ "role": "otherSite" },
+						{ "role": "otherSite" },
+						{ "role": "otherSite", "foes": "secondaryEnemy" },
+						{ "role": "otherSite", "foes": "secondaryEnemy" }
+					],
+					"extraTiles": 2
+				}
+			]
+		}
+	},
+	{
+		"class": "Step_SubPlot",
+		"plotId": "C_villain_summoners_1",
+		"copyIn": [
+			{ "from": "party" },
+			{ "from": "warrior" },
+			{ "from": "hunter" },
+			{ "from": "mystic" }
+		]
+	},
+	{
+		"class": "StepC_DoInterval",
+		"tidings": [
+			{
+				"tidingId": [ "plot_villain_summoners_1_3_tiding" ]
+			}
+		],
+		"omen": [ "plot_villain_summoners_2_1_omen" ],
+		"nextChapter": "two"
+	},
+	{ "class": "Step_SubPlot", "plotId": "C_villain_summoners_2" },
+	{
+		"class": "StepC_DoInterval",
+		"tidings": [
+			{
+				"tidingId": [ "plot_villain_summoners_2_3_tiding" ]
+			}
+		],
+		"omen": [ "plot_villain_summoners_3_1_omen" ],
+		"nextChapter": "three"
+	},
+	{ "class": "Step_SubPlot", "plotId": "C_villain_summoners_3" },
+	{ "class": "StepC_Victory" }
+]
+}

@@ -1,0 +1,140 @@
+{
+"objectives": [
+	{
+		"class": "Objective_CampaignDefeat",
+		"onFail": [
+			{ "class": "StepC_Defeat" }
+		]
+	},
+	{ "class": "Objective_CampaignUpkeep" },
+	{
+		"class": "Objective_AssaultJob",
+		"objectiveId": "Objective_AssaultJob.villain_summoners_1.keystone",
+		"feedback": [
+			{
+				"overland": {
+					"color": { "r": 1, "g": 1, "b": 1, "a": 0.5 },
+					"sprite": "plot_destination",
+					"anchor": { "x": 0.5, "y": 0.5 }
+				},
+				"role": "site"
+			}
+		],
+		"site": "site2",
+		"arriveEvent": [ "plot_villain_summoners_1_1_keystone_arrive" ],
+		"results": [
+			{},
+			{
+				"result": "defeat",
+				"customResults": [
+					{ "class": "StepC_Defeat" }
+				]
+			}
+		],
+		"noRetreat": true,
+		"inferEncounterResult": true,
+		"customAssaultJob": "job_plotAssaultSite_min3_keystone|"
+	},
+	{
+		"class": "Objective_LocateAndUnlockSite",
+		"objectiveId": "capstone.findSite.villain_summoners_1",
+		"visible": false,
+		"feedback": [
+			{
+				"overland": {
+					"color": { "r": 1, "g": 1, "b": 1, "a": 0.5 },
+					"sprite": "plot_locked",
+					"anchor": { "x": 0.5, "y": 0.5 }
+				},
+				"role": "site"
+			}
+		],
+		"onSuccess": [
+			{
+				"class": "Step_AddObjectives",
+				"objectives": [ "Objective_AssaultJob.villain_summoners_2" ]
+			}
+		],
+		"target": "site3",
+		"lockUntilObjectiveComplete": "Objective_AssaultJob.villain_summoners_1.keystone",
+		"unlockedFeedback": [
+			{
+				"overland": {
+					"color": { "r": 1, "g": 1, "b": 1, "a": 0.5 },
+					"sprite": "plot_battle",
+					"anchor": { "x": 0.5, "y": 0.5 }
+				},
+				"role": "site"
+			}
+		]
+	},
+	{
+		"class": "Objective_AssaultJob",
+		"objectiveId": "Objective_AssaultJob.villain_summoners_1.capstone",
+		"feedback": [
+			{
+				"overland": {
+					"color": { "r": 1, "g": 1, "b": 1, "a": 0.5 },
+					"sprite": "plot_battle",
+					"anchor": { "x": 0.5, "y": 0.5 }
+				},
+				"role": "site"
+			}
+		],
+		"site": "site3",
+		"arriveEvent": [ "plot_villain_summoners_1_2_capstone_arrive" ],
+		"isCapstoneFight": true,
+		"results": [
+			{
+				"customResults": [
+					{ "class": "Step_SetPlotResult" }
+				]
+			},
+			{
+				"result": "defeat",
+				"customResults": [
+					{ "class": "StepC_Defeat" }
+				]
+			}
+		]
+	}
+],
+"steps": [
+	{ "class": "StepC_BeginChapter", "chapter": "introduction" },
+	{ "class": "Step_WaitForPlayer" },
+	{
+		"class": "Step_Encounter",
+		"arriveEvent": [ "plot_villain_summoners_0_1_intro_arrive" ],
+		"exactSite": "town",
+		"injectRoles": [ "party", "warrior", "hunter", "mystic" ],
+		"createFoes": { "threatStrength": "2" },
+		"results": [
+			{},
+			{
+				"result": "defeat",
+				"customResults": [
+					{ "class": "StepC_Defeat" }
+				]
+			}
+		]
+	},
+	{ "class": "StepC_BeginChapter", "chapter": "one" },
+	{
+		"class": "Step_AddObjectives",
+		"objectives": [
+			"Objective_CampaignDefeat",
+			"campaignUpkeep",
+			"Objective_AssaultJob.villain_summoners_1.keystone",
+			"capstone.findSite.villain_summoners_1"
+		]
+	},
+	{
+		"class": "Step_WaitForObjectives",
+		"objectives": [ "Objective_AssaultJob.villain_summoners_1.keystone" ]
+	},
+	{
+		"class": "Step_AddObjectives",
+		"objectives": [ "Objective_AssaultJob.villain_summoners_1.capstone" ]
+	}
+]
+}
