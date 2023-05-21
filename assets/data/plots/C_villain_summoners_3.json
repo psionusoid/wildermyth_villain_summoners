@@ -9,7 +9,68 @@
 	{ "class": "Objective_CampaignUpkeep" },
 	{
 		"class": "Objective_AssaultJob",
-		"objectiveId": "Objective_AssaultJob.villain_summoners_3",
+		"objectiveId": "Objective_AssaultJob.villain_summoners_3.keystone1",
+		"feedback": [
+			{
+				"overland": {
+					"color": { "r": 1, "g": 1, "b": 1, "a": 0.5 },
+					"sprite": "plot_destination",
+					"anchor": { "x": 0.5, "y": 0.5 }
+				},
+				"role": "site"
+			}
+		],
+		"site": "site2",
+		"arriveEvent": [ "plot_villain_summoners_3_1_keystone_arrive" ],
+		"results": [
+			{},
+			{
+				"result": "defeat",
+				"customResults": [
+					{ "class": "StepC_Defeat" }
+				]
+			}
+		],
+		"noRetreat": true,
+		"inferEncounterResult": true,
+		"customAssaultJob": "job_plotAssaultSite_min3_keystone|"
+	},
+	{
+		"class": "Objective_LocateAndUnlockSite",
+		"objectiveId": "capstone.findSite.villain_summoners_3",
+		"visible": false,
+		"feedback": [
+			{
+				"overland": {
+					"color": { "r": 1, "g": 1, "b": 1, "a": 0.5 },
+					"sprite": "plot_locked",
+					"anchor": { "x": 0.5, "y": 0.5 }
+				},
+				"role": "site"
+			}
+		],
+		"onSuccess": [
+			{
+				"class": "Step_AddObjectives",
+				"objectives": [ "Objective_AssaultJob.villain_summoners_2" ]
+			}
+		],
+		"target": "site3",
+		"lockUntilObjectiveComplete": "Objective_AssaultJob.villain_summoners_3.keystone1",
+		"unlockedFeedback": [
+			{
+				"overland": {
+					"color": { "r": 1, "g": 1, "b": 1, "a": 0.5 },
+					"sprite": "plot_battle",
+					"anchor": { "x": 0.5, "y": 0.5 }
+				},
+				"role": "site"
+			}
+		]
+	},
+	{
+		"class": "Objective_AssaultJob",
+		"objectiveId": "Objective_AssaultJob.villain_summoners_3.capstone",
 		"feedback": [
 			{
 				"overland": {
@@ -43,12 +104,42 @@
 "steps": [
 	{ "class": "StepC_BeginChapter", "chapter": "three" },
 	{
+		"class": "StepC_PickSite",
+		"fromRoles": [ "otherSite" ],
+		"notAlreadyMatchedAs": [ "site2" ],
+		"customScoring": [
+			{
+				"placementScoring": { "otherRole": "source" },
+				"lookupScoring": "10*((((cavern+quarry)+earthworks)+primalAltar)+mine)"
+			},
+			{
+				"placementScoring": { "otherRole": "npc" }
+			},
+			{
+				"placementScoring": { "otherRole": "town" }
+			},
+			{
+				"placementScoring": { "otherRole": "site2" }
+			}
+		],
+		"rememberAs": "site2"
+	},
+	{
 		"class": "Step_AddObjectives",
 		"objectives": [
 			"Objective_CampaignDefeat",
 			"campaignUpkeep",
-			"Objective_AssaultJob.villain_summoners_3"
+			"Objective_AssaultJob.villain_summoners_2.keystone",
+			"capstone.findSite.villain_summoners_2"
 		]
+	},
+	{
+		"class": "Step_WaitForObjectives",
+		"objectives": [ "Objective_AssaultJob.villain_summoners_3.keystone1" ]
+	},
+	{
+		"class": "Step_AddObjectives",
+		"objectives": [ "Objective_AssaultJob.villain_summoners_3.capstone" ]
 	}
 ]
 }
