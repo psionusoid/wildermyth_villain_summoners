@@ -11,8 +11,13 @@
 "ability": { "icon": "heroism", "priority": "1", "cooldown": "oncePerGame" },
 "targets": [
 	{ "template": "EVENT" },
-	{ "template": "INJECTED_HERO" },
-	{ "template": "COMPANY" }
+	{ "template": "COMPANY" },
+	{
+		"role": "leader",
+		"template": "HERO_BY_SCORE",
+		"scoreFunction": "LEADER",
+		"notAlreadyMatchedAs": [ "hero" ]
+	}
 ],
 "outcomes": [
 	{
@@ -23,13 +28,13 @@
 				"panel": {
 					"size": "full",
 					"actorSlots": [
-						{ "role": "hero" }
+						{ "role": "leader" }
 					],
 					"textSlots": [
 						{
 							"textSourceFile": "plotEvent/villain_summoners_1_3_tiding",
-							"textKey": "~01~~panel_001~1_hero",
-							"pointerOwner": "hero"
+							"textKey": "~01~~panel_001~1_narration",
+							"style": "narration"
 						}
 					]
 				}
