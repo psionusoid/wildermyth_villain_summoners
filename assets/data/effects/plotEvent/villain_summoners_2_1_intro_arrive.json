@@ -57,7 +57,8 @@
 			{ "role": "foes", "side": "enemy" }
 		],
 		"site": "folk1",
-		"missionPlanOverride": "villain_summoners_2_1_intro"
+		"missionPlanOverride": "villain_summoners_2_1_intro",
+		"victoryEventIds": [ "plot_villain_summoners_2_1_intro_victory" ]
 	}
 ]
 }
