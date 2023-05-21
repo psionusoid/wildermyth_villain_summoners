@@ -58,5 +58,17 @@
 		],
 		"missionPlanOverride": "villain_summoners_1_1_keystone"
 	}
-]
+],
+"implications": {
+	"generatedTargets": [
+		{
+			"role": "legend",
+			"npcId": "summoners_instructor",
+			"createEntity": {
+				"query": { "baseTag": "human" },
+				"control": "none"
+			}
+		}
+	]
+}
 }
