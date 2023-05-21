@@ -1,13 +1,15 @@
 {
-"declaredEncounterResults": [ "victory", "defeat" ],
+"declaredEncounterResults": [ "defeat", "victory" ],
 "structure": "custom",
 "skipDefaultPlots": true,
 "details": [
 	{
 		"class": "MapDetail_DrawFloor",
 		"floorTiles": {
-			"xs": [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9 ],
-			"ys": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 ]
+			"offsetX": 20,
+			"offsetY": 4,
+			"xs": [ 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29 ],
+			"ys": [ 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 ]
 		},
 		"floorLayer3": {
 			"preset": "biomeTop",
@@ -23,11 +25,11 @@
 	{
 		"class": "MapDetail_DrawIndoorLighting",
 		"initialValue": "0",
-		"drawIndoorLighting": {}
+		"drawIndoorLighting": { "offsetX": 20, "offsetY": 4 }
 	},
 	{
 		"class": "MapDetail_DrawWalls",
-		"tiles": {},
+		"tiles": { "offsetX": 20, "offsetY": 4 },
 		"wallStyle": {
 			"texture": "images/wallStoneShort_capped.png",
 			"uvBase": 1,
@@ -45,29 +47,29 @@
 	},
 	{
 		"class": "MapDetail_Door",
-		"locations": { "class": "TileSpec.ExactTiles" }
+		"locations": { "class": "TileSpec.ExactTiles", "offsetX": 20, "offsetY": 4 }
 	},
-	{ "class": "MapDetail_PlaceScenery" },
+	{ "class": "MapDetail_PlaceScenery", "offsetX": 20, "offsetY": 4 },
 	{
 		"class": "MapDetail_InteriorRegion",
-		"tiles": {},
-		"forbidLampsAndScenery": {}
+		"tiles": { "offsetX": 20, "offsetY": 4 },
+		"forbidLampsAndScenery": { "offsetX": 20, "offsetY": 4 }
 	},
 	{
 		"class": "MapDetail_RandomLamps",
 		"drawSpecificArea": {},
 		"drawExactLocations": {},
-		"drawForbidLampsAndScenery": {}
+		"drawForbidLampsAndScenery": { "offsetX": 20, "offsetY": 4 }
 	},
 	{
 		"class": "MapDetail_RandomScenery",
 		"drawSpecificArea": {},
 		"drawExactLocations": {},
-		"drawForbidScenery": {}
+		"drawForbidScenery": { "offsetX": 20, "offsetY": 4 }
 	},
 	{
 		"class": "MapDetail_Debris",
-		"drawDebrisChance": {}
+		"drawDebrisChance": { "offsetX": 20, "offsetY": 4 }
 	},
 	{ "class": "MapDetail_Plot", "plotId": "M_villain_summoners_1_2_capstone" }
 ]

@@ -56,8 +56,7 @@
 			{ "role": "party", "side": "player" },
 			{ "role": "foes", "side": "enemy" }
 		],
-		"missionPlanOverride": "villain_summoners_0_1_intro",
-		"victoryEventIds": [ "plot_villain_summoners_0_1_intro_victory" ]
+		"missionPlanOverride": "villain_summoners_0_1_intro"
 	}
 ]
 }
