@@ -64,7 +64,8 @@
 		"lineOfSight": "LIVE_FIGURES",
 		"tileFilter": "validMoveEnd",
 		"spawnEntitySize": "oneTile"
-	}
+	},
+	{ "role": "volunteer", "template": "ADJACENT_ALLY", "range": "1.6" }
 ],
 "outcomes": [
 	{
@@ -81,7 +82,7 @@
 					"target": "target",
 					"addRole": "monster",
 					"createEntity": {
-						"query": { "baseTag": "gorgon_roe" },
+						"query": { "inRelationTo": "volunteer", "cloneRelatedEntity": true },
 						"setLocation": true
 					}
 				},
