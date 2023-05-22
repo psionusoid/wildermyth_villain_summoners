@@ -1,0 +1,8 @@
+[
+{
+	"modId": "villain_summoners",
+	"id": "summoner_spawnGorgon",
+	"effects": [ "villain_summoners_summonGorgon" ],
+	"importance": -1
+}
+]

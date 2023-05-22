@@ -1,0 +1,54 @@
+{
+"id": "summonerTest",
+"modId": "villain_summoners",
+"notes": "Needs WIELD for melee",
+"aspects": [
+	"monstrous",
+	"mobileMonster",
+	"monsterCanSearch",
+	"activeDefender",
+	"alive",
+	"monsterMelee|melt|balanced|1.6|3+1d3",
+	"monsterRangedMagic|shadowtongue|balanced|0.9|6.6|2+1d2",
+	"summoner_spawnGorgon"
+],
+"stats": {
+	"HEALTH": "9",
+	"BLOCK": "0",
+	"SPEED": "7",
+	"DODGE": "110",
+	"PHYSICAL_DAMAGE_BONUS": "0",
+	"ARMOR": "2",
+	"MONSTER_THREAT": "15",
+	"PERCEPTION": "10",
+	"RANGE_ACCURACY": "95",
+	"WARDING": "2",
+	"MELEE_ACCURACY": "95",
+	"POTENCY": "0"
+},
+"scale": [ "((2+(HEALTH/6))*[0.95,1])/3", "((2+(HEALTH/6))*[0.95,1])/3" ],
+"combatDifficulty_1": {
+	"newAspects": [
+		"monsterRangedMagic|shadowtongue|balanced|0.9|6.6|1+1d2",
+		"monsterMelee|melt|balanced|1.6|2+1d2"
+	],
+	"stats": { "HEALTH": "6", "PHYSICAL_DAMAGE_BONUS": "0", "ARMOR": "2" }
+},
+"combatDifficulty_10": {
+	"newAspects": [
+		"monsterRangedMagic|shadowtongue|balanced|0.9|6.6|1+1d3",
+		"monsterMelee|melt|balanced|1.6|2+1d3"
+	],
+	"stats": { "HEALTH": "7", "PHYSICAL_DAMAGE_BONUS": "0", "ARMOR": "2" }
+},
+"combatDifficulty_30": {
+	"stats": { "HEALTH": "12", "ARMOR": "3" }
+},
+"baseColor": [ "[0.5,0.6]", "[0.5,0.6]", "[0.5,0.6]" ],
+"skin": [
+	{
+		"image": [ "misc/demonSuneater" ]
+	}
+],
+"footprint": 2
+}
