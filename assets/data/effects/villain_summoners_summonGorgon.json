@@ -13,7 +13,7 @@
 	"icon": "magic",
 	"priority": "3",
 	"showDescriptionInTooltip": true,
-	"cooldown": "oncePerMission"
+	"cooldown": "oncePerTurn"
 },
 "targets": [
 	{
@@ -34,38 +34,23 @@
 		"lineOfSight": "TERRAIN_ONLY"
 	},
 	{
+		"role": "volunteer",
+		"template": "ADJACENT_ALLY",
+		"choose": "BY_SCORE",
+		"scoreFunction": "MONSTER_THREAT+[0,20]",
+		"aspects": [ "alive", "ALLY", "NOT_SELF", "gorgon" ],
+		"range": "20"
+	},
+	{
 		"role": "target",
 		"template": "TILE",
 		"choose": "ONE_RANDOM_TRUE",
 		"missionFeedback": { "hoverFeedback": "ATTACK_HOVER" },
-		"range": "1.6",
-		"lineOfSight": "LIVE_FIGURES",
+		"range": "6",
+		"lineOfSight": "TERRAIN_ONLY",
 		"tileFilter": "validMoveEnd",
-		"spawnEntitySize": "oneTile"
-	},
-	{
-		"role": "target2",
-		"template": "TILE",
-		"choose": "ONE_RANDOM_TRUE",
-		"missionFeedback": { "hoverFeedback": "ATTACK_HOVER" },
-		"notAlreadyMatchedAs": [ "target" ],
-		"range": "1.6",
-		"lineOfSight": "LIVE_FIGURES",
-		"tileFilter": "validMoveEnd",
-		"spawnEntitySize": "oneTile"
-	},
-	{
-		"role": "target3",
-		"template": "TILE",
-		"choose": "ONE_RANDOM_TRUE",
-		"missionFeedback": { "hoverFeedback": "ATTACK_HOVER" },
-		"notAlreadyMatchedAs": [ "target", "target2" ],
-		"range": "1.6",
-		"lineOfSight": "LIVE_FIGURES",
-		"tileFilter": "validMoveEnd",
-		"spawnEntitySize": "oneTile"
-	},
-	{ "role": "volunteer", "template": "ADJACENT_ALLY", "range": "1.6" }
+		"spawnEntitySize": "fourTiles"
+	}
 ],
 "outcomes": [
 	{
@@ -83,24 +68,6 @@
 					"addRole": "monster",
 					"createEntity": {
 						"query": { "inRelationTo": "volunteer", "cloneRelatedEntity": true },
-						"setLocation": true
-					}
-				},
-				{
-					"class": "Spawn",
-					"target": "target2",
-					"addRole": "monster",
-					"createEntity": {
-						"query": { "baseTag": "gorgon_roe" },
-						"setLocation": true
-					}
-				},
-				{
-					"class": "Spawn",
-					"target": "target3",
-					"addRole": "monster",
-					"createEntity": {
-						"query": { "baseTag": "gorgon_roe" },
 						"setLocation": true
 					}
 				}
