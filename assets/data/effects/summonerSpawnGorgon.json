@@ -42,6 +42,15 @@
 		"range": "20"
 	},
 	{
+		"role": "volunteer2",
+		"template": "SELF",
+		"choose": "ANY",
+		"fromRoles": [ "self" ],
+		"aspectValues": [
+			{ "id": "summonerInterfused", "maxValue": "5" }
+		]
+	},
+	{
 		"role": "target",
 		"template": "TILE",
 		"choose": "ONE_RANDOM_TRUE",
@@ -69,6 +78,39 @@
 					"createEntity": {
 						"query": { "inRelationTo": "volunteer", "cloneRelatedEntity": true },
 						"setLocation": true
+					}
+				},
+				{
+					"class": "IfRolesArePresent",
+					"rolesArePresent": [ "volunteer2" ],
+					"then": {
+						"class": "DoAll",
+						"target": "volunteer2",
+						"outcomes": [
+							{
+								"class": "Aspects",
+								"addAspects": [
+									{
+										"id": "summonerInterfusedWithEntity",
+										"value": "1",
+										"merge": "max",
+										"inRelationTo": "monster"
+									}
+								]
+							},
+							{
+								"class": "Aspects",
+								"target": "target",
+								"addAspects": [
+									{
+										"id": "interfusedWithMonster",
+										"value": "1",
+										"merge": "max",
+										"inRelationTo": "volunteer2"
+									}
+								]
+							}
+						]
 					}
 				}
 			]

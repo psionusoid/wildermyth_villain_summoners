@@ -6,6 +6,21 @@
 },
 {
 	"modId": "villain_summoners",
+	"id": "summonerInterfusedWithEntity|_ENTITY_",
+	"parameters": [
+		{ "replace": "_ENTITY_", "isEntity": true }
+	],
+	"effects": [
+		"thrixlIncrementInterfusedWhenAdded",
+		"thrixlDecrementInterfuseWhenRemoved",
+		"removeInterfusionLinkOnDeath|_ENTITY_",
+		"removeInterfusionLinkOnDeleted|_ENTITY_"
+	],
+	"script": "effects.monsterInterfusion",
+	"importance": -1
+},
+{
+	"modId": "villain_summoners",
 	"id": "summoner_spawnGorgon",
 	"effects": [ "summonerSpawnGorgon" ],
 	"importance": -1
