@@ -1,6 +1,11 @@
 [
 {
 	"modId": "villain_summoners",
+	"id": "summonerInterfused",
+	"boostType": "NEUTRAL"
+},
+{
+	"modId": "villain_summoners",
 	"id": "summoner_spawnGorgon",
 	"effects": [ "summonerSpawnGorgon" ],
 	"importance": -1
