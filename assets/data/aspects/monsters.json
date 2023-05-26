@@ -2,7 +2,7 @@
 {
 	"modId": "villain_summoners",
 	"id": "summoner_spawnGorgon",
-	"effects": [ "villain_summoners_summonGorgon" ],
+	"effects": [ "summonerSpawnGorgon" ],
 	"importance": -1
 }
 ]

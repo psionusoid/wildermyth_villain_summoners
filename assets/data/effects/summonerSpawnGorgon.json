@@ -1,8 +1,8 @@
 {
-"id": "villain_summoners_summonGorgon",
+"id": "summonerSpawnGorgon",
 "info": {
 	"dataVersion": 1,
-	"sourceFile": "villain_summoners_summonGorgon",
+	"sourceFile": "summonerSpawnGorgon",
 	"modId": "villain_summoners",
 	"author": "psionusoid",
 	"aiPriority": "3000"
