@@ -100,14 +100,16 @@
 							},
 							{
 								"class": "Aspects",
-								"target": "target",
+								"target": "monster",
 								"addAspects": [
 									{
-										"id": "interfusedWithMonster",
+										"id": "interfusedWithSummoner",
 										"value": "1",
 										"merge": "max",
-										"inRelationTo": "volunteer2"
-									}
+										"inRelationTo": "self"
+									},
+									{ "id": "summonerInterfused", "value": "1" },
+									{ "id": "interfusedWithMonster", "value": "1", "merge": "max" }
 								]
 							}
 						]

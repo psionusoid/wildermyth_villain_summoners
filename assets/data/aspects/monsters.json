@@ -1,6 +1,21 @@
 [
 {
 	"modId": "villain_summoners",
+	"id": "interfusedWithSummoner|_ENTITY_",
+	"parameters": [
+		{ "replace": "_ENTITY_", "isEntity": true }
+	],
+	"effects": [
+		"setupInterfusedFire",
+		"setupInterfusedScenery",
+		"interfusedWithMysticRemoved",
+		"summonerRemoveInterfuseWhenEntityDeleted",
+		"summonerRemoveInterfuseWhenEntityRemoved"
+	],
+	"importance": -1
+},
+{
+	"modId": "villain_summoners",
 	"id": "summonerInterfused",
 	"boostType": "NEUTRAL"
 },
@@ -13,8 +28,8 @@
 	"effects": [
 		"thrixlIncrementInterfusedWhenAdded",
 		"thrixlDecrementInterfuseWhenRemoved",
-		"removeInterfusionLinkOnDeath|_ENTITY_",
-		"removeInterfusionLinkOnDeleted|_ENTITY_"
+		"summonerRemoveInterfusionLinkOnDeath|_ENTITY_",
+		"summonerRemoveInterfusionLinkOnDeleted|_ENTITY_"
 	],
 	"script": "effects.monsterInterfusion",
 	"importance": -1

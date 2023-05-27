@@ -1,0 +1,32 @@
+{
+"id": "summonerRemoveInterfuseWhenEntityRemoved",
+"info": {
+	"dataVersion": 1,
+	"sourceFile": "summonerRemoveInterfuseWhenEntityRemoved",
+	"modId": "villain_summoners",
+	"author": "psionusoid"
+},
+"type": "ENTITY_REMOVED",
+"targets": [
+	{ "template": "ANY_SELF" },
+	{ "template": "ANY", "relationship": "interfusedWithMystic" }
+],
+"outcomes": [
+	{
+		"class": "Aspects",
+		"target": "target",
+		"consumeAspects": [
+			{ "id": "summonerInterfusedWithEntity", "value": "1", "inRelationTo": "self" }
+		]
+	},
+	{
+		"class": "Aspects",
+		"target": "self",
+		"consumeAspects": [
+			{ "id": "interfusedWithSummoner", "value": "1", "inRelationTo": "self" },
+			{ "id": "interfusedWithMonster", "value": "1" },
+			{ "id": "summonerInterfused", "value": "1" }
+		]
+	}
+]
+}
