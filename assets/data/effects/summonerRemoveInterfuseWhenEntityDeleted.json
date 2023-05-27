@@ -9,7 +9,7 @@
 "type": "ENTITY_DELETED",
 "targets": [
 	{ "template": "ANY_SELF" },
-	{ "template": "ANY", "relationship": "interfusedWithMystic" }
+	{ "template": "ANY", "relationship": "interfusedWithSummoner" }
 ],
 "outcomes": [
 	{
