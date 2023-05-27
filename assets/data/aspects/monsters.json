@@ -14,6 +14,17 @@
 	],
 	"importance": -1
 },
+{
+	"modId": "villain_summoners",
+	"id": "soulshieldConnection|_ENTITY_",
+	"parameters": [
+		{ "replace": "_ENTITY_", "isEntity": true }
+	],
+	"effects": [ "soulsplittingRedirectsDamage|_ENTITY_" ],
+	"boostType": "ADVANTAGE",
+	"importance": 2,
+	"showValue": true
+},
 { "modId": "villain_summoners", "id": "summonerInterfused", "importance": -1 },
 {
 	"modId": "villain_summoners",
@@ -36,8 +47,7 @@
 	"modId": "villain_summoners",
 	"id": "summoner_soulshield",
 	"boostType": "ABILITY_MISC",
-	"showInTooltip": true,
-	"info": { "abilityDeckUsage": "none", "abilityDeckIcon": "soulSplitting" }
+	"showInTooltip": true
 },
 {
 	"modId": "villain_summoners",

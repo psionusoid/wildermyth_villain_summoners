@@ -17,7 +17,7 @@
 		"target": "self",
 		"addAspects": [
 			{
-				"id": "soulsplittingConnection",
+				"id": "soulshieldConnection",
 				"value": "0",
 				"merge": "replace",
 				"inRelationTo": "target"

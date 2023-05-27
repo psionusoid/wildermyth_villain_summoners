@@ -20,7 +20,7 @@
 			"class": "Aspects",
 			"target": "self",
 			"addAspects": [
-				{ "id": "soulsplittingConnection", "value": "1", "inRelationTo": "target" }
+				{ "id": "soulshieldConnection", "value": "1", "inRelationTo": "target" }
 			]
 		}
 	}
