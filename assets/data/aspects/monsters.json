@@ -20,7 +20,7 @@
 	"parameters": [
 		{ "replace": "_ENTITY_", "isEntity": true }
 	],
-	"effects": [ "soulsplittingRedirectsDamage|_ENTITY_" ],
+	"effects": [ "summonerSoulshieldRedirectsDamage|_ENTITY_" ],
 	"boostType": "ADVANTAGE",
 	"importance": 2,
 	"showValue": true

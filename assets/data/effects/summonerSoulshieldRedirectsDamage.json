@@ -1,0 +1,45 @@
+{
+"id": "summonerSoulshieldRedirectsDamage|_ENTITY_",
+"info": {
+	"dataVersion": 1,
+	"sourceFile": "summonerSoulshieldRedirectsDamage",
+	"modId": "villain_summoners",
+	"author": "psionusoid"
+},
+"type": "DAMAGE_ROLL_INCOMING_AFTER_ARMOR",
+"ability": {
+	"priority": "1",
+	"customSpecialAnimationEffect": {
+		"parameters": [ "1+self.mysticDeck_soulsplitting_upgrade" ]
+	}
+},
+"targets": [
+	{ "template": "SELF" },
+	{ "template": "ANY", "matchSpecial": "parameter1" },
+	{
+		"template": "ASPECT",
+		"choose": "ANY",
+		"aspects": [ "soulsplittingConnection|*" ]
+	}
+],
+"outcomes": [
+	{
+		"class": "Test",
+		"value": "DAMAGE",
+		"threshold": "1",
+		"onPass": {
+			"class": "DoAll",
+			"outcomes": [
+				{ "class": "Impact", "impact": "-1-self.mysticDeck_soulsplitting_upgrade" },
+				{
+					"class": "Damage",
+					"target": "target",
+					"amount": "2",
+					"type": "TRUE",
+					"showSpecialAnimationEffectIf": "0"
+				}
+			]
+		}
+	}
+]
+}
