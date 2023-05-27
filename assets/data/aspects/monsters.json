@@ -24,11 +24,20 @@
 	"effects": [
 		"summonerIncrementInterfusedWhenAdded",
 		"summonerDecrementInterfuseWhenRemoved",
+		"summonerSetUpPassiveInterfusionAspects|_ENTITY_",
+		"summonerTeardownPassiveInterfusionAspects|_ENTITY_",
 		"summonerRemoveInterfusionLinkOnDeath|_ENTITY_",
 		"summonerRemoveInterfusionLinkOnDeleted|_ENTITY_"
 	],
 	"script": "effects.monsterInterfusion",
 	"importance": -1
+},
+{
+	"modId": "villain_summoners",
+	"id": "summoner_soulshield",
+	"boostType": "ABILITY_MISC",
+	"showInTooltip": true,
+	"info": { "abilityDeckUsage": "none", "abilityDeckIcon": "soulSplitting" }
 },
 {
 	"modId": "villain_summoners",
