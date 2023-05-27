@@ -47,7 +47,7 @@
 		"choose": "ANY",
 		"fromRoles": [ "self" ],
 		"aspectValues": [
-			{ "id": "summonerInterfused", "maxValue": "5" }
+			{ "id": "summonerInterfused", "maxValue": "4" }
 		]
 	},
 	{
@@ -82,7 +82,7 @@
 				},
 				{
 					"class": "IfRolesArePresent",
-					"rolesArePresent": [ "volunteer2" ],
+					"rolesArePresent": [ "target", "volunteer2" ],
 					"then": {
 						"class": "DoAll",
 						"target": "volunteer2",
