@@ -14,11 +14,7 @@
 	],
 	"importance": -1
 },
-{
-	"modId": "villain_summoners",
-	"id": "summonerInterfused",
-	"boostType": "NEUTRAL"
-},
+{ "modId": "villain_summoners", "id": "summonerInterfused", "importance": -1 },
 {
 	"modId": "villain_summoners",
 	"id": "summonerInterfusedWithEntity|_ENTITY_",
@@ -26,8 +22,8 @@
 		{ "replace": "_ENTITY_", "isEntity": true }
 	],
 	"effects": [
-		"thrixlIncrementInterfusedWhenAdded",
-		"thrixlDecrementInterfuseWhenRemoved",
+		"summonerIncrementInterfusedWhenAdded",
+		"summonerDecrementInterfuseWhenRemoved",
 		"summonerRemoveInterfusionLinkOnDeath|_ENTITY_",
 		"summonerRemoveInterfusionLinkOnDeleted|_ENTITY_"
 	],

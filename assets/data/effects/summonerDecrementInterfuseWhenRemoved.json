@@ -1,0 +1,21 @@
+{
+"id": "summonerDecrementInterfuseWhenRemoved",
+"info": {
+	"dataVersion": 1,
+	"sourceFile": "summonerDecrementInterfuseWhenRemoved",
+	"modId": "villain_summoners",
+	"author": "psionusoid"
+},
+"type": "ASPECT_REMOVED",
+"targets": [
+	{ "template": "SELF" }
+],
+"outcomes": [
+	{
+		"class": "Aspects",
+		"addAspects": [
+			{ "id": "summonerInterfused", "value": "-1" }
+		]
+	}
+]
+}

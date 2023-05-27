@@ -108,7 +108,6 @@
 										"merge": "max",
 										"inRelationTo": "self"
 									},
-									{ "id": "summonerInterfused", "value": "1" },
 									{ "id": "interfusedWithMonster", "value": "1", "merge": "max" }
 								]
 							}
