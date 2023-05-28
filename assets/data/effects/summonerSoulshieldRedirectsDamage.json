@@ -11,21 +11,23 @@
 "targets": [
 	{ "template": "SELF" },
 	{
-		"role": "target2",
-		"template": "ANY",
-		"choose": "ANY",
-		"matchSpecial": "parameter1"
-	},
-	{
 		"template": "ASPECT",
 		"choose": "ANY",
 		"aspects": [ "soulshieldConnection|*" ]
 	},
 	{
+		"role": "target2",
+		"template": "ANY",
+		"choose": "ANY",
+		"matchSpecial": "parameter1",
+		"relativeTo": "aspect"
+	},
+	{
 		"template": "ANY",
 		"choose": "BY_SCORE",
 		"scoreFunction": "1000-(HEALTH-INJURY)",
-		"fromRoles": [ "target2" ]
+		"fromRoles": [ "target2" ],
+		"relativeTo": "target2"
 	}
 ],
 "outcomes": [
