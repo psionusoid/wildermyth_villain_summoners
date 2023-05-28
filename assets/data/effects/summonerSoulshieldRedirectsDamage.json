@@ -30,11 +30,11 @@
 		"onPass": {
 			"class": "DoAll",
 			"outcomes": [
-				{ "class": "Impact", "impact": "-1-self.mysticDeck_soulsplitting_upgrade" },
+				{ "class": "Impact", "impact": "0-min(DAMAGE,(target.HEALTH-target.INJURY))" },
 				{
 					"class": "Damage",
 					"target": "target",
-					"amount": "2",
+					"amount": "min(DAMAGE,(target.HEALTH-target.INJURY))",
 					"type": "TRUE",
 					"showSpecialAnimationEffectIf": "0"
 				}
