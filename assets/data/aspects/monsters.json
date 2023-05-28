@@ -1,6 +1,12 @@
 [
 {
 	"modId": "villain_summoners",
+	"id": "doppelganger",
+	"voice": "default",
+	"invalidatesSkin": true
+},
+{
+	"modId": "villain_summoners",
 	"id": "interfusedWithSummoner|_ENTITY_",
 	"parameters": [
 		{ "replace": "_ENTITY_", "isEntity": true }
@@ -53,6 +59,12 @@
 	"modId": "villain_summoners",
 	"id": "summoner_spawnGorgon",
 	"effects": [ "summonerSpawnGorgon" ],
+	"importance": -1
+},
+{
+	"modId": "villain_summoners",
+	"id": "summoner_spawnHero",
+	"effects": [ "summonerSpawnHero" ],
 	"importance": -1
 }
 ]
