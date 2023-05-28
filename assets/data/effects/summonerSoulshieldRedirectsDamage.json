@@ -7,19 +7,25 @@
 	"author": "psionusoid"
 },
 "type": "DAMAGE_ROLL_INCOMING_AFTER_ARMOR",
-"ability": {
-	"priority": "1",
-	"customSpecialAnimationEffect": {
-		"parameters": [ "1+self.mysticDeck_soulsplitting_upgrade" ]
-	}
-},
+"ability": { "priority": "1" },
 "targets": [
 	{ "template": "SELF" },
-	{ "template": "ANY", "matchSpecial": "parameter1" },
+	{
+		"role": "target2",
+		"template": "ANY",
+		"choose": "ANY",
+		"matchSpecial": "parameter1"
+	},
 	{
 		"template": "ASPECT",
 		"choose": "ANY",
-		"aspects": [ "soulsplittingConnection|*" ]
+		"aspects": [ "soulshieldConnection|*" ]
+	},
+	{
+		"template": "ANY",
+		"choose": "BY_SCORE",
+		"scoreFunction": "1000-(HEALTH-INJURY)",
+		"fromRoles": [ "target2" ]
 	}
 ],
 "outcomes": [
@@ -35,8 +41,7 @@
 					"class": "Damage",
 					"target": "target",
 					"amount": "min(DAMAGE,(target.HEALTH-target.INJURY))",
-					"type": "TRUE",
-					"showSpecialAnimationEffectIf": "0"
+					"type": "TRUE"
 				}
 			]
 		}
