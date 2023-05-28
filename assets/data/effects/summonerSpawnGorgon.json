@@ -77,6 +77,23 @@
 					"addRole": "monster",
 					"createEntity": {
 						"query": { "inRelationTo": "volunteer", "cloneRelatedEntity": true },
+						"additionalOutcome": {
+							"class": "DoAll",
+							"outcomes": [
+								{
+									"class": "ModifyStats",
+									"target": "monster",
+									"stat": "INJURY",
+									"value": "0-volunteer.INJURY"
+								},
+								{
+									"class": "ModifyStats",
+									"target": "monster",
+									"stat": "SHRED",
+									"value": "0-volunteer.SHRED"
+								}
+							]
+						},
 						"setLocation": true
 					}
 				},

@@ -4,7 +4,8 @@
 	"dataVersion": 1,
 	"sourceFile": "summonerSoulshieldRedirectsDamage",
 	"modId": "villain_summoners",
-	"author": "psionusoid"
+	"author": "psionusoid",
+	"sort": 2
 },
 "type": "DAMAGE_ROLL_INCOMING_AFTER_ARMOR",
 "ability": { "priority": "1" },
