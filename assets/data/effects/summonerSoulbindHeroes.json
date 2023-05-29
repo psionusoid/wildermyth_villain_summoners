@@ -1,0 +1,29 @@
+{
+"id": "summonerSoulbindHeroes|_ENTITY_",
+"info": {
+	"dataVersion": 1,
+	"sourceFile": "summonerSoulbindHeroes",
+	"modId": "villain_summoners",
+	"author": "psionusoid"
+},
+"type": "EVERY_TURN_2",
+"ability": { "priority": "1", "cooldown": "oncePerTurn" },
+"targets": [
+	{ "template": "SELF" },
+	{ "template": "ANY", "matchSpecial": "parameter1" }
+],
+"outcomes": [
+	{
+		"class": "Test",
+		"value": "self.summoner_soulbind",
+		"threshold": "1",
+		"onPass": {
+			"class": "Aspects",
+			"target": "self",
+			"addAspects": [
+				{ "id": "soulbindConnection", "value": "1", "inRelationTo": "target" }
+			]
+		}
+	}
+]
+}

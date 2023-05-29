@@ -12,7 +12,8 @@
 	"monsterRangedMagic|shadowtongue|balanced|0.9|6.6|2+1d2",
 	"summoner_spawnGorgon",
 	"summoner_spawnHero",
-	"summoner_soulshield"
+	"summoner_soulshield",
+	"summoner_soulbind"
 ],
 "stats": {
 	"WARDING": "2",

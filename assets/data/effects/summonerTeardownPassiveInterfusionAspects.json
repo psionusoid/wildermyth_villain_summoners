@@ -21,6 +21,12 @@
 				"value": "0",
 				"merge": "replace",
 				"inRelationTo": "target"
+			},
+			{
+				"id": "soulbindConnection",
+				"value": "0",
+				"merge": "replace",
+				"inRelationTo": "target"
 			}
 		]
 	}
