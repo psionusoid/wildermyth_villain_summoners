@@ -14,8 +14,8 @@
 "outcomes": [
 	{
 		"class": "Test",
-		"value": "self.summoner_soulshield",
-		"threshold": "1",
+		"value": "self.summoner_soulshield+target.monstrous",
+		"threshold": "2",
 		"onPass": {
 			"class": "Aspects",
 			"target": "self",

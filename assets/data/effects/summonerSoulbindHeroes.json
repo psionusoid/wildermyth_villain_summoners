@@ -15,7 +15,7 @@
 "outcomes": [
 	{
 		"class": "Test",
-		"value": "self.summoner_soulbind",
+		"value": "(self.summoner_soulbind-target.monstrous)-self.soulbindConnection|target",
 		"threshold": "1",
 		"onPass": {
 			"class": "Aspects",
