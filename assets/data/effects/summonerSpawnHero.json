@@ -129,7 +129,31 @@
 							},
 							{
 								"class": "Aspects",
+								"addAspects": [
+									{
+										"id": "summonerInterfusedWithEntity",
+										"value": "1",
+										"merge": "max",
+										"inRelationTo": "volunteer"
+									}
+								]
+							},
+							{
+								"class": "Aspects",
 								"target": "monster",
+								"addAspects": [
+									{
+										"id": "interfusedWithSummoner",
+										"value": "1",
+										"merge": "max",
+										"inRelationTo": "self"
+									},
+									{ "id": "interfusedWithMonster", "value": "1", "merge": "max" }
+								]
+							},
+							{
+								"class": "Aspects",
+								"target": "volunteer",
 								"addAspects": [
 									{
 										"id": "interfusedWithSummoner",
