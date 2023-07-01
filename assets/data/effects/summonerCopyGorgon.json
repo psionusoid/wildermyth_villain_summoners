@@ -1,0 +1,138 @@
+{
+"id": "summonerCopyGorgon",
+"info": {
+	"dataVersion": 1,
+	"sourceFile": "summonerCopyGorgon",
+	"modId": "villain_summoners",
+	"author": "psionusoid",
+	"aiPriority": "3000"
+},
+"type": "ABILITY",
+"verb": "ATTACK",
+"ability": {
+	"icon": "magic",
+	"priority": "3",
+	"showDescriptionInTooltip": true,
+	"cooldown": "oncePerTurn"
+},
+"targets": [
+	{
+		"template": "SELF",
+		"cost": { "class": "ActionPoints", "actionPoints": "free" },
+		"aspectValues": [
+			{ "id": "forbidReactions|*", "forbidden": true }
+		]
+	},
+	{
+		"role": "foes",
+		"template": "ANY",
+		"STUB": "Must be foes in sight",
+		"type": "UNIT",
+		"choose": "ALL",
+		"aspects": [ "HOSTILE_TARGET", "alive" ],
+		"range": "8",
+		"lineOfSight": "TERRAIN_ONLY"
+	},
+	{
+		"role": "volunteer",
+		"template": "ADJACENT_ALLY",
+		"choose": "BY_SCORE",
+		"scoreFunction": "MONSTER_THREAT+[0,20]",
+		"aspects": [ "alive", "ALLY", "NOT_SELF", "gorgon" ],
+		"range": "20"
+	},
+	{
+		"role": "volunteer2",
+		"template": "SELF",
+		"choose": "ANY",
+		"fromRoles": [ "self" ],
+		"aspectValues": [
+			{ "id": "summonerInterfused", "maxValue": "4" }
+		]
+	},
+	{
+		"role": "target",
+		"template": "TILE",
+		"choose": "ONE_RANDOM_TRUE",
+		"missionFeedback": { "hoverFeedback": "ATTACK_HOVER" },
+		"range": "6",
+		"lineOfSight": "TERRAIN_ONLY",
+		"tileFilter": "validMoveEnd",
+		"spawnEntitySize": "fourTiles"
+	}
+],
+"outcomes": [
+	{
+		"class": "AttackRoll",
+		"defender": null,
+		"attackAnimationType": "interaction",
+		"showAbilityName": "ifEnemy",
+		"attackStrength": "100",
+		"always": {
+			"class": "DoAll",
+			"outcomes": [
+				{
+					"class": "Spawn",
+					"target": "target",
+					"addRole": "monster",
+					"createEntity": {
+						"query": { "inRelationTo": "volunteer", "cloneRelatedEntity": true },
+						"additionalOutcome": {
+							"class": "DoAll",
+							"outcomes": [
+								{
+									"class": "ModifyStats",
+									"target": "monster",
+									"stat": "INJURY",
+									"value": "0-volunteer.INJURY"
+								},
+								{
+									"class": "ModifyStats",
+									"target": "monster",
+									"stat": "SHRED",
+									"value": "0-volunteer.SHRED"
+								}
+							]
+						},
+						"setLocation": true
+					}
+				},
+				{
+					"class": "IfRolesArePresent",
+					"rolesArePresent": [ "target", "volunteer2" ],
+					"then": {
+						"class": "DoAll",
+						"target": "volunteer2",
+						"outcomes": [
+							{
+								"class": "Aspects",
+								"addAspects": [
+									{
+										"id": "summonerInterfusedWithEntity",
+										"value": "1",
+										"merge": "max",
+										"inRelationTo": "monster"
+									}
+								]
+							},
+							{
+								"class": "Aspects",
+								"target": "monster",
+								"addAspects": [
+									{
+										"id": "interfusedWithSummoner",
+										"value": "1",
+										"merge": "max",
+										"inRelationTo": "self"
+									},
+									{ "id": "interfusedWithMonster", "value": "1", "merge": "max" }
+								]
+							}
+						]
+					}
+				}
+			]
+		}
+	}
+]
+}
