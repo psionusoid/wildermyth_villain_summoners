@@ -14,7 +14,7 @@
 	"summoner_spawnHero",
 	"summoner_soulshield",
 	"summoner_soulbind",
-	"summoner_scanUnits"
+	"summoner_scanGorgons"
 ],
 "stats": {
 	"MONSTER_THREAT": "15",

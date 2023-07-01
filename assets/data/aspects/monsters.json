@@ -63,6 +63,12 @@
 },
 {
 	"modId": "villain_summoners",
+	"id": "summoner_scanGorgons",
+	"effects": [ "summonerScanGorgons" ],
+	"importance": -1
+},
+{
+	"modId": "villain_summoners",
 	"id": "summoner_scanUnits",
 	"effects": [ "summonerScanUnits" ],
 	"importance": -1
