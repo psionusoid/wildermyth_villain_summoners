@@ -18,20 +18,12 @@
 "targets": [
 	{ "template": "SELF" },
 	{
-		"role": "volunteer",
-		"template": "ADJACENT_ALLY",
-		"choose": "ALL",
-		"aspects": [ "alive", "ALLY", "NOT_SELF", "gorgon" ],
-		"range": null
-	},
-	{
 		"role": "npc",
-		"template": "ADJACENT_UNIT",
+		"template": "ADJACENT_ALLY",
 		"choose": "ANY",
 		"missionFeedback": null,
-		"fromRoles": [ "volunteer" ],
-		"aspects": [ "gorgon_roe", "alive" ],
-		"range": null
+		"aspects": [ "gorgon_roe", "alive", "ALLY", "NOT_SELF" ],
+		"range": "100"
 	}
 ],
 "outcomes": [
