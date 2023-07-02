@@ -72,64 +72,139 @@
 			"class": "DoAll",
 			"outcomes": [
 				{
-					"class": "Spawn",
-					"target": "target",
-					"addRole": "monster",
-					"createEntity": {
-						"query": { "inRelationTo": "volunteer", "cloneRelatedEntity": true },
-						"additionalOutcome": {
-							"class": "DoAll",
-							"outcomes": [
-								{
-									"class": "ModifyStats",
-									"target": "monster",
-									"stat": "INJURY",
-									"value": "0-volunteer.INJURY"
+					"class": "DoOneRandom",
+					"weightedOutcomes": [
+						{
+							"outcome": {
+								"class": "Test",
+								"value": "self.saw_gorgon_roe",
+								"threshold": "1",
+								"onPass": {
+									"class": "DoAll",
+									"outcomes": [
+										{
+											"class": "Spawn",
+											"target": "target",
+											"addRole": "monster",
+											"createEntity": {
+												"query": { "baseTag": "gorgon_roe" },
+												"additionalOutcome": {
+													"class": "DoAll",
+													"outcomes": [
+														{
+															"class": "ModifyStats",
+															"target": "monster",
+															"stat": "INJURY",
+															"value": "0-volunteer.INJURY"
+														},
+														{
+															"class": "ModifyStats",
+															"target": "monster",
+															"stat": "SHRED",
+															"value": "0-volunteer.SHRED"
+														}
+													]
+												},
+												"setLocation": true
+											}
+										},
+										{
+											"class": "IfRolesArePresent",
+											"rolesArePresent": [ "target", "volunteer2" ],
+											"then": {
+												"class": "DoAll",
+												"target": "volunteer2",
+												"outcomes": [
+													{
+														"class": "Aspects",
+														"addAspects": [
+															{
+																"id": "summonerInterfusedWithEntity",
+																"value": "1",
+																"merge": "max",
+																"inRelationTo": "monster"
+															}
+														]
+													},
+													{
+														"class": "Aspects",
+														"target": "monster",
+														"addAspects": [
+															{
+																"id": "interfusedWithSummoner",
+																"value": "1",
+																"merge": "max",
+																"inRelationTo": "self"
+															},
+															{ "id": "interfusedWithMonster", "value": "1", "merge": "max" }
+														]
+													}
+												]
+											}
+										}
+									]
 								},
-								{
-									"class": "ModifyStats",
-									"target": "monster",
-									"stat": "SHRED",
-									"value": "0-volunteer.SHRED"
-								}
-							]
-						},
-						"setLocation": true
-					}
-				},
-				{
-					"class": "IfRolesArePresent",
-					"rolesArePresent": [ "target", "volunteer2" ],
-					"then": {
-						"class": "DoAll",
-						"target": "volunteer2",
-						"outcomes": [
-							{
-								"class": "Aspects",
-								"addAspects": [
-									{
-										"id": "summonerInterfusedWithEntity",
-										"value": "1",
-										"merge": "max",
-										"inRelationTo": "monster"
-									}
-								]
-							},
-							{
-								"class": "Aspects",
-								"target": "monster",
-								"addAspects": [
-									{
-										"id": "interfusedWithSummoner",
-										"value": "1",
-										"merge": "max",
-										"inRelationTo": "self"
-									},
-									{ "id": "interfusedWithMonster", "value": "1", "merge": "max" }
-								]
+								"onFail": { "class": "BranchAbility", "branchAbility": "summonerSpawnGorgon" }
 							}
-						]
-					}
+						},
+						{
+							"weight": 10,
+							"outcome": {
+								"class": "Test",
+								"value": "self.saw_gorgon_usric",
+								"threshold": "1",
+								"onPass": {
+									"class": "DoAll",
+									"outcomes": [
+										{
+											"class": "Spawn",
+											"target": "target",
+											"addRole": "monster",
+											"createEntity": {
+												"query": { "baseTag": "gorgon_usric" },
+												"setLocation": true
+											}
+										},
+										{
+											"class": "IfRolesArePresent",
+											"rolesArePresent": [ "target", "volunteer2" ],
+											"then": {
+												"class": "DoAll",
+												"target": "volunteer2",
+												"outcomes": [
+													{
+														"class": "Aspects",
+														"addAspects": [
+															{
+																"id": "summonerInterfusedWithEntity",
+																"value": "1",
+																"merge": "max",
+																"inRelationTo": "monster"
+															}
+														]
+													},
+													{
+														"class": "Aspects",
+														"target": "monster",
+														"addAspects": [
+															{
+																"id": "interfusedWithSummoner",
+																"value": "1",
+																"merge": "max",
+																"inRelationTo": "self"
+															},
+															{ "id": "interfusedWithMonster", "value": "1", "merge": "max" }
+														]
+													}
+												]
+											}
+										}
+									]
+								},
+								"onFail": { "class": "BranchAbility", "branchAbility": "summonerSpawnGorgon" }
+							}
+						}
+					]
 				}
 			]
 		}
