@@ -72,6 +72,7 @@
 		"class": "DoOneRandom",
 		"weightedOutcomes": [
 			{
+				"weight": 2,
 				"outcome": {
 					"class": "Test",
 					"value": "self.saw_gorgon_roe",
@@ -140,7 +141,283 @@
 				}
 			},
 			{
-				"weight": 10,
+				"weight": 2,
+				"outcome": {
+					"class": "Test",
+					"value": "self.saw_gorgon_coon",
+					"threshold": "1",
+					"onPass": {
+						"class": "DoAll",
+						"outcomes": [
+							{
+								"class": "AttackRoll",
+								"defender": null,
+								"attackAnimationType": "interaction",
+								"showAbilityName": "ifEnemy",
+								"attackStrength": "100",
+								"always": {
+									"class": "DoAll",
+									"outcomes": [
+										{
+											"class": "Spawn",
+											"target": "target",
+											"addRole": "monster",
+											"createEntity": {
+												"query": { "baseTag": "gorgon_coon" },
+												"setLocation": true
+											}
+										},
+										{
+											"class": "IfRolesArePresent",
+											"rolesArePresent": [ "target", "volunteer2" ],
+											"then": {
+												"class": "DoAll",
+												"target": "volunteer2",
+												"outcomes": [
+													{
+														"class": "Aspects",
+														"addAspects": [
+															{
+																"id": "summonerInterfusedWithEntity",
+																"value": "1",
+																"merge": "max",
+																"inRelationTo": "monster"
+															}
+														]
+													},
+													{
+														"class": "Aspects",
+														"target": "monster",
+														"addAspects": [
+															{
+																"id": "interfusedWithSummoner",
+																"value": "1",
+																"merge": "max",
+																"inRelationTo": "self"
+															},
+															{ "id": "interfusedWithMonster", "value": "1", "merge": "max" }
+														]
+													}
+												]
+											}
+										}
+									]
+								}
+							}
+						]
+					},
+					"onFail": { "class": "BranchAbility", "branchAbility": "summonerSpawnGorgon" }
+				}
+			},
+			{
+				"weight": 3,
+				"outcome": {
+					"class": "Test",
+					"value": "self.saw_gorgon_rager",
+					"threshold": "1",
+					"onPass": {
+						"class": "DoAll",
+						"outcomes": [
+							{
+								"class": "AttackRoll",
+								"defender": null,
+								"attackAnimationType": "interaction",
+								"showAbilityName": "ifEnemy",
+								"attackStrength": "100",
+								"always": {
+									"class": "DoAll",
+									"outcomes": [
+										{
+											"class": "Spawn",
+											"target": "target",
+											"addRole": "monster",
+											"createEntity": {
+												"query": { "baseTag": "gorgon_rager" },
+												"setLocation": true
+											}
+										},
+										{
+											"class": "IfRolesArePresent",
+											"rolesArePresent": [ "target", "volunteer2" ],
+											"then": {
+												"class": "DoAll",
+												"target": "volunteer2",
+												"outcomes": [
+													{
+														"class": "Aspects",
+														"addAspects": [
+															{
+																"id": "summonerInterfusedWithEntity",
+																"value": "1",
+																"merge": "max",
+																"inRelationTo": "monster"
+															}
+														]
+													},
+													{
+														"class": "Aspects",
+														"target": "monster",
+														"addAspects": [
+															{
+																"id": "interfusedWithSummoner",
+																"value": "1",
+																"merge": "max",
+																"inRelationTo": "self"
+															},
+															{ "id": "interfusedWithMonster", "value": "1", "merge": "max" }
+														]
+													}
+												]
+											}
+										}
+									]
+								}
+							}
+						]
+					},
+					"onFail": { "class": "BranchAbility", "branchAbility": "summonerSpawnGorgon" }
+				}
+			},
+			{
+				"weight": 3,
+				"outcome": {
+					"class": "Test",
+					"value": "self.saw_gorgon_bogmoor",
+					"threshold": "1",
+					"onPass": {
+						"class": "DoAll",
+						"outcomes": [
+							{
+								"class": "AttackRoll",
+								"defender": null,
+								"attackAnimationType": "interaction",
+								"showAbilityName": "ifEnemy",
+								"attackStrength": "100",
+								"always": {
+									"class": "DoAll",
+									"outcomes": [
+										{
+											"class": "Spawn",
+											"target": "target",
+											"addRole": "monster",
+											"createEntity": {
+												"query": { "baseTag": "gorgon_bogmoor" },
+												"setLocation": true
+											}
+										},
+										{
+											"class": "IfRolesArePresent",
+											"rolesArePresent": [ "target", "volunteer2" ],
+											"then": {
+												"class": "DoAll",
+												"target": "volunteer2",
+												"outcomes": [
+													{
+														"class": "Aspects",
+														"addAspects": [
+															{
+																"id": "summonerInterfusedWithEntity",
+																"value": "1",
+																"merge": "max",
+																"inRelationTo": "monster"
+															}
+														]
+													},
+													{
+														"class": "Aspects",
+														"target": "monster",
+														"addAspects": [
+															{
+																"id": "interfusedWithSummoner",
+																"value": "1",
+																"merge": "max",
+																"inRelationTo": "self"
+															},
+															{ "id": "interfusedWithMonster", "value": "1", "merge": "max" }
+														]
+													}
+												]
+											}
+										}
+									]
+								}
+							}
+						]
+					},
+					"onFail": { "class": "BranchAbility", "branchAbility": "summonerSpawnGorgon" }
+				}
+			},
+			{
+				"weight": 4,
+				"outcome": {
+					"class": "Test",
+					"value": "self.saw_gorgon_gheist",
+					"threshold": "1",
+					"onPass": {
+						"class": "DoAll",
+						"outcomes": [
+							{
+								"class": "AttackRoll",
+								"defender": null,
+								"attackAnimationType": "interaction",
+								"showAbilityName": "ifEnemy",
+								"attackStrength": "100",
+								"always": {
+									"class": "DoAll",
+									"outcomes": [
+										{
+											"class": "Spawn",
+											"target": "target",
+											"addRole": "monster",
+											"createEntity": {
+												"query": { "baseTag": "gorgon_gheist" },
+												"setLocation": true
+											}
+										},
+										{
+											"class": "IfRolesArePresent",
+											"rolesArePresent": [ "target", "volunteer2" ],
+											"then": {
+												"class": "DoAll",
+												"target": "volunteer2",
+												"outcomes": [
+													{
+														"class": "Aspects",
+														"addAspects": [
+															{
+																"id": "summonerInterfusedWithEntity",
+																"value": "1",
+																"merge": "max",
+																"inRelationTo": "monster"
+															}
+														]
+													},
+													{
+														"class": "Aspects",
+														"target": "monster",
+														"addAspects": [
+															{
+																"id": "interfusedWithSummoner",
+																"value": "1",
+																"merge": "max",
+																"inRelationTo": "self"
+															},
+															{ "id": "interfusedWithMonster", "value": "1", "merge": "max" }
+														]
+													}
+												]
+											}
+										}
+									]
+								}
+							}
+						]
+					},
+					"onFail": { "class": "BranchAbility", "branchAbility": "summonerSpawnGorgon" }
+				}
+			},
+			{
+				"weight": 5,
 				"outcome": {
 					"class": "Test",
 					"value": "self.saw_gorgon_gorgon",
@@ -163,6 +440,282 @@
 											"addRole": "monster",
 											"createEntity": {
 												"query": { "baseTag": "gorgon_gorgon" },
+												"setLocation": true
+											}
+										},
+										{
+											"class": "IfRolesArePresent",
+											"rolesArePresent": [ "target", "volunteer2" ],
+											"then": {
+												"class": "DoAll",
+												"target": "volunteer2",
+												"outcomes": [
+													{
+														"class": "Aspects",
+														"addAspects": [
+															{
+																"id": "summonerInterfusedWithEntity",
+																"value": "1",
+																"merge": "max",
+																"inRelationTo": "monster"
+															}
+														]
+													},
+													{
+														"class": "Aspects",
+														"target": "monster",
+														"addAspects": [
+															{
+																"id": "interfusedWithSummoner",
+																"value": "1",
+																"merge": "max",
+																"inRelationTo": "self"
+															},
+															{ "id": "interfusedWithMonster", "value": "1", "merge": "max" }
+														]
+													}
+												]
+											}
+										}
+									]
+								}
+							}
+						]
+					},
+					"onFail": { "class": "BranchAbility", "branchAbility": "summonerSpawnGorgon" }
+				}
+			},
+			{
+				"weight": 6,
+				"outcome": {
+					"class": "Test",
+					"value": "self.saw_gorgon_bartoth",
+					"threshold": "1",
+					"onPass": {
+						"class": "DoAll",
+						"outcomes": [
+							{
+								"class": "AttackRoll",
+								"defender": null,
+								"attackAnimationType": "interaction",
+								"showAbilityName": "ifEnemy",
+								"attackStrength": "100",
+								"always": {
+									"class": "DoAll",
+									"outcomes": [
+										{
+											"class": "Spawn",
+											"target": "target",
+											"addRole": "monster",
+											"createEntity": {
+												"query": { "baseTag": "gorgon_bartoth" },
+												"setLocation": true
+											}
+										},
+										{
+											"class": "IfRolesArePresent",
+											"rolesArePresent": [ "target", "volunteer2" ],
+											"then": {
+												"class": "DoAll",
+												"target": "volunteer2",
+												"outcomes": [
+													{
+														"class": "Aspects",
+														"addAspects": [
+															{
+																"id": "summonerInterfusedWithEntity",
+																"value": "1",
+																"merge": "max",
+																"inRelationTo": "monster"
+															}
+														]
+													},
+													{
+														"class": "Aspects",
+														"target": "monster",
+														"addAspects": [
+															{
+																"id": "interfusedWithSummoner",
+																"value": "1",
+																"merge": "max",
+																"inRelationTo": "self"
+															},
+															{ "id": "interfusedWithMonster", "value": "1", "merge": "max" }
+														]
+													}
+												]
+											}
+										}
+									]
+								}
+							}
+						]
+					},
+					"onFail": { "class": "BranchAbility", "branchAbility": "summonerSpawnGorgon" }
+				}
+			},
+			{
+				"weight": 6,
+				"outcome": {
+					"class": "Test",
+					"value": "self.saw_gorgon_staggron",
+					"threshold": "1",
+					"onPass": {
+						"class": "DoAll",
+						"outcomes": [
+							{
+								"class": "AttackRoll",
+								"defender": null,
+								"attackAnimationType": "interaction",
+								"showAbilityName": "ifEnemy",
+								"attackStrength": "100",
+								"always": {
+									"class": "DoAll",
+									"outcomes": [
+										{
+											"class": "Spawn",
+											"target": "target",
+											"addRole": "monster",
+											"createEntity": {
+												"query": { "baseTag": "gorgon_staggron" },
+												"setLocation": true
+											}
+										},
+										{
+											"class": "IfRolesArePresent",
+											"rolesArePresent": [ "target", "volunteer2" ],
+											"then": {
+												"class": "DoAll",
+												"target": "volunteer2",
+												"outcomes": [
+													{
+														"class": "Aspects",
+														"addAspects": [
+															{
+																"id": "summonerInterfusedWithEntity",
+																"value": "1",
+																"merge": "max",
+																"inRelationTo": "monster"
+															}
+														]
+													},
+													{
+														"class": "Aspects",
+														"target": "monster",
+														"addAspects": [
+															{
+																"id": "interfusedWithSummoner",
+																"value": "1",
+																"merge": "max",
+																"inRelationTo": "self"
+															},
+															{ "id": "interfusedWithMonster", "value": "1", "merge": "max" }
+														]
+													}
+												]
+											}
+										}
+									]
+								}
+							}
+						]
+					},
+					"onFail": { "class": "BranchAbility", "branchAbility": "summonerSpawnGorgon" }
+				}
+			},
+			{
+				"weight": 6,
+				"outcome": {
+					"class": "Test",
+					"value": "self.saw_gorgon_usric",
+					"threshold": "1",
+					"onPass": {
+						"class": "DoAll",
+						"outcomes": [
+							{
+								"class": "AttackRoll",
+								"defender": null,
+								"attackAnimationType": "interaction",
+								"showAbilityName": "ifEnemy",
+								"attackStrength": "100",
+								"always": {
+									"class": "DoAll",
+									"outcomes": [
+										{
+											"class": "Spawn",
+											"target": "target",
+											"addRole": "monster",
+											"createEntity": {
+												"query": { "baseTag": "gorgon_usric" },
+												"setLocation": true
+											}
+										},
+										{
+											"class": "IfRolesArePresent",
+											"rolesArePresent": [ "target", "volunteer2" ],
+											"then": {
+												"class": "DoAll",
+												"target": "volunteer2",
+												"outcomes": [
+													{
+														"class": "Aspects",
+														"addAspects": [
+															{
+																"id": "summonerInterfusedWithEntity",
+																"value": "1",
+																"merge": "max",
+																"inRelationTo": "monster"
+															}
+														]
+													},
+													{
+														"class": "Aspects",
+														"target": "monster",
+														"addAspects": [
+															{
+																"id": "interfusedWithSummoner",
+																"value": "1",
+																"merge": "max",
+																"inRelationTo": "self"
+															},
+															{ "id": "interfusedWithMonster", "value": "1", "merge": "max" }
+														]
+													}
+												]
+											}
+										}
+									]
+								}
+							}
+						]
+					},
+					"onFail": { "class": "BranchAbility", "branchAbility": "summonerSpawnGorgon" }
+				}
+			},
+			{
+				"weight": 6,
+				"outcome": {
+					"class": "Test",
+					"value": "self.saw_gorgon_seacaller",
+					"threshold": "1",
+					"onPass": {
+						"class": "DoAll",
+						"outcomes": [
+							{
+								"class": "AttackRoll",
+								"defender": null,
+								"attackAnimationType": "interaction",
+								"showAbilityName": "ifEnemy",
+								"attackStrength": "100",
+								"always": {
+									"class": "DoAll",
+									"outcomes": [
+										{
+											"class": "Spawn",
+											"target": "target",
+											"addRole": "monster",
+											"createEntity": {
+												"query": { "baseTag": "gorgon_seacaller" },
 												"setLocation": true
 											}
 										},
