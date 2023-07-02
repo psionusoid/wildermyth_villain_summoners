@@ -7,7 +7,7 @@
 	"author": "psionusoid",
 	"aiPriority": "3000"
 },
-"type": "ABILITY",
+"type": "TURN_START_2",
 "verb": "ATTACK",
 "ability": {
 	"icon": "magic",
