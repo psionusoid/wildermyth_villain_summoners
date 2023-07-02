@@ -40,9 +40,9 @@
 		"template": "ANY",
 		"STUB": "Must be foes in sight",
 		"type": "UNIT",
-		"choose": "ALL",
+		"choose": "ONE_RANDOM_TRUE",
 		"aspects": [ "HOSTILE_TARGET", "alive" ],
-		"range": "8",
+		"range": "12",
 		"lineOfSight": "TERRAIN_ONLY"
 	},
 	{
@@ -57,8 +57,10 @@
 	{
 		"role": "target",
 		"template": "TILE",
-		"choose": "ONE_RANDOM_TRUE",
+		"choose": "ONE_CLOSEST",
+		"scoreFunction": "(100-target.distanceTo.foes)-target.distanceTo.self",
 		"missionFeedback": { "hoverFeedback": "ATTACK_HOVER" },
+		"relativeTo": "foes",
 		"range": "6",
 		"lineOfSight": "TERRAIN_ONLY",
 		"tileFilter": "validMoveEnd",
