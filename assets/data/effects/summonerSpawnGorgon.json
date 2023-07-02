@@ -54,14 +54,16 @@
 			{ "id": "summonerInterfused", "maxValue": "4" }
 		]
 	},
+	{ "template": "TILE", "choose": "ANY", "range": "6" },
 	{
 		"role": "target",
 		"template": "TILE",
 		"choose": "ONE_CLOSEST",
 		"scoreFunction": "(100-target.distanceTo.foes)-target.distanceTo.self",
 		"missionFeedback": { "hoverFeedback": "ATTACK_HOVER" },
+		"fromRoles": [ "focus" ],
 		"relativeTo": "foes",
-		"range": "6",
+		"range": null,
 		"lineOfSight": "TERRAIN_ONLY",
 		"tileFilter": "validMoveEnd",
 		"spawnEntitySize": "fourTiles"
