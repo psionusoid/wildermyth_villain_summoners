@@ -21,6 +21,18 @@
 		"cost": { "class": "ActionPoints", "actionPoints": "free" },
 		"aspectValues": [
 			{ "id": "forbidReactions|*", "forbidden": true }
+		],
+		"aspectsOneOf": [
+			"saw_gorgon_roe",
+			"saw_gorgon_coon",
+			"saw_gorgon_rager",
+			"saw_gorgon_bogmoor",
+			"saw_gorgon_gheist",
+			"saw_gorgon_gorgon",
+			"saw_gorgon_bartoth",
+			"saw_gorgon_staggron",
+			"saw_gorgon_usric",
+			"saw_gorgon_seacaller"
 		]
 	},
 	{
@@ -32,14 +44,6 @@
 		"aspects": [ "HOSTILE_TARGET", "alive" ],
 		"range": "8",
 		"lineOfSight": "TERRAIN_ONLY"
-	},
-	{
-		"role": "volunteer",
-		"template": "ADJACENT_ALLY",
-		"choose": "BY_SCORE",
-		"scoreFunction": "MONSTER_THREAT+[0,20]",
-		"aspects": [ "alive", "ALLY", "NOT_SELF", "gorgon" ],
-		"range": "20"
 	},
 	{
 		"role": "volunteer2",
@@ -63,23 +67,23 @@
 ],
 "outcomes": [
 	{
-		"class": "AttackRoll",
-		"defender": null,
-		"attackAnimationType": "interaction",
-		"showAbilityName": "ifEnemy",
-		"attackStrength": "100",
-		"always": {
-			"class": "DoAll",
-			"outcomes": [
-				{
-					"class": "DoOneRandom",
-					"weightedOutcomes": [
-						{
-							"outcome": {
-								"class": "Test",
-								"value": "self.saw_gorgon_roe",
-								"threshold": "1",
-								"onPass": {
+		"class": "DoOneRandom",
+		"weightedOutcomes": [
+			{
+				"outcome": {
+					"class": "Test",
+					"value": "self.saw_gorgon_roe",
+					"threshold": "1",
+					"onPass": {
+						"class": "DoAll",
+						"outcomes": [
+							{
+								"class": "AttackRoll",
+								"defender": null,
+								"attackAnimationType": "interaction",
+								"showAbilityName": "ifEnemy",
+								"attackStrength": "100",
+								"always": {
 									"class": "DoAll",
 									"outcomes": [
 										{
@@ -88,23 +92,6 @@
 											"addRole": "monster",
 											"createEntity": {
 												"query": { "baseTag": "gorgon_roe" },
-												"additionalOutcome": {
-													"class": "DoAll",
-													"outcomes": [
-														{
-															"class": "ModifyStats",
-															"target": "monster",
-															"stat": "INJURY",
-															"value": "0-volunteer.INJURY"
-														},
-														{
-															"class": "ModifyStats",
-															"target": "monster",
-															"stat": "SHRED",
-															"value": "0-volunteer.SHRED"
-														}
-													]
-												},
 												"setLocation": true
 											}
 										},
@@ -143,17 +130,29 @@
 											}
 										}
 									]
-								},
-								"onFail": { "class": "BranchAbility", "branchAbility": "summonerSpawnGorgon" }
+								}
 							}
-						},
-						{
-							"weight": 10,
-							"outcome": {
-								"class": "Test",
-								"value": "self.saw_gorgon_usric",
-								"threshold": "1",
-								"onPass": {
+						]
+					},
+					"onFail": { "class": "BranchAbility", "branchAbility": "summonerSpawnGorgon" }
+				}
+			},
+			{
+				"weight": 10,
+				"outcome": {
+					"class": "Test",
+					"value": "self.saw_gorgon_gorgon",
+					"threshold": "1",
+					"onPass": {
+						"class": "DoAll",
+						"outcomes": [
+							{
+								"class": "AttackRoll",
+								"defender": null,
+								"attackAnimationType": "interaction",
+								"showAbilityName": "ifEnemy",
+								"attackStrength": "100",
+								"always": {
 									"class": "DoAll",
 									"outcomes": [
 										{
@@ -161,7 +160,7 @@
 											"target": "target",
 											"addRole": "monster",
 											"createEntity": {
-												"query": { "baseTag": "gorgon_usric" },
+												"query": { "baseTag": "gorgon_gorgon" },
 												"setLocation": true
 											}
 										},
@@ -200,14 +199,14 @@
 											}
 										}
 									]
-								},
-								"onFail": { "class": "BranchAbility", "branchAbility": "summonerSpawnGorgon" }
+								}
 							}
-						}
-					]
+						]
+					},
+					"onFail": { "class": "BranchAbility", "branchAbility": "summonerSpawnGorgon" }
 				}
-			]
-		}
+			}
+		]
 	}
 ]
 }
