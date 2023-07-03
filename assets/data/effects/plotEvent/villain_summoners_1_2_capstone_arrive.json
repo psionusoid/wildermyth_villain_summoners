@@ -32,6 +32,12 @@
 							"equipment": {},
 							"anchor": { "x": 0.251, "y": 0.557 },
 							"size": 0.5823668
+						},
+						{
+							"role": "legend",
+							"equipment": {},
+							"anchor": { "x": 0.676, "y": 0.495 },
+							"size": 0.582
 						}
 					],
 					"textSlots": [
@@ -54,9 +60,22 @@
 		"goal": "story",
 		"combatants": [
 			{ "role": "party", "side": "player" },
+			{ "role": "legend", "side": "player" },
 			{ "role": "foes", "side": "enemy" }
 		],
 		"missionPlanOverride": "villain_summoners_1_2_capstone"
 	}
-]
+],
+"implications": {
+	"generatedTargets": [
+		{
+			"role": "legend",
+			"npcId": "summoners_instructor",
+			"createEntity": {
+				"query": { "baseTag": "human" },
+				"control": "none"
+			}
+		}
+	]
+}
 }

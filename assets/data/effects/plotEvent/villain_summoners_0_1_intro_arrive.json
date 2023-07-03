@@ -16,7 +16,37 @@
 	{ "template": "INJECTED_TILE" },
 	{ "template": "INJECTED_SITE" },
 	{ "template": "INJECTED_PARTY" },
-	{ "template": "INJECTED_THREAT" }
+	{ "template": "INJECTED_THREAT" },
+	{
+		"role": "leader",
+		"template": "PICK_BY_SCORE",
+		"type": "HERO",
+		"scoreFunction": "LEADER",
+		"notAlreadyMatchedAs": []
+	},
+	{
+		"role": "hero2",
+		"template": "PICK_BY_SCORE",
+		"type": "HERO",
+		"scoreFunction": "AGE",
+		"notAlreadyMatchedAs": [ "leader" ]
+	},
+	{
+		"role": "hero3",
+		"template": "PICK_BY_SCORE",
+		"type": "HERO",
+		"scoreFunction": null,
+		"notAlreadyMatchedAs": [ "leader", "hero2" ]
+	},
+	{
+		"role": "hook",
+		"template": "PICK_BY_SCORE",
+		"STUB": "Legacy Hero, stored as vultureLord_legacyHero_join for ch2 omen",
+		"type": "LEGACY_HERO_PLAYABLE",
+		"choose": "BY_SCORE_OPTIONAL",
+		"scoreFunction": "((100*legacyTier)+LEVEL)+[0,5]",
+		"fromRoles": null
+	}
 ],
 "outcomes": [
 	{
@@ -26,23 +56,50 @@
 				"class": "comicNode_Panel",
 				"panel": {
 					"size": "full",
+					"showNameTags": false,
 					"actorSlots": [
 						{
-							"role": "party",
+							"role": "leader",
 							"equipment": {},
-							"anchor": { "x": 0.251, "y": 0.557 },
-							"size": 0.5823668
+							"size": 0.46976137
+						},
+						{
+							"role": "hero2",
+							"equipment": {},
+							"anchor": { "x": 0.649, "y": 0.487 },
+							"size": 0.46976137
+						},
+						{
+							"role": "hero3",
+							"equipment": {},
+							"anchor": { "x": 0.313, "y": 0.494 },
+							"size": 0.46976137
 						}
 					],
 					"textSlots": [
 						{
 							"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive",
-							"textKey": "~01~~panel_001~1_party",
-							"pointerOwner": "party",
+							"textKey": "~01~~panel_001~1_leader",
+							"pointerOwner": "leader",
 							"padXFraction": 0.34,
 							"padYFraction": 0.054,
 							"widthFraction": 0.3980158,
 							"shrinkToFitText": true
+						}
+					]
+				}
+			},
+			{
+				"class": "comicNode_Panel",
+				"panel": {
+					"actorSlots": [
+						{
+							"role": "legend",
+							"facing": "left",
+							"equipment": {},
+							"anchor": { "x": 0.458, "y": 0.651 },
+							"size": 0.5002,
+							"nameTag": "bottomRight"
 						}
 					]
 				}
@@ -58,5 +115,19 @@
 		],
 		"missionPlanOverride": "villain_summoners_0_1_intro"
 	}
-]
+],
+"implications": {
+	"generatedTargets": [
+		{
+			"role": "legend",
+			"npcId": "summoners_instructor",
+			"createEntity": {
+				"query": { "baseTag": "human", "setClass": "nonFarmer", "setEquipment": "tierThree" },
+				"legacyHero": { "spawnFromRole": "hook", "age": "70", "reset": false },
+				"addAspects": [],
+				"control": "none"
+			}
+		}
+	]
+}
 }
