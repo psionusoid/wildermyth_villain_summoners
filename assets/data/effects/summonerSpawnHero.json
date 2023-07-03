@@ -71,6 +71,8 @@
 		"defender": null,
 		"attackAnimationType": "interaction",
 		"showAbilityName": "ifEnemy",
+		"stopBlockingTime": "noBlocking",
+		"minimumBlockTime": "1000",
 		"attackStrength": "100",
 		"always": {
 			"class": "DoAll",
@@ -85,14 +87,6 @@
 							"class": "DoAll",
 							"outcomes": [
 								{
-									"class": "Aspects",
-									"target": "monster",
-									"addAspects": [
-										{ "id": "monstrous", "value": "1" },
-										{ "id": "doppelganger", "value": "1" }
-									]
-								},
-								{
 									"class": "ModifyStats",
 									"target": "monster",
 									"stat": "INJURY",
@@ -103,7 +97,16 @@
 									"target": "monster",
 									"stat": "SHRED",
 									"value": "0-volunteer.SHRED"
-								}
+								},
+								{
+									"class": "Aspects",
+									"target": "monster",
+									"addAspects": [
+										{ "id": "monstrous", "value": "1" },
+										{ "id": "doppelganger", "value": "1" }
+									]
+								},
+								{ "class": "Animate", "target": "monster", "script": "figures.swapWeapon" }
 							]
 						},
 						"setLocation": true
