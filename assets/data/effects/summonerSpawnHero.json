@@ -68,8 +68,8 @@
 "outcomes": [
 	{
 		"class": "AttackRoll",
-		"defender": null,
-		"attackAnimationType": "interaction",
+		"defender": "volunteer",
+		"attackAnimationType": "magic",
 		"showAbilityName": "ifEnemy",
 		"stopBlockingTime": "noBlocking",
 		"minimumBlockTime": "1000",
