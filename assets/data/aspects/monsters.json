@@ -63,6 +63,22 @@
 },
 {
 	"modId": "villain_summoners",
+	"id": "summoner_ethermine",
+	"effects": [ "summonerEthermine" ],
+	"boostType": "ABILITY_MISC",
+	"showInTooltip": true
+},
+{
+	"modId": "villain_summoners",
+	"id": "summoner_hasEthermine|COORDS",
+	"parameters": [
+		{ "replace": "COORDS" }
+	],
+	"effects": [ "summonerEthermineRegion|COORDS", "removeAtStartOfTurn", "removeOnDeath" ],
+	"stats": { "MELEE_ACCURACY": -10 }
+},
+{
+	"modId": "villain_summoners",
 	"id": "summoner_scanGorgons",
 	"effects": [ "summonerScanGorgons" ],
 	"importance": -1

@@ -1,0 +1,25 @@
+{
+"id": "summonerEthermineRegion|COORDS",
+"info": {
+	"dataVersion": 1,
+	"sourceFile": "summonerEthermineRegion",
+	"modId": "villain_summoners",
+	"author": "psionusoid (based on Patrick Belanger)"
+},
+"type": "REGION",
+"targets": [],
+"outcomes": [
+	{
+		"class": "MapRegion",
+		"target": "self",
+		"region": {
+			"id": "drauven_preparedShotRegion",
+			"entryCostDangerousPath": 2,
+			"feedbackType": "THREATEN",
+			"floorsOnly": true,
+			"entryTriggerEffects": [ "summonerEthermineDetonate" ]
+		},
+		"elementsString": "COORDS"
+	}
+]
+}
