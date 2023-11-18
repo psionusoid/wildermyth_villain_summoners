@@ -63,8 +63,22 @@
 },
 {
 	"modId": "villain_summoners",
-	"id": "summoner_ethermine",
-	"effects": [ "summonerEthermine" ],
+	"id": "summoner_ethermineRegion|COORDS",
+	"parameters": [
+		{ "replace": "COORDS" }
+	],
+	"effects": [ "summonerEthermineRegion|COORDS" ],
+	"boostType": "ABILITY_MISC",
+	"importance": -1,
+	"showInTooltip": true
+},
+{
+	"modId": "villain_summoners",
+	"id": "summoner_ethermine|DAMAGE_EXPRESSION",
+	"parameters": [
+		{ "replace": "DAMAGE_EXPRESSION" }
+	],
+	"effects": [ "summonerEthermine|DAMAGE_EXPRESSION" ],
 	"boostType": "ABILITY_MISC",
 	"showInTooltip": true
 },
@@ -74,8 +88,7 @@
 	"parameters": [
 		{ "replace": "COORDS" }
 	],
-	"effects": [ "summonerEthermineRegion|COORDS", "removeAtStartOfTurn", "removeOnDeath" ],
-	"stats": { "MELEE_ACCURACY": -10 }
+	"effects": [ "summonerEthermineDetonate|COORDS", "removeAtStartOfTurn", "removeOnDeath" ]
 },
 {
 	"modId": "villain_summoners",

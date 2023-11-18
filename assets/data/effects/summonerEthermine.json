@@ -1,5 +1,5 @@
 {
-"id": "summonerEthermine",
+"id": "summonerEthermine|DAMAGE_EXPRESSION",
 "info": {
 	"dataVersion": 1,
 	"sourceFile": "summonerEthermine",
@@ -63,10 +63,28 @@
 	{ "class": "Animate", "script": "figures.endTurn" },
 	{ "class": "ActionPoints", "actionPoints": "all" },
 	{
+		"class": "Spawn",
+		"addRole": "item",
+		"forceSpawn": true,
+		"createEntity": {
+			"query": { "type": "TRAP" },
+			"addAspects": [
+				{ "id": "summoner_ethermineRegion", "value": "1", "atTiles": "targetTile" }
+			],
+			"setLocation": true
+		}
+	},
+	{
 		"class": "Aspects",
 		"addAspects": [
 			{ "id": "doneWithTurn", "value": "1" },
-			{ "id": "drauven_hasPreparedShot", "value": "1", "atTiles": "targetTile" }
+			{
+				"id": "summoner_hasEthermine",
+				"value": "1",
+				"atTiles": "targetTile",
+				"atTilesAbsolute": true,
+				"inRelationTo": "item"
+			}
 		]
 	}
 ]

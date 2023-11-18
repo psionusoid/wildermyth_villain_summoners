@@ -15,18 +15,65 @@
 	{
 		"template": "INTERLOPER",
 		"aspects": [ "alive", "ENEMY" ]
+	},
+	{
+		"role": "foes",
+		"template": "ADJACENT_UNIT",
+		"choose": "ANY",
+		"missionFeedback": {
+			"orientTo": "self",
+			"suggestionScript": "figures.attackSuggestion",
+			"hoverScript": "figures.attackHovered",
+			"rangeFeedback": "ATTACK_RANGE",
+			"suggestionFeedback": "ATTACK_SUGGESTION",
+			"hoverFeedback": "ATTACK_HOVER"
+		},
+		"range": "2.6",
+		"lineOfSight": "TERRAIN_ONLY"
 	}
 ],
 "outcomes": [
 	{
-		"class": "BranchAbility",
-		"branchType": "standardRanged",
-		"targetRole": "target",
-		"triggerAbilityUsedEffects": true
-	},
-	{
-		"class": "Aspects",
-		"removeAspects": [ "_THIS_" ]
+		"class": "AttackRoll",
+		"defender": "foes",
+		"attackAnimationType": "melee",
+		"timingOverride": {
+			"beforeAnimationTime": "0",
+			"swingTime": "0",
+			"attackTime": "0",
+			"afterAnimationTime": "200"
+		},
+		"particles": [
+			{ "script": "gorgonFireball", "setPosition": "self" },
+			{
+				"script": "gorgonCorruptionTrail",
+				"setPosition": "self",
+				"setPosition2": "focus"
+			},
+			{ "script": "gorgonCorruptionBurst", "setPosition": "focus", "delay": 0.4 }
+		],
+		"audioOverride": {
+			"attackHitCue": "Characters/DefaultHuman/Magic_FireHit",
+			"attackDodgedCue": "Characters/DefaultHuman/Magic_FireMiss",
+			"attackBlockedCue": "Characters/DefaultHuman/Magic_FireMiss"
+		},
+		"attackerAnimationOverride": "",
+		"defenseRollTags": [ "range" ],
+		"attackStrength": "self.RANGE_ACCURACY+20",
+		"always": {
+			"class": "DoAll",
+			"outcomes": [
+				{
+					"class": "Aspects",
+					"removeAspects": [ "_THIS_" ]
+				}
+			]
+		},
+		"onHit": {
+			"class": "Damage",
+			"amount": "(DAMAGE_EXPRESSION+target.PHYSICAL_DAMAGE_BONUS)/(1+defender.ALLY.target)",
+			"type": "MAGIC"
+		}
 	}
 ]
 }
