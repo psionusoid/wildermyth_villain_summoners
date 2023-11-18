@@ -84,7 +84,7 @@
 },
 {
 	"modId": "villain_summoners",
-	"id": "summoner_hasEthermine|COORDS",
+	"id": "summoner_hasEthermine|DAMAGE_EXPRESSION|COORDS",
 	"parameters": [
 		{ "replace": "COORDS" }
 	],
