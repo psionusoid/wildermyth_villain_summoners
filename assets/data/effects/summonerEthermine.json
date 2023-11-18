@@ -72,9 +72,7 @@
 			{
 				"id": "summoner_hasEthermine|DAMAGE_EXPRESSION",
 				"value": "1",
-				"atTiles": "sourceTile",
-				"atTilesAbsolute": true,
-				"inRelationTo": "item"
+				"atTiles": "sourceTile"
 			}
 		]
 	}
