@@ -21,6 +21,7 @@
 			"floorsOnly": true,
 			"entryTriggerEffects": [ "summonerEthermineDetonate" ]
 		},
+		"associateWithFaction": true,
 		"elementsString": "COORDS"
 	}
 ]
