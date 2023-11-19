@@ -17,7 +17,7 @@
 			"physicallyPresent": true,
 			"visibleAtLocation": true,
 			"entryCostDangerousPath": 2,
-			"feedbackType": "THREATEN",
+			"feedbackType": "SUMMONER_ETHERMINE",
 			"floorsOnly": true,
 			"entryTriggerEffects": [ "summonerEthermineDetonate" ]
 		},
