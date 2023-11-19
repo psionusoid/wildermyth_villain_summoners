@@ -5,7 +5,7 @@
 	"sourceFile": "summonerEthermine",
 	"modId": "villain_summoners",
 	"author": "psionusoid (based on Patrick Belanger)",
-	"aiPriority": "1000",
+	"aiPriority": "100000",
 	"tags": [ "sneaky" ]
 },
 "type": "ABILITY",
@@ -28,11 +28,11 @@
 		"alwaysSelect": true,
 		"missionFeedback": { "suggestionFeedback": "FRIENDLY_EFFECT_RANGE" },
 		"aiHints": {
-			"scoreNearbyFoe": "100",
-			"foeRange": "2",
+			"scoreNearbyFoe": "10",
+			"foeRange": "2.1",
 			"foeMaxRange": "10",
-			"scoreNearbyFriend": "10",
-			"friendRange": "2"
+			"scoreNearbyFriend": "-100",
+			"friendRange": "2.1"
 		},
 		"minRange": "0.9",
 		"range": "(5.6-1)+self.BONUS_RANGE",
