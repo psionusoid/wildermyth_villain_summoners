@@ -86,9 +86,14 @@
 	"modId": "villain_summoners",
 	"id": "summoner_hasEthermine|DAMAGE_EXPRESSION|COORDS",
 	"parameters": [
+		{ "replace": "DAMAGE_EXPRESSION" },
 		{ "replace": "COORDS" }
 	],
-	"effects": [ "summonerEthermineDetonate|COORDS", "removeAtStartOfTurn", "removeOnDeath" ]
+	"effects": [
+		"summonerEthermineRegion|DAMAGE_EXPRESSION|COORDS",
+		"removeAtStartOfTurn",
+		"removeOnDeath"
+	]
 },
 {
 	"modId": "villain_summoners",
