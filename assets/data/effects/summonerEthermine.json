@@ -64,17 +64,6 @@
 			],
 			"setLocation": true
 		}
-	},
-	{
-		"class": "Aspects",
-		"addAspects": [
-			{ "id": "doneWithTurn", "value": "1" },
-			{
-				"id": "summoner_hasEthermine|DAMAGE_EXPRESSION",
-				"value": "1",
-				"atTiles": "sourceTile"
-			}
-		]
 	}
 ]
 }

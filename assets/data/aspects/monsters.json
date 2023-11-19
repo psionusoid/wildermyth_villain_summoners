@@ -67,10 +67,12 @@
 	"parameters": [
 		{ "replace": "COORDS" }
 	],
-	"effects": [ "summonerEthermineRegion|COORDS" ],
-	"boostType": "ABILITY_MISC",
-	"importance": -1,
-	"showInTooltip": true
+	"effects": [
+		"summonerEthermineRegion|COORDS",
+		"deleteEntityWhenAspectRemoved",
+		"decayAtStartOfTurn"
+	],
+	"importance": -1
 },
 {
 	"modId": "villain_summoners",

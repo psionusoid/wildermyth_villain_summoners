@@ -11,7 +11,7 @@
 "verb": "ATTACK",
 "ability": { "category": "attackAbility", "priority": "1" },
 "targets": [
-	{ "template": "SELF" },
+	{ "template": "ANY_SELF" },
 	{
 		"template": "INTERLOPER",
 		"aspects": [ "alive", "ENEMY" ]
@@ -44,13 +44,7 @@
 			"afterAnimationTime": "200"
 		},
 		"particles": [
-			{ "script": "gorgonFireball", "setPosition": "self" },
-			{
-				"script": "gorgonCorruptionTrail",
-				"setPosition": "self",
-				"setPosition2": "focus"
-			},
-			{ "script": "gorgonCorruptionBurst", "setPosition": "focus", "delay": 0.4 }
+			{ "script": "gorgonFireball", "setPosition": "self" }
 		],
 		"audioOverride": {
 			"attackHitCue": "Characters/DefaultHuman/Magic_FireHit",
@@ -59,7 +53,7 @@
 		},
 		"attackerAnimationOverride": "",
 		"defenseRollTags": [ "range" ],
-		"attackStrength": "self.RANGE_ACCURACY+20",
+		"attackStrength": "105",
 		"always": {
 			"class": "DoAll",
 			"outcomes": [
@@ -69,11 +63,7 @@
 				}
 			]
 		},
-		"onHit": {
-			"class": "Damage",
-			"amount": "(DAMAGE_EXPRESSION+target.PHYSICAL_DAMAGE_BONUS)/(1+defender.ALLY.target)",
-			"type": "MAGIC"
-		}
+		"onHit": { "class": "Damage", "amount": "2", "type": "MAGIC" }
 	}
 ]
 }
