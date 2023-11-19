@@ -64,6 +64,14 @@
 			],
 			"setLocation": true
 		}
+	},
+	{
+		"class": "Aspects",
+		"STUB": "Set the damage of the trap based on the hero's potency",
+		"target": "item",
+		"addAspects": [
+			{ "id": "weaponDamage", "value": "DAMAGE_EXPRESSION" }
+		]
 	}
 ]
 }
