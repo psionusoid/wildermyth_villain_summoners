@@ -53,7 +53,7 @@
 		},
 		"attackerAnimationOverride": "",
 		"defenseRollTags": [ "range" ],
-		"attackStrength": "105",
+		"attackStrength": "self.RANGE_ACCURACY",
 		"onHit": { "class": "Damage", "amount": "self.weaponDamage+1d3", "type": "MAGIC" }
 	},
 	{ "class": "Delete" }

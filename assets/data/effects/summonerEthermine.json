@@ -45,7 +45,7 @@
 		"choose": "ALL",
 		"missionFeedback": { "rangeFeedback": "FRIENDLY_EFFECT_RANGE", "hoverFeedback": "THREATEN" },
 		"relativeTo": "focus",
-		"range": "1.3",
+		"range": "2.1",
 		"lineOfSight": "TERRAIN_ONLY",
 		"tileFilter": "floor"
 	}
@@ -67,11 +67,17 @@
 	},
 	{
 		"class": "Aspects",
-		"STUB": "Set the damage of the trap based on the hero's potency",
+		"STUB": "Set the damage of the trap based on the damage expression",
 		"target": "item",
 		"addAspects": [
 			{ "id": "weaponDamage", "value": "DAMAGE_EXPRESSION" }
 		]
+	},
+	{
+		"class": "ModifyStats",
+		"target": "item",
+		"stat": "MELEE_ACCURACY",
+		"value": "self.MELEE_ACCURACY"
 	}
 ]
 }
