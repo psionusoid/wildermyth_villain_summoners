@@ -18,17 +18,17 @@
 	"summoner_ethermine|3"
 ],
 "stats": {
-	"DODGE": "110",
-	"ARMOR": "2",
 	"WARDING": "2",
 	"HEALTH": "9",
-	"MELEE_ACCURACY": "95",
-	"MONSTER_THREAT": "15",
-	"RANGE_ACCURACY": "95",
-	"SPEED": "7",
-	"BLOCK": "0",
 	"POTENCY": "0",
+	"RANGE_ACCURACY": "95",
+	"ARMOR": "2",
+	"SPEED": "7",
 	"PHYSICAL_DAMAGE_BONUS": "0",
+	"MONSTER_THREAT": "15",
+	"DODGE": "110",
+	"MELEE_ACCURACY": "95",
+	"BLOCK": "0",
 	"PERCEPTION": "10"
 },
 "scale": [ "((2+(HEALTH/6))*[0.95,1])/3", "((2+(HEALTH/6))*[0.95,1])/3" ],
@@ -37,17 +37,17 @@
 		"monsterRangedMagic|shadowtongue|balanced|0.9|6.6|1+1d2",
 		"monsterMelee|melt|balanced|1.6|2+1d2"
 	],
-	"stats": { "ARMOR": "2", "HEALTH": "6", "PHYSICAL_DAMAGE_BONUS": "0" }
+	"stats": { "HEALTH": "6", "ARMOR": "2", "PHYSICAL_DAMAGE_BONUS": "0" }
 },
 "combatDifficulty_10": {
 	"newAspects": [
 		"monsterRangedMagic|shadowtongue|balanced|0.9|6.6|1+1d3",
 		"monsterMelee|melt|balanced|1.6|2+1d3"
 	],
-	"stats": { "ARMOR": "2", "HEALTH": "7", "PHYSICAL_DAMAGE_BONUS": "0" }
+	"stats": { "HEALTH": "7", "ARMOR": "2", "PHYSICAL_DAMAGE_BONUS": "0" }
 },
 "combatDifficulty_30": {
-	"stats": { "ARMOR": "3", "HEALTH": "12" }
+	"stats": { "HEALTH": "12", "ARMOR": "3" }
 },
 "baseColor": [ "[1.5,2]", "[1.5,2]", "[1.5,2]" ],
 "skin": [

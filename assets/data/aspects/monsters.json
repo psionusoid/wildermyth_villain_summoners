@@ -124,7 +124,7 @@
 {
 	"modId": "villain_summoners",
 	"id": "summoner_spawnGorgon",
-	"effects": [ "summonerSpawnGorgon" ],
+	"effects": [ "summonerSpawnGorgonCard" ],
 	"importance": -1
 },
 {
