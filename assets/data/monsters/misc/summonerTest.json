@@ -15,7 +15,8 @@
 	"summoner_soulshield",
 	"summoner_soulbind",
 	"summoner_scanUnits",
-	"summoner_ethermine|3"
+	"summoner_ethermine|3",
+	"summonerIncreaseStatsPerCalamity"
 ],
 "stats": {
 	"WARDING": "2",

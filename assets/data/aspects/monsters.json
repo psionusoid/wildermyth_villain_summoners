@@ -42,6 +42,13 @@
 	"importance": 2,
 	"showValue": true
 },
+{
+	"modId": "villain_summoners",
+	"id": "summonerIncreaseStatsPerCalamity",
+	"STUB": "Increase stats for summoner units based on the number of calamities",
+	"effects": [ "summonerIncreaseStatsPerCalamity" ],
+	"importance": -1
+},
 { "modId": "villain_summoners", "id": "summonerInterfused", "importance": -1 },
 {
 	"modId": "villain_summoners",
