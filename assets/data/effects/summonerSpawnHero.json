@@ -1,5 +1,5 @@
 {
-"id": "summonerSpawnHero",
+"id": "summonerSpawnHero|MAX_INTERFUSIONS",
 "info": {
 	"dataVersion": 1,
 	"sourceFile": "summonerSpawnHero",
@@ -41,7 +41,7 @@
 		"choose": "ANY",
 		"fromRoles": [ "self" ],
 		"aspectValues": [
-			{ "id": "summonerInterfused", "maxValue": "4" }
+			{ "id": "summonerInterfused", "maxValue": "MAX_INTERFUSIONS" }
 		]
 	},
 	{

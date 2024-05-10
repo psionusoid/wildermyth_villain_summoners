@@ -10,8 +10,8 @@
 	"alive",
 	"monsterMelee|melt|balanced|1.6|3+1d3",
 	"monsterRangedMagic|shadowtongue|balanced|0.9|6.6|2+1d2",
-	"summoner_spawnGorgon",
-	"summoner_spawnHero",
+	"summoner_spawnGorgon|4",
+	"summoner_spawnHero|4",
 	"summoner_soulshield",
 	"summoner_soulbind",
 	"summoner_scanUnits",
@@ -26,11 +26,11 @@
 	"ARMOR": "2",
 	"SPEED": "7",
 	"PHYSICAL_DAMAGE_BONUS": "0",
-	"MONSTER_THREAT": "15",
 	"DODGE": "110",
 	"MELEE_ACCURACY": "95",
 	"BLOCK": "0",
-	"PERCEPTION": "10"
+	"PERCEPTION": "10",
+	"MONSTER_THREAT": "15"
 },
 "scale": [ "((2+(HEALTH/6))*[0.95,1])/3", "((2+(HEALTH/6))*[0.95,1])/3" ],
 "combatDifficulty_1": {

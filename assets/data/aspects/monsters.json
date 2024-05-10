@@ -130,14 +130,20 @@
 },
 {
 	"modId": "villain_summoners",
-	"id": "summoner_spawnGorgon",
-	"effects": [ "summonerSpawnGorgonCard" ],
+	"id": "summoner_spawnGorgon|MAX_INTERFUSIONS",
+	"parameters": [
+		{ "replace": "MAX_INTERFUSIONS" }
+	],
+	"effects": [ "summonerSpawnGorgonCard|MAX_INTERFUSIONS" ],
 	"importance": -1
 },
 {
 	"modId": "villain_summoners",
-	"id": "summoner_spawnHero",
-	"effects": [ "summonerSpawnHero" ],
+	"id": "summoner_spawnHero|MAX_INTERFUSIONS",
+	"parameters": [
+		{ "replace": "MAX_INTERFUSIONS" }
+	],
+	"effects": [ "summonerSpawnHero|MAX_INTERFUSIONS" ],
 	"importance": -1
 }
 ]
