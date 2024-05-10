@@ -16,9 +16,43 @@
 	{ "template": "INJECTED_TILE" },
 	{ "template": "INJECTED_SITE" },
 	{ "template": "INJECTED_PARTY" },
-	{ "template": "INJECTED_THREAT" }
+	{ "template": "INJECTED_THREAT" },
+	{
+		"role": "monster",
+		"template": "THREAT",
+		"choose": "BY_SCORE_OPTIONAL",
+		"aspects": [ "cultist" ]
+	},
+	{
+		"role": "monster2",
+		"template": "THREAT",
+		"choose": "BY_SCORE_OPTIONAL",
+		"aspects": [ "drauven" ]
+	},
+	{
+		"role": "monster3",
+		"template": "THREAT",
+		"choose": "BY_SCORE_OPTIONAL",
+		"aspects": [ "gorgon" ]
+	},
+	{
+		"role": "monster4",
+		"template": "THREAT",
+		"choose": "BY_SCORE_OPTIONAL",
+		"aspects": [ "thrixl" ]
+	}
 ],
 "outcomes": [
+	{
+		"class": "Aspects",
+		"target": "company",
+		"addAspects": [
+			{
+				"id": "currentCalamities",
+				"value": "((monster.THREAT_CALAMITIES+monster2.THREAT_CALAMITIES)+monster3.THREAT_CALAMITIES)+monster4.THREAT_CALAMITIES"
+			}
+		]
+	},
 	{
 		"class": "Description",
 		"script": [

@@ -45,6 +45,26 @@
 		"combatantCards": true
 	},
 	{
+		"class": "StepM_SpawnExact",
+		"location": {
+			"class": "TileSpec.ExactTiles",
+			"xs": [ 5 ],
+			"ys": [ 8 ]
+		},
+		"combatantCards": true,
+		"monsterIds": [ "cultist_wokenMelee" ]
+	},
+	{
+		"class": "StepM_SpawnExact",
+		"location": {
+			"class": "TileSpec.ExactTiles",
+			"xs": [ 5 ],
+			"ys": [ 8 ]
+		},
+		"combatantCards": true,
+		"monsterIds": [ "summonerTest" ]
+	},
+	{
 		"class": "Step_AddObjectives",
 		"objectives": [ "Objective_KillAllEnemies" ]
 	},

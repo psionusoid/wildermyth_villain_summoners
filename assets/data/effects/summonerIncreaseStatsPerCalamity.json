@@ -6,7 +6,8 @@
 	"modId": "villain_summoners",
 	"author": "psionusoid",
 	"STUB": "Increase unit health and bonus damage based on chapter",
-	"sort": 2
+	"sort": 2,
+	"debug": true
 },
 "type": "MISSION_SPAWNED",
 "verb": "MANEUVER",
@@ -16,26 +17,35 @@
 	{
 		"role": "monster",
 		"template": "THREAT",
+		"choose": "BY_SCORE_OPTIONAL",
 		"aspects": [ "cultist" ]
 	},
 	{
 		"role": "monster2",
 		"template": "THREAT",
+		"choose": "BY_SCORE_OPTIONAL",
 		"aspects": [ "drauven" ]
 	},
 	{
 		"role": "monster3",
 		"template": "THREAT",
+		"choose": "BY_SCORE_OPTIONAL",
 		"aspects": [ "gorgon" ]
 	},
 	{
 		"role": "monster4",
 		"template": "THREAT",
+		"choose": "BY_SCORE_OPTIONAL",
 		"aspects": [ "thrixl" ]
 	}
 ],
 "outcomes": [
-	{ "class": "ModifyStats", "stat": "ARMOR", "value": "10", "lifespan": "mission" },
+	{
+		"class": "ModifyStats",
+		"stat": "WARDING",
+		"value": "floor((company.currentCalamities/2))",
+		"lifespan": "mission"
+	},
 	{
 		"class": "ModifyStats",
 		"stat": "PHYSICAL_DAMAGE_BONUS",
