@@ -6,8 +6,7 @@
 	"modId": "villain_summoners",
 	"author": "psionusoid",
 	"STUB": "Increase unit health and bonus damage based on chapter",
-	"sort": 2,
-	"debug": true
+	"sort": 2
 },
 "type": "MISSION_SPAWNED",
 "verb": "MANEUVER",
@@ -17,6 +16,7 @@
 	{
 		"role": "monster",
 		"template": "THREAT",
+		"STUB": "These THREAT targets are currently non-functional",
 		"choose": "BY_SCORE_OPTIONAL",
 		"aspects": [ "cultist" ]
 	},
@@ -42,101 +42,15 @@
 "outcomes": [
 	{
 		"class": "ModifyStats",
-		"stat": "WARDING",
-		"value": "floor((company.currentCalamities/2))",
+		"stat": "HEALTH_FACTOR",
+		"value": "company.currentCalamities/100",
 		"lifespan": "mission"
 	},
 	{
 		"class": "ModifyStats",
 		"stat": "PHYSICAL_DAMAGE_BONUS",
-		"value": "(1*isMatch(company.chapterNumber,2))+(3*isMatch(company.chapterNumber,3))",
+		"value": "company.currentCalamities/50",
 		"lifespan": "mission"
-	},
-	{
-		"class": "ModifyStats",
-		"stat": "ARMOR",
-		"value": "(self.ARMOR*0.3)*(company.chapterNumber-1)",
-		"lifespan": "mission"
-	},
-	{
-		"class": "ModifyStats",
-		"stat": "WARDING",
-		"value": "(self.WARDING*0.3)*(company.chapterNumber-1)",
-		"lifespan": "mission"
-	},
-	{
-		"class": "Test",
-		"STUB": "Bosses get more buffs in legacy runs",
-		"value": "company.dungeonModeLegacyBossBuff",
-		"threshold": "1",
-		"onPass": {
-			"class": "DoAll",
-			"outcomes": [
-				{ "class": "ModifyStats", "stat": "ARMOR", "value": "1", "lifespan": "mission" },
-				{
-					"class": "ModifyStats",
-					"stat": "WARDING",
-					"value": "1",
-					"lifespan": "mission"
-				},
-				{
-					"class": "ModifyStats",
-					"stat": "PHYSICAL_DAMAGE_BONUS",
-					"value": "1",
-					"lifespan": "mission"
-				},
-				{
-					"class": "Aspects",
-					"addAspects": [
-						{ "id": "goldenShield|20", "value": "1" }
-					]
-				},
-				{
-					"class": "Test",
-					"value": "company.chapterNumber",
-					"threshold": "2",
-					"onPass": {
-						"class": "Aspects",
-						"addAspects": [
-							{ "id": "goldenShield|25", "value": "1" }
-						]
-					}
-				},
-				{
-					"class": "Test",
-					"value": "company.chapterNumber",
-					"threshold": "3",
-					"onPass": {
-						"class": "Aspects",
-						"addAspects": [
-							{ "id": "goldenShield|30", "value": "1" }
-						]
-					}
-				}
-			]
-		},
-		"onFail": {
-			"class": "DoAll",
-			"outcomes": [
-				{
-					"class": "Aspects",
-					"addAspects": [
-						{ "id": "goldenShield|20", "value": "1" }
-					]
-				},
-				{
-					"class": "Test",
-					"value": "company.chapterNumber",
-					"threshold": "3",
-					"onPass": {
-						"class": "Aspects",
-						"addAspects": [
-							{ "id": "goldenShield|25", "value": "1" }
-						]
-					}
-				}
-			]
-		}
 	}
 ]
 }
