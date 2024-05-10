@@ -1,0 +1,507 @@
+{
+"id": "summonerScanUnits",
+"info": {
+	"dataVersion": 1,
+	"sourceFile": "summonerScanUnits",
+	"modId": "villain_summoners",
+	"author": "psionusoid",
+	"aiPriority": "3000"
+},
+"type": "TURN_START_2",
+"verb": "ATTACK",
+"ability": {
+	"icon": "magic",
+	"priority": "3",
+	"showDescriptionInTooltip": true,
+	"cooldown": "oncePerTurn"
+},
+"targets": [
+	{ "template": "SELF" },
+	{
+		"role": "volunteer",
+		"template": "ADJACENT_ALLY",
+		"choose": "ALL",
+		"range": "100"
+	}
+],
+"outcomes": [
+	{
+		"class": "ForEach",
+		"fromRoles": [ "volunteer" ],
+		"toRole": "volunteer2",
+		"outcome": {
+			"class": "DoAll",
+			"outcomes": [
+				{
+					"class": "Test",
+					"target": "self",
+					"value": "volunteer2.gorgon_roe",
+					"threshold": "1",
+					"onPass": {
+						"class": "Aspects",
+						"addAspects": [
+							{ "id": "saw_gorgon_roe", "value": "1" }
+						]
+					}
+				},
+				{
+					"class": "Test",
+					"target": "self",
+					"value": "volunteer2.gorgon_coon",
+					"threshold": "1",
+					"onPass": {
+						"class": "Aspects",
+						"addAspects": [
+							{ "id": "saw_gorgon_coon", "value": "1" }
+						]
+					}
+				},
+				{
+					"class": "Test",
+					"target": "self",
+					"value": "volunteer2.gorgon_rager",
+					"threshold": "1",
+					"onPass": {
+						"class": "Aspects",
+						"addAspects": [
+							{ "id": "saw_gorgon_rager", "value": "1" }
+						]
+					}
+				},
+				{
+					"class": "Test",
+					"target": "self",
+					"value": "volunteer2.gorgon_bogmoor",
+					"threshold": "1",
+					"onPass": {
+						"class": "Aspects",
+						"addAspects": [
+							{ "id": "saw_gorgon_bogmoor", "value": "1" }
+						]
+					}
+				},
+				{
+					"class": "Test",
+					"target": "self",
+					"value": "volunteer2.gorgon_gheist",
+					"threshold": "1",
+					"onPass": {
+						"class": "Aspects",
+						"addAspects": [
+							{ "id": "saw_gorgon_gheist", "value": "1" }
+						]
+					}
+				},
+				{
+					"class": "Test",
+					"target": "self",
+					"value": "volunteer2.gorgon_gorgon",
+					"threshold": "1",
+					"onPass": {
+						"class": "Aspects",
+						"addAspects": [
+							{ "id": "saw_gorgon_gorgon", "value": "1" }
+						]
+					}
+				},
+				{
+					"class": "Test",
+					"target": "self",
+					"value": "volunteer2.gorgon_bartoth",
+					"threshold": "1",
+					"onPass": {
+						"class": "Aspects",
+						"addAspects": [
+							{ "id": "saw_gorgon_bartoth", "value": "1" }
+						]
+					}
+				},
+				{
+					"class": "Test",
+					"target": "self",
+					"value": "volunteer2.gorgon_staggron",
+					"threshold": "1",
+					"onPass": {
+						"class": "Aspects",
+						"addAspects": [
+							{ "id": "saw_gorgon_staggron", "value": "1" }
+						]
+					}
+				},
+				{
+					"class": "Test",
+					"target": "self",
+					"value": "volunteer2.gorgon_usric",
+					"threshold": "1",
+					"onPass": {
+						"class": "Aspects",
+						"addAspects": [
+							{ "id": "saw_gorgon_usric", "value": "1" }
+						]
+					}
+				},
+				{
+					"class": "Test",
+					"target": "self",
+					"value": "volunteer2.gorgon_seacaller",
+					"threshold": "1",
+					"onPass": {
+						"class": "Aspects",
+						"addAspects": [
+							{ "id": "saw_gorgon_seacaller", "value": "1" }
+						]
+					}
+				},
+				{
+					"class": "Test",
+					"target": "self",
+					"value": "volunteer2.cultist_wokenMelee",
+					"threshold": "1",
+					"onPass": {
+						"class": "Aspects",
+						"addAspects": [
+							{ "id": "saw_cultist_wokenMelee", "value": "1" }
+						]
+					}
+				},
+				{
+					"class": "Test",
+					"target": "self",
+					"value": "volunteer2.cultist_wokenRanged",
+					"threshold": "1",
+					"onPass": {
+						"class": "Aspects",
+						"addAspects": [
+							{ "id": "saw_cultist_wokenRanged", "value": "1" }
+						]
+					}
+				},
+				{
+					"class": "Test",
+					"target": "self",
+					"value": "volunteer2.cultist_hornChild",
+					"threshold": "1",
+					"onPass": {
+						"class": "Aspects",
+						"addAspects": [
+							{ "id": "saw_cultist_hornChild", "value": "1" }
+						]
+					}
+				},
+				{
+					"class": "Test",
+					"target": "self",
+					"value": "volunteer2.cultist_chosen",
+					"threshold": "1",
+					"onPass": {
+						"class": "Aspects",
+						"addAspects": [
+							{ "id": "saw_cultist_chosen", "value": "1" }
+						]
+					}
+				},
+				{
+					"class": "Test",
+					"target": "self",
+					"value": "volunteer2.cultist_mushrox",
+					"threshold": "1",
+					"onPass": {
+						"class": "Aspects",
+						"addAspects": [
+							{ "id": "saw_cultist_mushrox", "value": "1" }
+						]
+					}
+				},
+				{
+					"class": "Test",
+					"target": "self",
+					"value": "volunteer2.cultist_fatherFungus",
+					"threshold": "1",
+					"onPass": {
+						"class": "Aspects",
+						"addAspects": [
+							{ "id": "saw_cultist_fatherFungus", "value": "1" }
+						]
+					}
+				},
+				{
+					"class": "Test",
+					"target": "self",
+					"value": "volunteer2.cultist_murkMother",
+					"threshold": "1",
+					"onPass": {
+						"class": "Aspects",
+						"addAspects": [
+							{ "id": "saw_cultist_murkMother", "value": "1" }
+						]
+					}
+				},
+				{
+					"class": "Test",
+					"target": "self",
+					"value": "volunteer2.cultist_chastised",
+					"threshold": "1",
+					"onPass": {
+						"class": "Aspects",
+						"addAspects": [
+							{ "id": "saw_cultist_chastised", "value": "1" }
+						]
+					}
+				},
+				{
+					"class": "Test",
+					"target": "self",
+					"value": "volunteer2.cultist_faithful",
+					"threshold": "1",
+					"onPass": {
+						"class": "Aspects",
+						"addAspects": [
+							{ "id": "saw_cultist_faithful", "value": "1" }
+						]
+					}
+				},
+				{
+					"class": "Test",
+					"target": "self",
+					"value": "volunteer2.cultist_prophet",
+					"threshold": "1",
+					"onPass": {
+						"class": "Aspects",
+						"addAspects": [
+							{ "id": "saw_cultist_prophet", "value": "1" }
+						]
+					}
+				},
+				{
+					"class": "Test",
+					"target": "self",
+					"value": "volunteer2.thrixl_thrusk",
+					"threshold": "1",
+					"onPass": {
+						"class": "Aspects",
+						"addAspects": [
+							{ "id": "saw_thrixl_thrusk", "value": "1" }
+						]
+					}
+				},
+				{
+					"class": "Test",
+					"target": "self",
+					"value": "volunteer2.thrixl_dweaver",
+					"threshold": "1",
+					"onPass": {
+						"class": "Aspects",
+						"addAspects": [
+							{ "id": "saw_thrixl_dweaver", "value": "1" }
+						]
+					}
+				},
+				{
+					"class": "Test",
+					"target": "self",
+					"value": "volunteer2.thrixl_seeker",
+					"threshold": "1",
+					"onPass": {
+						"class": "Aspects",
+						"addAspects": [
+							{ "id": "saw_thrixl_seeker", "value": "1" }
+						]
+					}
+				},
+				{
+					"class": "Test",
+					"target": "self",
+					"value": "volunteer2.thrixl_bard",
+					"threshold": "1",
+					"onPass": {
+						"class": "Aspects",
+						"addAspects": [
+							{ "id": "saw_thrixl_bard", "value": "1" }
+						]
+					}
+				},
+				{
+					"class": "Test",
+					"target": "self",
+					"value": "volunteer2.thrixl_scorier",
+					"threshold": "1",
+					"onPass": {
+						"class": "Aspects",
+						"addAspects": [
+							{ "id": "saw_thrixl_scorier", "value": "1" }
+						]
+					}
+				},
+				{
+					"class": "Test",
+					"target": "self",
+					"value": "volunteer2.thrixl_nightmare",
+					"threshold": "1",
+					"onPass": {
+						"class": "Aspects",
+						"addAspects": [
+							{ "id": "saw_thrixl_nightmare", "value": "1" }
+						]
+					}
+				},
+				{
+					"class": "Test",
+					"target": "self",
+					"value": "volunteer2.thrixl_drathix",
+					"threshold": "1",
+					"onPass": {
+						"class": "Aspects",
+						"addAspects": [
+							{ "id": "saw_thrixl_drathix", "value": "1" }
+						]
+					}
+				},
+				{
+					"class": "Test",
+					"target": "self",
+					"value": "volunteer2.thrixl_kinnestend",
+					"threshold": "1",
+					"onPass": {
+						"class": "Aspects",
+						"addAspects": [
+							{ "id": "saw_thrixl_kinnestend", "value": "1" }
+						]
+					}
+				},
+				{
+					"class": "Test",
+					"target": "self",
+					"value": "volunteer2.thrixl_muse",
+					"threshold": "1",
+					"onPass": {
+						"class": "Aspects",
+						"addAspects": [
+							{ "id": "saw_thrixl_muse", "value": "1" }
+						]
+					}
+				},
+				{
+					"class": "Test",
+					"target": "self",
+					"value": "volunteer2.drauven_archer",
+					"threshold": "1",
+					"onPass": {
+						"class": "Aspects",
+						"addAspects": [
+							{ "id": "saw_drauven_archer", "value": "1" }
+						]
+					}
+				},
+				{
+					"class": "Test",
+					"target": "self",
+					"value": "volunteer2.drauven_stump",
+					"threshold": "1",
+					"onPass": {
+						"class": "Aspects",
+						"addAspects": [
+							{ "id": "saw_drauven_stump", "value": "1" }
+						]
+					}
+				},
+				{
+					"class": "Test",
+					"target": "self",
+					"value": "volunteer2.drauven_stormthroat",
+					"threshold": "1",
+					"onPass": {
+						"class": "Aspects",
+						"addAspects": [
+							{ "id": "saw_drauven_stormthroat", "value": "1" }
+						]
+					}
+				},
+				{
+					"class": "Test",
+					"target": "self",
+					"value": "volunteer2.drauven_haunt",
+					"threshold": "1",
+					"onPass": {
+						"class": "Aspects",
+						"addAspects": [
+							{ "id": "saw_drauven_haunt", "value": "1" }
+						]
+					}
+				},
+				{
+					"class": "Test",
+					"target": "self",
+					"value": "volunteer2.drauven_skysinger",
+					"threshold": "1",
+					"onPass": {
+						"class": "Aspects",
+						"addAspects": [
+							{ "id": "saw_drauven_skysinger", "value": "1" }
+						]
+					}
+				},
+				{
+					"class": "Test",
+					"target": "self",
+					"value": "volunteer2.drauven_terrorbird",
+					"threshold": "1",
+					"onPass": {
+						"class": "Aspects",
+						"addAspects": [
+							{ "id": "saw_drauven_terrorbird", "value": "1" }
+						]
+					}
+				},
+				{
+					"class": "Test",
+					"target": "self",
+					"value": "volunteer2.drauven_gorelord",
+					"threshold": "1",
+					"onPass": {
+						"class": "Aspects",
+						"addAspects": [
+							{ "id": "saw_drauven_gorelord", "value": "1" }
+						]
+					}
+				},
+				{
+					"class": "Test",
+					"target": "self",
+					"value": "volunteer2.drauven_raidKnight",
+					"threshold": "1",
+					"onPass": {
+						"class": "Aspects",
+						"addAspects": [
+							{ "id": "saw_drauven_raidKnight", "value": "1" }
+						]
+					}
+				},
+				{
+					"class": "Test",
+					"target": "self",
+					"value": "volunteer2.drauven_pilotNobylle",
+					"threshold": "1",
+					"onPass": {
+						"class": "Aspects",
+						"addAspects": [
+							{ "id": "saw_drauven_pilotNobylle", "value": "1" }
+						]
+					}
+				},
+				{
+					"class": "Test",
+					"target": "self",
+					"value": "volunteer2.drauven_balestar",
+					"threshold": "1",
+					"onPass": {
+						"class": "Aspects",
+						"addAspects": [
+							{ "id": "saw_drauven_balestar", "value": "1" }
+						]
+					}
+				}
+			]
+		}
+	}
+]
+}

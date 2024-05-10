@@ -1,0 +1,28 @@
+{
+"id": "summonerEthermineRegion|COORDS",
+"info": {
+	"dataVersion": 1,
+	"sourceFile": "summonerEthermineRegion",
+	"modId": "villain_summoners",
+	"author": "psionusoid (based on Patrick Belanger)"
+},
+"type": "REGION",
+"targets": [],
+"outcomes": [
+	{
+		"class": "MapRegion",
+		"target": "self",
+		"region": {
+			"id": "summoner_EthermineRegion",
+			"physicallyPresent": true,
+			"visibleAtLocation": true,
+			"entryCostDangerousPath": 2,
+			"feedbackType": "SUMMONER_ETHERMINE",
+			"floorsOnly": true,
+			"entryTriggerEffects": [ "summonerEthermineDetonate" ]
+		},
+		"associateWithFaction": true,
+		"elementsString": "COORDS"
+	}
+]
+}

@@ -1,0 +1,56 @@
+{
+"id": "summonerIncreaseStatsPerCalamity",
+"info": {
+	"dataVersion": 1,
+	"sourceFile": "summonerIncreaseStatsPerCalamity",
+	"modId": "villain_summoners",
+	"author": "psionusoid",
+	"STUB": "Increase unit health and bonus damage based on chapter",
+	"sort": 2
+},
+"type": "MISSION_SPAWNED",
+"verb": "MANEUVER",
+"targets": [
+	{ "template": "SELF" },
+	{ "template": "COMPANY" },
+	{
+		"role": "monster",
+		"template": "THREAT",
+		"STUB": "These THREAT targets are currently non-functional",
+		"choose": "BY_SCORE_OPTIONAL",
+		"aspects": [ "cultist" ]
+	},
+	{
+		"role": "monster2",
+		"template": "THREAT",
+		"choose": "BY_SCORE_OPTIONAL",
+		"aspects": [ "drauven" ]
+	},
+	{
+		"role": "monster3",
+		"template": "THREAT",
+		"choose": "BY_SCORE_OPTIONAL",
+		"aspects": [ "gorgon" ]
+	},
+	{
+		"role": "monster4",
+		"template": "THREAT",
+		"choose": "BY_SCORE_OPTIONAL",
+		"aspects": [ "thrixl" ]
+	}
+],
+"outcomes": [
+	{
+		"class": "ModifyStats",
+		"stat": "HEALTH_FACTOR",
+		"value": "company.currentCalamities/100",
+		"lifespan": "mission"
+	},
+	{
+		"class": "ModifyStats",
+		"stat": "PHYSICAL_DAMAGE_BONUS",
+		"value": "company.currentCalamities/50",
+		"lifespan": "mission"
+	}
+]
+}

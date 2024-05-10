@@ -1,0 +1,31 @@
+{
+"id": "summonerRemoveInterfusionLinkOnDeath|_ENTITY_",
+"info": {
+	"dataVersion": 1,
+	"sourceFile": "summonerRemoveInterfusionLinkOnDeath",
+	"modId": "villain_summoners",
+	"author": "psionusoid"
+},
+"type": "ENTITY_REMOVED",
+"targets": [
+	{ "template": "ANY_SELF" },
+	{ "template": "ANY", "matchSpecial": "parameter1" }
+],
+"outcomes": [
+	{
+		"class": "Aspects",
+		"consumeAspects": [
+			{ "id": "summonerInterfusedWithEntity", "value": "1", "inRelationTo": "target" }
+		]
+	},
+	{
+		"class": "Aspects",
+		"target": "target",
+		"consumeAspects": [
+			{ "id": "interfusedWithSummoner", "value": "1", "inRelationTo": "self" },
+			{ "id": "interfusedWithMonster", "value": "1" },
+			{ "id": "summonerInterfused", "value": "1" }
+		]
+	}
+]
+}

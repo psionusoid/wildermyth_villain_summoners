@@ -1,0 +1,18 @@
+[
+	{
+		"id": "SUMMONER_ETHERMINE",
+		"renderPriority": 150,
+		"baseColor": {
+			"hex": "ff8000ff"
+		},
+		"sprite": "squareBorder",
+		"scale": 1.080,
+		"textureAlpha": 0.7,
+		"textureAlphaAmplitude": 0.3,
+		"outlineAlpha": 0,
+		"fillAlpha": 0.14,
+		"fillAlphaAmplitude": 0.01,
+		"multiTile": true,
+		"particleScript": "summonerEthermineTile"
+	}
+]

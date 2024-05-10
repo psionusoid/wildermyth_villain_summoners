@@ -11,20 +11,7 @@
 	}
 ],
 "steps": [
-	{
-		"class": "StepM_SetupMission",
-		"missionResults": [
-			{
-				"defaultEvent": false,
-				"customResults": [
-					{
-						"class": "StepM_Event",
-						"eventIds": [ "plot_villain_summoners_0_1_intro_victory" ]
-					}
-				]
-			}
-		]
-	},
+	{ "class": "StepM_SetupMission" },
 	{
 		"class": "StepM_SpawnExact",
 		"side": "HERO",
@@ -51,7 +38,6 @@
 			"xs": [ 5 ],
 			"ys": [ 8 ]
 		},
-		"combatantCards": true,
 		"monsterIds": [ "summonerTest" ]
 	},
 	{

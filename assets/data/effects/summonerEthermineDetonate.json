@@ -1,0 +1,61 @@
+{
+"id": "summonerEthermineDetonate",
+"info": {
+	"dataVersion": 1,
+	"sourceFile": "summonerEthermineDetonate",
+	"modId": "villain_summoners",
+	"author": "psionusoid (based on Patrick Belanger)",
+	"tags": [ "ranged", "weapon", "bowTypeAttack" ]
+},
+"type": "REGION_TRIGGER",
+"verb": "ATTACK",
+"ability": { "category": "attackAbility", "priority": "1" },
+"targets": [
+	{ "template": "ANY_SELF" },
+	{
+		"template": "INTERLOPER",
+		"aspects": [ "alive", "ENEMY" ]
+	},
+	{
+		"role": "foes",
+		"template": "ADJACENT_UNIT",
+		"choose": "ANY",
+		"missionFeedback": {
+			"orientTo": "self",
+			"suggestionScript": "figures.attackSuggestion",
+			"hoverScript": "figures.attackHovered",
+			"rangeFeedback": "ATTACK_RANGE",
+			"suggestionFeedback": "ATTACK_SUGGESTION",
+			"hoverFeedback": "ATTACK_HOVER"
+		},
+		"range": "0.1",
+		"lineOfSight": "TERRAIN_ONLY"
+	}
+],
+"outcomes": [
+	{
+		"class": "AttackRoll",
+		"defender": "foes",
+		"attackAnimationType": "melee",
+		"timingOverride": {
+			"beforeAnimationTime": "0",
+			"swingTime": "0",
+			"attackTime": "0",
+			"afterAnimationTime": "200"
+		},
+		"particles": [
+			{ "script": "gorgonFireball", "setPosition": "self" }
+		],
+		"audioOverride": {
+			"attackHitCue": "Characters/DefaultHuman/Magic_FireHit",
+			"attackDodgedCue": "Characters/DefaultHuman/Magic_FireMiss",
+			"attackBlockedCue": "Characters/DefaultHuman/Magic_FireMiss"
+		},
+		"attackerAnimationOverride": "",
+		"defenseRollTags": [ "range" ],
+		"attackStrength": "self.RANGE_ACCURACY",
+		"onHit": { "class": "Damage", "amount": "self.weaponDamage+1d3", "type": "MAGIC" }
+	},
+	{ "class": "Delete" }
+]
+}

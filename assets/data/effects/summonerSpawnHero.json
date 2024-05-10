@@ -1,0 +1,167 @@
+{
+"id": "summonerSpawnHero|MAX_INTERFUSIONS",
+"info": {
+	"dataVersion": 1,
+	"sourceFile": "summonerSpawnHero",
+	"modId": "villain_summoners",
+	"author": "psionusoid",
+	"aiPriority": "3000"
+},
+"type": "ABILITY",
+"verb": "ATTACK",
+"ability": {
+	"icon": "magic",
+	"priority": "3",
+	"showDescriptionInTooltip": true,
+	"cooldown": "oncePerTurn"
+},
+"targets": [
+	{
+		"template": "SELF",
+		"cost": { "class": "ActionPoints", "actionPoints": "free" },
+		"aspectValues": [
+			{ "id": "forbidReactions|*", "forbidden": true }
+		]
+	},
+	{
+		"role": "volunteer",
+		"template": "ADJACENT_ENEMY",
+		"choose": "ONE_RANDOM_TRUE",
+		"missionFeedback": {
+			"rangeFeedback": "FRIENDLY_EFFECT_RANGE",
+			"suggestionFeedback": "FRIENDLY_EFFECT_SUGGESTION",
+			"hoverFeedback": "FRIENDLY_EFFECT_HOVER"
+		},
+		"aspects": [ "HOSTILE_TARGET", "alive", "ENEMY" ],
+		"range": "8"
+	},
+	{
+		"role": "volunteer2",
+		"template": "SELF",
+		"choose": "ANY",
+		"fromRoles": [ "self" ],
+		"aspectValues": [
+			{ "id": "summonerInterfused", "maxValue": "MAX_INTERFUSIONS" }
+		]
+	},
+	{
+		"role": "target",
+		"template": "TILE",
+		"choose": "ONE_RANDOM_TRUE",
+		"missionFeedback": { "hoverFeedback": "ATTACK_HOVER" },
+		"range": "6",
+		"lineOfSight": "TERRAIN_ONLY",
+		"tileFilter": "validMoveEnd",
+		"spawnEntitySize": "oneTile"
+	}
+],
+"outcomes": [
+	{
+		"class": "AttackRoll",
+		"defender": "volunteer",
+		"attackAnimationType": "magic",
+		"showAbilityName": "ifEnemy",
+		"stopBlockingTime": "noBlocking",
+		"minimumBlockTime": "1000",
+		"attackStrength": "100",
+		"always": {
+			"class": "DoAll",
+			"outcomes": [
+				{
+					"class": "Spawn",
+					"target": "target",
+					"addRole": "monster",
+					"createEntity": {
+						"query": { "inRelationTo": "volunteer", "cloneRelatedEntity": true },
+						"additionalOutcome": {
+							"class": "DoAll",
+							"outcomes": [
+								{
+									"class": "ModifyStats",
+									"target": "monster",
+									"stat": "INJURY",
+									"value": "0-volunteer.INJURY"
+								},
+								{
+									"class": "ModifyStats",
+									"target": "monster",
+									"stat": "SHRED",
+									"value": "0-volunteer.SHRED"
+								},
+								{
+									"class": "Aspects",
+									"target": "monster",
+									"addAspects": [
+										{ "id": "monstrous", "value": "1" },
+										{ "id": "doppelganger", "value": "1" }
+									]
+								},
+								{ "class": "Animate", "target": "monster", "script": "figures.swapWeapon" }
+							]
+						},
+						"setLocation": true
+					}
+				},
+				{
+					"class": "IfRolesArePresent",
+					"rolesArePresent": [ "target", "volunteer2" ],
+					"then": {
+						"class": "DoAll",
+						"target": "volunteer2",
+						"outcomes": [
+							{
+								"class": "Aspects",
+								"addAspects": [
+									{
+										"id": "summonerInterfusedWithEntity",
+										"value": "1",
+										"merge": "max",
+										"inRelationTo": "monster"
+									}
+								]
+							},
+							{
+								"class": "Aspects",
+								"addAspects": [
+									{
+										"id": "summonerInterfusedWithEntity",
+										"value": "1",
+										"merge": "max",
+										"inRelationTo": "volunteer"
+									}
+								]
+							},
+							{
+								"class": "Aspects",
+								"target": "monster",
+								"addAspects": [
+									{
+										"id": "interfusedWithSummoner",
+										"value": "1",
+										"merge": "max",
+										"inRelationTo": "self"
+									},
+									{ "id": "interfusedWithMonster", "value": "1", "merge": "max" }
+								]
+							},
+							{
+								"class": "Aspects",
+								"target": "volunteer",
+								"addAspects": [
+									{
+										"id": "interfusedWithSummoner",
+										"value": "1",
+										"merge": "max",
+										"inRelationTo": "self"
+									},
+									{ "id": "interfusedWithMonster", "value": "1", "merge": "max" }
+								]
+							}
+						]
+					}
+				}
+			]
+		}
+	}
+]
+}

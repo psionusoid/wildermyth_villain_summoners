@@ -1,0 +1,28 @@
+{
+"id": "summonerSetUpPassiveInterfusionAspects|_ENTITY_",
+"info": {
+	"dataVersion": 1,
+	"sourceFile": "summonerSetUpPassiveInterfusionAspects",
+	"modId": "villain_summoners",
+	"author": "psionusoid"
+},
+"type": "ASPECT_ADDED_IMMEDIATE",
+"targets": [
+	{ "template": "SELF" },
+	{ "template": "ANY", "matchSpecial": "parameter1" }
+],
+"outcomes": [
+	{
+		"class": "Test",
+		"value": "self.summoner_soulshield+target.monstrous",
+		"threshold": "2",
+		"onPass": {
+			"class": "Aspects",
+			"target": "self",
+			"addAspects": [
+				{ "id": "soulshieldConnection", "value": "1", "inRelationTo": "target" }
+			]
+		}
+	}
+]
+}

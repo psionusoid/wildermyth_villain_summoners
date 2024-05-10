@@ -1,0 +1,34 @@
+{
+"id": "summonerTeardownPassiveInterfusionAspects|_ENTITY_",
+"info": {
+	"dataVersion": 1,
+	"sourceFile": "summonerTeardownPassiveInterfusionAspects",
+	"modId": "villain_summoners",
+	"author": "psionusoid"
+},
+"type": "ASPECT_REMOVED",
+"targets": [
+	{ "template": "SELF" },
+	{ "template": "ANY", "matchSpecial": "parameter1" }
+],
+"outcomes": [
+	{
+		"class": "Aspects",
+		"target": "self",
+		"addAspects": [
+			{
+				"id": "soulshieldConnection",
+				"value": "0",
+				"merge": "replace",
+				"inRelationTo": "target"
+			},
+			{
+				"id": "soulbindConnection",
+				"value": "0",
+				"merge": "replace",
+				"inRelationTo": "target"
+			}
+		]
+	}
+]
+}

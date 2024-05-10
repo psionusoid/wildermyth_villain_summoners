@@ -5,8 +5,8 @@
 	"nameKey": "villain_summoners.name",
 	"blurbKey": "villain_summoners.blurb",
 	"sortNumber": 109,
-	"lockMainEnemy": "drauven",
-	"requireSecondaryEnemies": [ "gorgon", "cultist", "thrixl" ],
+	"lockMainEnemyOther": true,
+	"requireSecondaryEnemies": [ "cultist", "drauven", "gorgon", "thrixl" ],
 	"rosterSlots": [
 		{
 			"type": "legacyHero",

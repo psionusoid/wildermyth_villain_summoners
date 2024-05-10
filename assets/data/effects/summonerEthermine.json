@@ -1,0 +1,83 @@
+{
+"id": "summonerEthermine|DAMAGE_EXPRESSION",
+"info": {
+	"dataVersion": 1,
+	"sourceFile": "summonerEthermine",
+	"modId": "villain_summoners",
+	"author": "psionusoid (based on Patrick Belanger)",
+	"aiPriority": "100000",
+	"tags": [ "sneaky" ]
+},
+"type": "ABILITY",
+"verb": "ATTACK",
+"ability": {
+	"icon": "ambush",
+	"strictlyBetterThan": [ "waitEndTurn" ],
+	"priority": "1",
+	"showDescriptionInTooltip": true,
+	"overrideOverlayType": "endTurn"
+},
+"targets": [
+	{
+		"template": "SELF",
+		"cost": { "class": "ActionPoints", "actionPoints": "all" },
+		"missionFeedback": { "orientTo": "focus" }
+	},
+	{
+		"template": "TILE",
+		"alwaysSelect": true,
+		"missionFeedback": { "suggestionFeedback": "FRIENDLY_EFFECT_RANGE" },
+		"aiHints": {
+			"scoreNearbyFoe": "10",
+			"foeRange": "2.1",
+			"foeMaxRange": "10",
+			"scoreNearbyFriend": "-100",
+			"friendRange": "2.1"
+		},
+		"minRange": "0.9",
+		"range": "(5.6-1)+self.BONUS_RANGE",
+		"lineOfSight": "LIVE_ENEMIES",
+		"tileFilter": "floor"
+	},
+	{
+		"role": "sourceTile",
+		"template": "TILE",
+		"choose": "ALL",
+		"missionFeedback": { "rangeFeedback": "FRIENDLY_EFFECT_RANGE", "hoverFeedback": "THREATEN" },
+		"relativeTo": "focus",
+		"range": "2.1",
+		"lineOfSight": "TERRAIN_ONLY",
+		"tileFilter": "floor"
+	}
+],
+"outcomes": [
+	{ "class": "Animate", "script": "figures.endTurn" },
+	{ "class": "ActionPoints", "actionPoints": "all" },
+	{
+		"class": "Spawn",
+		"addRole": "item",
+		"forceSpawn": true,
+		"createEntity": {
+			"query": { "type": "TRAP" },
+			"addAspects": [
+				{ "id": "summoner_ethermineRegion", "value": "1", "atTiles": "sourceTile" }
+			],
+			"setLocation": true
+		}
+	},
+	{
+		"class": "Aspects",
+		"STUB": "Set the damage of the trap based on the damage expression",
+		"target": "item",
+		"addAspects": [
+			{ "id": "weaponDamage", "value": "DAMAGE_EXPRESSION" }
+		]
+	},
+	{
+		"class": "ModifyStats",
+		"target": "item",
+		"stat": "MELEE_ACCURACY",
+		"value": "self.MELEE_ACCURACY"
+	}
+]
+}

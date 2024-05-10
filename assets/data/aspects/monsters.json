@@ -1,0 +1,149 @@
+[
+{
+	"modId": "villain_summoners",
+	"id": "doppelganger",
+	"voice": "default",
+	"invalidatesSkin": true
+},
+{
+	"modId": "villain_summoners",
+	"id": "interfusedWithSummoner|_ENTITY_",
+	"parameters": [
+		{ "replace": "_ENTITY_", "isEntity": true }
+	],
+	"effects": [
+		"setupInterfusedFire",
+		"setupInterfusedScenery",
+		"interfusedWithMysticRemoved",
+		"summonerRemoveInterfuseWhenEntityDeleted",
+		"summonerRemoveInterfuseWhenEntityRemoved"
+	],
+	"importance": -1
+},
+{
+	"modId": "villain_summoners",
+	"id": "soulbindConnection|_ENTITY_",
+	"parameters": [
+		{ "replace": "_ENTITY_", "isEntity": true }
+	],
+	"effects": [ "summonerSoulbindRedirectsDamage|_ENTITY_" ],
+	"boostType": "ADVANTAGE",
+	"importance": 2,
+	"showValue": true
+},
+{
+	"modId": "villain_summoners",
+	"id": "soulshieldConnection|_ENTITY_",
+	"parameters": [
+		{ "replace": "_ENTITY_", "isEntity": true }
+	],
+	"effects": [ "summonerSoulshieldRedirectsDamage|_ENTITY_" ],
+	"boostType": "ADVANTAGE",
+	"importance": 2,
+	"showValue": true
+},
+{
+	"modId": "villain_summoners",
+	"id": "summonerIncreaseStatsPerCalamity",
+	"STUB": "Increase stats for summoner units based on the number of calamities",
+	"effects": [ "summonerIncreaseStatsPerCalamity" ],
+	"importance": -1
+},
+{ "modId": "villain_summoners", "id": "summonerInterfused", "importance": -1 },
+{
+	"modId": "villain_summoners",
+	"id": "summonerInterfusedWithEntity|_ENTITY_",
+	"parameters": [
+		{ "replace": "_ENTITY_", "isEntity": true }
+	],
+	"effects": [
+		"summonerIncrementInterfusedWhenAdded",
+		"summonerDecrementInterfuseWhenRemoved",
+		"summonerSetUpPassiveInterfusionAspects|_ENTITY_",
+		"summonerSoulbindHeroes|_ENTITY_",
+		"summonerTeardownPassiveInterfusionAspects|_ENTITY_",
+		"summonerRemoveInterfusionLinkOnDeath|_ENTITY_",
+		"summonerRemoveInterfusionLinkOnDeleted|_ENTITY_"
+	],
+	"script": "effects.monsterInterfusion",
+	"importance": -1
+},
+{
+	"modId": "villain_summoners",
+	"id": "summoner_ethermineRegion|COORDS",
+	"parameters": [
+		{ "replace": "COORDS" }
+	],
+	"effects": [
+		"summonerEthermineRegion|COORDS",
+		"deleteEntityWhenAspectRemoved",
+		"decayAtStartOfTurn"
+	],
+	"importance": -1
+},
+{
+	"modId": "villain_summoners",
+	"id": "summoner_ethermine|DAMAGE_EXPRESSION",
+	"parameters": [
+		{ "replace": "DAMAGE_EXPRESSION" }
+	],
+	"effects": [ "summonerEthermine|DAMAGE_EXPRESSION" ],
+	"boostType": "ABILITY_MISC",
+	"showInTooltip": true
+},
+{
+	"modId": "villain_summoners",
+	"id": "summoner_hasEthermine|DAMAGE_EXPRESSION|COORDS",
+	"parameters": [
+		{ "replace": "DAMAGE_EXPRESSION" },
+		{ "replace": "COORDS" }
+	],
+	"effects": [
+		"summonerEthermineRegion|DAMAGE_EXPRESSION|COORDS",
+		"removeAtStartOfTurn",
+		"removeOnDeath"
+	]
+},
+{
+	"modId": "villain_summoners",
+	"id": "summoner_scanGorgons",
+	"effects": [ "summonerScanGorgons" ],
+	"importance": -1
+},
+{
+	"modId": "villain_summoners",
+	"id": "summoner_scanUnits",
+	"effects": [ "summonerScanUnits" ],
+	"importance": -1
+},
+{
+	"modId": "villain_summoners",
+	"id": "summoner_soulbind",
+	"boostType": "ABILITY_MISC",
+	"showInTooltip": true
+},
+{
+	"modId": "villain_summoners",
+	"id": "summoner_soulshield",
+	"boostType": "ABILITY_MISC",
+	"showInTooltip": true
+},
+{
+	"modId": "villain_summoners",
+	"id": "summoner_spawnGorgon|MAX_INTERFUSIONS",
+	"parameters": [
+		{ "replace": "MAX_INTERFUSIONS" }
+	],
+	"effects": [ "summonerSpawnGorgonCard|MAX_INTERFUSIONS" ],
+	"importance": -1
+},
+{
+	"modId": "villain_summoners",
+	"id": "summoner_spawnHero|MAX_INTERFUSIONS",
+	"parameters": [
+		{ "replace": "MAX_INTERFUSIONS" }
+	],
+	"effects": [ "summonerSpawnHero|MAX_INTERFUSIONS" ],
+	"importance": -1
+}
+]

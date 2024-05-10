@@ -8,7 +8,7 @@
 				{
 					"sites": [
 						{ "role": "town", "siteType": "town", "foes": "none" },
-						{ "role": "otherSite" }
+						{ "role": "otherSite", "foes": "thrixl" }
 					],
 					"extraTiles": 0
 				},
@@ -18,11 +18,11 @@
 							"role": "site3",
 							"siteType": "fancyStation",
 							"placement": "remote",
-							"foes": "secondaryEnemy"
+							"foes": "cultist"
 						},
-						{ "role": "site2", "placement": "semiRemote" },
-						{ "role": "otherSite", "foes": "secondaryEnemy" },
-						{ "role": "otherSite", "foes": "secondaryEnemy" },
+						{ "role": "site2", "placement": "semiRemote", "foes": "drauven" },
+						{ "role": "otherSite", "foes": "cultist" },
+						{ "role": "otherSite", "foes": "gorgon" },
 						{ "role": "otherSite", "foes": "secondaryEnemy" }
 					]
 				},

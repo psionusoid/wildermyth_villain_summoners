@@ -1,0 +1,41 @@
+{
+"id": "summonerScanGorgons",
+"info": {
+	"dataVersion": 1,
+	"sourceFile": "summonerScanGorgons",
+	"modId": "villain_summoners",
+	"author": "psionusoid",
+	"aiPriority": "3000"
+},
+"type": "ABILITY",
+"verb": "ATTACK",
+"ability": {
+	"icon": "magic",
+	"priority": "3",
+	"showDescriptionInTooltip": true,
+	"cooldown": "oncePerTurn"
+},
+"targets": [
+	{ "template": "SELF" },
+	{
+		"role": "npc",
+		"template": "ADJACENT_ALLY",
+		"choose": "ANY",
+		"missionFeedback": null,
+		"aspects": [ "gorgon_roe", "alive", "ALLY", "NOT_SELF" ],
+		"range": "100"
+	}
+],
+"outcomes": [
+	{
+		"class": "IfRolesArePresent",
+		"rolesArePresent": [ "npc" ],
+		"then": {
+			"class": "Aspects",
+			"addAspects": [
+				{ "id": "saw_gorgon_roe", "value": "1" }
+			]
+		}
+	}
+]
+}

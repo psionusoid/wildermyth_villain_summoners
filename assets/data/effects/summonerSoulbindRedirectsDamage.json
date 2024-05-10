@@ -1,0 +1,39 @@
+{
+"id": "summonerSoulbindRedirectsDamage|_ENTITY_",
+"info": {
+	"dataVersion": 1,
+	"sourceFile": "summonerSoulbindRedirectsDamage",
+	"modId": "villain_summoners",
+	"author": "psionusoid"
+},
+"type": "DAMAGE_ROLL_INCOMING_AFTER_ARMOR",
+"ability": { "priority": "1" },
+"targets": [
+	{ "template": "SELF" },
+	{
+		"template": "ASPECT",
+		"choose": "ANY",
+		"aspects": [ "soulbindConnection|*" ]
+	},
+	{
+		"template": "ANY",
+		"choose": "ANY",
+		"matchSpecial": "parameter1",
+		"relativeTo": "aspect"
+	}
+],
+"outcomes": [
+	{
+		"class": "Test",
+		"value": "DAMAGE",
+		"threshold": "1",
+		"onPass": {
+			"class": "DoAll",
+			"outcomes": [
+				{ "class": "Impact", "impact": "-1" },
+				{ "class": "Damage", "target": "target", "amount": "1", "type": "TRUE" }
+			]
+		}
+	}
+]
+}

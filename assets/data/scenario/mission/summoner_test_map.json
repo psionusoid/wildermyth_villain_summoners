@@ -1,0 +1,27 @@
+{
+"scenarioInfo": {
+	"id": "summoner_test_map",
+	"type": "MISSION",
+	"nameKey": "summoner_test_map.name",
+	"blurbKey": "summoner_test_map.blurb",
+	"rosterSlots": [
+		{ "type": "greenhorn", "archetype": "warrior" },
+		{ "type": "greenhorn", "archetype": "warrior" },
+		{ "type": "greenhorn", "archetype": "hunter" },
+		{ "type": "greenhorn", "archetype": "hunter" },
+		{ "type": "greenhorn", "archetype": "mystic" }
+	]
+},
+"playableFactions": [
+	{ "factionRole": "HERO", "plotRole": "attacker" },
+	{ "factionRole": "VILLAIN", "plotRole": "defender" }
+],
+"site": { "type": "SITE", "siteMissionPlanId": "summoner_test_map" },
+"inhabitants": [
+	{
+		"factionRole": "VILLAIN",
+		"threat": { "flavor": "gorgon", "strength": 6 },
+		"calamities": 6
+	}
+]
+}

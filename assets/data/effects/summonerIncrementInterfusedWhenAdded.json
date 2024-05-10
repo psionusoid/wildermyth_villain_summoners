@@ -1,0 +1,21 @@
+{
+"id": "summonerIncrementInterfusedWhenAdded",
+"info": {
+	"dataVersion": 1,
+	"sourceFile": "summonerIncrementInterfusedWhenAdded",
+	"modId": "villain_summoners",
+	"author": "psionusoid"
+},
+"type": "ASPECT_ADDED",
+"targets": [
+	{ "template": "SELF" }
+],
+"outcomes": [
+	{
+		"class": "Aspects",
+		"addAspects": [
+			{ "id": "summonerInterfused", "value": "1" }
+		]
+	}
+]
+}
