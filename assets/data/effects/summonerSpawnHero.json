@@ -24,6 +24,12 @@
 		]
 	},
 	{
+		"role": "parent",
+		"template": "ANY",
+		"type": "UNIT",
+		"fromRoles": [ "self" ]
+	},
+	{
 		"role": "volunteer",
 		"template": "ADJACENT_ENEMY",
 		"choose": "ONE_RANDOM_TRUE",
@@ -56,112 +62,6 @@
 	}
 ],
 "outcomes": [
-	{
-		"class": "AttackRoll",
-		"defender": "volunteer",
-		"attackAnimationType": "magic",
-		"showAbilityName": "ifEnemy",
-		"stopBlockingTime": "noBlocking",
-		"minimumBlockTime": "1000",
-		"attackStrength": "100",
-		"always": {
-			"class": "DoAll",
-			"outcomes": [
-				{
-					"class": "Spawn",
-					"target": "target",
-					"addRole": "monster",
-					"createEntity": {
-						"query": { "inRelationTo": "volunteer", "cloneRelatedEntity": true },
-						"additionalOutcome": {
-							"class": "DoAll",
-							"outcomes": [
-								{
-									"class": "ModifyStats",
-									"target": "monster",
-									"stat": "INJURY",
-									"value": "0-volunteer.INJURY"
-								},
-								{
-									"class": "ModifyStats",
-									"target": "monster",
-									"stat": "SHRED",
-									"value": "0-volunteer.SHRED"
-								},
-								{
-									"class": "Aspects",
-									"target": "monster",
-									"addAspects": [
-										{ "id": "monstrous", "value": "1" },
-										{ "id": "doppelganger", "value": "1" }
-									]
-								},
-								{ "class": "Animate", "target": "monster", "script": "figures.swapWeapon" }
-							]
-						},
-						"setLocation": true
-					}
-				},
-				{
-					"class": "IfRolesArePresent",
-					"rolesArePresent": [ "target", "volunteer2" ],
-					"then": {
-						"class": "DoAll",
-						"target": "volunteer2",
-						"outcomes": [
-							{
-								"class": "Aspects",
-								"addAspects": [
-									{
-										"id": "summonerInterfusedWithEntity",
-										"value": "1",
-										"merge": "max",
-										"inRelationTo": "monster"
-									}
-								]
-							},
-							{
-								"class": "Aspects",
-								"addAspects": [
-									{
-										"id": "summonerInterfusedWithEntity",
-										"value": "1",
-										"merge": "max",
-										"inRelationTo": "volunteer"
-									}
-								]
-							},
-							{
-								"class": "Aspects",
-								"target": "monster",
-								"addAspects": [
-									{
-										"id": "interfusedWithSummoner",
-										"value": "1",
-										"merge": "max",
-										"inRelationTo": "self"
-									},
-									{ "id": "interfusedWithMonster", "value": "1", "merge": "max" }
-								]
-							},
-							{
-								"class": "Aspects",
-								"target": "volunteer",
-								"addAspects": [
-									{
-										"id": "interfusedWithSummoner",
-										"value": "1",
-										"merge": "max",
-										"inRelationTo": "self"
-									},
-									{ "id": "interfusedWithMonster", "value": "1", "merge": "max" }
-								]
-							}
-						]
-					}
-				}
-			]
-		}
-	}
+	{ "class": "Branch", "branchEvent": "summonerSpawnHeroBranch" }
 ]
 }
