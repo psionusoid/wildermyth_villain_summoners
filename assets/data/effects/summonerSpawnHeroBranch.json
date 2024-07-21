@@ -96,6 +96,25 @@
 									"addAspects": [
 										{ "id": "monstrous", "value": "1" },
 										{ "id": "doppelganger", "value": "1" }
+									],
+									"removeAspects": [
+										"summoner_soulbound",
+										"interfusedWithMonster",
+										"interfusedWithSummoner|*",
+										"interfusedWithEntity|*",
+										"interfused",
+										"engaged|*",
+										"engaging|*",
+										"guarding",
+										"sentinelActive",
+										"hobbled",
+										"poisoned",
+										"senseless",
+										"pinned",
+										"nightmarePinned",
+										"thrixl_dominated",
+										"blinded",
+										"deafened"
 									]
 								},
 								{ "class": "Animate", "target": "monster", "script": "figures.swapWeapon" }
