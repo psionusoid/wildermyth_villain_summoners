@@ -22,8 +22,7 @@
 		"role": "volunteer2",
 		"template": "ANY",
 		"choose": "ANY",
-		"injectedRole": "volunteer2",
-		"aspects": null
+		"injectedRole": "volunteer2"
 	},
 	{
 		"role": "target",
@@ -44,8 +43,7 @@
 		"defender": "volunteer",
 		"attackAnimationType": "magic",
 		"showAbilityName": "ifEnemy",
-		"stopBlockingTime": "noBlocking",
-		"minimumBlockTime": "1000",
+		"stopBlockingTime": "onHit",
 		"attackStrength": "100",
 		"always": {
 			"class": "DoAll",
