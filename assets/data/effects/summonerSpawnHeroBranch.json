@@ -43,7 +43,27 @@
 		"defender": "volunteer",
 		"attackAnimationType": "magic",
 		"showAbilityName": "ifEnemy",
-		"stopBlockingTime": "onHit",
+		"stopBlockingTime": "afterHitAnimation",
+		"particles": [
+			{
+				"script": "thrixlRangedAttack",
+				"setPosition": "parent",
+				"setPosition2": "volunteer",
+				"delay": -0.1
+			},
+			{
+				"script": "thrixlRangedAttack",
+				"setPosition": "volunteer",
+				"setPosition2": "parent",
+				"delay": 0.3
+			},
+			{
+				"script": "thrixlRangedAttack",
+				"setPosition": "parent",
+				"setPosition2": "target",
+				"delay": 0.7
+			}
+		],
 		"attackStrength": "100",
 		"always": {
 			"class": "DoAll",
