@@ -44,10 +44,21 @@
 	{
 		"role": "volunteer2",
 		"template": "SELF",
+		"STUB": "check if at least one interfusion slot is open",
 		"choose": "ANY",
 		"fromRoles": [ "self" ],
 		"aspectValues": [
-			{ "id": "summonerInterfused", "maxValue": "MAX_INTERFUSIONS" }
+			{ "id": "summonerInterfused", "maxValue": "MAX_INTERFUSIONS-1" }
+		]
+	},
+	{
+		"role": "volunteer3",
+		"template": "SELF",
+		"STUB": "check if at least 2 interfusion slots are open",
+		"choose": "ANY",
+		"fromRoles": [ "self" ],
+		"aspectValues": [
+			{ "id": "summonerInterfused", "maxValue": "MAX_INTERFUSIONS-2" }
 		]
 	},
 	{

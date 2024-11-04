@@ -25,6 +25,12 @@
 		"injectedRole": "volunteer2"
 	},
 	{
+		"role": "volunteer3",
+		"template": "ANY",
+		"choose": "ANY",
+		"injectedRole": "volunteer3"
+	},
+	{
 		"role": "target",
 		"template": "TILE",
 		"choose": "ONE_RANDOM_TRUE",
@@ -137,24 +143,13 @@
 										"id": "summonerInterfusedWithEntity",
 										"value": "1",
 										"merge": "max",
-										"inRelationTo": "monster"
-									}
-								]
-							},
-							{
-								"class": "Aspects",
-								"addAspects": [
-									{
-										"id": "summonerInterfusedWithEntity",
-										"value": "1",
-										"merge": "max",
 										"inRelationTo": "volunteer"
 									}
 								]
 							},
 							{
 								"class": "Aspects",
-								"target": "monster",
+								"target": "volunteer",
 								"addAspects": [
 									{
 										"id": "interfusedWithSummoner",
@@ -164,10 +159,31 @@
 									},
 									{ "id": "interfusedWithMonster", "value": "1", "merge": "max" }
 								]
+							}
+						]
+					}
+				},
+				{
+					"class": "IfRolesArePresent",
+					"rolesArePresent": [ "target", "volunteer3" ],
+					"then": {
+						"class": "DoAll",
+						"target": "volunteer2",
+						"outcomes": [
+							{
+								"class": "Aspects",
+								"addAspects": [
+									{
+										"id": "summonerInterfusedWithEntity",
+										"value": "1",
+										"merge": "max",
+										"inRelationTo": "monster"
+									}
+								]
 							},
 							{
 								"class": "Aspects",
-								"target": "volunteer",
+								"target": "monster",
 								"addAspects": [
 									{
 										"id": "interfusedWithSummoner",
