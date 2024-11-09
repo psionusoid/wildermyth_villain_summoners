@@ -3,7 +3,7 @@
 	"modId": "villain_summoners",
 	"id": "summoner_soulbound",
 	"effects": [
-		"removeSoulbound",
+		"villain_summoners_removeSoulbind",
 		"removeOnDeath",
 		"otherAspectPreventsThisAspect|dead",
 		"otherAspectPreventsThisAspect|forbidDamagingStatusEffects",

@@ -1,0 +1,54 @@
+{
+"id": "villain_summoners_removeSoulbind",
+"info": {
+	"dataVersion": 1,
+	"sourceFile": "villain_summoners_removeSoulbind",
+	"modId": "villain_summoners",
+	"author": "psionusoid (based on timcrosby)",
+	"tags": [ "sneaky" ]
+},
+"type": "ABILITY",
+"verb": "MANEUVER",
+"ability": { "icon": "heal", "priority": "-10" },
+"targets": [
+	{
+		"template": "SELF",
+		"cost": { "class": "ActionPoints" }
+	},
+	{
+		"template": "ANY",
+		"missionFeedback": {
+			"suggestionScript": "figures.abilitySelectOption",
+			"hoverScript": "figures.abilitySelectHover",
+			"selectedScript": "figures.abilitySelectSelected",
+			"suggestionFeedback": "FRIENDLY_EFFECT_SUGGESTION",
+			"hoverFeedback": "FRIENDLY_EFFECT_HOVER"
+		},
+		"relationship": "interfusedWithSummoner"
+	}
+],
+"outcomes": [
+	{
+		"class": "Aspects",
+		"consumeAspects": [
+			{ "id": "interfusedWithSummoner", "value": "1", "inRelationTo": "target" }
+		],
+		"removeAspects": [ "summoner_soulbound" ]
+	},
+	{
+		"class": "Aspects",
+		"target": "target",
+		"consumeAspects": [
+			{ "id": "soulbindConnection", "value": "1", "inRelationTo": "self" },
+			{ "id": "summonerInterfusedWithEntity", "value": "1", "inRelationTo": "self" }
+		]
+	},
+	{
+		"class": "Aspects",
+		"addAspects": [
+			{ "id": "immuneToSoulbind", "value": "1" }
+		]
+	},
+	{ "class": "Animate", "audio": "UI/statusEffectClear" }
+]
+}
