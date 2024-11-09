@@ -39,6 +39,9 @@
 			"hoverFeedback": "FRIENDLY_EFFECT_HOVER"
 		},
 		"aspects": [ "HOSTILE_TARGET", "alive", "ENEMY" ],
+		"aspectValues": [
+			{ "id": "immuneToSoulbind", "forbidden": true }
+		],
 		"range": "8"
 	},
 	{
