@@ -1,0 +1,214 @@
+{
+"id": "summonerSpawnHeroBranch",
+"info": {
+	"dataVersion": 1,
+	"sourceFile": "summonerSpawnHeroBranch",
+	"modId": "villain_summoners",
+	"author": "psionusoid"
+},
+"type": "BRANCH",
+"verb": "MANEUVER",
+"ability": {
+	"icon": "rewardTransform",
+	"category": "research",
+	"priority": "1",
+	"musicOverride": ""
+},
+"targets": [
+	{ "template": "EVENT" },
+	{ "role": "parent", "template": "ANY", "injectedRole": "parent" },
+	{ "role": "volunteer", "template": "ANY", "injectedRole": "volunteer" },
+	{
+		"role": "volunteer2",
+		"template": "ANY",
+		"choose": "ANY",
+		"injectedRole": "volunteer2"
+	},
+	{
+		"role": "volunteer3",
+		"template": "ANY",
+		"choose": "ANY",
+		"injectedRole": "volunteer3"
+	},
+	{
+		"role": "target",
+		"template": "TILE",
+		"choose": "ONE_RANDOM_TRUE",
+		"missionFeedback": { "hoverFeedback": "ATTACK_HOVER" },
+		"relativeTo": "parent",
+		"range": "6",
+		"lineOfSight": "TERRAIN_ONLY",
+		"tileFilter": "validMoveEnd",
+		"spawnEntitySize": "oneTile"
+	}
+],
+"outcomes": [
+	{
+		"class": "AttackRoll",
+		"target": "parent",
+		"defender": "volunteer",
+		"attackAnimationType": "magic",
+		"showAbilityName": "ifEnemy",
+		"stopBlockingTime": "afterHitAnimation",
+		"particles": [
+			{
+				"script": "thrixlRangedAttack",
+				"setPosition": "parent",
+				"setPosition2": "volunteer",
+				"delay": -0.1
+			},
+			{
+				"script": "thrixlRangedAttack",
+				"setPosition": "volunteer",
+				"setPosition2": "parent",
+				"delay": 0.3
+			},
+			{
+				"script": "thrixlRangedAttack",
+				"setPosition": "parent",
+				"setPosition2": "target",
+				"delay": 0.7
+			}
+		],
+		"attackStrength": "100",
+		"always": {
+			"class": "DoAll",
+			"outcomes": [
+				{
+					"class": "Spawn",
+					"target": "target",
+					"addRole": "monster",
+					"createEntity": {
+						"useExisting": "npc",
+						"controlRelativeTo": "parent",
+						"additionalOutcome": {
+							"class": "DoAll",
+							"outcomes": [
+								{
+									"class": "ModifyStats",
+									"target": "monster",
+									"stat": "INJURY",
+									"value": "0-volunteer.INJURY"
+								},
+								{
+									"class": "ModifyStats",
+									"target": "monster",
+									"stat": "SHRED",
+									"value": "0-volunteer.SHRED"
+								},
+								{
+									"class": "Aspects",
+									"target": "monster",
+									"addAspects": [
+										{ "id": "monstrous", "value": "1" },
+										{ "id": "doppelganger", "value": "1" }
+									],
+									"removeAspects": [
+										"summoner_soulbound",
+										"interfusedWithMonster",
+										"interfusedWithSummoner|*",
+										"interfusedWithEntity|*",
+										"interfused",
+										"engaged|*",
+										"engaging|*",
+										"guarding",
+										"sentinelActive",
+										"hobbled",
+										"poisoned",
+										"senseless",
+										"pinned",
+										"nightmarePinned",
+										"thrixl_dominated",
+										"blinded",
+										"deafened"
+									]
+								},
+								{ "class": "Animate", "target": "monster", "script": "figures.swapWeapon" }
+							]
+						},
+						"setLocation": true
+					}
+				},
+				{
+					"class": "IfRolesArePresent",
+					"rolesArePresent": [ "target", "volunteer2" ],
+					"then": {
+						"class": "DoAll",
+						"target": "volunteer2",
+						"outcomes": [
+							{
+								"class": "Aspects",
+								"addAspects": [
+									{
+										"id": "summonerInterfusedWithEntity",
+										"value": "1",
+										"merge": "max",
+										"inRelationTo": "volunteer"
+									}
+								]
+							},
+							{
+								"class": "Aspects",
+								"target": "volunteer",
+								"addAspects": [
+									{
+										"id": "interfusedWithSummoner",
+										"value": "1",
+										"merge": "max",
+										"inRelationTo": "parent"
+									},
+									{ "id": "interfusedWithMonster", "value": "1", "merge": "max" }
+								]
+							}
+						]
+					}
+				},
+				{
+					"class": "IfRolesArePresent",
+					"rolesArePresent": [ "target", "volunteer3" ],
+					"then": {
+						"class": "DoAll",
+						"target": "volunteer2",
+						"outcomes": [
+							{
+								"class": "Aspects",
+								"addAspects": [
+									{
+										"id": "summonerInterfusedWithEntity",
+										"value": "1",
+										"merge": "max",
+										"inRelationTo": "monster"
+									}
+								]
+							},
+							{
+								"class": "Aspects",
+								"target": "monster",
+								"addAspects": [
+									{
+										"id": "interfusedWithSummoner",
+										"value": "1",
+										"merge": "max",
+										"inRelationTo": "parent"
+									},
+									{ "id": "interfusedWithMonster", "value": "1", "merge": "max" }
+								]
+							}
+						]
+					}
+				}
+			]
+		}
+	}
+],
+"implications": {
+	"generatedTargets": [
+		{
+			"createEntity": {
+				"query": { "baseTag": "human", "inRelationTo": "volunteer", "cloneRelatedEntity": true },
+				"control": "none"
+			}
+		}
+	]
+}
+}

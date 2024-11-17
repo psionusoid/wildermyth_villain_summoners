@@ -1,0 +1,20 @@
+[
+{
+	"modId": "villain_summoners",
+	"id": "immuneToSoulbind",
+	"effects": [ "decayAtStartOfTurn", "removeOnDeath", "otherAspectPreventsThisAspect|dead" ],
+	"boostType": "ADVANTAGE"
+},
+{
+	"modId": "villain_summoners",
+	"id": "summoner_soulbound",
+	"effects": [
+		"villain_summoners_removeSoulbind",
+		"removeOnDeath",
+		"otherAspectPreventsThisAspect|dead",
+		"otherAspectPreventsThisAspect|forbidDamagingStatusEffects",
+		"otherAspectPreventsThisAspectShowText|immuneToStatusEffects"
+	],
+	"boostType": "DISADVANTAGE"
+}
+]
