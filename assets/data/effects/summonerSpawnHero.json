@@ -41,7 +41,8 @@
 		},
 		"aspects": [ "HOSTILE_TARGET", "alive", "ENEMY" ],
 		"aspectValues": [
-			{ "id": "immuneToSoulbind", "forbidden": true }
+			{ "id": "immuneToSoulbind", "forbidden": true },
+			{ "id": "interfusedWithMonster", "forbidden": true }
 		],
 		"range": "8"
 	},
