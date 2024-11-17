@@ -26,6 +26,7 @@
 	{
 		"role": "parent",
 		"template": "ANY",
+		"STUB": "Copy Self role so the branch has access to it",
 		"type": "UNIT",
 		"fromRoles": [ "self" ]
 	},
