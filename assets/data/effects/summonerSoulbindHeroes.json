@@ -15,6 +15,16 @@
 "outcomes": [
 	{
 		"class": "Test",
+		"value": "target.immuneToStatusEffects-target.monstrous",
+		"threshold": "1",
+		"onPass": {
+			"class": "BranchAbility",
+			"target": "target",
+			"branchAbility": "villain_summoners_removeSoulbind"
+		}
+	},
+	{
+		"class": "Test",
 		"value": "(self.summoner_soulbind-target.monstrous)-self.soulbindConnection|target",
 		"threshold": "1",
 		"onPass": {
