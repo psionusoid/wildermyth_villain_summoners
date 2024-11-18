@@ -34,7 +34,7 @@
 		"objectives": [ "Objective_ClearAllHostileSites.C_villain_summoners_3" ]
 	},
 	{
-		"class": "StepM_ImmediateEvent",
+		"class": "StepC_ImmediateEvent",
 		"eventIds": [ "plot_villain_summoners_3_2_plot" ]
 	},
 	{ "class": "Step_SetPlotResult" }
