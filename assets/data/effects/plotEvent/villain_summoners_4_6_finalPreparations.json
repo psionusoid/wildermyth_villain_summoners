@@ -1,8 +1,8 @@
 {
-"id": "plot_villain_summoners_3_2_finalPreparations",
+"id": "plot_villain_summoners_4_6_finalPreparations",
 "info": {
 	"dataVersion": 1,
-	"sourceFile": "plotEvent/villain_summoners_3_2_finalPreparations",
+	"sourceFile": "plotEvent/villain_summoners_4_6_finalPreparations",
 	"modId": "villain_summoners",
 	"author": "psionusoid"
 },
@@ -48,7 +48,7 @@
 					],
 					"textSlots": [
 						{
-							"textSourceFile": "plotEvent/villain_summoners_3_2_finalPreparations",
+							"textSourceFile": "plotEvent/villain_summoners_4_6_finalPreparations",
 							"textKey": "~01~~panel_001~1_narration",
 							"style": "narration",
 							"backgroundColor": { "r": "0.32263023", "g": "0.14478043", "b": "0.07043335", "a": "0.76878613" },

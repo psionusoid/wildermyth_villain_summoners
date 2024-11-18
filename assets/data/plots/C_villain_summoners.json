@@ -47,7 +47,8 @@
 						{ "role": "otherSite", "foes": "secondaryEnemy" }
 					],
 					"extraTiles": 2
-				}
+				},
+				{ "extraTiles": 0 }
 			]
 		}
 	},
@@ -81,11 +82,25 @@
 				"tidingId": [ "plot_villain_summoners_2_4_tiding" ]
 			}
 		],
+		"doRegularTidings": false,
 		"omen": [ "plot_villain_summoners_3_1_omen" ],
 		"nextChapter": "three",
-		"overrideYearsOfPeace": "2"
+		"overrideYearsOfPeace": "1",
+		"seasonsInsteadOfYears": true
 	},
 	{ "class": "Step_SubPlot", "plotId": "C_villain_summoners_3" },
+	{
+		"class": "StepC_DoInterval",
+		"tidings": [
+			{
+				"tidingId": [ "plot_villain_summoners_3_2_tiding" ]
+			}
+		],
+		"omen": [ "plot_villain_summoners_4_1_omen" ],
+		"nextChapter": "four",
+		"overrideYearsOfPeace": "2"
+	},
+	{ "class": "Step_SubPlot", "plotId": "C_villain_summoners_4" },
 	{ "class": "StepC_Victory" }
 ]
 }

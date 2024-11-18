@@ -19,7 +19,7 @@
 				"customResults": [
 					{
 						"class": "StepM_Event",
-						"eventIds": [ "plot_villain_summoners_3_1_keystone_victory" ]
+						"eventIds": [ "plot_villain_summoners_4_7_capstone_victory" ]
 					}
 				]
 			}
@@ -47,10 +47,6 @@
 	{
 		"class": "Step_AddObjectives",
 		"objectives": [ "Objective_KillAllEnemies" ]
-	},
-	{
-		"class": "StepM_Event",
-		"eventIds": [ "plot_villain_summoners_3_1_keystone_midMission" ]
 	}
 ]
 }
