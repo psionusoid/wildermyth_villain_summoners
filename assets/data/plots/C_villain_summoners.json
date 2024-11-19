@@ -3,7 +3,7 @@
 	{
 		"class": "StepC_MapConfig",
 		"mapConfig": {
-			"mapRadius": 22,
+			"mapRadius": 23,
 			"customChapters": [
 				{
 					"sites": [
@@ -18,31 +18,53 @@
 							"role": "site3",
 							"siteType": "fancyStation",
 							"placement": "remote",
-							"foes": "cultist"
+							"foes": "thrixl"
 						},
-						{ "role": "site2", "placement": "semiRemote", "foes": "drauven" },
+						{ "role": "site2", "placement": "semiRemote", "foes": "secondaryEnemy" },
 						{ "role": "otherSite", "foes": "cultist" },
 						{ "role": "otherSite", "foes": "gorgon" },
+						{ "role": "otherSite", "foes": "drauven" }
+					]
+				},
+				{
+					"sites": [
+						{ "role": "town", "siteType": "town", "placement": "nearbyTown", "foes": "none" },
+						{
+							"role": "site3",
+							"siteType": "fancyStation",
+							"placement": "remote",
+							"foes": "secondaryEnemy"
+						},
+						{ "role": "site2", "placement": "semiRemote", "foes": "secondaryEnemy" },
+						{ "role": "otherSite", "foes": "secondaryEnemy" },
+						{ "role": "otherSite", "foes": "secondaryEnemy" },
 						{ "role": "otherSite", "foes": "secondaryEnemy" }
 					]
 				},
 				{
 					"sites": [
 						{ "role": "town", "siteType": "town", "placement": "nearbyTown", "foes": "none" },
-						{ "role": "site3", "siteType": "fancyStation", "placement": "remote" },
-						{ "role": "site2", "placement": "semiRemote" },
-						{ "role": "otherSite" },
-						{ "role": "otherSite" },
-						{ "role": "otherSite", "foes": "secondaryEnemy" }
-					]
-				},
-				{
-					"sites": [
-						{ "role": "town", "siteType": "town", "placement": "nearbyTown", "foes": "none" },
-						{ "role": "site3", "siteType": "fancyStation", "placement": "remote" },
-						{ "role": "otherSite" },
-						{ "role": "otherSite" },
-						{ "role": "otherSite" },
+						{
+							"role": "villain1",
+							"siteType": "fancyStation",
+							"placement": "remote",
+							"foes": "gorgon"
+						},
+						{
+							"role": "villain2",
+							"siteType": "fancyStation",
+							"placement": "remote",
+							"foes": "cultist"
+						},
+						{
+							"role": "villain3",
+							"siteType": "fancyStation",
+							"placement": "remote",
+							"foes": "drauven"
+						},
+						{ "role": "otherSite", "foes": "secondaryEnemy" },
+						{ "role": "otherSite", "foes": "secondaryEnemy" },
+						{ "role": "otherSite", "foes": "secondaryEnemy" },
 						{ "role": "otherSite", "foes": "secondaryEnemy" },
 						{ "role": "otherSite", "foes": "secondaryEnemy" }
 					],

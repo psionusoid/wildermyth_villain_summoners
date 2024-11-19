@@ -17,7 +17,8 @@
 		"class": "StepC_BeginChapter",
 		"chapter": "three",
 		"sitesFromOtherChapters": [
-			{ "chapter": "introduction", "fromRole": "town", "toRole": "folk1" }
+			{ "chapter": "introduction", "fromRole": "town", "toRole": "folk1" },
+			{ "chapter": "two", "fromRole": "town", "toRole": "folk2" }
 		]
 	},
 	{
