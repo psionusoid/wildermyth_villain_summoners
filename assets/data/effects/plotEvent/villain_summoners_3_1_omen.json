@@ -13,12 +13,6 @@
 	{ "template": "EVENT" },
 	{ "template": "COMPANY" },
 	{ "role": "town", "template": "INJECTED_SITE", "injectedRole": "town" },
-	{
-		"role": "site3",
-		"template": "INJECTED_ENTITY",
-		"type": "ANY_STATUS",
-		"injectedRole": "site3"
-	},
 	{ "template": "INJECTED_THREAT", "choose": "ANY" }
 ],
 "outcomes": [
