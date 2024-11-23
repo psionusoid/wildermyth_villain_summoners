@@ -1,8 +1,8 @@
 {
-"id": "plot_villain_summoners_3_1_keystone_arrive",
+"id": "plot_villain_summoners_4_2_keystone_arrive",
 "info": {
 	"dataVersion": 1,
-	"sourceFile": "plotEvent/villain_summoners_3_1_keystone_arrive",
+	"sourceFile": "plotEvent/villain_summoners_4_2_keystone_arrive",
 	"modId": "villain_summoners",
 	"author": "psionusoid",
 	"declaredEncounterResults": [ "victory", "defeat" ]
@@ -36,7 +36,7 @@
 					],
 					"textSlots": [
 						{
-							"textSourceFile": "plotEvent/villain_summoners_3_1_keystone_arrive",
+							"textSourceFile": "plotEvent/villain_summoners_4_2_keystone_arrive",
 							"textKey": "~01~~panel_001~1_party",
 							"pointerOwner": "party",
 							"padXFraction": 0.34,
@@ -56,7 +56,7 @@
 			{ "role": "party", "side": "player" },
 			{ "role": "foes", "side": "enemy" }
 		],
-		"missionPlanOverride": "villain_summoners_3_1_keystone"
+		"missionPlanOverride": "villain_summoners_4_2_keystone"
 	}
 ]
 }
