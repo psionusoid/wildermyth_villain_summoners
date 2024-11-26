@@ -75,6 +75,21 @@
 		}
 	},
 	{
+		"class": "Step_RunOutcomes",
+		"outcomes": [
+			{
+				"class": "SetGlobal",
+				"globalId": "extraMissionCardDraw",
+				"value": "if(isMatch(DIFFICULTY_COMBAT,4),4,1)"
+			},
+			{
+				"class": "SetGlobal",
+				"globalId": "intervalBareMinimumPartyThreshold.chapter3",
+				"value": "3"
+			}
+		]
+	},
+	{
 		"class": "Step_SubPlot",
 		"plotId": "C_villain_summoners_1",
 		"copyIn": [
