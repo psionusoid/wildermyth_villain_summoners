@@ -1,8 +1,8 @@
 {
-"id": "plot_villain_summoners_4_2_keystone_victory",
+"id": "plot_villain_summoners_4_2_keystoneGorgon_midMission",
 "info": {
 	"dataVersion": 1,
-	"sourceFile": "plotEvent/villain_summoners_4_2_keystone_victory",
+	"sourceFile": "plotEvent/villain_summoners_4_2_keystoneGorgon_midMission",
 	"modId": "villain_summoners",
 	"author": "psionusoid",
 	"STUB": "Victories occur at the end of missions. No choice is needed in most cases, we can just tell a brief story."
@@ -36,13 +36,14 @@
 	{
 		"class": "Description",
 		"lightweight": false,
+		"blockOtherChanges": true,
 		"script": [
 			{
 				"class": "comicNode_Panel",
 				"panel": {
 					"textSlots": [
 						{
-							"textSourceFile": "plotEvent/villain_summoners_4_2_keystone_victory",
+							"textSourceFile": "plotEvent/villain_summoners_4_2_keystoneGorgon_midMission",
 							"textKey": "~01~~panel_001~1_narration",
 							"style": "narration"
 						}

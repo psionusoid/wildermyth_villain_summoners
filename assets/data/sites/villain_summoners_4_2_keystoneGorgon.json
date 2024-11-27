@@ -92,6 +92,6 @@
 		"class": "MapDetail_Debris",
 		"drawDebrisChance": { "offsetX": 20, "offsetY": 4 }
 	},
-	{ "class": "MapDetail_Plot", "plotId": "M_villain_summoners_4_2_keystone" }
+	{ "class": "MapDetail_Plot", "plotId": "M_villain_summoners_4_2_keystoneGorgon" }
 ]
 }

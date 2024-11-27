@@ -1,9 +1,9 @@
 {
 "scenarioInfo": {
-	"id": "villain_summoners_4_2_keystone",
+	"id": "villain_summoners_4_2_keystoneGorgon",
 	"type": "MISSION",
-	"nameKey": "villain_summoners_4_2_keystone.name",
-	"blurbKey": "villain_summoners_4_2_keystone.blurb",
+	"nameKey": "villain_summoners_4_2_keystoneGorgon.name",
+	"blurbKey": "villain_summoners_4_2_keystoneGorgon.blurb",
 	"rosterSlots": [
 		{ "type": "greenhorn", "archetype": "warrior" },
 		{ "type": "greenhorn", "archetype": "warrior" },
@@ -16,7 +16,7 @@
 	{ "factionRole": "HERO", "plotRole": "attacker" },
 	{ "factionRole": "VILLAIN", "plotRole": "defender" }
 ],
-"site": { "type": "SITE", "siteMissionPlanId": "villain_summoners_4_2_keystone" },
+"site": { "type": "SITE", "siteMissionPlanId": "villain_summoners_4_2_keystoneGorgon" },
 "inhabitants": [
 	{
 		"factionRole": "VILLAIN",

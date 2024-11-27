@@ -9,7 +9,7 @@
 	{ "class": "Objective_CampaignUpkeep" },
 	{
 		"class": "Objective_AssaultJob",
-		"objectiveId": "Objective_AssaultJob.villain_summoners_4.keystone1",
+		"objectiveId": "Objective_AssaultJob.villain_summoners_4.keystoneGorgon",
 		"feedback": [
 			{
 				"overland": {
@@ -20,8 +20,8 @@
 				"role": "site"
 			}
 		],
-		"site": "folk3",
-		"arriveEvent": [ "plot_villain_summoners_4_2_keystone_arrive" ],
+		"site": "monster",
+		"arriveEvent": [ "plot_villain_summoners_4_2_keystoneGorgon_arrive" ],
 		"results": [
 			{},
 			{
@@ -36,31 +36,95 @@
 		"customAssaultJob": "job_plotAssaultSite_min3_keystone|"
 	},
 	{
-		"class": "Objective_LocateAndUnlockSite",
-		"objectiveId": "capstone.findSite.villain_summoners_4",
-		"visible": false,
+		"class": "Objective_AssaultJob",
+		"objectiveId": "Objective_AssaultJob.villain_summoners_4.keystoneCultist",
 		"feedback": [
 			{
 				"overland": {
 					"color": { "r": 1, "g": 1, "b": 1, "a": 0.5 },
-					"sprite": "plot_locked",
+					"sprite": "plot_destination",
 					"anchor": { "x": 0.5, "y": 0.5 }
 				},
 				"role": "site"
 			}
 		],
-		"target": "site3",
-		"lockUntilObjectiveComplete": "Objective_AssaultJob.villain_summoners_4.keystone1",
-		"unlockedFeedback": [
+		"site": "monster2",
+		"arriveEvent": [ "plot_villain_summoners_4_2_keystoneCultist_arrive" ],
+		"results": [
+			{},
+			{
+				"result": "defeat",
+				"customResults": [
+					{ "class": "StepC_Defeat" }
+				]
+			}
+		],
+		"noRetreat": true,
+		"inferEncounterResult": true,
+		"customAssaultJob": "job_plotAssaultSite_min3_keystone|"
+	},
+	{
+		"class": "Objective_AssaultJob",
+		"objectiveId": "Objective_AssaultJob.villain_summoners_4.keystoneThrixl",
+		"feedback": [
 			{
 				"overland": {
 					"color": { "r": 1, "g": 1, "b": 1, "a": 0.5 },
-					"sprite": "plot_battle",
+					"sprite": "plot_destination",
 					"anchor": { "x": 0.5, "y": 0.5 }
 				},
 				"role": "site"
 			}
-		]
+		],
+		"site": "monster3",
+		"arriveEvent": [ "plot_villain_summoners_4_2_keystoneThrixl_arrive" ],
+		"results": [
+			{},
+			{
+				"result": "defeat",
+				"customResults": [
+					{ "class": "StepC_Defeat" }
+				]
+			}
+		],
+		"noRetreat": true,
+		"inferEncounterResult": true,
+		"customAssaultJob": "job_plotAssaultSite_min3_keystone|"
+	},
+	{
+		"class": "Objective_AssaultJob",
+		"objectiveId": "Objective_AssaultJob.villain_summoners_4.keystoneDrauven",
+		"feedback": [
+			{
+				"overland": {
+					"color": { "r": 1, "g": 1, "b": 1, "a": 0.5 },
+					"sprite": "plot_destination",
+					"anchor": { "x": 0.5, "y": 0.5 }
+				},
+				"role": "site"
+			}
+		],
+		"site": "monster4",
+		"arriveEvent": [ "plot_villain_summoners_4_2_keystoneDrauven_arrive" ],
+		"results": [
+			{},
+			{
+				"result": "defeat",
+				"customResults": [
+					{ "class": "StepC_Defeat" }
+				]
+			}
+		],
+		"noRetreat": true,
+		"inferEncounterResult": true,
+		"customAssaultJob": "job_plotAssaultSite_min3_keystone|"
+	},
+	{
+		"class": "Objective_TestAspect",
+		"objectiveId": "Objective_TestAspect.C_villain_summoners_4",
+		"targets": [ "company" ],
+		"test": "allMustHave",
+		"aspect": "villain_summoners_4_keystones_completed"
 	},
 	{
 		"class": "Objective_AssaultJob",
@@ -120,17 +184,12 @@
 		"objectives": [
 			"Objective_CampaignDefeat",
 			"campaignUpkeep",
-			"Objective_AssaultJob.villain_summoners_4.keystone1",
-			"capstone.findSite.villain_summoners_4"
+			"Objective_AssaultJob.villain_summoners_4.keystoneGorgon",
+			"Objective_AssaultJob.villain_summoners_4.keystoneCultist",
+			"Objective_AssaultJob.villain_summoners_4.keystoneThrixl",
+			"Objective_AssaultJob.villain_summoners_4.keystoneDrauven",
+			"Objective_AssaultJob.villain_summoners_4.capstone"
 		]
-	},
-	{
-		"class": "Step_WaitForObjectives",
-		"objectives": [ "Objective_AssaultJob.villain_summoners_4.keystone1" ]
-	},
-	{
-		"class": "Step_AddObjectives",
-		"objectives": [ "Objective_AssaultJob.villain_summoners_4.capstone" ]
 	}
 ]
 }
