@@ -19,7 +19,7 @@
 				"customResults": [
 					{
 						"class": "StepM_Event",
-						"eventIds": [ "plot_villain_summoners_4_2_keystone_victory" ]
+						"eventIds": [ "plot_villain_summoners_4_4_keystoneThrixl_victory" ]
 					}
 				]
 			}
@@ -50,7 +50,7 @@
 	},
 	{
 		"class": "StepM_Event",
-		"eventIds": [ "plot_villain_summoners_4_2_keystone_midMission" ]
+		"eventIds": [ "plot_villain_summoners_4_4_keystoneThrixl_midMission" ]
 	}
 ]
 }
