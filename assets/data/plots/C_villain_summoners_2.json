@@ -49,12 +49,6 @@
 				"role": "site"
 			}
 		],
-		"onSuccess": [
-			{
-				"class": "Step_AddObjectives",
-				"objectives": [ "Objective_AssaultJob.villain_summoners_2" ]
-			}
-		],
 		"target": "site3",
 		"lockUntilObjectiveComplete": "Objective_AssaultJob.villain_summoners_2.keystone",
 		"unlockedFeedback": [

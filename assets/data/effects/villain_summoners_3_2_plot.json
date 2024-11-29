@@ -1,0 +1,28 @@
+{
+"id": "plot_villain_summoners_3_2_plot",
+"info": {
+	"dataVersion": 1,
+	"sourceFile": "villain_summoners_3_2_plot",
+	"modId": "villain_summoners",
+	"author": "psionusoid"
+},
+"type": "PLOT",
+"verb": "MANEUVER",
+"ability": { "icon": "melee", "priority": "1" },
+"targets": [
+	{ "template": "EVENT" },
+	{ "template": "COMPANY" }
+],
+"outcomes": [
+	{
+		"class": "Description",
+		"blockOtherChanges": true,
+		"script": [
+			{
+				"class": "comicNode_Panel",
+				"panel": { "size": "full", "showNameTags": false }
+			}
+		]
+	}
+]
+}

@@ -1,9 +1,9 @@
 {
 "scenarioInfo": {
-	"id": "villain_summoners_3_3_capstone",
+	"id": "villain_summoners_4_7_capstone",
 	"type": "MISSION",
-	"nameKey": "villain_summoners_3_3_capstone.name",
-	"blurbKey": "villain_summoners_3_3_capstone.blurb",
+	"nameKey": "villain_summoners_4_7_capstone.name",
+	"blurbKey": "villain_summoners_4_7_capstone.blurb",
 	"rosterSlots": [
 		{ "type": "legacyHeroNoReset" },
 		{ "type": "legacyHeroNoReset" },
@@ -16,7 +16,7 @@
 	{ "factionRole": "HERO", "plotRole": "attacker" },
 	{ "factionRole": "VILLAIN", "plotRole": "defender" }
 ],
-"site": { "type": "SITE", "siteMissionPlanId": "villain_summoners_3_3_capstone" },
+"site": { "type": "SITE", "siteMissionPlanId": "villain_summoners_4_7_capstone" },
 "inhabitants": [
 	{
 		"factionRole": "VILLAIN",

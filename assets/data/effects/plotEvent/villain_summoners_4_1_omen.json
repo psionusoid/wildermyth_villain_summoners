@@ -1,8 +1,8 @@
 {
-"id": "plot_villain_summoners_3_1_omen",
+"id": "plot_villain_summoners_4_1_omen",
 "info": {
 	"dataVersion": 1,
-	"sourceFile": "plotEvent/villain_summoners_3_1_omen",
+	"sourceFile": "plotEvent/villain_summoners_4_1_omen",
 	"modId": "villain_summoners",
 	"author": "psionusoid"
 },
@@ -12,7 +12,6 @@
 "targets": [
 	{ "template": "EVENT" },
 	{ "template": "COMPANY" },
-	{ "role": "town", "template": "INJECTED_SITE", "injectedRole": "town" },
 	{ "template": "INJECTED_THREAT", "choose": "ANY" }
 ],
 "outcomes": [
@@ -26,7 +25,7 @@
 					"showNameTags": false,
 					"textSlots": [
 						{
-							"textSourceFile": "plotEvent/villain_summoners_3_1_omen",
+							"textSourceFile": "plotEvent/villain_summoners_4_1_omen",
 							"textKey": "~01~~panel_001~1_narration",
 							"style": "narration"
 						}
