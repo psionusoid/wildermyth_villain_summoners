@@ -8,6 +8,10 @@
 	},
 	{ "class": "Objective_CampaignUpkeep" },
 	{
+		"class": "Objective_ClearAllHostileSites",
+		"objectiveId": "Objective_ClearAllHostileSites.C_villain_summoners_1"
+	},
+	{
 		"class": "Objective_AssaultJob",
 		"objectiveId": "Objective_AssaultJob.villain_summoners_1.keystone",
 		"feedback": [
@@ -118,6 +122,7 @@
 		"objectives": [
 			"Objective_CampaignDefeat",
 			"campaignUpkeep",
+			"Objective_ClearAllHostileSites.C_villain_summoners_1",
 			"Objective_AssaultJob.villain_summoners_1.keystone",
 			"capstone.findSite.villain_summoners_1"
 		]
