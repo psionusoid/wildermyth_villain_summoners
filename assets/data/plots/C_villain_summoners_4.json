@@ -156,7 +156,8 @@
 					{ "class": "StepC_Defeat" }
 				]
 			}
-		]
+		],
+		"noRetreat": true
 	}
 ],
 "steps": [
@@ -174,6 +175,31 @@
 			{ "chapter": "two", "toRole": "site3" }
 		]
 	},
+	{
+		"class": "StepC_SackSite",
+		"site": "monster",
+		"addLurkingThreat": { "threatFlavor": "gorgon", "threatStrength": "6" },
+		"alsoInfest": true
+	},
+	{
+		"class": "StepC_SackSite",
+		"site": "monster2",
+		"addLurkingThreat": { "threatFlavor": "cultist", "threatStrength": "6" },
+		"alsoInfest": true
+	},
+	{
+		"class": "StepC_SackSite",
+		"site": "monster3",
+		"addLurkingThreat": { "threatFlavor": "thrixl", "threatStrength": "6" },
+		"alsoInfest": true
+	},
+	{
+		"class": "StepC_SackSite",
+		"site": "monster4",
+		"addLurkingThreat": { "threatFlavor": "drauven", "threatStrength": "6" },
+		"alsoInfest": true
+	},
+	{ "class": "StepC_SackSite", "site": "site3" },
 	{
 		"class": "StepC_MoveToTile",
 		"specificTile": "folk2",
