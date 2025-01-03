@@ -33,6 +33,7 @@
 		],
 		"noRetreat": true,
 		"inferEncounterResult": true,
+		"jobRole": "aspect",
 		"customAssaultJob": "job_plotAssaultSite_min3_keystone|"
 	},
 	{
@@ -61,6 +62,7 @@
 		],
 		"noRetreat": true,
 		"inferEncounterResult": true,
+		"jobRole": "aspect2",
 		"customAssaultJob": "job_plotAssaultSite_min3_keystone|"
 	},
 	{
@@ -89,6 +91,7 @@
 		],
 		"noRetreat": true,
 		"inferEncounterResult": true,
+		"jobRole": "aspect3",
 		"customAssaultJob": "job_plotAssaultSite_min3_keystone|"
 	},
 	{
@@ -117,6 +120,7 @@
 		],
 		"noRetreat": true,
 		"inferEncounterResult": true,
+		"jobRole": "aspect4",
 		"customAssaultJob": "job_plotAssaultSite_min3_keystone|"
 	},
 	{
