@@ -2,7 +2,7 @@
 "id": "plot_villain_summoners_3_3_tiding",
 "info": {
 	"dataVersion": 1,
-	"sourceFile": "plotEvent/plot_villain_summoners_3_3_tiding",
+	"sourceFile": "plotEvent/villain_summoners_3_3_tiding",
 	"modId": "villain_summoners",
 	"author": "psionusoid"
 },
@@ -26,7 +26,7 @@
 					],
 					"textSlots": [
 						{
-							"textSourceFile": "plotEvent/plot_villain_summoners_3_3_tiding",
+							"textSourceFile": "plotEvent/villain_summoners_3_3_tiding",
 							"textKey": "~01~~panel_001~1_hero",
 							"pointerOwner": "hero"
 						}

@@ -2,7 +2,7 @@
 "id": "plot_villain_summoners_4_2_2_keystoneMorthagi_arrive",
 "info": {
 	"dataVersion": 1,
-	"sourceFile": "plotEvent/plot_villain_summoners_4_2_2_keystoneMorthagi_arrive",
+	"sourceFile": "plotEvent/villain_summoners_4_2_2_keystoneMorthagi_arrive",
 	"modId": "villain_summoners",
 	"author": "psionusoid",
 	"declaredEncounterResults": [ "victory", "defeat" ]
@@ -36,7 +36,7 @@
 					],
 					"textSlots": [
 						{
-							"textSourceFile": "plotEvent/plot_villain_summoners_4_2_2_keystoneMorthagi_arrive",
+							"textSourceFile": "plotEvent/villain_summoners_4_2_2_keystoneMorthagi_arrive",
 							"textKey": "~01~~panel_001~1_party",
 							"pointerOwner": "party",
 							"padXFraction": 0.34,

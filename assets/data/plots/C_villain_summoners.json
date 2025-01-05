@@ -116,7 +116,7 @@
 				"tidingId": [ "plot_villain_summoners_1_3_tiding" ]
 			}
 		],
-		"omen": null,
+		"omen": [ "plot_villain_summoners_2_1_omen" ],
 		"fallbackShowDefaultOmen": false,
 		"nextChapter": "two",
 		"overrideYearsOfPeace": "5"
