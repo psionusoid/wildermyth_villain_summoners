@@ -21,7 +21,7 @@
 			}
 		],
 		"site": "monster",
-		"arriveEvent": [ "plot_villain_summoners_4_2_keystoneGorgon_arrive" ],
+		"arriveEvent": [ "plot_villain_summoners_4_2_1_keystoneGorgon_arrive" ],
 		"results": [
 			{},
 			{
@@ -50,7 +50,7 @@
 			}
 		],
 		"site": "monster2",
-		"arriveEvent": [ "plot_villain_summoners_4_3_keystoneCultist_arrive" ],
+		"arriveEvent": [ "plot_villain_summoners_4_2_3_keystoneCultist_arrive" ],
 		"results": [
 			{},
 			{
@@ -79,7 +79,7 @@
 			}
 		],
 		"site": "monster3",
-		"arriveEvent": [ "plot_villain_summoners_4_4_keystoneThrixl_arrive" ],
+		"arriveEvent": [ "plot_villain_summoners_4_2_4_keystoneThrixl_arrive" ],
 		"results": [
 			{},
 			{
@@ -108,7 +108,7 @@
 			}
 		],
 		"site": "monster4",
-		"arriveEvent": [ "plot_villain_summoners_4_5_keystoneDrauven_arrive" ],
+		"arriveEvent": [ "plot_villain_summoners_4_2_5_keystoneDrauven_arrive" ],
 		"results": [
 			{},
 			{
@@ -144,10 +144,10 @@
 			}
 		],
 		"site": "site3",
-		"arriveEvent": [ "plot_villain_summoners_4_7_capstone_arrive" ],
+		"arriveEvent": [ "plot_villain_summoners_4_4_capstone_arrive" ],
 		"isCapstoneFight": true,
 		"isFinalFight": true,
-		"finalPreparationsEvent": [ "plot_villain_summoners_4_6_finalPreparations" ],
+		"finalPreparationsEvent": [ "plot_villain_summoners_4_3_finalPreparations" ],
 		"results": [
 			{
 				"customResults": [
