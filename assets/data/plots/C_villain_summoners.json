@@ -3,7 +3,7 @@
 	{
 		"class": "StepC_MapConfig",
 		"mapConfig": {
-			"mapRadius": 23,
+			"mapRadius": 24,
 			"customChapters": [
 				{
 					"sites": [
@@ -39,6 +39,7 @@
 						{ "role": "site2", "placement": "semiRemote", "foes": "secondaryEnemy" },
 						{ "role": "otherSite", "foes": "secondaryEnemy" },
 						{ "role": "otherSite", "foes": "secondaryEnemy" },
+						{ "role": "otherSite", "foes": "secondaryEnemy" },
 						{ "role": "otherSite", "foes": "secondaryEnemy" }
 					]
 				},
@@ -70,6 +71,8 @@
 							"foes": "drauven"
 						},
 						{ "role": "otherSite", "foes": "thrixl" },
+						{ "role": "otherSite", "foes": "secondaryEnemy" },
+						{ "role": "otherSite", "foes": "secondaryEnemy" },
 						{ "role": "otherSite", "foes": "secondaryEnemy" },
 						{ "role": "otherSite", "foes": "secondaryEnemy" },
 						{ "role": "otherSite", "foes": "secondaryEnemy" },
