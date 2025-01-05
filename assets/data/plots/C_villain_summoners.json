@@ -53,7 +53,7 @@
 							"foes": "gorgon"
 						},
 						{
-							"role": "item",
+							"role": "npc9",
 							"siteType": "fancyStation",
 							"placement": "remote",
 							"foes": "morthagi"
