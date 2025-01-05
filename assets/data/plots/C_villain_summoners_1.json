@@ -70,6 +70,32 @@
 		]
 	},
 	{
+		"class": "Objective_LocateAndUnlockSite",
+		"objectiveId": "capstone.findSite.villain_summoners_1_vis",
+		"feedback": [
+			{
+				"overland": {
+					"color": { "r": 1, "g": 1, "b": 1, "a": 0.5 },
+					"sprite": "plot_locked",
+					"anchor": { "x": 0.5, "y": 0.5 }
+				},
+				"role": "site"
+			}
+		],
+		"target": "site3",
+		"lockUntilObjectivesComplete": [ "Objective_ClearAllHostileSites.C_villain_summoners_1" ],
+		"unlockedFeedback": [
+			{
+				"overland": {
+					"color": { "r": 1, "g": 1, "b": 1, "a": 0.5 },
+					"sprite": "plot_battle",
+					"anchor": { "x": 0.5, "y": 0.5 }
+				},
+				"role": "site"
+			}
+		]
+	},
+	{
 		"class": "Objective_AssaultJob",
 		"objectiveId": "Objective_AssaultJob.villain_summoners_1.capstone",
 		"feedback": [
@@ -129,6 +155,14 @@
 			"Objective_AssaultJob.villain_summoners_1.keystone",
 			"capstone.findSite.villain_summoners_1"
 		]
+	},
+	{
+		"class": "Step_WaitForObjectives",
+		"objectives": [ "Objective_AssaultJob.villain_summoners_1.keystone" ]
+	},
+	{
+		"class": "Step_AddObjectives",
+		"objectives": [ "capstone.findSite.villain_summoners_1_vis" ]
 	},
 	{
 		"class": "Step_WaitForObjectives",
