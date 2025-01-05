@@ -38,6 +38,35 @@
 	},
 	{
 		"class": "Objective_AssaultJob",
+		"objectiveId": "Objective_AssaultJob.villain_summoners_4.keystoneMorthagi",
+		"feedback": [
+			{
+				"overland": {
+					"color": { "r": 1, "g": 1, "b": 1, "a": 0.5 },
+					"sprite": "plot_destination",
+					"anchor": { "x": 0.5, "y": 0.5 }
+				},
+				"role": "site"
+			}
+		],
+		"site": "item",
+		"arriveEvent": [ "plot_villain_summoners_4_2_1_keystoneGorgon_arrive" ],
+		"results": [
+			{},
+			{
+				"result": "defeat",
+				"customResults": [
+					{ "class": "StepC_Defeat" }
+				]
+			}
+		],
+		"noRetreat": true,
+		"inferEncounterResult": true,
+		"jobRole": "door",
+		"customAssaultJob": "job_plotAssaultSite_min3_keystone|"
+	},
+	{
+		"class": "Objective_AssaultJob",
 		"objectiveId": "Objective_AssaultJob.villain_summoners_4.keystoneCultist",
 		"feedback": [
 			{
@@ -173,6 +202,7 @@
 			{ "chapter": "two", "fromRole": "town", "toRole": "folk2" },
 			{ "chapter": "three", "fromRole": "town", "toRole": "folk3" },
 			{ "chapter": "three", "fromRole": "villain1", "toRole": "monster" },
+			{ "chapter": "three", "fromRole": "item", "toRole": "item" },
 			{ "chapter": "three", "fromRole": "villain2", "toRole": "monster2" },
 			{ "chapter": "three", "fromRole": "villain3", "toRole": "monster3" },
 			{ "chapter": "one", "toRole": "monster4" },
@@ -183,6 +213,12 @@
 		"class": "StepC_SackSite",
 		"site": "monster",
 		"addLurkingThreat": { "threatFlavor": "gorgon", "threatStrength": "6" },
+		"alsoInfest": true
+	},
+	{
+		"class": "StepC_SackSite",
+		"site": "item",
+		"addLurkingThreat": { "threatFlavor": "morthagi", "threatStrength": "6" },
 		"alsoInfest": true
 	},
 	{
@@ -215,6 +251,7 @@
 			"Objective_CampaignDefeat",
 			"campaignUpkeep",
 			"Objective_AssaultJob.villain_summoners_4.keystoneGorgon",
+			"Objective_AssaultJob.villain_summoners_4.keystoneMorthagi",
 			"Objective_AssaultJob.villain_summoners_4.keystoneCultist",
 			"Objective_AssaultJob.villain_summoners_4.keystoneThrixl",
 			"Objective_AssaultJob.villain_summoners_4.keystoneDrauven",
