@@ -2,7 +2,7 @@
 "id": "plot_villain_summoners_3_2_plot",
 "info": {
 	"dataVersion": 1,
-	"sourceFile": "villain_summoners_3_2_plot",
+	"sourceFile": "plotEvent/villain_summoners_3_2_plot",
 	"modId": "villain_summoners",
 	"author": "psionusoid"
 },
@@ -20,7 +20,23 @@
 		"script": [
 			{
 				"class": "comicNode_Panel",
-				"panel": { "size": "full", "showNameTags": false }
+				"panel": {
+					"size": "full",
+					"showNameTags": false,
+					"actorSlots": [
+						{
+							"role": "company",
+							"equipment": {}
+						}
+					],
+					"textSlots": [
+						{
+							"textSourceFile": "plotEvent/villain_summoners_3_2_plot",
+							"textKey": "~01~~panel_001~1_narration",
+							"style": "narration"
+						}
+					]
+				}
 			}
 		]
 	}

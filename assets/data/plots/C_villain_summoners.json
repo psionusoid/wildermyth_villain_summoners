@@ -39,7 +39,6 @@
 						{ "role": "site2", "placement": "semiRemote", "foes": "secondaryEnemy" },
 						{ "role": "otherSite", "foes": "secondaryEnemy" },
 						{ "role": "otherSite", "foes": "secondaryEnemy" },
-						{ "role": "otherSite", "foes": "secondaryEnemy" },
 						{ "role": "otherSite", "foes": "secondaryEnemy" }
 					]
 				},
@@ -71,7 +70,6 @@
 							"foes": "drauven"
 						},
 						{ "role": "otherSite", "foes": "thrixl" },
-						{ "role": "otherSite", "foes": "secondaryEnemy" },
 						{ "role": "otherSite", "foes": "secondaryEnemy" },
 						{ "role": "otherSite", "foes": "secondaryEnemy" },
 						{ "role": "otherSite", "foes": "secondaryEnemy" },
@@ -116,7 +114,7 @@
 				"tidingId": [ "plot_villain_summoners_1_3_tiding" ]
 			}
 		],
-		"omen": [ "plot_villain_summoners_2_1_omen" ],
+		"omen": [ "plot_villain_summoners_2_0_omen" ],
 		"fallbackShowDefaultOmen": false,
 		"nextChapter": "two",
 		"overrideYearsOfPeace": "5"

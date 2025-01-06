@@ -19,7 +19,9 @@
 		"sitesFromOtherChapters": [
 			{ "chapter": "introduction", "fromRole": "town", "toRole": "folk1" },
 			{ "chapter": "two", "fromRole": "town", "toRole": "folk2" }
-		]
+		],
+		"allowIncursionsDestroyTowns": false,
+		"allowIncursionsDestroyStations": false
 	},
 	{
 		"class": "StepC_MoveToTile",
