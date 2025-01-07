@@ -201,11 +201,11 @@
 			{ "chapter": "introduction", "fromRole": "town", "toRole": "folk1" },
 			{ "chapter": "two", "fromRole": "town", "toRole": "folk2" },
 			{ "chapter": "three", "fromRole": "town", "toRole": "folk3" },
-			{ "chapter": "three", "fromRole": "villain1", "toRole": "monster" },
-			{ "chapter": "three", "fromRole": "npc9", "toRole": "item" },
-			{ "chapter": "three", "fromRole": "villain2", "toRole": "monster2" },
-			{ "chapter": "three", "fromRole": "villain3", "toRole": "monster3" },
-			{ "chapter": "one", "toRole": "monster4" },
+			{ "chapter": "one", "fromRole": "npc5", "toRole": "monster" },
+			{ "chapter": "three", "fromRole": "npc6", "toRole": "item" },
+			{ "chapter": "two", "fromRole": "npc7", "toRole": "monster2" },
+			{ "chapter": "three", "fromRole": "npc8", "toRole": "monster3" },
+			{ "chapter": "three", "fromRole": "npc9", "toRole": "monster4" },
 			{ "chapter": "two", "toRole": "site3" }
 		]
 	},

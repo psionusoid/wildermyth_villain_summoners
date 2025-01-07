@@ -21,7 +21,7 @@
 							"foes": "thrixl"
 						},
 						{ "role": "site2", "placement": "semiRemote", "foes": "secondaryEnemy" },
-						{ "role": "otherSite", "foes": "gorgon" },
+						{ "role": "npc5", "foes": "gorgon" },
 						{ "role": "otherSite", "foes": "morthagi" },
 						{ "role": "otherSite", "foes": "cultist" },
 						{ "role": "otherSite", "foes": "drauven" }
@@ -37,7 +37,7 @@
 							"foes": "secondaryEnemy"
 						},
 						{ "role": "site2", "placement": "semiRemote", "foes": "secondaryEnemy" },
-						{ "role": "otherSite", "foes": "secondaryEnemy" },
+						{ "role": "npc7", "foes": "cultist" },
 						{ "role": "otherSite", "foes": "secondaryEnemy" },
 						{ "role": "otherSite", "foes": "secondaryEnemy" }
 					]
@@ -46,30 +46,24 @@
 					"sites": [
 						{ "role": "town", "siteType": "town", "placement": "nearbyTown", "foes": "none" },
 						{
-							"role": "villain1",
-							"siteType": "fancyStation",
-							"placement": "remote",
-							"foes": "gorgon"
-						},
-						{
 							"role": "npc9",
-							"siteType": "fancyStation",
-							"placement": "remote",
-							"foes": "morthagi"
-						},
-						{
-							"role": "villain2",
-							"siteType": "fancyStation",
-							"placement": "remote",
-							"foes": "cultist"
-						},
-						{
-							"role": "villain3",
 							"siteType": "fancyStation",
 							"placement": "remote",
 							"foes": "drauven"
 						},
-						{ "role": "otherSite", "foes": "thrixl" },
+						{
+							"role": "npc8",
+							"siteType": "fancyStation",
+							"placement": "remote",
+							"foes": "thrixl"
+						},
+						{
+							"role": "npc6",
+							"siteType": "fancyStation",
+							"placement": "semiRemote",
+							"foes": "morthagi"
+						},
+						{ "role": "otherSite", "foes": "secondaryEnemy" },
 						{ "role": "otherSite", "foes": "secondaryEnemy" },
 						{ "role": "otherSite", "foes": "secondaryEnemy" },
 						{ "role": "otherSite", "foes": "secondaryEnemy" },
