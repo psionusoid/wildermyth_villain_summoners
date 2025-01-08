@@ -25,7 +25,7 @@
 							"placement": "semiRemote",
 							"foes": "secondaryEnemy"
 						},
-						{ "role": "npc5", "foes": "gorgon" },
+						{ "role": "npc5", "foes": "gorgon", "forceBiome": "swamp" },
 						{ "role": "otherSite", "foes": "thrixl" },
 						{ "role": "otherSite", "foes": "drauven" },
 						{ "role": "otherSite", "foes": "cultist" },
@@ -42,7 +42,7 @@
 							"foes": "secondaryEnemy"
 						},
 						{ "role": "site2", "placement": "semiRemote", "foes": "secondaryEnemy" },
-						{ "role": "npc7", "foes": "cultist" },
+						{ "role": "npc7", "foes": "cultist", "forceBiome": "hills" },
 						{ "role": "otherSite", "foes": "secondaryEnemy" },
 						{ "role": "otherSite", "foes": "secondaryEnemy" }
 					]
@@ -54,19 +54,22 @@
 							"role": "npc9",
 							"siteType": "fancyStation",
 							"placement": "remote",
-							"foes": "drauven"
+							"foes": "drauven",
+							"forceBiome": "forestConiferous"
 						},
 						{
 							"role": "npc8",
 							"siteType": "fancyStation",
 							"placement": "remote",
-							"foes": "thrixl"
+							"foes": "thrixl",
+							"forceBiome": "forestDeciduous"
 						},
 						{
 							"role": "npc6",
 							"siteType": "fancyStation",
 							"placement": "semiRemote",
-							"foes": "morthagi"
+							"foes": "morthagi",
+							"forceBiome": "grassland"
 						},
 						{ "role": "otherSite", "foes": "secondaryEnemy" },
 						{ "role": "otherSite", "foes": "secondaryEnemy" },
