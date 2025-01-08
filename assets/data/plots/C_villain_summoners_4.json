@@ -239,7 +239,6 @@
 		"addLurkingThreat": { "threatFlavor": "drauven", "threatStrength": "6" },
 		"alsoInfest": true
 	},
-	{ "class": "StepC_SackSite", "site": "site3" },
 	{
 		"class": "StepC_MoveToTile",
 		"specificTile": "folk2",
