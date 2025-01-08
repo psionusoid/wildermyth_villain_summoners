@@ -7,8 +7,7 @@
 			"customChapters": [
 				{
 					"sites": [
-						{ "role": "town", "siteType": "town", "foes": "none" },
-						{ "role": "otherSite", "foes": "thrixl" }
+						{ "role": "town", "siteType": "town", "foes": "none" }
 					],
 					"extraTiles": 0
 				},
@@ -18,13 +17,19 @@
 							"role": "site3",
 							"siteType": "fancyStation",
 							"placement": "remote",
-							"foes": "thrixl"
+							"foes": "secondaryEnemy"
 						},
-						{ "role": "site2", "placement": "semiRemote", "foes": "secondaryEnemy" },
+						{
+							"role": "site2",
+							"exactStation": "library",
+							"placement": "semiRemote",
+							"foes": "secondaryEnemy"
+						},
 						{ "role": "npc5", "foes": "gorgon" },
-						{ "role": "otherSite", "foes": "morthagi" },
+						{ "role": "otherSite", "foes": "thrixl" },
+						{ "role": "otherSite", "foes": "drauven" },
 						{ "role": "otherSite", "foes": "cultist" },
-						{ "role": "otherSite", "foes": "drauven" }
+						{ "role": "otherSite", "foes": "morthagi" }
 					]
 				},
 				{
