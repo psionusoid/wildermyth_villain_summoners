@@ -1,0 +1,27 @@
+{
+"scenarioInfo": {
+	"id": "villain_summoners_4_2_4_keystoneThrixl",
+	"type": "MISSION",
+	"nameKey": "villain_summoners_4_2_4_keystoneThrixl.name",
+	"blurbKey": "villain_summoners_4_2_4_keystoneThrixl.blurb",
+	"rosterSlots": [
+		{ "type": "greenhorn", "archetype": "warrior" },
+		{ "type": "greenhorn", "archetype": "warrior" },
+		{ "type": "greenhorn", "archetype": "hunter" },
+		{ "type": "greenhorn", "archetype": "hunter" },
+		{ "type": "greenhorn", "archetype": "mystic" }
+	]
+},
+"playableFactions": [
+	{ "factionRole": "HERO", "plotRole": "attacker" },
+	{ "factionRole": "VILLAIN", "plotRole": "defender" }
+],
+"site": { "type": "SITE", "siteMissionPlanId": "villain_summoners_4_2_4_keystoneThrixl" },
+"inhabitants": [
+	{
+		"factionRole": "VILLAIN",
+		"threat": { "flavor": "thrixl", "strength": 6 },
+		"calamities": 6
+	}
+]
+}

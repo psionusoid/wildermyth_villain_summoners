@@ -3,12 +3,11 @@
 	{
 		"class": "StepC_MapConfig",
 		"mapConfig": {
-			"mapRadius": 22,
+			"mapRadius": 24,
 			"customChapters": [
 				{
 					"sites": [
-						{ "role": "town", "siteType": "town", "foes": "none" },
-						{ "role": "otherSite", "foes": "thrixl" }
+						{ "role": "town", "siteType": "town", "foes": "none" }
 					],
 					"extraTiles": 0
 				},
@@ -18,38 +17,87 @@
 							"role": "site3",
 							"siteType": "fancyStation",
 							"placement": "remote",
-							"foes": "cultist"
+							"foes": "secondaryEnemy"
 						},
-						{ "role": "site2", "placement": "semiRemote", "foes": "drauven" },
+						{
+							"role": "site2",
+							"exactStation": "library",
+							"placement": "semiRemote",
+							"foes": "secondaryEnemy"
+						},
+						{ "role": "npc5", "foes": "gorgon", "forceBiome": "swamp" },
+						{ "role": "otherSite", "foes": "thrixl" },
+						{ "role": "otherSite", "foes": "drauven" },
 						{ "role": "otherSite", "foes": "cultist" },
-						{ "role": "otherSite", "foes": "gorgon" },
+						{ "role": "otherSite", "foes": "morthagi" }
+					]
+				},
+				{
+					"sites": [
+						{ "role": "town", "siteType": "town", "placement": "nearbyTown", "foes": "none" },
+						{
+							"role": "site3",
+							"siteType": "fancyStation",
+							"placement": "remote",
+							"foes": "secondaryEnemy"
+						},
+						{ "role": "site2", "placement": "semiRemote", "foes": "secondaryEnemy" },
+						{ "role": "npc7", "foes": "cultist", "forceBiome": "hills" },
+						{ "role": "otherSite", "foes": "secondaryEnemy" },
 						{ "role": "otherSite", "foes": "secondaryEnemy" }
 					]
 				},
 				{
 					"sites": [
 						{ "role": "town", "siteType": "town", "placement": "nearbyTown", "foes": "none" },
-						{ "role": "site3", "siteType": "fancyStation", "placement": "remote" },
-						{ "role": "site2", "placement": "semiRemote" },
-						{ "role": "otherSite" },
-						{ "role": "otherSite" },
-						{ "role": "otherSite", "foes": "secondaryEnemy" }
-					]
-				},
-				{
-					"sites": [
-						{ "role": "town", "siteType": "town", "placement": "nearbyTown", "foes": "none" },
-						{ "role": "site3", "siteType": "fancyStation", "placement": "remote" },
-						{ "role": "otherSite" },
-						{ "role": "otherSite" },
-						{ "role": "otherSite" },
+						{
+							"role": "npc9",
+							"siteType": "fancyStation",
+							"placement": "remote",
+							"foes": "drauven",
+							"forceBiome": "forestConiferous"
+						},
+						{
+							"role": "npc8",
+							"siteType": "fancyStation",
+							"placement": "remote",
+							"foes": "thrixl",
+							"forceBiome": "forestDeciduous"
+						},
+						{
+							"role": "npc6",
+							"siteType": "fancyStation",
+							"placement": "semiRemote",
+							"foes": "morthagi",
+							"forceBiome": "grassland"
+						},
+						{ "role": "otherSite", "foes": "secondaryEnemy" },
+						{ "role": "otherSite", "foes": "secondaryEnemy" },
+						{ "role": "otherSite", "foes": "secondaryEnemy" },
+						{ "role": "otherSite", "foes": "secondaryEnemy" },
 						{ "role": "otherSite", "foes": "secondaryEnemy" },
 						{ "role": "otherSite", "foes": "secondaryEnemy" }
 					],
 					"extraTiles": 2
-				}
+				},
+				{ "extraTiles": 0 }
 			]
 		}
+	},
+	{
+		"class": "Step_RunOutcomes",
+		"outcomes": [
+			{
+				"class": "SetGlobal",
+				"globalId": "extraMissionCardDraw",
+				"value": "if(isMatch(DIFFICULTY_COMBAT,4),4,1)"
+			},
+			{
+				"class": "SetGlobal",
+				"globalId": "intervalBareMinimumPartyThreshold.chapter3",
+				"value": "3"
+			}
+		]
 	},
 	{
 		"class": "Step_SubPlot",
@@ -68,7 +116,7 @@
 				"tidingId": [ "plot_villain_summoners_1_3_tiding" ]
 			}
 		],
-		"omen": null,
+		"omen": [ "plot_villain_summoners_2_0_omen" ],
 		"fallbackShowDefaultOmen": false,
 		"nextChapter": "two",
 		"overrideYearsOfPeace": "5"
@@ -81,11 +129,25 @@
 				"tidingId": [ "plot_villain_summoners_2_4_tiding" ]
 			}
 		],
+		"doRegularTidings": false,
 		"omen": [ "plot_villain_summoners_3_1_omen" ],
 		"nextChapter": "three",
-		"overrideYearsOfPeace": "2"
+		"overrideYearsOfPeace": "1",
+		"seasonsInsteadOfYears": true
 	},
 	{ "class": "Step_SubPlot", "plotId": "C_villain_summoners_3" },
+	{
+		"class": "StepC_DoInterval",
+		"tidings": [
+			{
+				"tidingId": [ "plot_villain_summoners_3_3_tiding" ]
+			}
+		],
+		"omen": [ "plot_villain_summoners_4_1_omen" ],
+		"nextChapter": "four",
+		"overrideYearsOfPeace": "2"
+	},
+	{ "class": "Step_SubPlot", "plotId": "C_villain_summoners_4" },
 	{ "class": "StepC_Victory" }
 ]
 }

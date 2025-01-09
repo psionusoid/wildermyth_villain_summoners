@@ -1,0 +1,27 @@
+{
+"scenarioInfo": {
+	"id": "villain_summoners_4_2_1_keystoneGorgon",
+	"type": "MISSION",
+	"nameKey": "villain_summoners_4_2_1_keystoneGorgon.name",
+	"blurbKey": "villain_summoners_4_2_1_keystoneGorgon.blurb",
+	"rosterSlots": [
+		{ "type": "greenhorn", "archetype": "warrior" },
+		{ "type": "greenhorn", "archetype": "warrior" },
+		{ "type": "greenhorn", "archetype": "hunter" },
+		{ "type": "greenhorn", "archetype": "hunter" },
+		{ "type": "greenhorn", "archetype": "mystic" }
+	]
+},
+"playableFactions": [
+	{ "factionRole": "HERO", "plotRole": "attacker" },
+	{ "factionRole": "VILLAIN", "plotRole": "defender" }
+],
+"site": { "type": "SITE", "siteMissionPlanId": "villain_summoners_4_2_1_keystoneGorgon" },
+"inhabitants": [
+	{
+		"factionRole": "VILLAIN",
+		"threat": { "flavor": "gorgon", "strength": 6 },
+		"calamities": 6
+	}
+]
+}

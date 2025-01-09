@@ -8,6 +8,10 @@
 	},
 	{ "class": "Objective_CampaignUpkeep" },
 	{
+		"class": "Objective_ClearAllHostileSites",
+		"objectiveId": "Objective_ClearAllHostileSites.C_villain_summoners_1"
+	},
+	{
 		"class": "Objective_AssaultJob",
 		"objectiveId": "Objective_AssaultJob.villain_summoners_1.keystone",
 		"feedback": [
@@ -49,14 +53,37 @@
 				"role": "site"
 			}
 		],
-		"onSuccess": [
+		"target": "site3",
+		"lockUntilObjectivesComplete": [
+			"Objective_AssaultJob.villain_summoners_1.keystone",
+			"Objective_ClearAllHostileSites.C_villain_summoners_1"
+		],
+		"unlockedFeedback": [
 			{
-				"class": "Step_AddObjectives",
-				"objectives": [ "Objective_AssaultJob.villain_summoners_2" ]
+				"overland": {
+					"color": { "r": 1, "g": 1, "b": 1, "a": 0.5 },
+					"sprite": "plot_battle",
+					"anchor": { "x": 0.5, "y": 0.5 }
+				},
+				"role": "site"
+			}
+		]
+	},
+	{
+		"class": "Objective_LocateAndUnlockSite",
+		"objectiveId": "capstone.findSite.villain_summoners_1_vis",
+		"feedback": [
+			{
+				"overland": {
+					"color": { "r": 1, "g": 1, "b": 1, "a": 0.5 },
+					"sprite": "plot_locked",
+					"anchor": { "x": 0.5, "y": 0.5 }
+				},
+				"role": "site"
 			}
 		],
 		"target": "site3",
-		"lockUntilObjectiveComplete": "Objective_AssaultJob.villain_summoners_1.keystone",
+		"lockUntilObjectivesComplete": [ "Objective_ClearAllHostileSites.C_villain_summoners_1" ],
 		"unlockedFeedback": [
 			{
 				"overland": {
@@ -124,6 +151,7 @@
 		"objectives": [
 			"Objective_CampaignDefeat",
 			"campaignUpkeep",
+			"Objective_ClearAllHostileSites.C_villain_summoners_1",
 			"Objective_AssaultJob.villain_summoners_1.keystone",
 			"capstone.findSite.villain_summoners_1"
 		]
@@ -131,6 +159,17 @@
 	{
 		"class": "Step_WaitForObjectives",
 		"objectives": [ "Objective_AssaultJob.villain_summoners_1.keystone" ]
+	},
+	{
+		"class": "Step_AddObjectives",
+		"objectives": [ "capstone.findSite.villain_summoners_1_vis" ]
+	},
+	{
+		"class": "Step_WaitForObjectives",
+		"objectives": [
+			"Objective_AssaultJob.villain_summoners_1.keystone",
+			"Objective_ClearAllHostileSites.C_villain_summoners_1"
+		]
 	},
 	{
 		"class": "Step_AddObjectives",

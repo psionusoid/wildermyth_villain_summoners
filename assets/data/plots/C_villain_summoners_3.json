@@ -8,97 +8,8 @@
 	},
 	{ "class": "Objective_CampaignUpkeep" },
 	{
-		"class": "Objective_AssaultJob",
-		"objectiveId": "Objective_AssaultJob.villain_summoners_3.keystone1",
-		"feedback": [
-			{
-				"overland": {
-					"color": { "r": 1, "g": 1, "b": 1, "a": 0.5 },
-					"sprite": "plot_destination",
-					"anchor": { "x": 0.5, "y": 0.5 }
-				},
-				"role": "site"
-			}
-		],
-		"site": "folk3",
-		"arriveEvent": [ "plot_villain_summoners_3_1_keystone_arrive" ],
-		"results": [
-			{},
-			{
-				"result": "defeat",
-				"customResults": [
-					{ "class": "StepC_Defeat" }
-				]
-			}
-		],
-		"noRetreat": true,
-		"inferEncounterResult": true,
-		"customAssaultJob": "job_plotAssaultSite_min3_keystone|"
-	},
-	{
-		"class": "Objective_LocateAndUnlockSite",
-		"objectiveId": "capstone.findSite.villain_summoners_3",
-		"visible": false,
-		"feedback": [
-			{
-				"overland": {
-					"color": { "r": 1, "g": 1, "b": 1, "a": 0.5 },
-					"sprite": "plot_locked",
-					"anchor": { "x": 0.5, "y": 0.5 }
-				},
-				"role": "site"
-			}
-		],
-		"onSuccess": [
-			{
-				"class": "Step_AddObjectives",
-				"objectives": [ "Objective_AssaultJob.villain_summoners_2" ]
-			}
-		],
-		"target": "site3",
-		"lockUntilObjectiveComplete": "Objective_AssaultJob.villain_summoners_3.keystone1",
-		"unlockedFeedback": [
-			{
-				"overland": {
-					"color": { "r": 1, "g": 1, "b": 1, "a": 0.5 },
-					"sprite": "plot_battle",
-					"anchor": { "x": 0.5, "y": 0.5 }
-				},
-				"role": "site"
-			}
-		]
-	},
-	{
-		"class": "Objective_AssaultJob",
-		"objectiveId": "Objective_AssaultJob.villain_summoners_3.capstone",
-		"feedback": [
-			{
-				"overland": {
-					"color": { "r": 1, "g": 1, "b": 1, "a": 0.5 },
-					"sprite": "plot_battle",
-					"anchor": { "x": 0.5, "y": 0.5 }
-				},
-				"role": "site"
-			}
-		],
-		"site": "site3",
-		"arriveEvent": [ "plot_villain_summoners_3_3_capstone_arrive" ],
-		"isCapstoneFight": true,
-		"isFinalFight": true,
-		"finalPreparationsEvent": [ "plot_villain_summoners_3_2_finalPreparations" ],
-		"results": [
-			{
-				"customResults": [
-					{ "class": "Step_SetPlotResult" }
-				]
-			},
-			{
-				"result": "defeat",
-				"customResults": [
-					{ "class": "StepC_Defeat" }
-				]
-			}
-		]
+		"class": "Objective_ClearAllHostileSites",
+		"objectiveId": "Objective_ClearAllHostileSites.C_villain_summoners_3"
 	}
 ],
 "steps": [
@@ -107,31 +18,28 @@
 		"chapter": "three",
 		"sitesFromOtherChapters": [
 			{ "chapter": "introduction", "fromRole": "town", "toRole": "folk1" },
-			{ "chapter": "two", "fromRole": "town", "toRole": "folk2" },
-			{ "chapter": "two", "fromRole": "site2", "toRole": "folk3" }
-		]
+			{ "chapter": "two", "fromRole": "town", "toRole": "folk2" }
+		],
+		"allowIncursionsDestroyTowns": false,
+		"allowIncursionsDestroyStations": false
 	},
 	{
 		"class": "StepC_MoveToTile",
-		"specificTile": "folk2",
+		"specificTile": "folk1",
 		"moveHeroes": "allLiving"
 	},
 	{
 		"class": "Step_AddObjectives",
-		"objectives": [
-			"Objective_CampaignDefeat",
-			"campaignUpkeep",
-			"Objective_AssaultJob.villain_summoners_3.keystone1",
-			"capstone.findSite.villain_summoners_3"
-		]
+		"objectives": [ "Objective_CampaignDefeat", "campaignUpkeep" ]
 	},
 	{
 		"class": "Step_WaitForObjectives",
-		"objectives": [ "Objective_AssaultJob.villain_summoners_3.keystone1" ]
+		"objectives": [ "Objective_ClearAllHostileSites.C_villain_summoners_3" ]
 	},
 	{
-		"class": "Step_AddObjectives",
-		"objectives": [ "Objective_AssaultJob.villain_summoners_3.capstone" ]
-	}
+		"class": "StepC_ImmediateEvent",
+		"eventIds": [ "plot_villain_summoners_3_2_plot" ]
+	},
+	{ "class": "Step_SetPlotResult" }
 ]
 }

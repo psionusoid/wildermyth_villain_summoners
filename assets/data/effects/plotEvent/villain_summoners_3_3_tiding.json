@@ -1,0 +1,39 @@
+{
+"id": "plot_villain_summoners_3_3_tiding",
+"info": {
+	"dataVersion": 1,
+	"sourceFile": "plotEvent/villain_summoners_3_3_tiding",
+	"modId": "villain_summoners",
+	"author": "psionusoid"
+},
+"type": "TIDING_MISC",
+"verb": "MANEUVER",
+"ability": { "icon": "heroism", "priority": "1", "cooldown": "oncePerGame" },
+"targets": [
+	{ "template": "EVENT" },
+	{ "template": "COMPANY" }
+],
+"outcomes": [
+	{
+		"class": "Description",
+		"script": [
+			{
+				"class": "comicNode_Panel",
+				"panel": {
+					"size": "full",
+					"actorSlots": [
+						{ "role": "hero" }
+					],
+					"textSlots": [
+						{
+							"textSourceFile": "plotEvent/villain_summoners_3_3_tiding",
+							"textKey": "~01~~panel_001~1_hero",
+							"pointerOwner": "hero"
+						}
+					]
+				}
+			}
+		]
+	}
+]
+}

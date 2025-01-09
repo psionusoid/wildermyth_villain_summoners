@@ -1,0 +1,261 @@
+{
+"objectives": [
+	{
+		"class": "Objective_CampaignDefeat",
+		"onFail": [
+			{ "class": "StepC_Defeat" }
+		]
+	},
+	{ "class": "Objective_CampaignUpkeep" },
+	{
+		"class": "Objective_AssaultJob",
+		"objectiveId": "Objective_AssaultJob.villain_summoners_4.keystoneGorgon",
+		"feedback": [
+			{
+				"overland": {
+					"color": { "r": 1, "g": 1, "b": 1, "a": 0.5 },
+					"sprite": "plot_destination",
+					"anchor": { "x": 0.5, "y": 0.5 }
+				},
+				"role": "site"
+			}
+		],
+		"site": "monster",
+		"arriveEvent": [ "plot_villain_summoners_4_2_1_keystoneGorgon_arrive" ],
+		"results": [
+			{},
+			{
+				"result": "defeat",
+				"customResults": [
+					{ "class": "StepC_Defeat" }
+				]
+			}
+		],
+		"noRetreat": true,
+		"inferEncounterResult": true,
+		"jobRole": "aspect",
+		"customAssaultJob": "job_plotAssaultSite_min3_keystone|"
+	},
+	{
+		"class": "Objective_AssaultJob",
+		"objectiveId": "Objective_AssaultJob.villain_summoners_4.keystoneMorthagi",
+		"feedback": [
+			{
+				"overland": {
+					"color": { "r": 1, "g": 1, "b": 1, "a": 0.5 },
+					"sprite": "plot_destination",
+					"anchor": { "x": 0.5, "y": 0.5 }
+				},
+				"role": "site"
+			}
+		],
+		"site": "item",
+		"arriveEvent": [ "plot_villain_summoners_4_2_2_keystoneMorthagi_arrive" ],
+		"results": [
+			{},
+			{
+				"result": "defeat",
+				"customResults": [
+					{ "class": "StepC_Defeat" }
+				]
+			}
+		],
+		"noRetreat": true,
+		"inferEncounterResult": true,
+		"jobRole": "door",
+		"customAssaultJob": "job_plotAssaultSite_min3_keystone|"
+	},
+	{
+		"class": "Objective_AssaultJob",
+		"objectiveId": "Objective_AssaultJob.villain_summoners_4.keystoneCultist",
+		"feedback": [
+			{
+				"overland": {
+					"color": { "r": 1, "g": 1, "b": 1, "a": 0.5 },
+					"sprite": "plot_destination",
+					"anchor": { "x": 0.5, "y": 0.5 }
+				},
+				"role": "site"
+			}
+		],
+		"site": "monster2",
+		"arriveEvent": [ "plot_villain_summoners_4_2_3_keystoneCultist_arrive" ],
+		"results": [
+			{},
+			{
+				"result": "defeat",
+				"customResults": [
+					{ "class": "StepC_Defeat" }
+				]
+			}
+		],
+		"noRetreat": true,
+		"inferEncounterResult": true,
+		"jobRole": "aspect2",
+		"customAssaultJob": "job_plotAssaultSite_min3_keystone|"
+	},
+	{
+		"class": "Objective_AssaultJob",
+		"objectiveId": "Objective_AssaultJob.villain_summoners_4.keystoneThrixl",
+		"feedback": [
+			{
+				"overland": {
+					"color": { "r": 1, "g": 1, "b": 1, "a": 0.5 },
+					"sprite": "plot_destination",
+					"anchor": { "x": 0.5, "y": 0.5 }
+				},
+				"role": "site"
+			}
+		],
+		"site": "monster3",
+		"arriveEvent": [ "plot_villain_summoners_4_2_4_keystoneThrixl_arrive" ],
+		"results": [
+			{},
+			{
+				"result": "defeat",
+				"customResults": [
+					{ "class": "StepC_Defeat" }
+				]
+			}
+		],
+		"noRetreat": true,
+		"inferEncounterResult": true,
+		"jobRole": "aspect3",
+		"customAssaultJob": "job_plotAssaultSite_min3_keystone|"
+	},
+	{
+		"class": "Objective_AssaultJob",
+		"objectiveId": "Objective_AssaultJob.villain_summoners_4.keystoneDrauven",
+		"feedback": [
+			{
+				"overland": {
+					"color": { "r": 1, "g": 1, "b": 1, "a": 0.5 },
+					"sprite": "plot_destination",
+					"anchor": { "x": 0.5, "y": 0.5 }
+				},
+				"role": "site"
+			}
+		],
+		"site": "monster4",
+		"arriveEvent": [ "plot_villain_summoners_4_2_5_keystoneDrauven_arrive" ],
+		"results": [
+			{},
+			{
+				"result": "defeat",
+				"customResults": [
+					{ "class": "StepC_Defeat" }
+				]
+			}
+		],
+		"noRetreat": true,
+		"inferEncounterResult": true,
+		"jobRole": "aspect4",
+		"customAssaultJob": "job_plotAssaultSite_min3_keystone|"
+	},
+	{
+		"class": "Objective_TestAspect",
+		"objectiveId": "Objective_TestAspect.C_villain_summoners_4",
+		"targets": [ "company" ],
+		"test": "allMustHave",
+		"aspect": "villain_summoners_4_keystones_completed"
+	},
+	{
+		"class": "Objective_AssaultJob",
+		"objectiveId": "Objective_AssaultJob.villain_summoners_4.capstone",
+		"feedback": [
+			{
+				"overland": {
+					"color": { "r": 1, "g": 1, "b": 1, "a": 0.5 },
+					"sprite": "plot_battle",
+					"anchor": { "x": 0.5, "y": 0.5 }
+				},
+				"role": "site"
+			}
+		],
+		"site": "site3",
+		"arriveEvent": [ "plot_villain_summoners_4_4_capstone_arrive" ],
+		"isCapstoneFight": true,
+		"isFinalFight": true,
+		"finalPreparationsEvent": [ "plot_villain_summoners_4_3_finalPreparations" ],
+		"results": [
+			{
+				"customResults": [
+					{ "class": "Step_SetPlotResult" }
+				]
+			},
+			{
+				"result": "defeat",
+				"customResults": [
+					{ "class": "StepC_Defeat" }
+				]
+			}
+		],
+		"noRetreat": true
+	}
+],
+"steps": [
+	{
+		"class": "StepC_BeginChapter",
+		"chapter": "four",
+		"sitesFromOtherChapters": [
+			{ "chapter": "introduction", "fromRole": "town", "toRole": "folk1" },
+			{ "chapter": "two", "fromRole": "town", "toRole": "folk2" },
+			{ "chapter": "three", "fromRole": "town", "toRole": "folk3" },
+			{ "chapter": "one", "fromRole": "npc5", "toRole": "monster" },
+			{ "chapter": "three", "fromRole": "npc6", "toRole": "item" },
+			{ "chapter": "two", "fromRole": "npc7", "toRole": "monster2" },
+			{ "chapter": "three", "fromRole": "npc8", "toRole": "monster3" },
+			{ "chapter": "three", "fromRole": "npc9", "toRole": "monster4" },
+			{ "chapter": "two", "toRole": "site3" }
+		]
+	},
+	{
+		"class": "StepC_SackSite",
+		"site": "monster",
+		"addLurkingThreat": { "threatFlavor": "gorgon", "threatStrength": "6" },
+		"alsoInfest": true
+	},
+	{
+		"class": "StepC_SackSite",
+		"site": "item",
+		"addLurkingThreat": { "threatFlavor": "morthagi", "threatStrength": "6" },
+		"alsoInfest": true
+	},
+	{
+		"class": "StepC_SackSite",
+		"site": "monster2",
+		"addLurkingThreat": { "threatFlavor": "cultist", "threatStrength": "6" },
+		"alsoInfest": true
+	},
+	{
+		"class": "StepC_SackSite",
+		"site": "monster3",
+		"addLurkingThreat": { "threatFlavor": "thrixl", "threatStrength": "6" },
+		"alsoInfest": true
+	},
+	{
+		"class": "StepC_SackSite",
+		"site": "monster4",
+		"addLurkingThreat": { "threatFlavor": "drauven", "threatStrength": "6" },
+		"alsoInfest": true
+	},
+	{
+		"class": "StepC_MoveToTile",
+		"specificTile": "folk2",
+		"moveHeroes": "allLiving"
+	},
+	{
+		"class": "Step_AddObjectives",
+		"objectives": [
+			"Objective_CampaignDefeat",
+			"campaignUpkeep",
+			"Objective_AssaultJob.villain_summoners_4.keystoneGorgon",
+			"Objective_AssaultJob.villain_summoners_4.keystoneMorthagi",
+			"Objective_AssaultJob.villain_summoners_4.keystoneCultist",
+			"Objective_AssaultJob.villain_summoners_4.keystoneThrixl",
+			"Objective_AssaultJob.villain_summoners_4.keystoneDrauven",
+			"Objective_AssaultJob.villain_summoners_4.capstone"
+		]
+	}
+]
+}
