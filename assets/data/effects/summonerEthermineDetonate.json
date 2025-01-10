@@ -52,9 +52,8 @@
 			"attackBlockedCue": "Characters/DefaultHuman/Magic_FireMiss"
 		},
 		"attackerAnimationOverride": "",
-		"defenseRollTags": [ "range" ],
 		"attackStrength": "self.RANGE_ACCURACY",
-		"onHit": { "class": "Damage", "amount": "self.weaponDamage+1d3", "type": "MAGIC" }
+		"onHit": { "class": "Damage", "amount": "self.weaponDamage", "type": "MAGIC" }
 	},
 	{ "class": "Delete" }
 ]
