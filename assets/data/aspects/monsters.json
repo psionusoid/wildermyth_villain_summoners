@@ -89,7 +89,7 @@
 	],
 	"effects": [ "summonerEthermine|DAMAGE_EXPRESSION" ],
 	"boostType": "ABILITY_MISC",
-	"showInTooltip": true
+	"importance": -1
 },
 {
 	"modId": "villain_summoners",
