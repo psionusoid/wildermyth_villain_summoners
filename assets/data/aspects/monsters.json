@@ -136,7 +136,7 @@
 		{ "replace": "USES" },
 		{ "replace": "MAX_INTERFUSIONS" }
 	],
-	"effects": [ "summonerSpawnGorgonCard|COOLDOWN|USES|MAX_INTERFUSIONS" ],
+	"effects": [ "summonerSpawnGorgon|COOLDOWN|USES|MAX_INTERFUSIONS" ],
 	"importance": -1
 },
 {
