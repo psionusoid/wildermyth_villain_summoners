@@ -73,12 +73,6 @@
 ],
 "outcomes": [
 	{
-		"class": "DoOneRandom",
-		"weightedOutcomes": [
-			{}
-		]
-	},
-	{
 		"class": "AttackRoll",
 		"defender": null,
 		"attackAnimationType": "interaction",
