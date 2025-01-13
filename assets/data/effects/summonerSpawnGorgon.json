@@ -82,13 +82,129 @@
 			"class": "DoAll",
 			"outcomes": [
 				{
-					"class": "Spawn",
-					"target": "target",
-					"addRole": "monster",
-					"createEntity": {
-						"randomCards": { "group": "gorgon", "numberOfCards": "1" },
-						"setLocation": true
-					}
+					"class": "DoOneRandom",
+					"weightedOutcomes": [
+						{
+							"weightExp": "2*boolean(self.saw_gorgon_roe)",
+							"outcome": {
+								"class": "Spawn",
+								"target": "target",
+								"addRole": "monster",
+								"createEntity": {
+									"query": { "baseTag": "gorgon_roe" },
+									"setLocation": true
+								}
+							}
+						},
+						{
+							"weightExp": "2*boolean(self.saw_gorgon_coon)",
+							"outcome": {
+								"class": "Spawn",
+								"target": "target",
+								"addRole": "monster",
+								"createEntity": {
+									"query": { "baseTag": "gorgon_coon" },
+									"setLocation": true
+								}
+							}
+						},
+						{
+							"weightExp": "3*boolean(self.saw_gorgon_rager)",
+							"outcome": {
+								"class": "Spawn",
+								"target": "target",
+								"addRole": "monster",
+								"createEntity": {
+									"query": { "baseTag": "gorgon_rager" },
+									"setLocation": true
+								}
+							}
+						},
+						{
+							"weightExp": "3*boolean(self.saw_gorgon_bogmoor)",
+							"outcome": {
+								"class": "Spawn",
+								"target": "target",
+								"addRole": "monster",
+								"createEntity": {
+									"query": { "baseTag": "gorgon_bogmoor" },
+									"setLocation": true
+								}
+							}
+						},
+						{
+							"weightExp": "4*boolean(self.saw_gorgon_gheist)",
+							"outcome": {
+								"class": "Spawn",
+								"target": "target",
+								"addRole": "monster",
+								"createEntity": {
+									"query": { "baseTag": "gorgon_gheist" },
+									"setLocation": true
+								}
+							}
+						},
+						{
+							"weightExp": "5*boolean(self.saw_gorgon_gorgon)",
+							"outcome": {
+								"class": "Spawn",
+								"target": "target",
+								"addRole": "monster",
+								"createEntity": {
+									"query": { "baseTag": "gorgon_gorgon" },
+									"setLocation": true
+								}
+							}
+						},
+						{
+							"weightExp": "6*boolean(self.saw_gorgon_bartoth)",
+							"outcome": {
+								"class": "Spawn",
+								"target": "target",
+								"addRole": "monster",
+								"createEntity": {
+									"query": { "baseTag": "gorgon_bartoth" },
+									"setLocation": true
+								}
+							}
+						},
+						{
+							"weightExp": "6*boolean(self.saw_gorgon_staggron)",
+							"outcome": {
+								"class": "Spawn",
+								"target": "target",
+								"addRole": "monster",
+								"createEntity": {
+									"query": { "baseTag": "gorgon_staggron" },
+									"setLocation": true
+								}
+							}
+						},
+						{
+							"weightExp": "6*boolean(self.saw_gorgon_usric)",
+							"outcome": {
+								"class": "Spawn",
+								"target": "target",
+								"addRole": "monster",
+								"createEntity": {
+									"query": { "baseTag": "gorgon_usric" },
+									"setLocation": true
+								}
+							}
+						},
+						{
+							"weightExp": "6*boolean(self.saw_gorgon_seacaller)",
+							"outcome": {
+								"class": "Spawn",
+								"target": "target",
+								"addRole": "monster",
+								"createEntity": {
+									"query": { "baseTag": "gorgon_seacaller" },
+									"setLocation": true
+								}
+							}
+						}
+					]
 				}
 			]
 		}
