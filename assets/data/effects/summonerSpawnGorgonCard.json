@@ -1,5 +1,5 @@
 {
-"id": "summonerSpawnGorgonCard|MAX_INTERFUSIONS",
+"id": "summonerSpawnGorgonCard|COOLDOWN|USES|MAX_INTERFUSIONS",
 "info": {
 	"dataVersion": 1,
 	"sourceFile": "summonerSpawnGorgonCard",
@@ -13,7 +13,7 @@
 	"icon": "magic",
 	"priority": "3",
 	"showDescriptionInTooltip": true,
-	"cooldown": "oncePerTurn"
+	"numUses": "USES"
 },
 "targets": [
 	{
@@ -32,7 +32,8 @@
 			"saw_gorgon_bartoth",
 			"saw_gorgon_staggron",
 			"saw_gorgon_usric",
-			"saw_gorgon_seacaller"
+			"saw_gorgon_seacaller",
+			"alive"
 		]
 	},
 	{
@@ -51,7 +52,7 @@
 		"choose": "ANY",
 		"fromRoles": [ "self" ],
 		"aspectValues": [
-			{ "id": "summonerInterfused", "maxValue": "MAX_INTERFUSIONS" }
+			{ "id": "summonerInterfused", "maxValue": "MAX_INTERFUSIONS-1" }
 		]
 	},
 	{ "template": "TILE", "choose": "ANY", "range": "6" },
@@ -90,6 +91,16 @@
 				}
 			]
 		}
+	},
+	{
+		"class": "Aspects",
+		"STUB": "We manually add the cooldown, so it can take unusual values or depend on difficulty",
+		"addAspects": [
+			{
+				"id": "cooldown|summonerSpawnGorgonCard|COOLDOWN|USES|MAX_INTERFUSIONS",
+				"value": "COOLDOWN"
+			}
+		]
 	},
 	{
 		"class": "IfRolesArePresent",
