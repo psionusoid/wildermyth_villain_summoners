@@ -42,6 +42,7 @@
 	"importance": 2,
 	"showValue": true
 },
+{ "modId": "villain_summoners", "id": "summoner", "voice": "default" },
 {
 	"modId": "villain_summoners",
 	"id": "summonerIncreaseStatsPerCalamity",
