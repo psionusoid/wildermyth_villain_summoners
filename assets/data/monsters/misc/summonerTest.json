@@ -10,8 +10,8 @@
 	"alive",
 	"summoner",
 	"monsterMelee|melt|balanced|1.6|3+1d3",
-	"monsterRangedMagic|shadowtongue|balanced|0.9|6.6|2+1d2",
-	"summoner_spawnGorgon|2|6|4",
+	"monsterRangedMagic|summonerRanged|balanced|0.9|6.6|2+1d2",
+	"summoner_spawnGorgon|2|10|4",
 	"summoner_soulshield",
 	"summoner_soulbind",
 	"summoner_scanUnits",
@@ -30,25 +30,32 @@
 	"ARMOR": "2",
 	"RANGE_ACCURACY": "95",
 	"BLOCK": "0",
-	"SPEED": "7"
+	"SPEED": "4"
 },
 "scale": [ "((2+(HEALTH/6))*[0.95,1])/3", "((2+(HEALTH/6))*[0.95,1])/3" ],
 "combatDifficulty_1": {
 	"newAspects": [
-		"monsterRangedMagic|shadowtongue|balanced|0.9|6.6|1+1d2",
-		"monsterMelee|melt|balanced|1.6|2+1d2"
+		"monsterRangedMagic|summonerRanged|balanced|0.9|6.6|1+1d2",
+		"monsterMelee|melt|balanced|1.6|2+1d2",
+		"summoner_spawnGorgon|3|6|2"
 	],
-	"stats": { "HEALTH": "6", "PHYSICAL_DAMAGE_BONUS": "0", "ARMOR": "2" }
+	"stats": { "HEALTH": "6", "WARDING": "1", "ARMOR": "1" }
 },
 "combatDifficulty_10": {
 	"newAspects": [
-		"monsterRangedMagic|shadowtongue|balanced|0.9|6.6|1+1d3",
-		"monsterMelee|melt|balanced|1.6|2+1d3"
+		"monsterRangedMagic|summonerRanged|balanced|0.9|6.6|1+1d3",
+		"monsterMelee|melt|balanced|1.6|2+1d3",
+		"summoner_spawnGorgon|2|10|4"
 	],
-	"stats": { "HEALTH": "7", "PHYSICAL_DAMAGE_BONUS": "0", "ARMOR": "2" }
+	"stats": { "HEALTH": "7", "ARMOR": "1" }
 },
 "combatDifficulty_30": {
-	"stats": { "HEALTH": "12", "ARMOR": "3" }
+	"newAspects": [
+		"monsterRangedMagic|summonerRanged|balanced|0.9|6.6|3+1d2",
+		"monsterMelee|melt|balanced|1.6|4+1d2",
+		"summoner_spawnGorgon|1|100|6"
+	],
+	"stats": { "HEALTH": "20+1d4", "WARDING": "6", "ARMOR": "4" }
 },
 "baseColor": [ "[1.5,2]", "[1.5,2]", "[1.5,2]" ],
 "skin": [
