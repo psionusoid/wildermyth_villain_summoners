@@ -194,11 +194,13 @@
 },
 {
 	"modId": "villain_summoners",
-	"id": "summoner_spawnHero|MAX_INTERFUSIONS",
+	"id": "summoner_spawnHero|COOLDOWN|USES|MAX_INTERFUSIONS",
 	"parameters": [
+		{ "replace": "COOLDOWN" },
+		{ "replace": "USES" },
 		{ "replace": "MAX_INTERFUSIONS" }
 	],
-	"effects": [ "summonerSpawnHero|MAX_INTERFUSIONS" ],
+	"effects": [ "summonerSpawnHero|COOLDOWN|USES|MAX_INTERFUSIONS" ],
 	"importance": -1
 },
 {
