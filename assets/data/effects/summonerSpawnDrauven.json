@@ -25,16 +25,16 @@
 			{ "id": "forbidReactions|*", "forbidden": true }
 		],
 		"aspectsOneOf": [
-			"saw_gorgon_roe",
-			"saw_gorgon_coon",
-			"saw_gorgon_rager",
-			"saw_gorgon_bogmoor",
-			"saw_gorgon_gheist",
-			"saw_gorgon_gorgon",
-			"saw_gorgon_bartoth",
-			"saw_gorgon_staggron",
-			"saw_gorgon_usric",
-			"saw_gorgon_seacaller"
+			"saw_drauven_archer",
+			"saw_drauven_stump",
+			"saw_drauven_stormthroat",
+			"saw_drauven_haunt",
+			"saw_drauven_skysinger",
+			"saw_drauven_terrorbird",
+			"saw_drauven_gorelord",
+			"saw_drauven_raidKnight",
+			"saw_drauven_pilotNobylle",
+			"saw_drauven_balestar"
 		]
 	},
 	{
@@ -85,121 +85,121 @@
 					"class": "DoOneRandom",
 					"weightedOutcomes": [
 						{
-							"weightExp": "2*boolean(self.saw_gorgon_roe)",
+							"weightExp": "2*boolean(self.saw_drauven_archer)",
 							"outcome": {
 								"class": "Spawn",
 								"target": "target",
 								"addRole": "monster",
 								"createEntity": {
-									"query": { "baseTag": "gorgon_roe" },
+									"query": { "baseTag": "drauven_archer" },
 									"setLocation": true
 								}
 							}
 						},
 						{
-							"weightExp": "2*boolean(self.saw_gorgon_coon)",
+							"weightExp": "2*boolean(self.saw_drauven_stump)",
 							"outcome": {
 								"class": "Spawn",
 								"target": "target",
 								"addRole": "monster",
 								"createEntity": {
-									"query": { "baseTag": "gorgon_coon" },
+									"query": { "baseTag": "drauven_stump" },
 									"setLocation": true
 								}
 							}
 						},
 						{
-							"weightExp": "3*boolean(self.saw_gorgon_rager)",
+							"weightExp": "3*boolean(self.saw_drauven_stormthroat)",
 							"outcome": {
 								"class": "Spawn",
 								"target": "target",
 								"addRole": "monster",
 								"createEntity": {
-									"query": { "baseTag": "gorgon_rager" },
+									"query": { "baseTag": "drauven_stormthroat" },
 									"setLocation": true
 								}
 							}
 						},
 						{
-							"weightExp": "3*boolean(self.saw_gorgon_bogmoor)",
+							"weightExp": "3*boolean(self.saw_drauven_haunt)",
 							"outcome": {
 								"class": "Spawn",
 								"target": "target",
 								"addRole": "monster",
 								"createEntity": {
-									"query": { "baseTag": "gorgon_bogmoor" },
+									"query": { "baseTag": "drauven_haunt" },
 									"setLocation": true
 								}
 							}
 						},
 						{
-							"weightExp": "4*boolean(self.saw_gorgon_gheist)",
+							"weightExp": "4*boolean(self.saw_drauven_skysinger)",
 							"outcome": {
 								"class": "Spawn",
 								"target": "target",
 								"addRole": "monster",
 								"createEntity": {
-									"query": { "baseTag": "gorgon_gheist" },
+									"query": { "baseTag": "drauven_skysinger" },
 									"setLocation": true
 								}
 							}
 						},
 						{
-							"weightExp": "5*boolean(self.saw_gorgon_gorgon)",
+							"weightExp": "5*boolean(self.saw_drauven_terrorbird)",
 							"outcome": {
 								"class": "Spawn",
 								"target": "target",
 								"addRole": "monster",
 								"createEntity": {
-									"query": { "baseTag": "gorgon_gorgon" },
+									"query": { "baseTag": "drauven_terrorbird" },
 									"setLocation": true
 								}
 							}
 						},
 						{
-							"weightExp": "6*boolean(self.saw_gorgon_bartoth)",
+							"weightExp": "6*boolean(self.drauven_gorelord)",
 							"outcome": {
 								"class": "Spawn",
 								"target": "target",
 								"addRole": "monster",
 								"createEntity": {
-									"query": { "baseTag": "gorgon_bartoth" },
+									"query": { "baseTag": "drauven_gorelord" },
 									"setLocation": true
 								}
 							}
 						},
 						{
-							"weightExp": "6*boolean(self.saw_gorgon_staggron)",
+							"weightExp": "6*boolean(self.drauven_raidKnight)",
 							"outcome": {
 								"class": "Spawn",
 								"target": "target",
 								"addRole": "monster",
 								"createEntity": {
-									"query": { "baseTag": "gorgon_staggron" },
+									"query": { "baseTag": "drauven_raidKnight" },
 									"setLocation": true
 								}
 							}
 						},
 						{
-							"weightExp": "6*boolean(self.saw_gorgon_usric)",
+							"weightExp": "6*boolean(self.saw_drauven_pilotNobylle)",
 							"outcome": {
 								"class": "Spawn",
 								"target": "target",
 								"addRole": "monster",
 								"createEntity": {
-									"query": { "baseTag": "gorgon_usric" },
+									"query": { "baseTag": "drauven_pilotNobylle" },
 									"setLocation": true
 								}
 							}
 						},
 						{
-							"weightExp": "6*boolean(self.saw_gorgon_seacaller)",
+							"weightExp": "6*boolean(self.saw_drauven_balestar)",
 							"outcome": {
 								"class": "Spawn",
 								"target": "target",
 								"addRole": "monster",
 								"createEntity": {
-									"query": { "baseTag": "gorgon_seacaller" },
+									"query": { "baseTag": "drauven_balestar" },
 									"setLocation": true
 								}
 							}

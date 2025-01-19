@@ -25,16 +25,16 @@
 			{ "id": "forbidReactions|*", "forbidden": true }
 		],
 		"aspectsOneOf": [
-			"saw_gorgon_roe",
-			"saw_gorgon_coon",
-			"saw_gorgon_rager",
-			"saw_gorgon_bogmoor",
-			"saw_gorgon_gheist",
-			"saw_gorgon_gorgon",
-			"saw_gorgon_bartoth",
-			"saw_gorgon_staggron",
-			"saw_gorgon_usric",
-			"saw_gorgon_seacaller"
+			"saw_cultist_wokenMelee",
+			"saw_cultist_wokenRanged",
+			"saw_cultist_hornChild",
+			"saw_cultist_chosen",
+			"saw_cultist_mushrox",
+			"saw_cultist_fatherFungus",
+			"saw_cultist_murkMother",
+			"saw_cultist_chastised",
+			"saw_cultist_faithful",
+			"saw_cultist_prophet"
 		]
 	},
 	{
@@ -85,121 +85,121 @@
 					"class": "DoOneRandom",
 					"weightedOutcomes": [
 						{
-							"weightExp": "2*boolean(self.saw_gorgon_roe)",
+							"weightExp": "2*boolean(self.saw_cultist_wokenMelee)",
 							"outcome": {
 								"class": "Spawn",
 								"target": "target",
 								"addRole": "monster",
 								"createEntity": {
-									"query": { "baseTag": "gorgon_roe" },
+									"query": { "baseTag": "cultist_wokenMelee" },
 									"setLocation": true
 								}
 							}
 						},
 						{
-							"weightExp": "2*boolean(self.saw_gorgon_coon)",
+							"weightExp": "2*boolean(self.saw_cultist_wokenRanged)",
 							"outcome": {
 								"class": "Spawn",
 								"target": "target",
 								"addRole": "monster",
 								"createEntity": {
-									"query": { "baseTag": "gorgon_coon" },
+									"query": { "baseTag": "cultist_wokenRanged" },
 									"setLocation": true
 								}
 							}
 						},
 						{
-							"weightExp": "3*boolean(self.saw_gorgon_rager)",
+							"weightExp": "3*boolean(self.saw_cultist_hornChild)",
 							"outcome": {
 								"class": "Spawn",
 								"target": "target",
 								"addRole": "monster",
 								"createEntity": {
-									"query": { "baseTag": "gorgon_rager" },
+									"query": { "baseTag": "cultist_hornChild" },
 									"setLocation": true
 								}
 							}
 						},
 						{
-							"weightExp": "3*boolean(self.saw_gorgon_bogmoor)",
+							"weightExp": "3*boolean(self.saw_cultist_chosen)",
 							"outcome": {
 								"class": "Spawn",
 								"target": "target",
 								"addRole": "monster",
 								"createEntity": {
-									"query": { "baseTag": "gorgon_bogmoor" },
+									"query": { "baseTag": "cultist_chosen" },
 									"setLocation": true
 								}
 							}
 						},
 						{
-							"weightExp": "4*boolean(self.saw_gorgon_gheist)",
+							"weightExp": "4*boolean(self.saw_cultist_mushrox)",
 							"outcome": {
 								"class": "Spawn",
 								"target": "target",
 								"addRole": "monster",
 								"createEntity": {
-									"query": { "baseTag": "gorgon_gheist" },
+									"query": { "baseTag": "cultist_mushrox" },
 									"setLocation": true
 								}
 							}
 						},
 						{
-							"weightExp": "5*boolean(self.saw_gorgon_gorgon)",
+							"weightExp": "5*boolean(self.saw_cultist_fatherFungus)",
 							"outcome": {
 								"class": "Spawn",
 								"target": "target",
 								"addRole": "monster",
 								"createEntity": {
-									"query": { "baseTag": "gorgon_gorgon" },
+									"query": { "baseTag": "cultist_fatherFungus" },
 									"setLocation": true
 								}
 							}
 						},
 						{
-							"weightExp": "6*boolean(self.saw_gorgon_bartoth)",
+							"weightExp": "6*boolean(self.saw_cultist_murkMother)",
 							"outcome": {
 								"class": "Spawn",
 								"target": "target",
 								"addRole": "monster",
 								"createEntity": {
-									"query": { "baseTag": "gorgon_bartoth" },
+									"query": { "baseTag": "cultist_murkMother" },
 									"setLocation": true
 								}
 							}
 						},
 						{
-							"weightExp": "6*boolean(self.saw_gorgon_staggron)",
+							"weightExp": "6*boolean(self.saw_cultist_chastised)",
 							"outcome": {
 								"class": "Spawn",
 								"target": "target",
 								"addRole": "monster",
 								"createEntity": {
-									"query": { "baseTag": "gorgon_staggron" },
+									"query": { "baseTag": "cultist_chastised" },
 									"setLocation": true
 								}
 							}
 						},
 						{
-							"weightExp": "6*boolean(self.saw_gorgon_usric)",
+							"weightExp": "6*boolean(self.saw_cultist_faithful)",
 							"outcome": {
 								"class": "Spawn",
 								"target": "target",
 								"addRole": "monster",
 								"createEntity": {
-									"query": { "baseTag": "gorgon_usric" },
+									"query": { "baseTag": "cultist_faithful" },
 									"setLocation": true
 								}
 							}
 						},
 						{
-							"weightExp": "6*boolean(self.saw_gorgon_seacaller)",
+							"weightExp": "6*boolean(self.saw_cultist_prophet)",
 							"outcome": {
 								"class": "Spawn",
 								"target": "target",
 								"addRole": "monster",
 								"createEntity": {
-									"query": { "baseTag": "gorgon_seacaller" },
+									"query": { "baseTag": "cultist_prophet" },
 									"setLocation": true
 								}
 							}
