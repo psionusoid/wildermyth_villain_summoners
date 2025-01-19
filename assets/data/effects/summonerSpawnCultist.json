@@ -1,0 +1,257 @@
+{
+"id": "summonerSpawnCultist|COOLDOWN|USES|MAX_INTERFUSIONS",
+"info": {
+	"dataVersion": 1,
+	"sourceFile": "summonerSpawnCultist",
+	"modId": "villain_summoners",
+	"author": "psionusoid",
+	"aiPriority": "3000",
+	"tags": [ "okToMarkDone" ]
+},
+"type": "ABILITY",
+"verb": "ATTACK",
+"ability": {
+	"icon": "magic",
+	"priority": "3",
+	"extraUI": { "overrideCooldownShown": "COOLDOWN" },
+	"showDescriptionInTooltip": true,
+	"numUses": "USES"
+},
+"targets": [
+	{
+		"template": "SELF",
+		"cost": { "class": "ActionPoints", "actionPoints": "free" },
+		"aspectValues": [
+			{ "id": "forbidReactions|*", "forbidden": true }
+		],
+		"aspectsOneOf": [
+			"saw_gorgon_roe",
+			"saw_gorgon_coon",
+			"saw_gorgon_rager",
+			"saw_gorgon_bogmoor",
+			"saw_gorgon_gheist",
+			"saw_gorgon_gorgon",
+			"saw_gorgon_bartoth",
+			"saw_gorgon_staggron",
+			"saw_gorgon_usric",
+			"saw_gorgon_seacaller"
+		]
+	},
+	{
+		"role": "foes",
+		"template": "ANY",
+		"STUB": "Must be foes in sight",
+		"type": "UNIT",
+		"choose": "ONE_RANDOM_TRUE",
+		"aspects": [ "HOSTILE_TARGET", "alive" ],
+		"range": "12",
+		"lineOfSight": "TERRAIN_ONLY"
+	},
+	{
+		"role": "volunteer2",
+		"template": "SELF",
+		"choose": "ANY",
+		"fromRoles": [ "self" ],
+		"aspectValues": [
+			{ "id": "summonerInterfused", "maxValue": "MAX_INTERFUSIONS-1" }
+		]
+	},
+	{ "template": "TILE", "choose": "ANY", "range": "6" },
+	{
+		"role": "target",
+		"template": "TILE",
+		"choose": "ONE_CLOSEST",
+		"scoreFunction": "(100-target.distanceTo.foes)-target.distanceTo.self",
+		"missionFeedback": { "hoverFeedback": "ATTACK_HOVER" },
+		"fromRoles": [ "focus" ],
+		"relativeTo": "foes",
+		"range": null,
+		"lineOfSight": "TERRAIN_ONLY",
+		"tileFilter": "validMoveEnd",
+		"spawnEntitySize": "fourTiles"
+	}
+],
+"outcomes": [
+	{
+		"class": "AttackRoll",
+		"defender": null,
+		"attackAnimationType": "interaction",
+		"showAbilityName": "ifEnemy",
+		"attackStrength": "100",
+		"always": {
+			"class": "DoAll",
+			"outcomes": [
+				{
+					"class": "DoOneRandom",
+					"weightedOutcomes": [
+						{
+							"weightExp": "2*boolean(self.saw_gorgon_roe)",
+							"outcome": {
+								"class": "Spawn",
+								"target": "target",
+								"addRole": "monster",
+								"createEntity": {
+									"query": { "baseTag": "gorgon_roe" },
+									"setLocation": true
+								}
+							}
+						},
+						{
+							"weightExp": "2*boolean(self.saw_gorgon_coon)",
+							"outcome": {
+								"class": "Spawn",
+								"target": "target",
+								"addRole": "monster",
+								"createEntity": {
+									"query": { "baseTag": "gorgon_coon" },
+									"setLocation": true
+								}
+							}
+						},
+						{
+							"weightExp": "3*boolean(self.saw_gorgon_rager)",
+							"outcome": {
+								"class": "Spawn",
+								"target": "target",
+								"addRole": "monster",
+								"createEntity": {
+									"query": { "baseTag": "gorgon_rager" },
+									"setLocation": true
+								}
+							}
+						},
+						{
+							"weightExp": "3*boolean(self.saw_gorgon_bogmoor)",
+							"outcome": {
+								"class": "Spawn",
+								"target": "target",
+								"addRole": "monster",
+								"createEntity": {
+									"query": { "baseTag": "gorgon_bogmoor" },
+									"setLocation": true
+								}
+							}
+						},
+						{
+							"weightExp": "4*boolean(self.saw_gorgon_gheist)",
+							"outcome": {
+								"class": "Spawn",
+								"target": "target",
+								"addRole": "monster",
+								"createEntity": {
+									"query": { "baseTag": "gorgon_gheist" },
+									"setLocation": true
+								}
+							}
+						},
+						{
+							"weightExp": "5*boolean(self.saw_gorgon_gorgon)",
+							"outcome": {
+								"class": "Spawn",
+								"target": "target",
+								"addRole": "monster",
+								"createEntity": {
+									"query": { "baseTag": "gorgon_gorgon" },
+									"setLocation": true
+								}
+							}
+						},
+						{
+							"weightExp": "6*boolean(self.saw_gorgon_bartoth)",
+							"outcome": {
+								"class": "Spawn",
+								"target": "target",
+								"addRole": "monster",
+								"createEntity": {
+									"query": { "baseTag": "gorgon_bartoth" },
+									"setLocation": true
+								}
+							}
+						},
+						{
+							"weightExp": "6*boolean(self.saw_gorgon_staggron)",
+							"outcome": {
+								"class": "Spawn",
+								"target": "target",
+								"addRole": "monster",
+								"createEntity": {
+									"query": { "baseTag": "gorgon_staggron" },
+									"setLocation": true
+								}
+							}
+						},
+						{
+							"weightExp": "6*boolean(self.saw_gorgon_usric)",
+							"outcome": {
+								"class": "Spawn",
+								"target": "target",
+								"addRole": "monster",
+								"createEntity": {
+									"query": { "baseTag": "gorgon_usric" },
+									"setLocation": true
+								}
+							}
+						},
+						{
+							"weightExp": "6*boolean(self.saw_gorgon_seacaller)",
+							"outcome": {
+								"class": "Spawn",
+								"target": "target",
+								"addRole": "monster",
+								"createEntity": {
+									"query": { "baseTag": "gorgon_seacaller" },
+									"setLocation": true
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	},
+	{
+		"class": "Aspects",
+		"STUB": "We manually add the cooldown, so it can take unusual values or depend on difficulty",
+		"addAspects": [
+			{
+				"id": "cooldown|summonerSpawnCultist|COOLDOWN|USES|MAX_INTERFUSIONS",
+				"value": "COOLDOWN"
+			}
+		]
+	},
+	{
+		"class": "IfRolesArePresent",
+		"rolesArePresent": [ "target", "volunteer2" ],
+		"then": {
+			"class": "DoAll",
+			"target": "volunteer2",
+			"outcomes": [
+				{
+					"class": "Aspects",
+					"addAspects": [
+						{
+							"id": "summonerInterfusedWithEntity",
+							"value": "1",
+							"merge": "max",
+							"inRelationTo": "monster"
+						}
+					]
+				},
+				{
+					"class": "Aspects",
+					"target": "monster",
+					"addAspects": [
+						{
+							"id": "interfusedWithSummoner",
+							"value": "1",
+							"merge": "max",
+							"inRelationTo": "self"
+						},
+						{ "id": "interfusedWithMonster", "value": "1", "merge": "max" }
+					]
+				}
+			]
+		}
+	}
+]
+}

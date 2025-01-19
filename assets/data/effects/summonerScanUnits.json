@@ -155,6 +155,114 @@
 				{
 					"class": "Test",
 					"target": "self",
+					"value": "volunteer2.morthagi_spectik",
+					"threshold": "1",
+					"onPass": {
+						"class": "Aspects",
+						"addAspects": [
+							{ "id": "saw_morthagi_spectik", "value": "1" }
+						]
+					}
+				},
+				{
+					"class": "Test",
+					"target": "self",
+					"value": "volunteer2.morthagi_portopump",
+					"threshold": "1",
+					"onPass": {
+						"class": "Aspects",
+						"addAspects": [
+							{ "id": "saw_morthagi_portopump", "value": "1" }
+						]
+					}
+				},
+				{
+					"class": "Test",
+					"target": "self",
+					"value": "volunteer2.morthagi_watchman",
+					"threshold": "1",
+					"onPass": {
+						"class": "Aspects",
+						"addAspects": [
+							{ "id": "saw_morthagi_watchman", "value": "1" }
+						]
+					}
+				},
+				{
+					"class": "Test",
+					"target": "self",
+					"value": "volunteer2.morthagi_weldling",
+					"threshold": "1",
+					"onPass": {
+						"class": "Aspects",
+						"addAspects": [
+							{ "id": "saw_morthagi_weldling", "value": "1" }
+						]
+					}
+				},
+				{
+					"class": "Test",
+					"target": "self",
+					"value": "volunteer2.morthagi_wardrobe",
+					"threshold": "1",
+					"onPass": {
+						"class": "Aspects",
+						"addAspects": [
+							{ "id": "saw_morthagi_wardrobe", "value": "1" }
+						]
+					}
+				},
+				{
+					"class": "Test",
+					"target": "self",
+					"value": "volunteer2.morthagi_batchby",
+					"threshold": "1",
+					"onPass": {
+						"class": "Aspects",
+						"addAspects": [
+							{ "id": "saw_morthagi_batchby", "value": "1" }
+						]
+					}
+				},
+				{
+					"class": "Test",
+					"target": "self",
+					"value": "volunteer2.morthagi_butler",
+					"threshold": "1",
+					"onPass": {
+						"class": "Aspects",
+						"addAspects": [
+							{ "id": "saw_morthagi_butler", "value": "1" }
+						]
+					}
+				},
+				{
+					"class": "Test",
+					"target": "self",
+					"value": "volunteer2.morthagi_coachman",
+					"threshold": "1",
+					"onPass": {
+						"class": "Aspects",
+						"addAspects": [
+							{ "id": "saw_morthagi_coachman", "value": "1" }
+						]
+					}
+				},
+				{
+					"class": "Test",
+					"target": "self",
+					"value": "volunteer2.morthagi_groundskeeper",
+					"threshold": "1",
+					"onPass": {
+						"class": "Aspects",
+						"addAspects": [
+							{ "id": "saw_morthagi_groundskeeper", "value": "1" }
+						]
+					}
+				},
+				{
+					"class": "Test",
+					"target": "self",
 					"value": "volunteer2.cultist_wokenMelee",
 					"threshold": "1",
 					"onPass": {
