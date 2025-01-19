@@ -1,0 +1,66 @@
+{
+"id": "summoner_cultist",
+"modId": "villain_summoners",
+"notes": "Needs WIELD for melee",
+"aspects": [
+	"monstrous",
+	"mobileMonster",
+	"monsterCanSearch",
+	"activeDefender",
+	"alive",
+	"summoner",
+	"monsterMelee|melt|balanced|1.6|3+1d3",
+	"monsterRangedMagic|summonerRanged|balanced|0.9|6.6|2+1d2",
+	"summoner_spawnCultist|2|10|4",
+	"summoner_soulshield",
+	"summoner_scanUnits",
+	"summoner_ethereal|33",
+	"summonerIncreaseStatsPerCalamity"
+],
+"stats": {
+	"HEALTH": "9",
+	"PERCEPTION": "10",
+	"DODGE": "110",
+	"MONSTER_THREAT": "15",
+	"PHYSICAL_DAMAGE_BONUS": "0",
+	"POTENCY": "0",
+	"WARDING": "2",
+	"MELEE_ACCURACY": "95",
+	"ARMOR": "2",
+	"RANGE_ACCURACY": "95",
+	"BLOCK": "0",
+	"SPEED": "4"
+},
+"scale": [ "((2+(HEALTH/6))*[0.95,1])/3", "((2+(HEALTH/6))*[0.95,1])/3" ],
+"combatDifficulty_1": {
+	"newAspects": [
+		"monsterRangedMagic|summonerRanged|balanced|0.9|6.6|1+1d2",
+		"monsterMelee|melt|balanced|1.6|2+1d2",
+		"summoner_spawnCultist|3|6|2"
+	],
+	"stats": { "HEALTH": "6", "WARDING": "1", "ARMOR": "1" }
+},
+"combatDifficulty_10": {
+	"newAspects": [
+		"monsterRangedMagic|summonerRanged|balanced|0.9|6.6|1+1d3",
+		"monsterMelee|melt|balanced|1.6|2+1d3",
+		"summoner_spawnCultist|2|10|4"
+	],
+	"stats": { "HEALTH": "7", "ARMOR": "1" }
+},
+"combatDifficulty_30": {
+	"newAspects": [
+		"monsterRangedMagic|summonerRanged|balanced|0.9|6.6|3+1d2",
+		"monsterMelee|melt|balanced|1.6|4+1d2",
+		"summoner_spawnCultist|1|100|6"
+	],
+	"stats": { "HEALTH": "20+1d4", "WARDING": "6", "ARMOR": "4" }
+},
+"baseColor": [ "[1.5,2]", "[1.5,2]", "[1.5,2]" ],
+"skin": [
+	{
+		"image": [ "misc/demonSuneater" ]
+	}
+],
+"footprint": 2
+}
