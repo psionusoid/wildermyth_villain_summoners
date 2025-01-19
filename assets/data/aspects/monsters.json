@@ -75,6 +75,7 @@
 	"parameters": [
 		{ "replace": "PERCENT" }
 	],
+	"effects": [ "summonerEthereal|PERCENT" ],
 	"boostType": "ABILITY_MISC",
 	"showInTooltip": true
 },

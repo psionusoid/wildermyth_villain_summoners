@@ -1,0 +1,22 @@
+{
+"id": "summonerEthereal|PERCENT",
+"info": {
+	"dataVersion": 1,
+	"sourceFile": "summonerEthereal",
+	"modId": "villain_summoners",
+	"author": "psionusoid"
+},
+"type": "DAMAGE_ROLL_INCOMING",
+"verb": "ATTACK",
+"ability": {
+	"icon": "ignite",
+	"priority": "1",
+	"customSpecialAnimationEffect": {}
+},
+"targets": [
+	{ "template": "SELF" }
+],
+"outcomes": [
+	{ "class": "Impact", "impact": "0-floor(((DAMAGE*PERCENT)/100))" }
+]
+}
