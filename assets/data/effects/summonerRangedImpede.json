@@ -1,0 +1,74 @@
+{
+"id": "summonerRangedImpede|MIN_RANGE|MAX_RANGE|DAMAGE_EXPRESSION",
+"info": {
+	"dataVersion": 1,
+	"sourceFile": "summonerRangedImpede",
+	"modId": "villain_summoners",
+	"author": "psionusoid (from Patrick Belanger)",
+	"aiPriority": "2000+target.AI_ATTACK_PRIORITY",
+	"tags": [ "ranged" ]
+},
+"type": "ABILITY",
+"verb": "ATTACK",
+"ability": {
+	"icon": "ranged",
+	"priority": "10",
+	"showDescriptionInTooltip": true,
+	"cooldown": "oncePerTurn",
+	"branchableAbilityType": "standardRanged"
+},
+"targets": [
+	{
+		"template": "SELF",
+		"cost": { "class": "ActionPoints", "actionPoints": "free" },
+		"showAnyway": true
+	},
+	{
+		"template": "ADJACENT_ENEMY",
+		"showAnyway": true,
+		"alwaysSelect": true,
+		"aspects": [ "HOSTILE_TARGET", "alive" ],
+		"minRange": "MIN_RANGE",
+		"range": "MAX_RANGE+self.BONUS_RANGE",
+		"lineOfSight": "LIVE_ENEMIES"
+	}
+],
+"outcomes": [
+	{
+		"class": "AttackRoll",
+		"particles": [
+			{
+				"script": "FLAVOR|projectileTrail",
+				"setPosition": "self",
+				"setPosition2": "target"
+			}
+		],
+		"defenseRollTags": [ "range" ],
+		"attackStrength": "actionRoll(self.RANGE_ACCURACY)",
+		"wield": "fromWeapon",
+		"applyCover": true,
+		"onHit": {
+			"class": "DoAll",
+			"outcomes": [
+				{
+					"class": "Damage",
+					"amount": "attacker.PHYSICAL_DAMAGE_BONUS+DAMAGE_EXPRESSION",
+					"pierce": "0"
+				},
+				{
+					"class": "Aspects",
+					"addAspects": [
+						{ "id": "hobbled", "value": "1" }
+					]
+				}
+			]
+		},
+		"onHitCover": {
+			"class": "Damage",
+			"amount": "max(1,((attacker.PHYSICAL_DAMAGE_BONUS+DAMAGE_EXPRESSION)-2))",
+			"shred": "1"
+		}
+	}
+],
+"expressions": { "aiRange": "MAX_RANGE+self.BONUS_RANGE" }
+}

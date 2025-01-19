@@ -37,7 +37,7 @@
 		},
 		"minRange": "0.9",
 		"range": "(5.6-1)+self.BONUS_RANGE",
-		"lineOfSight": "LIVE_ENEMIES",
+		"lineOfSight": "TERRAIN_ONLY",
 		"tileFilter": "floor"
 	},
 	{

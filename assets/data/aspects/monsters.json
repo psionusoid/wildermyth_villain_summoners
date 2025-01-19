@@ -71,6 +71,13 @@
 },
 {
 	"modId": "villain_summoners",
+	"id": "summoner_dodge",
+	"stats": { "DODGE": 10000 },
+	"boostType": "ABILITY_MISC",
+	"showInTooltip": true
+},
+{
+	"modId": "villain_summoners",
 	"id": "summoner_ethereal|PERCENT",
 	"parameters": [
 		{ "replace": "PERCENT" }
@@ -114,6 +121,19 @@
 		"removeAtStartOfTurn",
 		"removeOnDeath"
 	]
+},
+{
+	"modId": "villain_summoners",
+	"id": "summoner_rangedImpede|DAMAGE",
+	"parameters": [
+		{ "replace": "DAMAGE" }
+	],
+	"effects": [
+		"summonerRangedImpede|0.9|5.6|DAMAGE",
+		"monsterBreakScenery|DAMAGE",
+		"defaultMoveFeedbackRange|5.6|summonerRangedImpede"
+	],
+	"importance": -1
 },
 {
 	"modId": "villain_summoners",
