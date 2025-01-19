@@ -71,6 +71,15 @@
 },
 {
 	"modId": "villain_summoners",
+	"id": "summoner_ethereal|PERCENT",
+	"parameters": [
+		{ "replace": "PERCENT" }
+	],
+	"boostType": "ABILITY_MISC",
+	"showInTooltip": true
+},
+{
+	"modId": "villain_summoners",
 	"id": "summoner_ethermineRegion|COORDS",
 	"parameters": [
 		{ "replace": "COORDS" }
