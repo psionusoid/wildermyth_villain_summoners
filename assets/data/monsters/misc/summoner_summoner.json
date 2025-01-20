@@ -1,0 +1,62 @@
+{
+"id": "summoner_summoner",
+"modId": "villain_summoners",
+"notes": "Needs WIELD for melee",
+"aspects": [
+	"monstrous",
+	"mobileMonster",
+	"monsterCanSearch",
+	"activeDefender",
+	"alive",
+	"summoner",
+	"monsterMelee|melt|balanced|1.6|3+1d3",
+	"monsterRangedMagic|summonerRanged|balanced|0.9|6.6|2+1d2",
+	"summoner_soulshield",
+	"summoner_scanUnits",
+	"summoner_ethereal|33",
+	"summonerIncreaseStatsPerCalamity"
+],
+"stats": {
+	"HEALTH": "50",
+	"PERCEPTION": "10",
+	"DODGE": "110",
+	"PHYSICAL_DAMAGE_BONUS": "0",
+	"POTENCY": "0",
+	"MONSTER_THREAT": "15",
+	"WARDING": "8",
+	"MELEE_ACCURACY": "110",
+	"ARMOR": "6",
+	"RANGE_ACCURACY": "110",
+	"BLOCK": "0",
+	"SPEED": "4"
+},
+"scale": [ "1.2", "1.2" ],
+"combatDifficulty_1": {
+	"newAspects": [
+		"monsterRangedMagic|summonerRanged|balanced|0.9|6.6|1+1d2",
+		"monsterMelee|melt|balanced|1.6|2+1d2"
+	],
+	"stats": { "HEALTH": "30", "WARDING": "4", "ARMOR": "3" }
+},
+"combatDifficulty_10": {
+	"newAspects": [
+		"monsterRangedMagic|summonerRanged|balanced|0.9|6.6|1+1d3",
+		"monsterMelee|melt|balanced|1.6|2+1d3"
+	],
+	"stats": { "HEALTH": "40", "WARDING": "6", "ARMOR": "5" }
+},
+"combatDifficulty_30": {
+	"newAspects": [
+		"monsterRangedMagic|summonerRanged|balanced|0.9|6.6|3+1d2",
+		"monsterMelee|melt|balanced|1.6|4+1d2"
+	],
+	"stats": { "HEALTH": "100", "WARDING": "12", "ARMOR": "10" }
+},
+"baseColor": [ "[1.5,2]", "[1.5,2]", "[1.5,2]" ],
+"skin": [
+	{
+		"image": [ "misc/demonSuneater" ]
+	}
+],
+"footprint": 4
+}
