@@ -24,7 +24,8 @@
 		"consumeAspects": [
 			{ "id": "interfusedWithSummoner", "value": "1", "inRelationTo": "self" },
 			{ "id": "interfusedWithMonster", "value": "1" },
-			{ "id": "summonerInterfused", "value": "1" }
+			{ "id": "summonerInterfused", "value": "1" },
+			{ "id": "summoner_soulbound", "value": "1" }
 		]
 	}
 ]
