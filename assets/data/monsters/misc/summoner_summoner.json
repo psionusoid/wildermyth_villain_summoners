@@ -17,40 +17,40 @@
 	"summonerIncreaseStatsPerCalamity"
 ],
 "stats": {
-	"HEALTH": "50",
+	"RANGE_ACCURACY": "110",
+	"ARMOR": "6",
+	"WARDING": "8",
+	"MONSTER_THREAT": "15",
+	"MELEE_ACCURACY": "110",
 	"PERCEPTION": "10",
 	"DODGE": "110",
-	"PHYSICAL_DAMAGE_BONUS": "0",
+	"HEALTH": "50",
+	"SPEED": "4",
 	"POTENCY": "0",
-	"MONSTER_THREAT": "15",
-	"WARDING": "8",
-	"MELEE_ACCURACY": "110",
-	"ARMOR": "6",
-	"RANGE_ACCURACY": "110",
-	"BLOCK": "0",
-	"SPEED": "4"
+	"PHYSICAL_DAMAGE_BONUS": "0",
+	"BLOCK": "0"
 },
-"scale": [ "1.2", "1.2" ],
+"scale": [ "1.4", "1.4" ],
 "combatDifficulty_1": {
 	"newAspects": [
 		"monsterRangedMagic|summonerRanged|balanced|0.9|6.6|1+1d2",
 		"monsterMelee|melt|balanced|1.6|2+1d2"
 	],
-	"stats": { "HEALTH": "30", "WARDING": "4", "ARMOR": "3" }
+	"stats": { "ARMOR": "3", "WARDING": "4", "HEALTH": "30" }
 },
 "combatDifficulty_10": {
 	"newAspects": [
 		"monsterRangedMagic|summonerRanged|balanced|0.9|6.6|1+1d3",
 		"monsterMelee|melt|balanced|1.6|2+1d3"
 	],
-	"stats": { "HEALTH": "40", "WARDING": "6", "ARMOR": "5" }
+	"stats": { "ARMOR": "5", "WARDING": "6", "HEALTH": "40" }
 },
 "combatDifficulty_30": {
 	"newAspects": [
 		"monsterRangedMagic|summonerRanged|balanced|0.9|6.6|3+1d2",
 		"monsterMelee|melt|balanced|1.6|4+1d2"
 	],
-	"stats": { "HEALTH": "100", "WARDING": "12", "ARMOR": "10" }
+	"stats": { "ARMOR": "10", "WARDING": "12", "HEALTH": "100" }
 },
 "baseColor": [ "[1.5,2]", "[1.5,2]", "[1.5,2]" ],
 "skin": [
