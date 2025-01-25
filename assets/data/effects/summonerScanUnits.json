@@ -9,12 +9,7 @@
 },
 "type": "TURN_START_2",
 "verb": "ATTACK",
-"ability": {
-	"icon": "magic",
-	"priority": "3",
-	"showDescriptionInTooltip": true,
-	"cooldown": "oncePerTurn"
-},
+"ability": { "icon": "magic", "priority": "3", "cooldown": "oncePerTurn" },
 "targets": [
 	{ "template": "SELF" },
 	{
