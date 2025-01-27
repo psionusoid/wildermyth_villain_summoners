@@ -1,0 +1,61 @@
+{
+"budget": "64",
+"emitterLifetime": "2.5",
+"loopLimit": "1",
+"blendStyle": "multiply",
+"bucketStrategy": "spatialPlanes",
+"rules": [
+	{ "class": "EmitterVar", "name": "swaySpeed", "value": "6", "onlyIfNull": true },
+	{
+		"class": "EmitterVar",
+		"name": "swayIntensityX",
+		"value": "[0.2,0.6]",
+		"onlyIfNull": true
+	},
+	{
+		"class": "EmitterVar",
+		"name": "swayIntensityY",
+		"value": "[0.2,0.6]",
+		"onlyIfNull": true
+	},
+	{
+		"class": "Once",
+		"when": "0",
+		"doAll": [
+			{
+				"class": "Emit",
+				"numberOfParticles": "30",
+				"image": [ "particle_etherburn1", "particle_etherburn2", "particle_etherburn3" ],
+				"size": "0.2",
+				"killTime": "[1.5,1.7]",
+				"initializeWith": [
+					{ "class": "ParticleVar", "name": "brightness", "value": "[0,0.7]" },
+					{
+						"class": "SetColor",
+						"color": { "r": "brightness", "g": "brightness/2", "b": "brightness/3", "a": "1" }
+					},
+					{ "class": "SetVelocity", "vTheta": "[-360,360]" },
+					{ "class": "SetSize", "size": "0.5-(0.3*(particleNumber/30))" }
+				]
+			}
+		]
+	},
+	{ "class": "BasicPhysics" },
+	{ "class": "Lifetime" },
+	{
+		"class": "SetPosition",
+		"x": "lerp(e.x,(lerp(e.x,e.dx,(particleNumber/30))+(((cos(((time*e.swaySpeed)+(particleNumber/5)))*particleNumber)/30)*e.swayIntensityX)),life~{0|outQuad:0.3:1|inSine:0})",
+		"y": "lerp(e.y,(lerp(e.y,e.dy,(particleNumber/30))+(((sin(((time*e.swaySpeed)+(particleNumber/5)))*particleNumber)/30)*e.swayIntensityY)),life~{0|outQuad:0.3:1|inSine:0})",
+		"z": "lerp(-0.7,(-0.7-((sin(((time*e.swaySpeed)+(particleNumber/5)))*particleNumber)/90)),life~{0|outQuad:0.30000001:1|inCubic:0})"
+	},
+	{
+		"class": "SetColor",
+		"color": {
+			"r": null,
+			"g": null,
+			"b": null,
+			"a": "((30+particleNumber)/60)*life~{0|outSine:0.30000001:1|0.60000002:1|outCubic:0}"
+		}
+	}
+]
+}

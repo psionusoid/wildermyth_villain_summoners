@@ -1,5 +1,5 @@
 {
-"id": "summonerTest",
+"id": "summoner_thrixlBoss",
 "modId": "villain_summoners",
 "notes": "Needs WIELD for melee",
 "aspects": [
@@ -11,11 +11,8 @@
 	"summoner",
 	"monsterMelee|melt|balanced|1.6|3+1d3",
 	"monsterRangedMagic|summonerRanged|balanced|0.9|6.6|2+1d2",
-	"summoner_spawnGorgon|2|10|4",
+	"summoner_spawnThrixlBoss|3|5|4",
 	"summoner_soulshield",
-	"summoner_soulbind",
-	"summoner_scanUnits",
-	"summoner_ethermine|2+1d2",
 	"summoner_ethereal|33",
 	"summonerIncreaseStatsPerCalamity"
 ],
@@ -23,8 +20,8 @@
 	"RANGE_ACCURACY": "95",
 	"ARMOR": "2",
 	"WARDING": "2",
-	"MONSTER_THREAT": "15",
 	"MELEE_ACCURACY": "95",
+	"MONSTER_THREAT": "15",
 	"PERCEPTION": "10",
 	"DODGE": "110",
 	"HEALTH": "9",
@@ -33,12 +30,12 @@
 	"PHYSICAL_DAMAGE_BONUS": "0",
 	"BLOCK": "0"
 },
-"scale": [ "1.1*[0.95,1]", "1.1*[0.95,1]" ],
+"scale": [ "1.3*[0.95,1]", "1.3*[0.95,1]" ],
 "combatDifficulty_1": {
 	"newAspects": [
 		"monsterRangedMagic|summonerRanged|balanced|0.9|6.6|1+1d2",
 		"monsterMelee|melt|balanced|1.6|2+1d2",
-		"summoner_spawnGorgon|3|6|2"
+		"summoner_spawnThrixlBoss|5|3|2"
 	],
 	"stats": { "ARMOR": "1", "WARDING": "1", "HEALTH": "6" }
 },
@@ -46,7 +43,7 @@
 	"newAspects": [
 		"monsterRangedMagic|summonerRanged|balanced|0.9|6.6|1+1d3",
 		"monsterMelee|melt|balanced|1.6|2+1d3",
-		"summoner_spawnGorgon|2|10|4"
+		"summoner_spawnThrixlBoss|3|5|4"
 	],
 	"stats": { "ARMOR": "1", "HEALTH": "7" }
 },
@@ -54,11 +51,11 @@
 	"newAspects": [
 		"monsterRangedMagic|summonerRanged|balanced|0.9|6.6|3+1d2",
 		"monsterMelee|melt|balanced|1.6|4+1d2",
-		"summoner_spawnGorgon|1|100|6"
+		"summoner_spawnThrixlBoss|1|100|6"
 	],
 	"stats": { "ARMOR": "4", "WARDING": "6", "HEALTH": "20+1d4" }
 },
-"baseColor": [ "[1.5,2]", "[1.5,2]", "[1.5,2]" ],
+"baseColor": [ "[1.5,2]", "[0,0.5]", "[1.5,2]" ],
 "skin": [
 	{
 		"image": [ "misc/demonSuneater" ]

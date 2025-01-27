@@ -1,5 +1,5 @@
 {
-"id": "summonerTest",
+"id": "summoner_gorgon",
 "modId": "villain_summoners",
 "notes": "Needs WIELD for melee",
 "aspects": [
@@ -13,9 +13,7 @@
 	"monsterRangedMagic|summonerRanged|balanced|0.9|6.6|2+1d2",
 	"summoner_spawnGorgon|2|10|4",
 	"summoner_soulshield",
-	"summoner_soulbind",
 	"summoner_scanUnits",
-	"summoner_ethermine|2+1d2",
 	"summoner_ethereal|33",
 	"summonerIncreaseStatsPerCalamity"
 ],
@@ -23,8 +21,8 @@
 	"RANGE_ACCURACY": "95",
 	"ARMOR": "2",
 	"WARDING": "2",
-	"MONSTER_THREAT": "15",
 	"MELEE_ACCURACY": "95",
+	"MONSTER_THREAT": "15",
 	"PERCEPTION": "10",
 	"DODGE": "110",
 	"HEALTH": "9",
@@ -58,7 +56,7 @@
 	],
 	"stats": { "ARMOR": "4", "WARDING": "6", "HEALTH": "20+1d4" }
 },
-"baseColor": [ "[1.5,2]", "[1.5,2]", "[1.5,2]" ],
+"baseColor": [ "[0.5,1]", "[1.5,2]", "[1.5,2]" ],
 "skin": [
 	{
 		"image": [ "misc/demonSuneater" ]

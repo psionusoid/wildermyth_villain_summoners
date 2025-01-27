@@ -1,8 +1,8 @@
 {
-"id": "summonerSpawnGorgon|COOLDOWN|USES|MAX_INTERFUSIONS",
+"id": "summonerSpawnThrixl|COOLDOWN|USES|MAX_INTERFUSIONS",
 "info": {
 	"dataVersion": 1,
-	"sourceFile": "summonerSpawnGorgon",
+	"sourceFile": "summonerSpawnThrixl",
 	"modId": "villain_summoners",
 	"author": "psionusoid",
 	"aiPriority": "3000",
@@ -25,16 +25,15 @@
 			{ "id": "forbidReactions|*", "forbidden": true }
 		],
 		"aspectsOneOf": [
-			"saw_gorgon_roe",
-			"saw_gorgon_coon",
-			"saw_gorgon_rager",
-			"saw_gorgon_bogmoor",
-			"saw_gorgon_gheist",
-			"saw_gorgon_gorgon",
-			"saw_gorgon_bartoth",
-			"saw_gorgon_staggron",
-			"saw_gorgon_usric",
-			"saw_gorgon_seacaller"
+			"saw_thrixl_thrusk",
+			"saw_thrixl_dweaver",
+			"saw_thrixl_seeker",
+			"saw_thrixl_bard",
+			"saw_thrixl_scorier",
+			"saw_thrixl_nightmare",
+			"saw_thrixl_drathix",
+			"saw_thrixl_kinnestend",
+			"saw_thrixl_muse"
 		]
 	},
 	{
@@ -85,121 +84,109 @@
 					"class": "DoOneRandom",
 					"weightedOutcomes": [
 						{
-							"weightExp": "2*boolean(self.saw_gorgon_roe)",
+							"weightExp": "2*boolean(self.saw_thrixl_thrusk)",
 							"outcome": {
 								"class": "Spawn",
 								"target": "target",
 								"addRole": "monster",
 								"createEntity": {
-									"query": { "baseTag": "gorgon_roe" },
+									"query": { "baseTag": "thrixl_thrusk" },
 									"setLocation": true
 								}
 							}
 						},
 						{
-							"weightExp": "2*boolean(self.saw_gorgon_coon)",
+							"weightExp": "2*boolean(self.saw_thrixl_dweaver)",
 							"outcome": {
 								"class": "Spawn",
 								"target": "target",
 								"addRole": "monster",
 								"createEntity": {
-									"query": { "baseTag": "gorgon_coon" },
+									"query": { "baseTag": "thrixl_dweaver" },
 									"setLocation": true
 								}
 							}
 						},
 						{
-							"weightExp": "3*boolean(self.saw_gorgon_rager)",
+							"weightExp": "3*boolean(self.saw_thrixl_seeker)",
 							"outcome": {
 								"class": "Spawn",
 								"target": "target",
 								"addRole": "monster",
 								"createEntity": {
-									"query": { "baseTag": "gorgon_rager" },
+									"query": { "baseTag": "thrixl_seeker" },
 									"setLocation": true
 								}
 							}
 						},
 						{
-							"weightExp": "3*boolean(self.saw_gorgon_bogmoor)",
+							"weightExp": "3*boolean(self.saw_thrixl_bard)",
 							"outcome": {
 								"class": "Spawn",
 								"target": "target",
 								"addRole": "monster",
 								"createEntity": {
-									"query": { "baseTag": "gorgon_bogmoor" },
+									"query": { "baseTag": "thrixl_bard" },
 									"setLocation": true
 								}
 							}
 						},
 						{
-							"weightExp": "4*boolean(self.saw_gorgon_gheist)",
+							"weightExp": "4*boolean(self.saw_thrixl_scorier)",
 							"outcome": {
 								"class": "Spawn",
 								"target": "target",
 								"addRole": "monster",
 								"createEntity": {
-									"query": { "baseTag": "gorgon_gheist" },
+									"query": { "baseTag": "thrixl_scorier" },
 									"setLocation": true
 								}
 							}
 						},
 						{
-							"weightExp": "5*boolean(self.saw_gorgon_gorgon)",
+							"weightExp": "5*boolean(self.saw_thrixl_nightmare)",
 							"outcome": {
 								"class": "Spawn",
 								"target": "target",
 								"addRole": "monster",
 								"createEntity": {
-									"query": { "baseTag": "gorgon_gorgon" },
+									"query": { "baseTag": "thrixl_nightmare" },
 									"setLocation": true
 								}
 							}
 						},
 						{
-							"weightExp": "6*boolean(self.saw_gorgon_bartoth)",
+							"weightExp": "6*boolean(self.saw_thrixl_drathix)",
 							"outcome": {
 								"class": "Spawn",
 								"target": "target",
 								"addRole": "monster",
 								"createEntity": {
-									"query": { "baseTag": "gorgon_bartoth" },
+									"query": { "baseTag": "thrixl_drathix" },
 									"setLocation": true
 								}
 							}
 						},
 						{
-							"weightExp": "6*boolean(self.saw_gorgon_staggron)",
+							"weightExp": "6*boolean(self.saw_thrixl_kinnestend)",
 							"outcome": {
 								"class": "Spawn",
 								"target": "target",
 								"addRole": "monster",
 								"createEntity": {
-									"query": { "baseTag": "gorgon_staggron" },
+									"query": { "baseTag": "thrixl_kinnestend" },
 									"setLocation": true
 								}
 							}
 						},
 						{
-							"weightExp": "6*boolean(self.saw_gorgon_usric)",
+							"weightExp": "6*boolean(self.saw_thrixl_muse)",
 							"outcome": {
 								"class": "Spawn",
 								"target": "target",
 								"addRole": "monster",
 								"createEntity": {
-									"query": { "baseTag": "gorgon_usric" },
-									"setLocation": true
-								}
-							}
-						},
-						{
-							"weightExp": "6*boolean(self.saw_gorgon_seacaller)",
-							"outcome": {
-								"class": "Spawn",
-								"target": "target",
-								"addRole": "monster",
-								"createEntity": {
-									"query": { "baseTag": "gorgon_seacaller" },
+									"query": { "baseTag": "thrixl_muse" },
 									"setLocation": true
 								}
 							}
@@ -214,7 +201,7 @@
 		"STUB": "We manually add the cooldown, so it can take unusual values or depend on difficulty",
 		"addAspects": [
 			{
-				"id": "cooldown|summonerSpawnGorgon|COOLDOWN|USES|MAX_INTERFUSIONS",
+				"id": "cooldown|summonerSpawnThrixl|COOLDOWN|USES|MAX_INTERFUSIONS",
 				"value": "COOLDOWN"
 			}
 		]

@@ -1,5 +1,5 @@
 {
-"id": "summonerSpawnHero|MAX_INTERFUSIONS",
+"id": "summonerSpawnHero|COOLDOWN|USES|MAX_INTERFUSIONS",
 "info": {
 	"dataVersion": 1,
 	"sourceFile": "summonerSpawnHero",
@@ -12,8 +12,9 @@
 "ability": {
 	"icon": "magic",
 	"priority": "3",
+	"extraUI": { "overrideCooldownShown": "COOLDOWN" },
 	"showDescriptionInTooltip": true,
-	"cooldown": "oncePerTurn"
+	"numUses": "USES"
 },
 "targets": [
 	{
@@ -78,6 +79,16 @@
 	}
 ],
 "outcomes": [
-	{ "class": "Branch", "branchEvent": "summonerSpawnHeroBranch" }
+	{ "class": "Branch", "branchEvent": "summonerSpawnHeroBranch" },
+	{
+		"class": "Aspects",
+		"STUB": "We manually add the cooldown, so it can take unusual values or depend on difficulty",
+		"addAspects": [
+			{
+				"id": "cooldown|summonerSpawnHero|COOLDOWN|USES|MAX_INTERFUSIONS",
+				"value": "COOLDOWN"
+			}
+		]
+	}
 ]
 }

@@ -42,6 +42,7 @@
 	"importance": 2,
 	"showValue": true
 },
+{ "modId": "villain_summoners", "id": "summoner", "voice": "default" },
 {
 	"modId": "villain_summoners",
 	"id": "summonerIncreaseStatsPerCalamity",
@@ -67,6 +68,23 @@
 	],
 	"script": "effects.monsterInterfusion",
 	"importance": -1
+},
+{
+	"modId": "villain_summoners",
+	"id": "summoner_dodge",
+	"stats": { "DODGE": 10000 },
+	"boostType": "ABILITY_MISC",
+	"showInTooltip": true
+},
+{
+	"modId": "villain_summoners",
+	"id": "summoner_ethereal|PERCENT",
+	"parameters": [
+		{ "replace": "PERCENT" }
+	],
+	"effects": [ "summonerEthereal|PERCENT" ],
+	"boostType": "ABILITY_MISC",
+	"showInTooltip": true
 },
 {
 	"modId": "villain_summoners",
@@ -106,6 +124,19 @@
 },
 {
 	"modId": "villain_summoners",
+	"id": "summoner_rangedImpede|DAMAGE",
+	"parameters": [
+		{ "replace": "DAMAGE" }
+	],
+	"effects": [
+		"summonerRangedImpede|0.9|5.6|DAMAGE",
+		"monsterBreakScenery|DAMAGE",
+		"defaultMoveFeedbackRange|5.6|summonerRangedImpede"
+	],
+	"importance": -1
+},
+{
+	"modId": "villain_summoners",
 	"id": "summoner_scanGorgons",
 	"effects": [ "summonerScanGorgons" ],
 	"importance": -1
@@ -130,20 +161,123 @@
 },
 {
 	"modId": "villain_summoners",
-	"id": "summoner_spawnGorgon|MAX_INTERFUSIONS",
+	"id": "summoner_spawnCultistBoss|COOLDOWN|USES|MAX_INTERFUSIONS",
 	"parameters": [
+		{ "replace": "COOLDOWN" },
+		{ "replace": "USES" },
 		{ "replace": "MAX_INTERFUSIONS" }
 	],
-	"effects": [ "summonerSpawnGorgonCard|MAX_INTERFUSIONS" ],
+	"effects": [ "summonerSpawnCultistBoss|COOLDOWN|USES|MAX_INTERFUSIONS" ],
 	"importance": -1
 },
 {
 	"modId": "villain_summoners",
-	"id": "summoner_spawnHero|MAX_INTERFUSIONS",
+	"id": "summoner_spawnCultist|COOLDOWN|USES|MAX_INTERFUSIONS",
 	"parameters": [
+		{ "replace": "COOLDOWN" },
+		{ "replace": "USES" },
 		{ "replace": "MAX_INTERFUSIONS" }
 	],
-	"effects": [ "summonerSpawnHero|MAX_INTERFUSIONS" ],
+	"effects": [ "summonerSpawnCultist|COOLDOWN|USES|MAX_INTERFUSIONS" ],
+	"importance": -1
+},
+{
+	"modId": "villain_summoners",
+	"id": "summoner_spawnDrauvenBoss|COOLDOWN|USES|MAX_INTERFUSIONS",
+	"parameters": [
+		{ "replace": "COOLDOWN" },
+		{ "replace": "USES" },
+		{ "replace": "MAX_INTERFUSIONS" }
+	],
+	"effects": [ "summonerSpawnDrauvenBoss|COOLDOWN|USES|MAX_INTERFUSIONS" ],
+	"importance": -1
+},
+{
+	"modId": "villain_summoners",
+	"id": "summoner_spawnDrauven|COOLDOWN|USES|MAX_INTERFUSIONS",
+	"parameters": [
+		{ "replace": "COOLDOWN" },
+		{ "replace": "USES" },
+		{ "replace": "MAX_INTERFUSIONS" }
+	],
+	"effects": [ "summonerSpawnDrauven|COOLDOWN|USES|MAX_INTERFUSIONS" ],
+	"importance": -1
+},
+{
+	"modId": "villain_summoners",
+	"id": "summoner_spawnGorgonBoss|COOLDOWN|USES|MAX_INTERFUSIONS",
+	"parameters": [
+		{ "replace": "COOLDOWN" },
+		{ "replace": "USES" },
+		{ "replace": "MAX_INTERFUSIONS" }
+	],
+	"effects": [ "summonerSpawnGorgonBoss|COOLDOWN|USES|MAX_INTERFUSIONS" ],
+	"importance": -1
+},
+{
+	"modId": "villain_summoners",
+	"id": "summoner_spawnGorgon|COOLDOWN|USES|MAX_INTERFUSIONS",
+	"parameters": [
+		{ "replace": "COOLDOWN" },
+		{ "replace": "USES" },
+		{ "replace": "MAX_INTERFUSIONS" }
+	],
+	"effects": [ "summonerSpawnGorgon|COOLDOWN|USES|MAX_INTERFUSIONS" ],
+	"importance": -1
+},
+{
+	"modId": "villain_summoners",
+	"id": "summoner_spawnHero|COOLDOWN|USES|MAX_INTERFUSIONS",
+	"parameters": [
+		{ "replace": "COOLDOWN" },
+		{ "replace": "USES" },
+		{ "replace": "MAX_INTERFUSIONS" }
+	],
+	"effects": [ "summonerSpawnHero|COOLDOWN|USES|MAX_INTERFUSIONS" ],
+	"importance": -1
+},
+{
+	"modId": "villain_summoners",
+	"id": "summoner_spawnMorthagiBoss|COOLDOWN|USES|MAX_INTERFUSIONS",
+	"parameters": [
+		{ "replace": "COOLDOWN" },
+		{ "replace": "USES" },
+		{ "replace": "MAX_INTERFUSIONS" }
+	],
+	"effects": [ "summonerSpawnMorthagiBoss|COOLDOWN|USES|MAX_INTERFUSIONS" ],
+	"importance": -1
+},
+{
+	"modId": "villain_summoners",
+	"id": "summoner_spawnMorthagi|COOLDOWN|USES|MAX_INTERFUSIONS",
+	"parameters": [
+		{ "replace": "COOLDOWN" },
+		{ "replace": "USES" },
+		{ "replace": "MAX_INTERFUSIONS" }
+	],
+	"effects": [ "summonerSpawnMorthagi|COOLDOWN|USES|MAX_INTERFUSIONS" ],
+	"importance": -1
+},
+{
+	"modId": "villain_summoners",
+	"id": "summoner_spawnThrixlBoss|COOLDOWN|USES|MAX_INTERFUSIONS",
+	"parameters": [
+		{ "replace": "COOLDOWN" },
+		{ "replace": "USES" },
+		{ "replace": "MAX_INTERFUSIONS" }
+	],
+	"effects": [ "summonerSpawnThrixlBoss|COOLDOWN|USES|MAX_INTERFUSIONS" ],
+	"importance": -1
+},
+{
+	"modId": "villain_summoners",
+	"id": "summoner_spawnThrixl|COOLDOWN|USES|MAX_INTERFUSIONS",
+	"parameters": [
+		{ "replace": "COOLDOWN" },
+		{ "replace": "USES" },
+		{ "replace": "MAX_INTERFUSIONS" }
+	],
+	"effects": [ "summonerSpawnThrixl|COOLDOWN|USES|MAX_INTERFUSIONS" ],
 	"importance": -1
 }
 ]

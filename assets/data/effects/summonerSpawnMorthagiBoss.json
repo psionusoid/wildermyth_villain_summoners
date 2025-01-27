@@ -1,17 +1,19 @@
 {
-"id": "summonerSpawnGorgonCard|COOLDOWN|USES|MAX_INTERFUSIONS",
+"id": "summonerSpawnMorthagiBoss|COOLDOWN|USES|MAX_INTERFUSIONS",
 "info": {
 	"dataVersion": 1,
-	"sourceFile": "summonerSpawnGorgonCard",
+	"sourceFile": "summonerSpawnMorthagiBoss",
 	"modId": "villain_summoners",
 	"author": "psionusoid",
-	"aiPriority": "3000"
+	"aiPriority": "3000",
+	"tags": [ "okToMarkDone" ]
 },
 "type": "ABILITY",
 "verb": "ATTACK",
 "ability": {
 	"icon": "magic",
 	"priority": "3",
+	"extraUI": { "overrideCooldownShown": "COOLDOWN" },
 	"showDescriptionInTooltip": true,
 	"numUses": "USES"
 },
@@ -21,19 +23,6 @@
 		"cost": { "class": "ActionPoints", "actionPoints": "free" },
 		"aspectValues": [
 			{ "id": "forbidReactions|*", "forbidden": true }
-		],
-		"aspectsOneOf": [
-			"saw_gorgon_roe",
-			"saw_gorgon_coon",
-			"saw_gorgon_rager",
-			"saw_gorgon_bogmoor",
-			"saw_gorgon_gheist",
-			"saw_gorgon_gorgon",
-			"saw_gorgon_bartoth",
-			"saw_gorgon_staggron",
-			"saw_gorgon_usric",
-			"saw_gorgon_seacaller",
-			"alive"
 		]
 	},
 	{
@@ -85,7 +74,7 @@
 					"target": "target",
 					"addRole": "monster",
 					"createEntity": {
-						"randomCards": { "group": "gorgon", "numberOfCards": "1" },
+						"query": { "baseTag": "morthagi_genericFinalBoss" },
 						"setLocation": true
 					}
 				}
@@ -97,7 +86,7 @@
 		"STUB": "We manually add the cooldown, so it can take unusual values or depend on difficulty",
 		"addAspects": [
 			{
-				"id": "cooldown|summonerSpawnGorgonCard|COOLDOWN|USES|MAX_INTERFUSIONS",
+				"id": "cooldown|summonerSpawnMorthagiBoss|COOLDOWN|USES|MAX_INTERFUSIONS",
 				"value": "COOLDOWN"
 			}
 		]

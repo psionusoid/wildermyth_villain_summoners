@@ -1,0 +1,52 @@
+{
+"id": "summoner_obstructor",
+"modId": "villain_summoners",
+"notes": "Needs WIELD for melee",
+"aspects": [
+	"monstrous",
+	"mobileMonster",
+	"monsterCanSearch",
+	"activeDefender",
+	"alive",
+	"summoner",
+	"summoner_rangedImpede|2+1d2",
+	"summoner_ethermine|2+1d2",
+	"summoner_ethereal|33",
+	"summoner_dodge",
+	"summonerIncreaseStatsPerCalamity",
+	"AI_behavior_ranged"
+],
+"stats": {
+	"RANGE_ACCURACY": "105",
+	"ARMOR": "2",
+	"WARDING": "2",
+	"MELEE_ACCURACY": "105",
+	"MONSTER_THREAT": "15",
+	"PERCEPTION": "10",
+	"DODGE": "110",
+	"HEALTH": "9",
+	"SPEED": "6",
+	"POTENCY": "0",
+	"PHYSICAL_DAMAGE_BONUS": "0",
+	"BLOCK": "0"
+},
+"scale": [ "1.1*[0.95,1]", "1.1*[0.95,1]" ],
+"combatDifficulty_1": {
+	"newAspects": [ "summoner_rangedImpede|1+1d2" ],
+	"stats": { "ARMOR": "1", "WARDING": "1", "HEALTH": "6" }
+},
+"combatDifficulty_10": {
+	"newAspects": [ "summoner_rangedImpede|1+1d3" ],
+	"stats": { "ARMOR": "1", "HEALTH": "7" }
+},
+"combatDifficulty_30": {
+	"newAspects": [ "summoner_rangedImpede|3+1d2" ],
+	"stats": { "ARMOR": "4", "WARDING": "6", "HEALTH": "20+1d4" }
+},
+"baseColor": [ "[1.5,2]", "[1.5,2]", "[1.5,2]" ],
+"skin": [
+	{
+		"image": [ "misc/demonSuneater" ]
+	}
+]
+}
