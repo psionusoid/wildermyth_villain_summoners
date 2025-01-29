@@ -30,8 +30,10 @@
 		"side": "HERO",
 		"location": {
 			"class": "TileSpec.ExactTiles",
-			"xs": [ 5 ],
-			"ys": [ 3 ]
+			"offsetX": 24,
+			"offsetY": 11,
+			"xs": [ 47, 46, 45, 45, 46, 47, 47, 46, 45 ],
+			"ys": [ 16, 16, 16, 17, 17, 17, 18, 18, 18 ]
 		},
 		"combatantCards": true
 	},
@@ -39,19 +41,21 @@
 		"class": "StepM_SpawnExact",
 		"location": {
 			"class": "TileSpec.ExactTiles",
-			"xs": [ 5 ],
-			"ys": [ 8 ]
-		},
-		"combatantCards": true
-	},
-	{
-		"class": "StepM_SpawnExact",
-		"location": {
-			"class": "TileSpec.ExactTiles",
-			"xs": [ 5 ],
-			"ys": [ 8 ]
+			"offsetX": 23,
+			"offsetY": 11,
+			"xs": [ 44, 38, 26, 34, 31, 40, 44 ],
+			"ys": [ 24, 9, 9, 24, 22, 18, 9 ]
 		},
 		"combatantCards": true,
+		"shuffleDetectedRegions": true
+	},
+	{
+		"class": "StepM_SpawnExact",
+		"location": {
+			"class": "TileSpec.ExactTiles",
+			"xs": [ 5 ],
+			"ys": [ 8 ]
+		},
 		"monsterIds": [ "summonerTest" ]
 	},
 	{
