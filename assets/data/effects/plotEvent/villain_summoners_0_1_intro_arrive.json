@@ -274,6 +274,27 @@
 ],
 "outcomes": [
 	{
+		"class": "Aspects",
+		"target": "hero",
+		"addAspects": [
+			{ "id": "summoners_startingHero", "value": "1" }
+		]
+	},
+	{
+		"class": "Aspects",
+		"target": "hero2",
+		"addAspects": [
+			{ "id": "summoners_startingHero", "value": "1" }
+		]
+	},
+	{
+		"class": "Aspects",
+		"target": "hero3",
+		"addAspects": [
+			{ "id": "summoners_startingHero", "value": "1" }
+		]
+	},
+	{
 		"class": "IfPlayerChose",
 		"target": "hero",
 		"ifPlayerChose": "one",
@@ -342,7 +363,8 @@
 					"amount": "12",
 					"who": [ "hero", "hero2" ],
 					"forceChangeRelationshipTo": "rival"
-				}
+				},
+				{ "class": "RelationshipPoints", "amount": "24" }
 			]
 		}
 	},
@@ -415,7 +437,8 @@
 					"amount": "12",
 					"who": [ "hero", "hero2" ],
 					"forceChangeRelationshipTo": "friend"
-				}
+				},
+				{ "class": "RelationshipPoints", "amount": "24" }
 			]
 		}
 	},
@@ -488,11 +511,11 @@
 					"amount": "12",
 					"who": [ "hero", "hero2" ],
 					"forceChangeRelationshipTo": "lover"
-				}
+				},
+				{ "class": "RelationshipPoints", "amount": "24" }
 			]
 		}
 	},
-	{ "class": "RelationshipPoints", "amount": "24" },
 	{
 		"class": "Mission",
 		"goal": "story",
