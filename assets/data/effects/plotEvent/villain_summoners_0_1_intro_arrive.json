@@ -311,7 +311,7 @@
 								"showNameTags": false,
 								"actorSlots": [
 									{
-										"role": "leader",
+										"role": "hero",
 										"equipment": {},
 										"size": 0.46976137
 									},
@@ -385,7 +385,7 @@
 								"showNameTags": false,
 								"actorSlots": [
 									{
-										"role": "leader",
+										"role": "hero",
 										"equipment": {},
 										"size": 0.46976137
 									},
@@ -459,7 +459,7 @@
 								"showNameTags": false,
 								"actorSlots": [
 									{
-										"role": "leader",
+										"role": "hero",
 										"equipment": {},
 										"size": 0.46976137
 									},

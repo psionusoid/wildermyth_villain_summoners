@@ -46,16 +46,68 @@
 		"add": [ "forbidHeroicDeath" ]
 	},
 	{
-		"class": "StepM_SpawnExact",
-		"location": {
-			"class": "TileSpec.ExactTiles",
-			"offsetX": 23,
-			"offsetY": 11,
-			"xs": [ 44, 38, 26, 34, 31, 40, 44 ],
-			"ys": [ 24, 9, 9, 24, 22, 18, 9 ]
-		},
-		"combatantCards": true,
-		"shuffleDetectedRegions": true
+		"class": "Step_CombatDifficultyImmediate",
+		"easy": [
+			{
+				"class": "StepM_SpawnExact",
+				"location": {
+					"class": "TileSpec.ExactTiles",
+					"offsetX": 23,
+					"offsetY": 11,
+					"xs": [ 41, 45 ],
+					"ys": [ 17, 25 ]
+				},
+				"randomCards": { "group": "gorgon", "numberOfCards": "1" },
+				"shuffleDetectedRegions": true
+			},
+			{
+				"class": "StepM_SpawnExact",
+				"location": {
+					"class": "TileSpec.ExactTiles",
+					"offsetX": 23,
+					"offsetY": 11,
+					"xs": [ 38, 33 ],
+					"ys": [ 11, 22 ]
+				},
+				"randomCards": { "group": "morthagi", "numberOfCards": "1" },
+				"shuffleDetectedRegions": true
+			},
+			{
+				"class": "StepM_SpawnExact",
+				"location": {
+					"class": "TileSpec.ExactTiles",
+					"offsetX": 23,
+					"offsetY": 11,
+					"xs": [ 45, 46 ],
+					"ys": [ 13, 23 ]
+				},
+				"randomCards": { "group": "cultist", "numberOfCards": "1" },
+				"shuffleDetectedRegions": true
+			},
+			{
+				"class": "StepM_SpawnExact",
+				"location": {
+					"class": "TileSpec.ExactTiles",
+					"offsetX": 23,
+					"offsetY": 11,
+					"xs": [ 47, 47, 44 ],
+					"ys": [ 12, 11, 21 ]
+				},
+				"randomCards": { "group": "thrixl", "numberOfCards": "1" }
+			},
+			{
+				"class": "StepM_SpawnExact",
+				"location": {
+					"class": "TileSpec.ExactTiles",
+					"offsetX": 23,
+					"offsetY": 11,
+					"xs": [ 43, 40 ],
+					"ys": [ 15, 16 ]
+				},
+				"randomCards": { "group": "drauven", "numberOfCards": "1" },
+				"shuffleDetectedRegions": true
+			}
+		]
 	},
 	{
 		"class": "StepM_SpawnExact",
