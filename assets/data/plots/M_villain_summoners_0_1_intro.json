@@ -16,6 +16,7 @@
 		"missionResults": [
 			{
 				"defaultEvent": false,
+				"experiencePoints": "30",
 				"customResults": [
 					{
 						"class": "StepM_Event",
@@ -35,7 +36,14 @@
 			"xs": [ 47, 46, 45, 45, 46, 47, 47, 46, 45 ],
 			"ys": [ 16, 16, 16, 17, 17, 17, 18, 18, 18 ]
 		},
-		"combatantCards": true
+		"combatantCards": true,
+		"combineRegions": true,
+		"rememberAs": "hero"
+	},
+	{
+		"class": "Step_AddRemoveAspects",
+		"targets": [ "hero" ],
+		"add": [ "forbidHeroicDeath" ]
 	},
 	{
 		"class": "StepM_SpawnExact",

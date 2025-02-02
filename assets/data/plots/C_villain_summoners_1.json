@@ -135,6 +135,7 @@
 		"exactSite": "town",
 		"injectRoles": [ "party", "warrior", "hunter", "mystic" ],
 		"createFoes": { "threatStrength": "2" },
+		"noRetreat": true,
 		"results": [
 			{},
 			{
