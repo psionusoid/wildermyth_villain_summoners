@@ -146,6 +146,41 @@
 			}
 		]
 	},
+	{
+		"class": "Step_OverlandDifficultyImmediate",
+		"easy": [
+			{
+				"class": "Step_RunOutcomes",
+				"outcomes": [
+					{ "class": "AddResources", "amount": "5" }
+				]
+			}
+		],
+		"medium": [
+			{
+				"class": "Step_RunOutcomes",
+				"outcomes": [
+					{ "class": "AddResources", "amount": "4" }
+				]
+			}
+		],
+		"classic": [
+			{
+				"class": "Step_RunOutcomes",
+				"outcomes": [
+					{ "class": "AddResources", "amount": "3" }
+				]
+			}
+		],
+		"hard": [
+			{
+				"class": "Step_RunOutcomes",
+				"outcomes": [
+					{ "class": "AddResources", "amount": "2" }
+				]
+			}
+		]
+	},
 	{ "class": "StepC_BeginChapter", "chapter": "one" },
 	{
 		"class": "Step_AddObjectives",

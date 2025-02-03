@@ -38,7 +38,8 @@
 		},
 		"combatantCards": true,
 		"combineRegions": true,
-		"rememberAs": "hero"
+		"rememberAs": "hero",
+		"shuffleDetectedRegions": true
 	},
 	{
 		"class": "Step_AddRemoveAspects",
@@ -54,8 +55,8 @@
 					"class": "TileSpec.ExactTiles",
 					"offsetX": 23,
 					"offsetY": 11,
-					"xs": [ 41, 45 ],
-					"ys": [ 17, 25 ]
+					"xs": [ 41, 45, 30, 27, 34 ],
+					"ys": [ 17, 25, 8, 29, 22 ]
 				},
 				"randomCards": { "group": "gorgon", "numberOfCards": "1" },
 				"shuffleDetectedRegions": true
@@ -66,8 +67,8 @@
 					"class": "TileSpec.ExactTiles",
 					"offsetX": 23,
 					"offsetY": 11,
-					"xs": [ 38, 33 ],
-					"ys": [ 11, 22 ]
+					"xs": [ 33, 38, 41, 26, 33 ],
+					"ys": [ 22, 29, 13, 14, 8 ]
 				},
 				"randomCards": { "group": "morthagi", "numberOfCards": "1" },
 				"shuffleDetectedRegions": true
@@ -78,8 +79,8 @@
 					"class": "TileSpec.ExactTiles",
 					"offsetX": 23,
 					"offsetY": 11,
-					"xs": [ 45, 46 ],
-					"ys": [ 13, 23 ]
+					"xs": [ 46, 45, 31, 37, 28 ],
+					"ys": [ 23, 14, 19, 28, 21 ]
 				},
 				"randomCards": { "group": "cultist", "numberOfCards": "1" },
 				"shuffleDetectedRegions": true
@@ -90,10 +91,11 @@
 					"class": "TileSpec.ExactTiles",
 					"offsetX": 23,
 					"offsetY": 11,
-					"xs": [ 47, 47, 44 ],
-					"ys": [ 12, 11, 21 ]
+					"xs": [ 44, 38, 29, 24, 29 ],
+					"ys": [ 21, 14, 23, 25, 8 ]
 				},
-				"randomCards": { "group": "thrixl", "numberOfCards": "1" }
+				"randomCards": { "group": "thrixl", "numberOfCards": "1" },
+				"shuffleDetectedRegions": true
 			},
 			{
 				"class": "StepM_SpawnExact",
@@ -101,22 +103,199 @@
 					"class": "TileSpec.ExactTiles",
 					"offsetX": 23,
 					"offsetY": 11,
-					"xs": [ 43, 40 ],
-					"ys": [ 15, 16 ]
+					"xs": [ 43, 40, 27, 36, 25 ],
+					"ys": [ 15, 16, 23, 29, 13 ]
 				},
 				"randomCards": { "group": "drauven", "numberOfCards": "1" },
 				"shuffleDetectedRegions": true
 			}
+		],
+		"medium": [
+			{
+				"class": "StepM_SpawnExact",
+				"location": {
+					"class": "TileSpec.ExactTiles",
+					"offsetX": 23,
+					"offsetY": 11,
+					"xs": [ 41, 45, 30, 27, 34 ],
+					"ys": [ 17, 25, 8, 29, 22 ]
+				},
+				"randomCards": { "group": "gorgon", "numberOfCards": "2" },
+				"shuffleDetectedRegions": true
+			},
+			{
+				"class": "StepM_SpawnExact",
+				"location": {
+					"class": "TileSpec.ExactTiles",
+					"offsetX": 23,
+					"offsetY": 11,
+					"xs": [ 33, 38, 41, 26, 33 ],
+					"ys": [ 22, 29, 13, 14, 8 ]
+				},
+				"randomCards": { "group": "morthagi", "numberOfCards": "2" },
+				"shuffleDetectedRegions": true
+			},
+			{
+				"class": "StepM_SpawnExact",
+				"location": {
+					"class": "TileSpec.ExactTiles",
+					"offsetX": 23,
+					"offsetY": 11,
+					"xs": [ 46, 45, 31, 37, 28 ],
+					"ys": [ 23, 14, 19, 28, 21 ]
+				},
+				"randomCards": { "group": "cultist", "numberOfCards": "2" },
+				"shuffleDetectedRegions": true
+			},
+			{
+				"class": "StepM_SpawnExact",
+				"location": {
+					"class": "TileSpec.ExactTiles",
+					"offsetX": 23,
+					"offsetY": 11,
+					"xs": [ 44, 38, 29, 24, 29 ],
+					"ys": [ 21, 14, 23, 25, 8 ]
+				},
+				"randomCards": { "group": "thrixl", "numberOfCards": "2" },
+				"shuffleDetectedRegions": true
+			},
+			{
+				"class": "StepM_SpawnExact",
+				"location": {
+					"class": "TileSpec.ExactTiles",
+					"offsetX": 23,
+					"offsetY": 11,
+					"xs": [ 43, 40, 27, 36, 25 ],
+					"ys": [ 15, 16, 23, 29, 13 ]
+				},
+				"randomCards": { "group": "drauven", "numberOfCards": "2" },
+				"shuffleDetectedRegions": true
+			}
+		],
+		"classic": [
+			{
+				"class": "StepM_SpawnExact",
+				"location": {
+					"class": "TileSpec.ExactTiles",
+					"offsetX": 23,
+					"offsetY": 11,
+					"xs": [ 41, 45, 30, 27, 34 ],
+					"ys": [ 17, 25, 8, 29, 22 ]
+				},
+				"randomCards": { "group": "gorgon", "numberOfCards": "2" },
+				"shuffleDetectedRegions": true
+			},
+			{
+				"class": "StepM_SpawnExact",
+				"location": {
+					"class": "TileSpec.ExactTiles",
+					"offsetX": 23,
+					"offsetY": 11,
+					"xs": [ 33, 38, 41, 26, 33 ],
+					"ys": [ 22, 29, 13, 14, 8 ]
+				},
+				"randomCards": { "group": "morthagi", "numberOfCards": "2" },
+				"shuffleDetectedRegions": true
+			},
+			{
+				"class": "StepM_SpawnExact",
+				"location": {
+					"class": "TileSpec.ExactTiles",
+					"offsetX": 23,
+					"offsetY": 11,
+					"xs": [ 46, 45, 31, 37, 28 ],
+					"ys": [ 23, 14, 19, 28, 21 ]
+				},
+				"randomCards": { "group": "cultist", "numberOfCards": "2" },
+				"shuffleDetectedRegions": true
+			},
+			{
+				"class": "StepM_SpawnExact",
+				"location": {
+					"class": "TileSpec.ExactTiles",
+					"offsetX": 23,
+					"offsetY": 11,
+					"xs": [ 44, 38, 29, 24, 29 ],
+					"ys": [ 21, 14, 23, 25, 8 ]
+				},
+				"randomCards": { "group": "thrixl", "numberOfCards": "2" },
+				"shuffleDetectedRegions": true
+			},
+			{
+				"class": "StepM_SpawnExact",
+				"location": {
+					"class": "TileSpec.ExactTiles",
+					"offsetX": 23,
+					"offsetY": 11,
+					"xs": [ 43, 40, 27, 36, 25 ],
+					"ys": [ 15, 16, 23, 29, 13 ]
+				},
+				"randomCards": { "group": "drauven", "numberOfCards": "2" },
+				"shuffleDetectedRegions": true
+			}
+		],
+		"hard": [
+			{
+				"class": "StepM_SpawnExact",
+				"location": {
+					"class": "TileSpec.ExactTiles",
+					"offsetX": 23,
+					"offsetY": 11,
+					"xs": [ 41, 45, 30, 27, 34 ],
+					"ys": [ 17, 25, 8, 29, 22 ]
+				},
+				"randomCards": { "group": "gorgon", "numberOfCards": "4" },
+				"shuffleDetectedRegions": true
+			},
+			{
+				"class": "StepM_SpawnExact",
+				"location": {
+					"class": "TileSpec.ExactTiles",
+					"offsetX": 23,
+					"offsetY": 11,
+					"xs": [ 33, 38, 41, 26, 33 ],
+					"ys": [ 22, 29, 13, 14, 8 ]
+				},
+				"randomCards": { "group": "morthagi", "numberOfCards": "4" },
+				"shuffleDetectedRegions": true
+			},
+			{
+				"class": "StepM_SpawnExact",
+				"location": {
+					"class": "TileSpec.ExactTiles",
+					"offsetX": 23,
+					"offsetY": 11,
+					"xs": [ 46, 45, 31, 37, 28 ],
+					"ys": [ 23, 14, 19, 28, 21 ]
+				},
+				"randomCards": { "group": "cultist", "numberOfCards": "4" },
+				"shuffleDetectedRegions": true
+			},
+			{
+				"class": "StepM_SpawnExact",
+				"location": {
+					"class": "TileSpec.ExactTiles",
+					"offsetX": 23,
+					"offsetY": 11,
+					"xs": [ 44, 38, 29, 24, 29 ],
+					"ys": [ 21, 14, 23, 25, 8 ]
+				},
+				"randomCards": { "group": "thrixl", "numberOfCards": "4" },
+				"shuffleDetectedRegions": true
+			},
+			{
+				"class": "StepM_SpawnExact",
+				"location": {
+					"class": "TileSpec.ExactTiles",
+					"offsetX": 23,
+					"offsetY": 11,
+					"xs": [ 43, 40, 27, 36, 25 ],
+					"ys": [ 15, 16, 23, 29, 13 ]
+				},
+				"randomCards": { "group": "drauven", "numberOfCards": "4" },
+				"shuffleDetectedRegions": true
+			}
 		]
-	},
-	{
-		"class": "StepM_SpawnExact",
-		"location": {
-			"class": "TileSpec.ExactTiles",
-			"xs": [ 5 ],
-			"ys": [ 8 ]
-		},
-		"monsterIds": [ "summonerTest" ]
 	},
 	{
 		"class": "Step_AddObjectives",
