@@ -8,6 +8,46 @@
 		"onFail": [
 			{ "class": "Step_SetPlotResult", "result": "defeat", "resultPriority": 100 }
 		]
+	},
+	{
+		"class": "Objective_ActionsEachTurn",
+		"objectiveId": "Objective_ActionsEachTurn.M_villain_summoners_0_1_intro.thrixl",
+		"feedbackVisibleAnyway": true,
+		"actions": [
+			{
+				"class": "Step_CombatDifficultyImmediate",
+				"easy": [
+					{
+						"class": "StepM_SpawnExact",
+						"location": {
+							"class": "TileSpec.ExactTiles",
+							"offsetX": 23,
+							"offsetY": 11,
+							"xs": [ 50, 49, 48, 47, 47, 48, 49, 50, 50, 49, 48, 47, 47, 48, 49, 50, 50, 49, 48, 47 ],
+							"ys": [ 14, 14, 14, 14, 15, 15, 15, 15, 16, 16, 16, 16, 17, 17, 17, 17, 18, 18, 18, 18 ]
+						},
+						"randomCards": { "group": "thrixl", "numberOfCards": "1" }
+					}
+				]
+			}
+		],
+		"numberOfTimes": "1",
+		"skipFirstN": 1,
+		"skipFirstNTurns": "0",
+		"atStartOfMonsterTurn": false,
+		"warnings": [
+			{
+				"where": {
+					"class": "TileSpec.ExactTiles",
+					"offsetX": 23,
+					"offsetY": 11,
+					"xs": [ 50, 50, 50, 50, 50, 49, 48, 47, 47, 48, 49, 49, 48, 47, 47, 48, 49, 49, 48, 47 ],
+					"ys": [ 14, 15, 16, 17, 18, 18, 18, 18, 17, 17, 17, 16, 16, 16, 15, 15, 15, 14, 14, 14 ]
+				},
+				"feedbackRole": "monster",
+				"feedback": "ENEMY_SPAWN"
+			}
+		]
 	}
 ],
 "steps": [
@@ -299,7 +339,10 @@
 	},
 	{
 		"class": "Step_AddObjectives",
-		"objectives": [ "Objective_KillAllEnemies" ]
+		"objectives": [
+			"Objective_ActionsEachTurn.M_villain_summoners_0_1_intro.thrixl",
+			"Objective_KillAllEnemies"
+		]
 	}
 ]
 }
