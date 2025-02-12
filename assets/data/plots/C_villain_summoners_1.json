@@ -135,12 +135,48 @@
 		"exactSite": "town",
 		"injectRoles": [ "party", "warrior", "hunter", "mystic" ],
 		"createFoes": { "threatStrength": "2" },
+		"noRetreat": true,
 		"results": [
 			{},
 			{
 				"result": "defeat",
 				"customResults": [
 					{ "class": "StepC_Defeat" }
+				]
+			}
+		]
+	},
+	{
+		"class": "Step_OverlandDifficultyImmediate",
+		"easy": [
+			{
+				"class": "Step_RunOutcomes",
+				"outcomes": [
+					{ "class": "AddResources", "amount": "5" }
+				]
+			}
+		],
+		"medium": [
+			{
+				"class": "Step_RunOutcomes",
+				"outcomes": [
+					{ "class": "AddResources", "amount": "4" }
+				]
+			}
+		],
+		"classic": [
+			{
+				"class": "Step_RunOutcomes",
+				"outcomes": [
+					{ "class": "AddResources", "amount": "3" }
+				]
+			}
+		],
+		"hard": [
+			{
+				"class": "Step_RunOutcomes",
+				"outcomes": [
+					{ "class": "AddResources", "amount": "2" }
 				]
 			}
 		]

@@ -32,6 +32,27 @@
 	{ "template": "LIVING_FOES" },
 	{ "template": "DEAD_FOES" },
 	{
+		"role": "leader",
+		"template": "PICK_BY_SCORE",
+		"type": "HERO",
+		"scoreFunction": "LEADER",
+		"notAlreadyMatchedAs": []
+	},
+	{
+		"role": "target2",
+		"template": "PICK_BY_SCORE",
+		"type": "HERO",
+		"scoreFunction": "GOOFBALL",
+		"notAlreadyMatchedAs": [ "leader" ]
+	},
+	{
+		"role": "target3",
+		"template": "PICK_BY_SCORE",
+		"type": "HERO",
+		"scoreFunction": null,
+		"notAlreadyMatchedAs": [ "leader", "target2" ]
+	},
+	{
 		"template": "CHOICE",
 		"promptScript": [
 			{
@@ -62,43 +83,21 @@
 							"colorFilter": { "filterName": "sepia", "strength": 0.6 }
 						},
 						{
-							"role": "volunteer2",
+							"role": "target2",
 							"equipment": {},
-							"anchor": { "x": 0.861, "y": 0.204 },
-							"size": 0.248,
+							"anchor": { "x": 0.887, "y": 0.307 },
+							"size": 0.5005,
 							"drawDepth": 0,
 							"color": { "r": "0.6574806", "g": "0.53905046", "b": "0.53905052", "a": "1" },
 							"colorFilter": { "filterName": "sepia", "strength": 0.6 }
 						},
 						{
-							"role": "volunteer",
-							"form": "frame-interested",
-							"equipment": {},
-							"anchor": { "x": 0.293, "y": 0.258 },
-							"size": 0.294,
-							"drawDepth": 0.25,
-							"head": { "rotate": -19.258, "scaleY": -1 },
-							"color": { "r": "0.6574806", "g": "0.53905046", "b": "0.53905052", "a": "1" },
-							"colorFilter": { "filterName": "sepia", "strength": 0.6 }
-						},
-						{
-							"role": "participant",
+							"role": "target3",
 							"equipment": {},
 							"anchor": { "x": 0.694, "y": 0.239 },
 							"size": 0.763,
 							"drawDepth": 0,
 							"head": { "rotate": -14.396 },
-							"color": { "r": "0.6574806", "g": "0.53905046", "b": "0.53905052", "a": "1" },
-							"colorFilter": { "filterName": "sepia", "strength": 0.6 }
-						},
-						{
-							"role": "volunteer3",
-							"form": "frame-grim",
-							"equipment": {},
-							"anchor": { "x": 0.96, "y": 0.201 },
-							"size": 0.22,
-							"drawDepth": 0.5,
-							"head": { "rotate": -33.095, "scaleY": -1 },
 							"color": { "r": "0.6574806", "g": "0.53905046", "b": "0.53905052", "a": "1" },
 							"colorFilter": { "filterName": "sepia", "strength": 0.6 }
 						},
@@ -200,7 +199,7 @@
 									"colorFilter": { "filterName": "sepia", "strength": 0.2 }
 								},
 								{
-									"role": "target",
+									"role": "leader",
 									"form": "frame-happy",
 									"equipment": {},
 									"anchor": { "x": 0.408, "y": 0.442 },
@@ -337,7 +336,7 @@
 									"colorFilter": { "filterName": "sepia", "strength": 1.1 }
 								},
 								{
-									"role": "target",
+									"role": "leader",
 									"form": "frame-interested",
 									"equipment": {},
 									"anchor": { "x": 0.133, "y": 0.442 },
