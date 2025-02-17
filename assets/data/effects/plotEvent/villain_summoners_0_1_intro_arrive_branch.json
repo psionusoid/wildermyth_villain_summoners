@@ -77,10 +77,10 @@
 					"textSlots": [
 						{
 							"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive_branch",
-							"textKey": "~01~prompt~panel_001~1_leader",
-							"pointerOwner": "leader",
-							"padXFraction": 0.34,
-							"padYFraction": 0.054,
+							"textKey": "~01~prompt~panel_001~1_hero",
+							"pointerOwner": "hero",
+							"padXFraction": 0.286,
+							"padYFraction": 0.089,
 							"widthFraction": 0.3980158,
 							"shrinkToFitText": true
 						}
@@ -265,27 +265,6 @@
 ],
 "outcomes": [
 	{
-		"class": "Aspects",
-		"target": "hero",
-		"addAspects": [
-			{ "id": "summoners_startingHero", "value": "1" }
-		]
-	},
-	{
-		"class": "Aspects",
-		"target": "hero2",
-		"addAspects": [
-			{ "id": "summoners_startingHero", "value": "1" }
-		]
-	},
-	{
-		"class": "Aspects",
-		"target": "hero3",
-		"addAspects": [
-			{ "id": "summoners_startingHero", "value": "1" }
-		]
-	},
-	{
 		"class": "IfPlayerChose",
 		"target": "hero",
 		"ifPlayerChose": "one",
@@ -348,14 +327,7 @@
 							}
 						}
 					]
-				},
-				{
-					"class": "RelationshipPoints",
-					"amount": "12",
-					"who": [ "hero", "hero2" ],
-					"forceChangeRelationshipTo": "rival"
-				},
-				{ "class": "RelationshipPoints", "amount": "24" }
+				}
 			]
 		}
 	},
@@ -422,14 +394,7 @@
 							}
 						}
 					]
-				},
-				{
-					"class": "RelationshipPoints",
-					"amount": "12",
-					"who": [ "hero", "hero2" ],
-					"forceChangeRelationshipTo": "friend"
-				},
-				{ "class": "RelationshipPoints", "amount": "24" }
+				}
 			]
 		}
 	},
@@ -496,14 +461,7 @@
 							}
 						}
 					]
-				},
-				{
-					"class": "RelationshipPoints",
-					"amount": "12",
-					"who": [ "hero", "hero2" ],
-					"forceChangeRelationshipTo": "lover"
-				},
-				{ "class": "RelationshipPoints", "amount": "24" }
+				}
 			]
 		}
 	},
@@ -516,5 +474,17 @@
 		],
 		"missionPlanOverride": "villain_summoners_0_1_intro"
 	}
-]
+],
+"implications": {
+	"generatedTargets": [
+		{
+			"role": "legend",
+			"npcId": "summoners_instructor",
+			"createEntity": {
+				"query": { "baseTag": "human" },
+				"control": "none"
+			}
+		}
+	]
+}
 }

@@ -302,63 +302,6 @@
 			"class": "DoAll",
 			"outcomes": [
 				{
-					"class": "Description",
-					"script": [
-						{
-							"class": "comicNode_Panel",
-							"panel": {
-								"size": "full",
-								"showNameTags": false,
-								"actorSlots": [
-									{
-										"role": "hero",
-										"equipment": {},
-										"size": 0.46976137
-									},
-									{
-										"role": "hero2",
-										"equipment": {},
-										"anchor": { "x": 0.649, "y": 0.487 },
-										"size": 0.46976137
-									},
-									{
-										"role": "hero3",
-										"equipment": {},
-										"anchor": { "x": 0.313, "y": 0.494 },
-										"size": 0.46976137
-									}
-								],
-								"textSlots": [
-									{
-										"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive",
-										"textKey": "~05~player_chose_one~panel_001~1_leader",
-										"pointerOwner": "leader",
-										"padXFraction": 0.34,
-										"padYFraction": 0.054,
-										"widthFraction": 0.3980158,
-										"shrinkToFitText": true
-									}
-								]
-							}
-						},
-						{
-							"class": "comicNode_Panel",
-							"panel": {
-								"actorSlots": [
-									{
-										"role": "legend",
-										"facing": "left",
-										"equipment": {},
-										"anchor": { "x": 0.458, "y": 0.651 },
-										"size": 0.5002,
-										"nameTag": "bottomRight"
-									}
-								]
-							}
-						}
-					]
-				},
-				{
 					"class": "RelationshipPoints",
 					"amount": "12",
 					"who": [ "hero", "hero2" ],
@@ -375,63 +318,6 @@
 		"then": {
 			"class": "DoAll",
 			"outcomes": [
-				{
-					"class": "Description",
-					"script": [
-						{
-							"class": "comicNode_Panel",
-							"panel": {
-								"size": "full",
-								"showNameTags": false,
-								"actorSlots": [
-									{
-										"role": "hero",
-										"equipment": {},
-										"size": 0.46976137
-									},
-									{
-										"role": "hero2",
-										"equipment": {},
-										"anchor": { "x": 0.649, "y": 0.487 },
-										"size": 0.46976137
-									},
-									{
-										"role": "hero3",
-										"equipment": {},
-										"anchor": { "x": 0.313, "y": 0.494 },
-										"size": 0.46976137
-									}
-								],
-								"textSlots": [
-									{
-										"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive",
-										"textKey": "~06~player_chose_two~panel_001~1_leader",
-										"pointerOwner": "leader",
-										"padXFraction": 0.34,
-										"padYFraction": 0.054,
-										"widthFraction": 0.3980158,
-										"shrinkToFitText": true
-									}
-								]
-							}
-						},
-						{
-							"class": "comicNode_Panel",
-							"panel": {
-								"actorSlots": [
-									{
-										"role": "legend",
-										"facing": "left",
-										"equipment": {},
-										"anchor": { "x": 0.458, "y": 0.651 },
-										"size": 0.5002,
-										"nameTag": "bottomRight"
-									}
-								]
-							}
-						}
-					]
-				},
 				{
 					"class": "RelationshipPoints",
 					"amount": "12",
@@ -450,63 +336,6 @@
 			"class": "DoAll",
 			"outcomes": [
 				{
-					"class": "Description",
-					"script": [
-						{
-							"class": "comicNode_Panel",
-							"panel": {
-								"size": "full",
-								"showNameTags": false,
-								"actorSlots": [
-									{
-										"role": "hero",
-										"equipment": {},
-										"size": 0.46976137
-									},
-									{
-										"role": "hero2",
-										"equipment": {},
-										"anchor": { "x": 0.649, "y": 0.487 },
-										"size": 0.46976137
-									},
-									{
-										"role": "hero3",
-										"equipment": {},
-										"anchor": { "x": 0.313, "y": 0.494 },
-										"size": 0.46976137
-									}
-								],
-								"textSlots": [
-									{
-										"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive",
-										"textKey": "~07~player_chose_three~panel_001~1_leader",
-										"pointerOwner": "leader",
-										"padXFraction": 0.34,
-										"padYFraction": 0.054,
-										"widthFraction": 0.3980158,
-										"shrinkToFitText": true
-									}
-								]
-							}
-						},
-						{
-							"class": "comicNode_Panel",
-							"panel": {
-								"actorSlots": [
-									{
-										"role": "legend",
-										"facing": "left",
-										"equipment": {},
-										"anchor": { "x": 0.458, "y": 0.651 },
-										"size": 0.5002,
-										"nameTag": "bottomRight"
-									}
-								]
-							}
-						}
-					]
-				},
-				{
 					"class": "RelationshipPoints",
 					"amount": "12",
 					"who": [ "hero", "hero2" ],
@@ -517,13 +346,8 @@
 		}
 	},
 	{
-		"class": "Mission",
-		"goal": "story",
-		"combatants": [
-			{ "role": "party", "side": "player" },
-			{ "role": "foes", "side": "enemy" }
-		],
-		"missionPlanOverride": "villain_summoners_0_1_intro"
+		"class": "Branch",
+		"branchEvent": "plot_villain_summoners_0_1_intro_arrive_branch"
 	}
 ],
 "implications": {
