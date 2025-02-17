@@ -79,9 +79,8 @@
 							"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive_branch",
 							"textKey": "~01~prompt~panel_001~1_hero",
 							"pointerOwner": "hero",
-							"padXFraction": 0.286,
-							"padYFraction": 0.089,
-							"widthFraction": 0.3980158,
+							"padXFraction": 0.541,
+							"padYFraction": 0.102,
 							"shrinkToFitText": true
 						}
 					]
