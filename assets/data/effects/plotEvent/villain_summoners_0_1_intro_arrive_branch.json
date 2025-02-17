@@ -460,6 +460,13 @@
 							}
 						}
 					]
+				},
+				{
+					"class": "Aspects",
+					"target": "company",
+					"addAspects": [
+						{ "id": "summoners_extremeDifficulty", "value": "1" }
+					]
 				}
 			]
 		}

@@ -1,6 +1,12 @@
 [
 {
 	"modId": "villain_summoners",
+	"id": "summoners_extremeDifficulty",
+	"importance": -1,
+	"lifespan": "all"
+},
+{
+	"modId": "villain_summoners",
 	"id": "summoners_startingHero",
 	"importance": -1,
 	"lifespan": "all"
