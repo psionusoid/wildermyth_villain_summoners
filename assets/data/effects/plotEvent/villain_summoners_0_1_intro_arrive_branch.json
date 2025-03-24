@@ -54,34 +54,11 @@
 				"class": "comicNode_Panel",
 				"panel": {
 					"size": "full",
-					"showNameTags": false,
-					"actorSlots": [
-						{
-							"role": "hero",
-							"equipment": {},
-							"size": 0.46976137
-						},
-						{
-							"role": "hero2",
-							"equipment": {},
-							"anchor": { "x": 0.649, "y": 0.487 },
-							"size": 0.46976137
-						},
-						{
-							"role": "hero3",
-							"equipment": {},
-							"anchor": { "x": 0.313, "y": 0.494 },
-							"size": 0.46976137
-						}
-					],
 					"textSlots": [
 						{
 							"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive_branch",
-							"textKey": "~01~prompt~panel_001~1_hero",
-							"pointerOwner": "hero",
-							"padXFraction": 0.541,
-							"padYFraction": 0.102,
-							"shrinkToFitText": true
+							"textKey": "~01~prompt~panel_001~1_narration",
+							"style": "narration"
 						}
 					]
 				}
@@ -89,14 +66,181 @@
 			{
 				"class": "comicNode_Panel",
 				"panel": {
+					"size": "full",
+					"showNameTags": false,
 					"actorSlots": [
 						{
-							"role": "legend",
-							"facing": "left",
+							"role": "hero",
 							"equipment": {},
-							"anchor": { "x": 0.458, "y": 0.651 },
-							"size": 0.5002,
-							"nameTag": "bottomRight"
+							"anchor": { "x": 0.543, "y": 0.355 },
+							"size": 0.4233
+						},
+						{
+							"role": "hero2",
+							"equipment": {},
+							"anchor": { "x": 0.775, "y": 0.361 },
+							"size": 0.3837
+						},
+						{
+							"role": "hero3",
+							"equipment": {},
+							"anchor": { "x": 0.275, "y": 0.37 },
+							"size": 0.35,
+							"drawDepth": 1.5
+						},
+						{
+							"assetSpec": "comicBg:comicBG_waterfallSmall.jpg",
+							"role": null,
+							"focus": "foot",
+							"anchor": { "x": 0.48, "y": 0.488 },
+							"size": 0.2905,
+							"drawDepth": 4,
+							"nameTag": "none"
+						},
+						{
+							"assetSpec": "comic:waterSurface.png",
+							"role": null,
+							"focus": "foot",
+							"anchor": { "x": 0.553, "y": -0.223 },
+							"size": 0.6402,
+							"drawDepth": 3,
+							"nameTag": "none"
+						}
+					],
+					"textSlots": [
+						{
+							"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive_branch",
+							"textKey": "~01~prompt~panel_002~1_hero",
+							"pointerOwner": "hero",
+							"padXFraction": 0.53,
+							"padYFraction": 0.246,
+							"shrinkToFitText": true
+						},
+						{
+							"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive_branch",
+							"textKey": "~01~prompt~panel_002~2_hero2",
+							"pointerOwner": "hero2",
+							"padXFraction": 0.829,
+							"padYFraction": 0.254,
+							"shrinkToFitText": true
+						},
+						{
+							"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive_branch",
+							"textKey": "~01~prompt~panel_002~3_hero3",
+							"pointerOwner": "hero3"
+						},
+						{
+							"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive_branch",
+							"textKey": "~01~prompt~panel_002~4_narration",
+							"style": "narration"
+						}
+					]
+				}
+			},
+			{
+				"class": "comicNode_Panel",
+				"panel": {
+					"size": "full",
+					"showNameTags": false,
+					"actorSlots": [
+						{
+							"role": "hero",
+							"equipment": {},
+							"anchor": { "x": 0.543, "y": 0.355 },
+							"size": 0.4233
+						},
+						{
+							"role": "hero2",
+							"equipment": {},
+							"anchor": { "x": 0.775, "y": 0.361 },
+							"size": 0.3837
+						},
+						{
+							"role": "hero3",
+							"equipment": {},
+							"anchor": { "x": 0.275, "y": 0.37 },
+							"size": 0.35,
+							"drawDepth": 1.5
+						},
+						{
+							"assetSpec": "comicBg:comicBG_waterfallSmall.jpg",
+							"role": null,
+							"focus": "foot",
+							"anchor": { "x": 0.48, "y": 0.488 },
+							"size": 0.2905,
+							"drawDepth": 4,
+							"nameTag": "none"
+						},
+						{
+							"assetSpec": "comic:waterSurface.png",
+							"role": null,
+							"focus": "foot",
+							"anchor": { "x": 0.553, "y": -0.223 },
+							"size": 0.6402,
+							"drawDepth": 3,
+							"nameTag": "none"
+						}
+					],
+					"textSlots": [
+						{
+							"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive_branch",
+							"textKey": "~01~prompt~panel_003~1_hero",
+							"pointerOwner": "hero",
+							"padXFraction": 0.53,
+							"padYFraction": 0.246,
+							"shrinkToFitText": true
+						},
+						{
+							"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive_branch",
+							"textKey": "~01~prompt~panel_003~2_hero2",
+							"pointerOwner": "hero2",
+							"padXFraction": 0.829,
+							"padYFraction": 0.254,
+							"shrinkToFitText": true
+						},
+						{
+							"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive_branch",
+							"textKey": "~01~prompt~panel_003~3_hero3",
+							"pointerOwner": "hero3"
+						},
+						{
+							"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive_branch",
+							"textKey": "~01~prompt~panel_003~4_narration",
+							"style": "narration"
+						}
+					]
+				}
+			},
+			{
+				"class": "comicNode_Panel",
+				"panel": {
+					"size": "full",
+					"showNameTags": false,
+					"actorSlots": [
+						{
+							"role": "hero",
+							"equipment": {},
+							"anchor": { "x": 0.585, "y": 0.481 },
+							"size": 0.5958
+						},
+						{
+							"role": "hero2",
+							"equipment": {},
+							"anchor": { "x": 0.741, "y": 0.476 },
+							"size": 0.5958
+						},
+						{
+							"role": "hero3",
+							"equipment": {},
+							"anchor": { "x": 0.326, "y": 0.471 },
+							"size": 0.5958
+						}
+					],
+					"textSlots": [
+						{
+							"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive_branch",
+							"textKey": "~01~prompt~panel_004~1_narration",
+							"style": "narration"
 						}
 					]
 				}
@@ -113,22 +257,22 @@
 							"actorSlots": [
 								{
 									"role": "hero",
-									"form": "frame-skeptical",
+									"form": "frame-interested",
 									"equipment": { "mode": "removeWeapons" },
 									"anchor": { "x": 0.189, "y": 0.47 },
 									"size": 0.648,
 									"drawDepth": 0,
-									"head": { "rotate": -17.554, "scaleY": -1 },
-									"color": { "r": "0.38310683", "g": "0.43166375", "b": "0.58799142", "a": "0.88728291" }
+									"head": { "rotate": 3.081, "scaleY": 1 }
 								},
 								{
 									"role": "hero2",
+									"form": "frame-rage",
 									"equipment": { "mode": "removeWeapons" },
-									"anchor": { "x": 0.757, "y": 0.473 },
+									"anchor": { "x": 0.781, "y": 0.456 },
 									"size": 0.833,
-									"drawDepth": -1.625,
-									"head": { "rotate": -21.307, "scaleY": 1 },
-									"color": { "r": "0.70131779", "g": "0.59448737", "b": "0.50677395", "a": "1" }
+									"drawDepth": -1,
+									"head": { "rotate": -14.558, "scaleY": 1 },
+									"foot": { "rotate": 3.282 }
 								}
 							],
 							"textSlots": [
@@ -137,9 +281,9 @@
 									"textKey": "~02~choice_one~panel_001~1_darken",
 									"style": "darken",
 									"location": "bottomRight",
-									"padXFraction": 0.414,
-									"padYFraction": 0.038,
-									"shrinkToFitText": true
+									"padXFraction": 0.05,
+									"padYFraction": 0.025,
+									"widthFraction": 0.8
 								},
 								{
 									"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive_branch",
@@ -148,6 +292,11 @@
 									"location": "topRight",
 									"shrinkToFitText": true,
 									"pointerAdjust": { "rotate": 23.041376, "dX": 16.059734, "dY": -14.170507 }
+								},
+								{
+									"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive_branch",
+									"textKey": "~02~choice_one~panel_001~3_narration",
+									"style": "narration"
 								}
 							]
 						}
@@ -164,23 +313,20 @@
 							"actorSlots": [
 								{
 									"role": "hero",
-									"form": "frame-happy",
+									"form": "frame-grim",
 									"equipment": { "mode": "removeWeapons" },
 									"anchor": { "x": 0.189, "y": 0.47 },
 									"size": 0.648,
 									"drawDepth": 0,
-									"head": { "rotate": 3.002, "scaleY": 1 },
-									"color": { "r": "0.38310683", "g": "0.43166375", "b": "0.58799142", "a": "0.88728291" }
+									"head": { "rotate": 3.002, "scaleY": 1 }
 								},
 								{
 									"role": "hero2",
-									"form": "frame-talk",
 									"equipment": { "mode": "removeWeapons" },
-									"anchor": { "x": 0.632, "y": 0.527 },
+									"anchor": { "x": 0.723, "y": 0.476 },
 									"size": 0.833,
 									"drawDepth": -1.625,
-									"head": { "rotate": -17.211, "scaleY": -1 },
-									"color": { "r": "0.70131779", "g": "0.59448737", "b": "0.50677395", "a": "1" }
+									"head": { "rotate": -17.211, "scaleY": 1 }
 								}
 							],
 							"textSlots": [
@@ -188,8 +334,8 @@
 									"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive_branch",
 									"textKey": "~03~choice_two~panel_001~1_darken",
 									"style": "darken",
-									"padXFraction": 0.333,
-									"padYFraction": 0.837,
+									"padXFraction": 0.097,
+									"padYFraction": 0.858,
 									"shrinkToFitText": true
 								},
 								{
@@ -200,6 +346,11 @@
 									"widthFraction": 0.9202562,
 									"shrinkToFitText": true,
 									"pointerAdjust": { "dX": 0, "dY": 0, "pointerOrientH": "onLeft" }
+								},
+								{
+									"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive_branch",
+									"textKey": "~03~choice_two~panel_001~3_narration",
+									"style": "narration"
 								}
 							]
 						}
@@ -216,24 +367,21 @@
 							"actorSlots": [
 								{
 									"role": "hero",
-									"form": "frame-interested",
+									"form": "frame-scared",
 									"equipment": { "mode": "removeWeapons" },
 									"anchor": { "x": 0.189, "y": 0.47 },
 									"size": 0.648,
 									"drawDepth": 0,
-									"head": { "rotate": 3.002, "scaleY": 1 },
-									"color": { "r": "0.38310683", "g": "0.43166375", "b": "0.58799142", "a": "0.88728291" }
+									"head": { "rotate": 3.002, "scaleY": 1 }
 								},
 								{
 									"role": "hero2",
-									"form": "frame-talk",
-									"facing": "left",
+									"form": "frame-surprised",
 									"equipment": { "mode": "removeWeapons" },
-									"anchor": { "x": 0.542, "y": 0.5 },
+									"anchor": { "x": 0.686, "y": 0.469 },
 									"size": 0.678,
 									"drawDepth": -1.625,
-									"head": { "rotate": -2.152, "scaleY": 1 },
-									"color": { "r": "0.51930308", "g": "0.45366392", "b": "0.39977068", "a": "1" }
+									"head": { "rotate": -2.152, "scaleY": 1 }
 								}
 							],
 							"textSlots": [
@@ -241,8 +389,8 @@
 									"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive_branch",
 									"textKey": "~04~choice_three~panel_001~1_darken",
 									"style": "darken",
-									"padXFraction": 0.34,
-									"padYFraction": 0.819,
+									"padXFraction": 0.206,
+									"padYFraction": 0.756,
 									"shrinkToFitText": true
 								},
 								{
@@ -252,6 +400,11 @@
 									"padXFraction": 0.046,
 									"widthFraction": 0.9899175,
 									"shrinkToFitText": true
+								},
+								{
+									"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive_branch",
+									"textKey": "~04~choice_three~panel_001~3_narration",
+									"style": "narration"
 								}
 							]
 						}
