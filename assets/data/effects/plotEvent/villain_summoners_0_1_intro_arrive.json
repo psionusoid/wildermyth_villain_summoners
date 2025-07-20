@@ -18,25 +18,34 @@
 	{ "template": "INJECTED_PARTY" },
 	{ "template": "INJECTED_THREAT" },
 	{
-		"role": "leader",
+		"role": "hero",
 		"template": "PICK_BY_SCORE",
 		"type": "HERO",
-		"scoreFunction": "LEADER",
+		"scoreFunction": "AGE-(1000*themePiece_skeleton_torso)",
 		"notAlreadyMatchedAs": []
 	},
 	{
 		"role": "hero2",
 		"template": "PICK_BY_SCORE",
 		"type": "HERO",
-		"scoreFunction": "AGE",
-		"notAlreadyMatchedAs": [ "leader" ]
+		"scoreFunction": "AGE-(1000*themePiece_skeleton_torso)",
+		"notAlreadyMatchedAs": [ "hero" ]
 	},
 	{
 		"role": "hero3",
 		"template": "PICK_BY_SCORE",
 		"type": "HERO",
 		"scoreFunction": null,
-		"notAlreadyMatchedAs": [ "leader", "hero2" ]
+		"notAlreadyMatchedAs": [ "hero", "hero2" ]
+	},
+	{
+		"role": "lover",
+		"template": "PICK_BY_SCORE",
+		"STUB": "Only give the romance option if non-family",
+		"choose": "BY_SCORE_OPTIONAL",
+		"scoreFunction": "1-FAMILY_WITH.hero",
+		"scoreThreshold": "1",
+		"fromRoles": [ "hero2" ]
 	},
 	{
 		"role": "hook",
@@ -46,12 +55,10 @@
 		"choose": "BY_SCORE_OPTIONAL",
 		"scoreFunction": "((100*legacyTier)+LEVEL)+[0,5]",
 		"fromRoles": null
-	}
-],
-"outcomes": [
+	},
 	{
-		"class": "Description",
-		"script": [
+		"template": "CHOICE",
+		"promptScript": [
 			{
 				"class": "comicNode_Panel",
 				"panel": {
@@ -59,32 +66,32 @@
 					"showNameTags": false,
 					"actorSlots": [
 						{
-							"role": "leader",
+							"role": "hero",
 							"equipment": {},
-							"size": 0.46976137
+							"anchor": { "x": 0.25, "y": 0.553 },
+							"size": 0.4786,
+							"nameTag": "none"
 						},
 						{
 							"role": "hero2",
 							"equipment": {},
-							"anchor": { "x": 0.649, "y": 0.487 },
-							"size": 0.46976137
+							"anchor": { "x": 0.73, "y": 0.524 },
+							"size": 0.4786,
+							"nameTag": "none"
 						},
 						{
 							"role": "hero3",
 							"equipment": {},
-							"anchor": { "x": 0.313, "y": 0.494 },
-							"size": 0.46976137
+							"anchor": { "x": 0.5, "y": 0.536 },
+							"size": 0.4786,
+							"nameTag": "none"
 						}
 					],
 					"textSlots": [
 						{
 							"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive",
-							"textKey": "~01~~panel_001~1_leader",
-							"pointerOwner": "leader",
-							"padXFraction": 0.34,
-							"padYFraction": 0.054,
-							"widthFraction": 0.3980158,
-							"shrinkToFitText": true
+							"textKey": "~01~prompt~panel_001~1_narration",
+							"style": "narration"
 						}
 					]
 				}
@@ -92,28 +99,446 @@
 			{
 				"class": "comicNode_Panel",
 				"panel": {
+					"size": "threeFourths",
 					"actorSlots": [
+						{
+							"assetSpec": "comic:roeShadowy1.png",
+							"role": null,
+							"focus": "foot",
+							"anchor": { "x": 0.682, "y": 0.3 },
+							"size": 0.3106,
+							"nameTag": "none"
+						}
+					],
+					"textSlots": [
+						{
+							"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive",
+							"textKey": "~01~prompt~panel_002~1_narration",
+							"style": "narration"
+						}
+					]
+				}
+			},
+			{
+				"class": "comicNode_Panel",
+				"panel": {
+					"size": "threeFourths",
+					"actorSlots": [
+						{
+							"assetSpec": "figure:morthagi/morthagi_portopump.png",
+							"role": null,
+							"focus": "foot",
+							"anchor": { "x": 0.549, "y": 0.363 },
+							"size": 0.318,
+							"nameTag": "none"
+						}
+					],
+					"textSlots": [
+						{
+							"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive",
+							"textKey": "~01~prompt~panel_003~1_narration",
+							"style": "narration"
+						}
+					]
+				}
+			},
+			{
+				"class": "comicNode_Panel",
+				"panel": {
+					"size": "threeFourths",
+					"actorSlots": [
+						{
+							"assetSpec": "figure:cultist/cultist_speaker.png",
+							"role": null,
+							"facing": "left",
+							"focus": "foot",
+							"anchor": { "x": 0.811, "y": 0.295 },
+							"size": 0.4886,
+							"nameTag": "none"
+						}
+					],
+					"textSlots": [
+						{
+							"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive",
+							"textKey": "~01~prompt~panel_004~1_narration",
+							"style": "narration"
+						}
+					]
+				}
+			},
+			{
+				"class": "comicNode_Panel",
+				"panel": {
+					"size": "threeFourths",
+					"actorSlots": [
+						{
+							"assetSpec": "comic:thrixlSwirlyWebs1.png",
+							"role": null,
+							"focus": "foot",
+							"anchor": { "x": 0.298, "y": 0.195 },
+							"size": 0.4857,
+							"nameTag": "none"
+						}
+					],
+					"textSlots": [
+						{
+							"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive",
+							"textKey": "~01~prompt~panel_005~1_narration",
+							"style": "narration"
+						}
+					]
+				}
+			},
+			{
+				"class": "comicNode_Panel",
+				"panel": {
+					"size": "threeFourths",
+					"actorSlots": [
+						{
+							"assetSpec": "comic:drauvenBaked_gorelord.png",
+							"role": null,
+							"focus": "foot",
+							"anchor": { "x": 0.753, "y": 0.288 },
+							"size": 0.2277,
+							"nameTag": "none"
+						},
+						{
+							"assetSpec": "asset:figures/images/misc/animal_cowShaggyBrown.png",
+							"role": null,
+							"facing": "left",
+							"focus": "foot",
+							"anchor": { "x": 0.224, "y": 0.24 },
+							"size": 0.3328,
+							"nameTag": "none"
+						}
+					],
+					"textSlots": [
+						{
+							"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive",
+							"textKey": "~01~prompt~panel_006~1_narration",
+							"style": "narration"
+						}
+					]
+				}
+			},
+			{
+				"class": "comicNode_Panel",
+				"panel": {
+					"size": "full",
+					"showNameTags": false,
+					"actorSlots": [
+						{
+							"role": "hero",
+							"equipment": {},
+							"anchor": { "x": 0.19, "y": 0.49 },
+							"size": 0.5132
+						},
+						{
+							"role": "hero2",
+							"equipment": {},
+							"anchor": { "x": 0.504, "y": 0.495 },
+							"size": 0.5132
+						},
+						{
+							"role": "hero3",
+							"equipment": {},
+							"anchor": { "x": 0.326, "y": 0.476 },
+							"size": 0.5132,
+							"nameTag": "none"
+						},
 						{
 							"role": "legend",
 							"facing": "left",
 							"equipment": {},
-							"anchor": { "x": 0.458, "y": 0.651 },
-							"size": 0.5002,
-							"nameTag": "bottomRight"
+							"anchor": { "x": 0.78, "y": 0.507 },
+							"size": 0.5132,
+							"nameTag": "none",
+							"head": { "scaleY": 1 }
+						}
+					],
+					"textSlots": [
+						{
+							"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive",
+							"textKey": "~01~prompt~panel_007~1_narration",
+							"style": "narration"
+						}
+					]
+				}
+			},
+			{
+				"class": "comicNode_Panel",
+				"panel": {
+					"size": "full",
+					"textSlots": [
+						{
+							"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive",
+							"textKey": "~01~prompt~panel_008~1_narration",
+							"style": "narration"
+						},
+						{
+							"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive",
+							"textKey": "~01~prompt~panel_008~2_narration",
+							"style": "narration"
 						}
 					]
 				}
 			}
+		],
+		"options": [
+			{
+				"id": "one",
+				"script": [
+					{
+						"class": "comicNode_Panel",
+						"panel": {
+							"showNameTags": false,
+							"actorSlots": [
+								{
+									"role": "hero",
+									"form": "frame-skeptical",
+									"equipment": { "mode": "removeWeapons" },
+									"anchor": { "x": 0.255, "y": 0.531 },
+									"size": 0.648,
+									"drawDepth": 0,
+									"head": { "rotate": -17.554, "scaleY": -1 }
+								},
+								{
+									"role": "hero2",
+									"equipment": { "mode": "removeWeapons" },
+									"anchor": { "x": 0.81, "y": 0.281 },
+									"size": 0.833,
+									"drawDepth": -1.625,
+									"head": { "rotate": -21.307, "scaleY": 1 }
+								}
+							],
+							"textSlots": [
+								{
+									"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive",
+									"textKey": "~02~choice_one~panel_001~1_darken",
+									"style": "darken",
+									"location": "bottomRight",
+									"padXFraction": 0.414,
+									"padYFraction": 0.038,
+									"shrinkToFitText": true
+								},
+								{
+									"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive",
+									"textKey": "~02~choice_one~panel_001~2_hero3",
+									"pointerOwner": "hero3",
+									"location": "topRight",
+									"shrinkToFitText": true,
+									"pointerAdjust": { "rotate": 23.041376, "dX": 16.059734, "dY": -14.170507 }
+								},
+								{
+									"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive",
+									"textKey": "~02~choice_one~panel_001~3_narration",
+									"style": "narration",
+									"padXFraction": 0.139,
+									"padYFraction": 0.024,
+									"shrinkToFitText": true
+								}
+							]
+						}
+					}
+				]
+			},
+			{
+				"id": "two",
+				"script": [
+					{
+						"class": "comicNode_Panel",
+						"panel": {
+							"showNameTags": false,
+							"actorSlots": [
+								{
+									"role": "hero",
+									"form": "frame-happy",
+									"equipment": { "mode": "removeWeapons" },
+									"anchor": { "x": 0.274, "y": 0.433 },
+									"size": 0.648,
+									"drawDepth": 0,
+									"head": { "rotate": 3.002, "scaleY": 1 }
+								},
+								{
+									"role": "hero2",
+									"form": "frame-talk",
+									"facing": "left",
+									"equipment": { "mode": "removeWeapons" },
+									"anchor": { "x": 0.714, "y": 0.415 },
+									"size": 0.833,
+									"drawDepth": -1.625,
+									"head": { "rotate": -17.211, "scaleY": 1 }
+								}
+							],
+							"textSlots": [
+								{
+									"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive",
+									"textKey": "~03~choice_two~panel_001~1_darken",
+									"style": "darken",
+									"padXFraction": 0.333,
+									"padYFraction": 0.837,
+									"shrinkToFitText": true
+								},
+								{
+									"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive",
+									"textKey": "~03~choice_two~panel_001~2_hero3",
+									"pointerOwner": "hero3",
+									"padXFraction": 0.083,
+									"widthFraction": 0.9202562,
+									"shrinkToFitText": true,
+									"pointerAdjust": { "dX": 0, "dY": 0, "pointerOrientH": "onLeft" }
+								},
+								{
+									"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive",
+									"textKey": "~03~choice_two~panel_001~3_narration",
+									"style": "narration",
+									"padXFraction": 0.085,
+									"padYFraction": 0.027,
+									"shrinkToFitText": true
+								}
+							]
+						}
+					}
+				]
+			},
+			{
+				"id": "three",
+				"script": [
+					{
+						"class": "comicNode_Panel",
+						"panel": {
+							"showNameTags": false,
+							"actorSlots": [
+								{
+									"role": "hero",
+									"form": "frame-interested",
+									"equipment": { "mode": "removeWeapons" },
+									"anchor": { "x": 0.279, "y": 0.47 },
+									"size": 0.648,
+									"drawDepth": 0,
+									"head": { "rotate": 3.002, "scaleY": 1 }
+								},
+								{
+									"role": "hero2",
+									"form": "frame-talk",
+									"facing": "left",
+									"equipment": { "mode": "removeWeapons" },
+									"anchor": { "x": 0.68, "y": 0.483 },
+									"size": 0.678,
+									"drawDepth": -1.625,
+									"head": { "rotate": -2.152, "scaleY": 1 }
+								}
+							],
+							"textSlots": [
+								{
+									"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive",
+									"textKey": "~04~choice_three~panel_001~1_darken",
+									"style": "darken",
+									"padXFraction": 0.34,
+									"padYFraction": 0.819,
+									"shrinkToFitText": true
+								},
+								{
+									"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive",
+									"textKey": "~04~choice_three~panel_001~2_hero3",
+									"pointerOwner": "hero3",
+									"padXFraction": 0.046,
+									"widthFraction": 0.9899175,
+									"shrinkToFitText": true
+								},
+								{
+									"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive",
+									"textKey": "~04~choice_three~panel_001~3_narration",
+									"style": "narration",
+									"padXFraction": 0.095,
+									"padYFraction": 0.034,
+									"shrinkToFitText": true
+								}
+							]
+						}
+					}
+				],
+				"ifTargetIsPresent": "lover"
+			}
+		]
+	}
+],
+"outcomes": [
+	{
+		"class": "Aspects",
+		"target": "hero",
+		"addAspects": [
+			{ "id": "summoners_startingHero", "value": "1" }
 		]
 	},
 	{
-		"class": "Mission",
-		"goal": "story",
-		"combatants": [
-			{ "role": "party", "side": "player" },
-			{ "role": "foes", "side": "enemy" }
-		],
-		"missionPlanOverride": "villain_summoners_0_1_intro"
+		"class": "Aspects",
+		"target": "hero2",
+		"addAspects": [
+			{ "id": "summoners_startingHero", "value": "1" }
+		]
+	},
+	{
+		"class": "Aspects",
+		"target": "hero3",
+		"addAspects": [
+			{ "id": "summoners_startingHero", "value": "1" }
+		]
+	},
+	{
+		"class": "IfPlayerChose",
+		"target": "hero",
+		"ifPlayerChose": "one",
+		"then": {
+			"class": "DoAll",
+			"outcomes": [
+				{
+					"class": "RelationshipPoints",
+					"amount": "12",
+					"who": [ "hero", "hero2" ],
+					"forceChangeRelationshipTo": "rival"
+				},
+				{ "class": "RelationshipPoints", "amount": "24" }
+			]
+		}
+	},
+	{
+		"class": "IfPlayerChose",
+		"target": "hero",
+		"ifPlayerChose": "two",
+		"then": {
+			"class": "DoAll",
+			"outcomes": [
+				{
+					"class": "RelationshipPoints",
+					"amount": "12",
+					"who": [ "hero", "hero2" ],
+					"forceChangeRelationshipTo": "friend"
+				},
+				{ "class": "RelationshipPoints", "amount": "24" }
+			]
+		}
+	},
+	{
+		"class": "IfPlayerChose",
+		"target": "hero",
+		"ifPlayerChose": "three",
+		"then": {
+			"class": "DoAll",
+			"outcomes": [
+				{
+					"class": "RelationshipPoints",
+					"amount": "12",
+					"who": [ "hero", "hero2" ],
+					"forceChangeRelationshipTo": "lover"
+				},
+				{ "class": "RelationshipPoints", "amount": "24" }
+			]
+		}
+	},
+	{
+		"class": "Branch",
+		"branchEvent": "plot_villain_summoners_0_1_intro_arrive_branch"
 	}
 ],
 "implications": {

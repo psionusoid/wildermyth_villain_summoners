@@ -1,0 +1,503 @@
+{
+"id": "plot_villain_summoners_0_1_intro_arrive_branch",
+"info": {
+	"dataVersion": 1,
+	"sourceFile": "plotEvent/villain_summoners_0_1_intro_arrive_branch",
+	"modId": "villain_summoners",
+	"author": "psionusoid",
+	"declaredEncounterResults": [ "victory", "defeat" ]
+},
+"type": "BRANCH",
+"verb": "MANEUVER",
+"ability": { "icon": "melee", "priority": "1" },
+"targets": [
+	{ "template": "EVENT" },
+	{ "template": "COMPANY" },
+	{ "template": "INJECTED_TILE" },
+	{ "template": "INJECTED_SITE" },
+	{ "template": "INJECTED_PARTY" },
+	{ "template": "INJECTED_THREAT" },
+	{
+		"role": "hero",
+		"template": "PICK_BY_SCORE",
+		"type": "HERO",
+		"scoreFunction": "AGE",
+		"notAlreadyMatchedAs": []
+	},
+	{
+		"role": "hero2",
+		"template": "PICK_BY_SCORE",
+		"type": "HERO",
+		"scoreFunction": "AGE",
+		"notAlreadyMatchedAs": [ "hero" ]
+	},
+	{
+		"role": "hero3",
+		"template": "PICK_BY_SCORE",
+		"type": "HERO",
+		"scoreFunction": null,
+		"notAlreadyMatchedAs": [ "hero", "hero2" ]
+	},
+	{
+		"role": "lover",
+		"template": "PICK_BY_SCORE",
+		"STUB": "Only give the romance option if non-family",
+		"choose": "BY_SCORE_OPTIONAL",
+		"scoreFunction": "1-FAMILY_WITH.hero",
+		"scoreThreshold": "1",
+		"fromRoles": [ "hero2" ]
+	},
+	{
+		"template": "CHOICE",
+		"promptScript": [
+			{
+				"class": "comicNode_Panel",
+				"panel": {
+					"size": "full",
+					"textSlots": [
+						{
+							"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive_branch",
+							"textKey": "~01~prompt~panel_001~1_narration",
+							"style": "narration"
+						}
+					]
+				}
+			},
+			{
+				"class": "comicNode_Panel",
+				"panel": {
+					"size": "full",
+					"showNameTags": false,
+					"actorSlots": [
+						{
+							"role": "hero",
+							"equipment": {},
+							"anchor": { "x": 0.543, "y": 0.355 },
+							"size": 0.4233
+						},
+						{
+							"role": "hero2",
+							"equipment": {},
+							"anchor": { "x": 0.775, "y": 0.361 },
+							"size": 0.3837
+						},
+						{
+							"role": "hero3",
+							"equipment": {},
+							"anchor": { "x": 0.275, "y": 0.37 },
+							"size": 0.35,
+							"drawDepth": 1.5
+						},
+						{
+							"assetSpec": "comicBg:comicBG_waterfallSmall.jpg",
+							"role": null,
+							"focus": "foot",
+							"anchor": { "x": 0.48, "y": 0.488 },
+							"size": 0.2905,
+							"drawDepth": 4,
+							"nameTag": "none"
+						},
+						{
+							"assetSpec": "comic:waterSurface.png",
+							"role": null,
+							"focus": "foot",
+							"anchor": { "x": 0.553, "y": -0.223 },
+							"size": 0.6402,
+							"drawDepth": 3,
+							"nameTag": "none"
+						}
+					],
+					"textSlots": [
+						{
+							"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive_branch",
+							"textKey": "~01~prompt~panel_002~1_hero",
+							"pointerOwner": "hero",
+							"padXFraction": 0.53,
+							"padYFraction": 0.246,
+							"shrinkToFitText": true
+						},
+						{
+							"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive_branch",
+							"textKey": "~01~prompt~panel_002~2_hero2",
+							"pointerOwner": "hero2",
+							"padXFraction": 0.829,
+							"padYFraction": 0.254,
+							"shrinkToFitText": true
+						},
+						{
+							"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive_branch",
+							"textKey": "~01~prompt~panel_002~3_hero3",
+							"pointerOwner": "hero3"
+						},
+						{
+							"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive_branch",
+							"textKey": "~01~prompt~panel_002~4_narration",
+							"style": "narration"
+						}
+					]
+				}
+			},
+			{
+				"class": "comicNode_Panel",
+				"panel": {
+					"size": "full",
+					"showNameTags": false,
+					"actorSlots": [
+						{
+							"role": "hero",
+							"equipment": {},
+							"anchor": { "x": 0.543, "y": 0.355 },
+							"size": 0.4233
+						},
+						{
+							"role": "hero2",
+							"equipment": {},
+							"anchor": { "x": 0.775, "y": 0.361 },
+							"size": 0.3837
+						},
+						{
+							"role": "hero3",
+							"equipment": {},
+							"anchor": { "x": 0.275, "y": 0.37 },
+							"size": 0.35,
+							"drawDepth": 1.5
+						},
+						{
+							"assetSpec": "comicBg:comicBG_waterfallSmall.jpg",
+							"role": null,
+							"focus": "foot",
+							"anchor": { "x": 0.48, "y": 0.488 },
+							"size": 0.2905,
+							"drawDepth": 4,
+							"nameTag": "none"
+						},
+						{
+							"assetSpec": "comic:waterSurface.png",
+							"role": null,
+							"focus": "foot",
+							"anchor": { "x": 0.553, "y": -0.223 },
+							"size": 0.6402,
+							"drawDepth": 3,
+							"nameTag": "none"
+						}
+					],
+					"textSlots": [
+						{
+							"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive_branch",
+							"textKey": "~01~prompt~panel_003~1_hero",
+							"pointerOwner": "hero",
+							"padXFraction": 0.53,
+							"padYFraction": 0.246,
+							"shrinkToFitText": true
+						},
+						{
+							"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive_branch",
+							"textKey": "~01~prompt~panel_003~2_hero2",
+							"pointerOwner": "hero2",
+							"padXFraction": 0.829,
+							"padYFraction": 0.254,
+							"shrinkToFitText": true
+						},
+						{
+							"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive_branch",
+							"textKey": "~01~prompt~panel_003~3_hero3",
+							"pointerOwner": "hero3"
+						},
+						{
+							"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive_branch",
+							"textKey": "~01~prompt~panel_003~4_narration",
+							"style": "narration"
+						}
+					]
+				}
+			},
+			{
+				"class": "comicNode_Panel",
+				"panel": {
+					"size": "full",
+					"showNameTags": false,
+					"actorSlots": [
+						{
+							"role": "hero",
+							"equipment": {},
+							"anchor": { "x": 0.585, "y": 0.481 },
+							"size": 0.5958
+						},
+						{
+							"role": "hero2",
+							"equipment": {},
+							"anchor": { "x": 0.741, "y": 0.476 },
+							"size": 0.5958
+						},
+						{
+							"role": "hero3",
+							"equipment": {},
+							"anchor": { "x": 0.326, "y": 0.471 },
+							"size": 0.5958
+						}
+					],
+					"textSlots": [
+						{
+							"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive_branch",
+							"textKey": "~01~prompt~panel_004~1_narration",
+							"style": "narration"
+						}
+					]
+				}
+			}
+		],
+		"options": [
+			{
+				"id": "one",
+				"script": [
+					{
+						"class": "comicNode_Panel",
+						"panel": {
+							"showNameTags": false,
+							"actorSlots": [
+								{
+									"role": "hero",
+									"form": "frame-interested",
+									"equipment": { "mode": "removeWeapons" },
+									"anchor": { "x": 0.189, "y": 0.47 },
+									"size": 0.648,
+									"drawDepth": 0,
+									"head": { "rotate": 3.081, "scaleY": 1 }
+								},
+								{
+									"role": "hero2",
+									"form": "frame-rage",
+									"equipment": { "mode": "removeWeapons" },
+									"anchor": { "x": 0.781, "y": 0.456 },
+									"size": 0.833,
+									"drawDepth": -1,
+									"head": { "rotate": -14.558, "scaleY": 1 },
+									"foot": { "rotate": 3.282 }
+								}
+							],
+							"textSlots": [
+								{
+									"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive_branch",
+									"textKey": "~02~choice_one~panel_001~1_darken",
+									"style": "darken",
+									"location": "bottomRight",
+									"padXFraction": 0.05,
+									"padYFraction": 0.025,
+									"widthFraction": 0.8
+								},
+								{
+									"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive_branch",
+									"textKey": "~02~choice_one~panel_001~2_hero3",
+									"pointerOwner": "hero3",
+									"location": "topRight",
+									"shrinkToFitText": true,
+									"pointerAdjust": { "rotate": 23.041376, "dX": 16.059734, "dY": -14.170507 }
+								},
+								{
+									"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive_branch",
+									"textKey": "~02~choice_one~panel_001~3_narration",
+									"style": "narration"
+								}
+							]
+						}
+					}
+				]
+			},
+			{
+				"id": "two",
+				"script": [
+					{
+						"class": "comicNode_Panel",
+						"panel": {
+							"showNameTags": false,
+							"actorSlots": [
+								{
+									"role": "hero",
+									"form": "frame-grim",
+									"equipment": { "mode": "removeWeapons" },
+									"anchor": { "x": 0.189, "y": 0.47 },
+									"size": 0.648,
+									"drawDepth": 0,
+									"head": { "rotate": 3.002, "scaleY": 1 }
+								},
+								{
+									"role": "hero2",
+									"equipment": { "mode": "removeWeapons" },
+									"anchor": { "x": 0.723, "y": 0.476 },
+									"size": 0.833,
+									"drawDepth": -1.625,
+									"head": { "rotate": -17.211, "scaleY": 1 }
+								}
+							],
+							"textSlots": [
+								{
+									"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive_branch",
+									"textKey": "~03~choice_two~panel_001~1_darken",
+									"style": "darken",
+									"padXFraction": 0.097,
+									"padYFraction": 0.858,
+									"shrinkToFitText": true
+								},
+								{
+									"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive_branch",
+									"textKey": "~03~choice_two~panel_001~2_hero3",
+									"pointerOwner": "hero3",
+									"padXFraction": 0.083,
+									"widthFraction": 0.9202562,
+									"shrinkToFitText": true,
+									"pointerAdjust": { "dX": 0, "dY": 0, "pointerOrientH": "onLeft" }
+								},
+								{
+									"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive_branch",
+									"textKey": "~03~choice_two~panel_001~3_narration",
+									"style": "narration"
+								}
+							]
+						}
+					}
+				]
+			},
+			{
+				"id": "three",
+				"script": [
+					{
+						"class": "comicNode_Panel",
+						"panel": {
+							"showNameTags": false,
+							"actorSlots": [
+								{
+									"role": "hero",
+									"form": "frame-scared",
+									"equipment": { "mode": "removeWeapons" },
+									"anchor": { "x": 0.189, "y": 0.47 },
+									"size": 0.648,
+									"drawDepth": 0,
+									"head": { "rotate": 3.002, "scaleY": 1 }
+								},
+								{
+									"role": "hero2",
+									"form": "frame-surprised",
+									"equipment": { "mode": "removeWeapons" },
+									"anchor": { "x": 0.686, "y": 0.469 },
+									"size": 0.678,
+									"drawDepth": -1.625,
+									"head": { "rotate": -2.152, "scaleY": 1 }
+								}
+							],
+							"textSlots": [
+								{
+									"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive_branch",
+									"textKey": "~04~choice_three~panel_001~1_darken",
+									"style": "darken",
+									"padXFraction": 0.206,
+									"padYFraction": 0.756,
+									"shrinkToFitText": true
+								},
+								{
+									"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive_branch",
+									"textKey": "~04~choice_three~panel_001~2_hero3",
+									"pointerOwner": "hero3",
+									"padXFraction": 0.046,
+									"widthFraction": 0.9899175,
+									"shrinkToFitText": true
+								},
+								{
+									"textSourceFile": "plotEvent/villain_summoners_0_1_intro_arrive_branch",
+									"textKey": "~04~choice_three~panel_001~3_narration",
+									"style": "narration"
+								}
+							]
+						}
+					}
+				],
+				"ifTargetIsPresent": "lover"
+			}
+		]
+	}
+],
+"outcomes": [
+	{
+		"class": "IfPlayerChose",
+		"target": "hero",
+		"ifPlayerChose": "one",
+		"then": {
+			"class": "DoAll",
+			"outcomes": [
+				{
+					"class": "Mission",
+					"goal": "story",
+					"combatants": [
+						{ "role": "party", "side": "player" },
+						{ "role": "foes", "side": "enemy" }
+					],
+					"combatModifiers": [
+						{ "modifier": "HASTE" }
+					],
+					"missionPlanOverride": "villain_summoners_0_1_intro"
+				}
+			]
+		}
+	},
+	{
+		"class": "IfPlayerChose",
+		"target": "hero",
+		"ifPlayerChose": "two",
+		"then": {
+			"class": "DoAll",
+			"outcomes": [
+				{
+					"class": "Mission",
+					"goal": "story",
+					"combatants": [
+						{ "role": "party", "side": "player" },
+						{ "role": "foes", "side": "enemy" }
+					],
+					"combatModifiers": [
+						{ "modifier": "ENDURANCE" }
+					],
+					"missionPlanOverride": "villain_summoners_0_1_intro",
+					"mutators": null
+				}
+			]
+		}
+	},
+	{
+		"class": "IfPlayerChose",
+		"target": "hero",
+		"ifPlayerChose": "three",
+		"then": {
+			"class": "DoAll",
+			"outcomes": [
+				{
+					"class": "Aspects",
+					"target": "company",
+					"addAspects": [
+						{ "id": "summoners_extremeDifficulty", "value": "1" }
+					]
+				},
+				{
+					"class": "Mission",
+					"goal": "story",
+					"combatants": [
+						{ "role": "party", "side": "player" },
+						{ "role": "foes", "side": "enemy" }
+					],
+					"missionPlanOverride": "villain_summoners_0_1_intro"
+				}
+			]
+		}
+	}
+],
+"implications": {
+	"generatedTargets": [
+		{
+			"role": "legend",
+			"npcId": "summoners_instructor",
+			"createEntity": {
+				"query": { "baseTag": "human" },
+				"control": "none"
+			}
+		}
+	]
+}
+}
