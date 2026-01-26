@@ -1,13 +1,54 @@
 {
 "objectives": [
 	{
-		"class": "Objective_KillAllEnemies",
-		"onSuccess": [
-			{ "class": "Step_SetPlotResult", "resultPriority": 10 }
+		"class": "Objective_EndTurnInRegion",
+		"objectiveId": "Objective_EndTurnInRegion.M_villain_summoners_1_1_keystone",
+		"feedback": [
+			{ "mission": "FRIENDLY_EFFECT_SUGGESTION", "role": "focus" }
 		],
-		"onFail": [
-			{ "class": "Step_SetPlotResult", "result": "defeat", "resultPriority": 100 }
-		]
+		"onSuccess": [
+			{
+				"class": "Step_AddObjectives",
+				"objectives": [ "Objective_EndTurnInRegion.M_villain_summoners_1_1_keystone.1" ]
+			}
+		],
+		"region": {
+			"class": "TileSpec.ExactTiles",
+			"offsetX": 55,
+			"offsetY": 10,
+			"xs": [ 35, 34, 33, 32, 31, 30, 29, 29, 27, 28, 26, 26, 27, 28, 30, 31, 32, 33, 34, 35, 35, 34, 33, 32, 31, 30, 29, 28, 27, 26, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 35, 34, 33, 32, 31, 30, 29, 28, 27, 26, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 35, 34, 33, 32, 31, 30, 29, 28, 27, 26, 26, 27, 28, 29, 31, 30, 32, 33, 34, 35, 35, 34, 33, 32, 31, 30, 29, 28, 27, 26, 26, 27, 28, 29, 30, 31, 32, 33, 35, 34 ],
+			"ys": [ 16, 16, 16, 16, 16, 16, 15, 16, 16, 16, 16, 15, 15, 15, 15, 15, 15, 15, 15, 15, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7 ]
+		},
+		"feedbackRegion": {
+			"class": "TileSpec.ExactTiles",
+			"offsetX": 55,
+			"offsetY": 10,
+			"xs": [ 35, 34, 33, 31, 32, 30, 29, 28, 27, 26, 26, 28, 27, 29, 31, 30, 32, 33, 34, 35, 35, 34, 33, 32, 31, 30, 29, 28, 27, 26, 26, 27, 28, 29, 30, 32, 31, 33, 34, 35, 35, 34, 33, 32, 31, 30, 29, 28, 27, 26, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 35, 34, 33, 32, 31, 30, 29, 28, 27, 26, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 35, 34, 33, 32, 31, 30, 29, 28, 27, 26, 26, 27, 28, 29, 30, 32, 33, 34, 35, 31 ],
+			"ys": [ 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7 ]
+		}
+	},
+	{
+		"class": "Objective_EndTurnInRegion",
+		"objectiveId": "Objective_EndTurnInRegion.M_villain_summoners_1_1_keystone.1",
+		"hideOnComplete": false,
+		"feedback": [
+			{ "mission": "FRIENDLY_EFFECT_SUGGESTION", "role": "focus" }
+		],
+		"region": {
+			"class": "TileSpec.ExactTiles",
+			"offsetX": 55,
+			"offsetY": 10,
+			"xs": [ 32, 31, 30, 29, 32, 31, 30, 29 ],
+			"ys": [ 16, 16, 16, 16, 15, 15, 15, 15 ]
+		},
+		"requireAll": true,
+		"feedbackRegion": {
+			"class": "TileSpec.ExactTiles",
+			"offsetX": 55,
+			"offsetY": 10,
+			"xs": [ 32, 31, 30, 29, 29, 30, 31, 32 ],
+			"ys": [ 16, 16, 16, 16, 15, 15, 15, 15 ]
+		}
 	}
 ],
 "steps": [
@@ -36,17 +77,73 @@
 		"combatantCards": true
 	},
 	{
-		"class": "StepM_SpawnExact",
-		"location": {
-			"class": "TileSpec.ExactTiles",
-			"xs": [ 5 ],
-			"ys": [ 8 ]
-		},
-		"combatantCards": true
+		"class": "Step_TestImmediate",
+		"then": [
+			{
+				"class": "StepM_SpawnExact",
+				"location": {
+					"class": "TileSpec.ExactTiles",
+					"offsetX": 55,
+					"offsetY": 10,
+					"xs": [ 62, 61, 60, 61, 61, 60, 60, 61, 62, 59, 59, 58, 58, 58, 59, 62, 62, 60, 59, 58 ],
+					"ys": [ 21, 21, 21, 19, 20, 20, 19, 18, 20, 20, 21, 21, 20, 19, 19, 19, 18, 18, 18, 18 ]
+				},
+				"randomCards": { "group": "drauven", "numberOfCards": "5" }
+			},
+			{
+				"class": "StepM_SpawnExact",
+				"location": {
+					"class": "TileSpec.ExactTiles",
+					"offsetX": 55,
+					"offsetY": 10,
+					"xs": [ 54, 54, 53, 53, 52, 52, 51, 51, 50, 50, 49, 49, 50, 49, 49, 50, 50, 49, 50, 49, 50, 50, 50, 51, 51, 51, 51 ],
+					"ys": [ 16, 15, 15, 16, 16, 15, 16, 15, 16, 15, 16, 15, 14, 13, 14, 13, 12, 12, 11, 11, 10, 9, 8, 10, 8, 9, 11 ]
+				},
+				"randomCards": { "group": "thrixl", "numberOfCards": "3" }
+			},
+			{
+				"class": "StepM_SpawnExact",
+				"location": {
+					"class": "TileSpec.ExactTiles",
+					"offsetX": 55,
+					"offsetY": 10,
+					"xs": [ 41, 42, 43, 43, 42, 41, 41, 42, 43, 43, 42, 41, 41, 42, 43, 43, 42, 41, 47, 46, 47, 46, 45, 45, 45, 46, 47 ],
+					"ys": [ 4, 4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8, 8, 9, 9, 9, 12, 12, 11, 11, 11, 12, 13, 13, 13 ]
+				},
+				"randomCards": { "group": "morthagi", "numberOfCards": "3" }
+			},
+			{
+				"class": "StepM_SpawnExact",
+				"location": {
+					"class": "TileSpec.ExactTiles",
+					"offsetX": 55,
+					"offsetY": 10,
+					"xs": [ 33, 33, 33, 34, 34, 34, 35, 35, 35, 36, 36, 36, 37, 37, 37, 34, 33, 33, 34, 34, 33, 33, 34 ],
+					"ys": [ 10, 11, 12, 12, 11, 10, 10, 11, 12, 12, 11, 10, 10, 11, 12, 9, 9, 8, 8, 7, 7, 6, 6 ]
+				},
+				"randomCards": { "group": "gorgon", "numberOfCards": "3" }
+			},
+			{
+				"class": "StepM_SpawnExact",
+				"location": {
+					"class": "TileSpec.ExactTiles",
+					"offsetX": 55,
+					"offsetY": 10,
+					"xs": [ 23, 23, 23, 23, 23, 24, 24, 24, 24, 24, 25, 25, 25, 26, 26, 26, 22, 22, 22, 22, 22 ],
+					"ys": [ 9, 10, 11, 12, 13, 13, 12, 11, 9, 10, 10, 11, 12, 12, 11, 10, 12, 13, 11, 10, 9 ]
+				},
+				"randomCards": { "group": "cultist", "numberOfCards": "3" }
+			}
+		],
+		"otherwise": [
+			{ "class": "Step_CombatDifficultyImmediate" }
+		],
+		"value": "company.summoners_extremeDifficulty",
+		"threshold": "1"
 	},
 	{
 		"class": "Step_AddObjectives",
-		"objectives": [ "Objective_KillAllEnemies" ]
+		"objectives": [ "Objective_EndTurnInRegion.M_villain_summoners_1_1_keystone" ]
 	}
 ]
 }
