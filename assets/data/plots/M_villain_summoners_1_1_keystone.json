@@ -46,8 +46,8 @@
 							"class": "TileSpec.ExactTiles",
 							"offsetX": 55,
 							"offsetY": 10,
-							"xs": [ 30, 29, 28, 28, 29, 30, 30, 29, 28 ],
-							"ys": [ 16, 16, 16, 15, 15, 15, 14, 14, 14 ]
+							"xs": [ 29, 28, 28, 29, 29, 28, 27, 27, 27 ],
+							"ys": [ 16, 16, 15, 15, 14, 14, 16, 15, 14 ]
 						},
 						"randomCards": { "group": "thrixl", "numberOfCards": "3" }
 					},
@@ -57,8 +57,8 @@
 							"class": "TileSpec.ExactTiles",
 							"offsetX": 55,
 							"offsetY": 10,
-							"xs": [ 27, 27, 27, 28, 28, 28, 29, 29, 29 ],
-							"ys": [ 10, 9, 8, 8, 9, 10, 10, 9, 8 ]
+							"xs": [ 27, 27, 27, 28, 28, 28, 26, 26, 26 ],
+							"ys": [ 10, 9, 8, 8, 9, 10, 8, 9, 10 ]
 						},
 						"randomCards": { "group": "drauven", "numberOfCards": "3" }
 					}
@@ -106,8 +106,8 @@
 									"class": "TileSpec.ExactTiles",
 									"offsetX": 55,
 									"offsetY": 10,
-									"xs": [ 30, 29, 28, 28, 29, 30, 30, 29, 28 ],
-									"ys": [ 16, 16, 16, 15, 15, 15, 14, 14, 14 ]
+									"xs": [ 29, 28, 28, 29, 29, 28, 27, 27, 27 ],
+									"ys": [ 16, 16, 15, 15, 14, 14, 16, 15, 14 ]
 								},
 								"randomCards": { "group": "thrixl", "numberOfCards": "1" }
 							},
@@ -117,8 +117,8 @@
 									"class": "TileSpec.ExactTiles",
 									"offsetX": 55,
 									"offsetY": 10,
-									"xs": [ 27, 27, 27, 28, 28, 28, 29, 29, 29 ],
-									"ys": [ 10, 9, 8, 8, 9, 10, 10, 9, 8 ]
+									"xs": [ 27, 27, 27, 28, 28, 28, 26, 26, 26 ],
+									"ys": [ 10, 9, 8, 8, 9, 10, 8, 9, 10 ]
 								},
 								"randomCards": { "group": "drauven", "numberOfCards": "1" }
 							}
@@ -163,8 +163,8 @@
 									"class": "TileSpec.ExactTiles",
 									"offsetX": 55,
 									"offsetY": 10,
-									"xs": [ 30, 29, 28, 28, 29, 30, 30, 29, 28 ],
-									"ys": [ 16, 16, 16, 15, 15, 15, 14, 14, 14 ]
+									"xs": [ 29, 28, 28, 29, 29, 28, 27, 27, 27 ],
+									"ys": [ 16, 16, 15, 15, 14, 14, 14, 15, 16 ]
 								},
 								"randomCards": { "group": "thrixl", "numberOfCards": "1" }
 							},
@@ -174,8 +174,8 @@
 									"class": "TileSpec.ExactTiles",
 									"offsetX": 55,
 									"offsetY": 10,
-									"xs": [ 27, 27, 27, 28, 28, 28, 29, 29, 29 ],
-									"ys": [ 10, 9, 8, 8, 9, 10, 10, 9, 8 ]
+									"xs": [ 27, 27, 27, 28, 28, 28, 26, 26, 26 ],
+									"ys": [ 10, 9, 8, 8, 9, 10, 8, 9, 10 ]
 								},
 								"randomCards": { "group": "drauven", "numberOfCards": "1" }
 							}
@@ -220,8 +220,8 @@
 									"class": "TileSpec.ExactTiles",
 									"offsetX": 55,
 									"offsetY": 10,
-									"xs": [ 30, 29, 28, 28, 29, 30, 30, 29, 28 ],
-									"ys": [ 16, 16, 16, 15, 15, 15, 14, 14, 14 ]
+									"xs": [ 29, 28, 28, 29, 29, 28, 27, 27, 27 ],
+									"ys": [ 16, 16, 15, 15, 14, 14, 14, 15, 16 ]
 								},
 								"randomCards": { "group": "thrixl", "numberOfCards": "2" }
 							},
@@ -231,8 +231,8 @@
 									"class": "TileSpec.ExactTiles",
 									"offsetX": 55,
 									"offsetY": 10,
-									"xs": [ 27, 27, 27, 28, 28, 28, 29, 29, 29 ],
-									"ys": [ 10, 9, 8, 8, 9, 10, 10, 9, 8 ]
+									"xs": [ 27, 27, 27, 28, 28, 28, 26, 26, 26 ],
+									"ys": [ 10, 9, 8, 8, 9, 10, 8, 9, 10 ]
 								},
 								"randomCards": { "group": "drauven", "numberOfCards": "2" }
 							}
@@ -277,8 +277,8 @@
 									"class": "TileSpec.ExactTiles",
 									"offsetX": 55,
 									"offsetY": 10,
-									"xs": [ 30, 29, 28, 28, 29, 30, 30, 29, 28 ],
-									"ys": [ 16, 16, 16, 15, 15, 15, 14, 14, 14 ]
+									"xs": [ 29, 28, 28, 29, 29, 28, 27, 27, 27 ],
+									"ys": [ 16, 16, 15, 15, 14, 14, 14, 15, 16 ]
 								},
 								"randomCards": { "group": "thrixl", "numberOfCards": "2" }
 							},
@@ -288,8 +288,8 @@
 									"class": "TileSpec.ExactTiles",
 									"offsetX": 55,
 									"offsetY": 10,
-									"xs": [ 27, 27, 27, 28, 28, 28, 29, 29, 29 ],
-									"ys": [ 10, 9, 8, 8, 9, 10, 10, 9, 8 ]
+									"xs": [ 27, 27, 27, 28, 28, 28, 26, 26, 26 ],
+									"ys": [ 10, 9, 8, 8, 9, 10, 8, 9, 10 ]
 								},
 								"randomCards": { "group": "drauven", "numberOfCards": "2" }
 							}
@@ -298,6 +298,10 @@
 				],
 				"value": "company.summoners_extremeDifficulty",
 				"threshold": "1"
+			},
+			{
+				"class": "Step_AddObjectives",
+				"objectives": [ "Objective_ActionsEachTurn.M_villain_summoners_1_1_keystone.gorgon2" ]
 			}
 		],
 		"plotDoors": null,
@@ -839,6 +843,103 @@
 					"offsetY": 10,
 					"xs": [ 61, 60, 59, 59, 60, 61, 61, 60, 59 ],
 					"ys": [ 12, 12, 12, 13, 13, 13, 14, 14, 14 ]
+				},
+				"feedback": "ENEMY_SPAWN"
+			}
+		]
+	},
+	{
+		"class": "Objective_ActionsEachTurn",
+		"objectiveId": "Objective_ActionsEachTurn.M_villain_summoners_1_1_keystone.gorgon2",
+		"feedbackVisibleAnyway": true,
+		"actions": [
+			{
+				"class": "Step_TestImmediate",
+				"then": [
+					{
+						"class": "StepM_SpawnExact",
+						"location": {
+							"class": "TileSpec.ExactTiles",
+							"offsetX": 55,
+							"offsetY": 10,
+							"xs": [ 31, 30, 29, 29, 30, 31, 31, 30, 29 ],
+							"ys": [ 6, 6, 6, 7, 7, 7, 8, 8, 8 ]
+						},
+						"randomCards": { "group": "gorgon", "numberOfCards": "4" }
+					}
+				],
+				"otherwise": [
+					{
+						"class": "Step_CombatDifficultyImmediate",
+						"easy": [
+							{
+								"class": "StepM_SpawnExact",
+								"location": {
+									"class": "TileSpec.ExactTiles",
+									"offsetX": 55,
+									"offsetY": 10,
+									"xs": [ 31, 31, 31, 30, 30, 30, 29, 29, 29 ],
+									"ys": [ 6, 7, 8, 8, 7, 6, 6, 7, 8 ]
+								},
+								"randomCards": { "group": "gorgon", "numberOfCards": "1" }
+							}
+						],
+						"medium": [
+							{
+								"class": "StepM_SpawnExact",
+								"location": {
+									"class": "TileSpec.ExactTiles",
+									"offsetX": 55,
+									"offsetY": 10,
+									"xs": [ 31, 30, 29, 29, 30, 31, 31, 30, 29 ],
+									"ys": [ 6, 6, 6, 7, 7, 7, 8, 8, 8 ]
+								},
+								"randomCards": { "group": "gorgon", "numberOfCards": "1" }
+							}
+						],
+						"classic": [
+							{
+								"class": "StepM_SpawnExact",
+								"location": {
+									"class": "TileSpec.ExactTiles",
+									"offsetX": 55,
+									"offsetY": 10,
+									"xs": [ 31, 30, 29, 29, 30, 31, 31, 30, 29 ],
+									"ys": [ 6, 6, 6, 7, 7, 7, 8, 8, 8 ]
+								},
+								"randomCards": { "group": "gorgon", "numberOfCards": "1" }
+							}
+						],
+						"hard": [
+							{
+								"class": "StepM_SpawnExact",
+								"location": {
+									"class": "TileSpec.ExactTiles",
+									"offsetX": 55,
+									"offsetY": 10,
+									"xs": [ 31, 30, 29, 29, 30, 31, 31, 30, 29 ],
+									"ys": [ 6, 6, 6, 7, 7, 7, 8, 8, 8 ]
+								},
+								"randomCards": { "group": "gorgon", "numberOfCards": "2" }
+							}
+						]
+					}
+				],
+				"value": "company.summoners_extremeDifficulty",
+				"threshold": "1"
+			}
+		],
+		"everyNTurns": 5,
+		"skipFirstNTurns": "1",
+		"atStartOfMonsterTurn": false,
+		"warnings": [
+			{
+				"where": {
+					"class": "TileSpec.ExactTiles",
+					"offsetX": 55,
+					"offsetY": 10,
+					"xs": [ 31, 31, 31, 30, 30, 30, 29, 29, 29 ],
+					"ys": [ 6, 7, 8, 8, 7, 6, 6, 7, 8 ]
 				},
 				"feedback": "ENEMY_SPAWN"
 			}
