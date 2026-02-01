@@ -316,8 +316,8 @@
 			"class": "TileSpec.ExactTiles",
 			"offsetX": 55,
 			"offsetY": 10,
-			"xs": [ 36, 36, 36 ],
-			"ys": [ 10, 11, 12 ]
+			"xs": [ 36 ],
+			"ys": [ 11 ]
 		}
 	},
 	{
@@ -1641,7 +1641,6 @@
 		"class": "Step_AddObjectives",
 		"objectives": [
 			"Objective_OpenDoor.M_villain_summoners_1_1_keystone",
-			"Objective_EndTurnInRegion.M_villain_summoners_1_1_keystone",
 			"Objective_ActionsEachTurn.M_villain_summoners_1_1_keystone.gorgon1",
 			"Objective_ActionsEachTurn.M_villain_summoners_1_1_keystone.morthagi1",
 			"Objective_ActionsEachTurn.M_villain_summoners_1_1_keystone.cultist1",
