@@ -334,6 +334,7 @@
 	{
 		"class": "Objective_ActionsEachTurn",
 		"objectiveId": "Objective_ActionsEachTurn.M_villain_summoners_1_1_keystone.cultist1",
+		"visible": true,
 		"feedbackVisibleAnyway": true,
 		"actions": [
 			{
