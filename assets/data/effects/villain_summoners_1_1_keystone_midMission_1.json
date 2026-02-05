@@ -1,0 +1,85 @@
+{
+"id": "plot_villain_summoners_1_1_keystone_midMission_1",
+"info": {
+	"dataVersion": 1,
+	"sourceFile": "villain_summoners_1_1_keystone_midMission_1",
+	"modId": "villain_summoners",
+	"author": "psionusoid",
+	"STUB": "Victories occur at the end of missions. No choice is needed in most cases, we can just tell a brief story."
+},
+"type": "PLOT_MISSION_EVENT",
+"verb": "MANEUVER",
+"ability": { "icon": "utility", "category": "attack", "priority": "1" },
+"targets": [
+	{ "template": "EVENT" },
+	{ "template": "COMPANY", "choose": "ANY" },
+	{ "template": "INJECTED_SITE" },
+	{ "template": "INJECTED_TILE" },
+	{
+		"role": "threat",
+		"template": "INJECTED_THREAT",
+		"choose": "ANY",
+		"injectedRole": "threat"
+	},
+	{ "template": "INJECTED_PARTY", "choose": "ANY" },
+	{ "template": "DEAD_HEROES" },
+	{ "template": "MAIMED_HEROES" },
+	{
+		"role": "escapedHero",
+		"template": "MAIMED_HEROES",
+		"injectedRole": "escapedHero"
+	},
+	{ "template": "LIVING_FOES" },
+	{ "template": "DEAD_FOES" },
+	{
+		"role": "volunteer",
+		"template": "INJECTED_HERO",
+		"choose": "ANY",
+		"injectedRole": "volunteer"
+	},
+	{
+		"role": "hero2",
+		"template": "PICK_BY_SCORE",
+		"choose": "BY_SCORE_OPTIONAL",
+		"scoreFunction": null,
+		"notAlreadyMatchedAs": [ "volunteer" ]
+	},
+	{
+		"role": "hero3",
+		"template": "PICK_BY_SCORE",
+		"choose": "BY_SCORE_OPTIONAL",
+		"scoreFunction": null,
+		"notAlreadyMatchedAs": [ "hero2", "volunteer" ]
+	}
+],
+"outcomes": [
+	{
+		"class": "Description",
+		"script": [
+			{
+				"class": "comicNode_Panel",
+				"panel": {
+					"actorSlots": [
+						{
+							"role": "volunteer",
+							"anchor": { "x": 0.468, "y": 0.397 }
+						}
+					],
+					"textSlots": [
+						{
+							"textSourceFile": "villain_summoners_1_1_keystone_midMission_1",
+							"textKey": "~01~~panel_001~1_volunteer",
+							"pointerOwner": "volunteer"
+						},
+						{
+							"textSourceFile": "villain_summoners_1_1_keystone_midMission_1",
+							"textKey": "~01~~panel_001~2_narration",
+							"style": "narration"
+						}
+					]
+				}
+			}
+		]
+	}
+]
+}

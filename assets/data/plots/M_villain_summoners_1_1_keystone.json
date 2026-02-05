@@ -307,7 +307,7 @@
 					"Objective_ActionsEachTurn.M_villain_summoners_1_1_keystone.cultist2",
 					"Objective_ActionsEachTurn.M_villain_summoners_1_1_keystone.thrixl2",
 					"Objective_ActionsEachTurn.M_villain_summoners_1_1_keystone.drauven2",
-					"Objective_OpenDoor.M_villain_summoners_1_1_keystone.1"
+					"Objective_EndTurnInRegion.M_villain_summoners_1_1_keystone.door"
 				]
 			}
 		],
@@ -321,15 +321,35 @@
 		}
 	},
 	{
-		"class": "Objective_OpenDoor",
-		"objectiveId": "Objective_OpenDoor.M_villain_summoners_1_1_keystone.1",
+		"class": "Objective_EndTurnInRegion",
+		"objectiveId": "Objective_EndTurnInRegion.M_villain_summoners_1_1_keystone.door",
+		"feedback": [
+			{ "mission": "FRIENDLY_EFFECT_SUGGESTION", "role": "focus" }
+		],
 		"onSuccess": [
+			{
+				"class": "StepM_ImmediateEvent",
+				"roles": [ "volunteer" ],
+				"eventIds": [ "plot_villain_summoners_1_1_keystone_midMission_1" ]
+			},
+			{
+				"class": "StepM_UpdateDoor",
+				"byRole": [ "door" ],
+				"setOpen": true
+			},
 			{
 				"class": "Step_AddObjectives",
 				"objectives": [ "Objective_EndTurnInRegion.M_villain_summoners_1_1_keystone" ]
 			}
 		],
-		"plotDoors": [ "door" ]
+		"region": {
+			"class": "TileSpec.ExactTiles",
+			"offsetX": 55,
+			"offsetY": 10,
+			"xs": [ 28, 29, 30, 31, 32 ],
+			"ys": [ 16, 16, 16, 16, 16 ]
+		},
+		"rememberTriggeringEntityAs": "volunteer"
 	},
 	{
 		"class": "Objective_ActionsEachTurn",
@@ -1308,13 +1328,47 @@
 		"feedback": [
 			{ "mission": "FRIENDLY_EFFECT_SUGGESTION", "role": "focus" }
 		],
+		"onSuccess": [
+			{
+				"class": "StepM_UpdateDoor",
+				"byRole": [ "door" ],
+				"setOpen": false,
+				"setLocked": true,
+				"setMonstersIgnore": true
+			},
+			{
+				"class": "Step_AddObjectives",
+				"objectives": [ "Objective_EndTurnInRegion.M_villain_summoners_1_1_keystone.killEnemies" ]
+			}
+		],
 		"region": {
 			"class": "TileSpec.ExactTiles",
 			"offsetX": 55,
 			"offsetY": 10,
-			"xs": [ 33, 32, 31, 30, 29, 28, 27, 27, 28, 29, 30, 31, 32, 33, 33, 31, 32, 30, 29, 28, 27, 27, 28, 29, 30, 31, 32, 33 ],
-			"ys": [ 21, 21, 21, 21, 21, 21, 21, 20, 20, 20, 20, 20, 20, 20, 19, 19, 19, 19, 19, 19, 19, 18, 18, 18, 18, 18, 18, 18 ]
+			"xs": [ 27, 28, 29, 30, 31, 32, 33, 33, 31, 32, 30, 29, 28, 27, 27, 28, 29, 30, 31, 32, 33 ],
+			"ys": [ 20, 20, 20, 20, 20, 20, 20, 19, 19, 19, 19, 19, 19, 19, 18, 18, 18, 18, 18, 18, 18 ]
 		},
+		"requireAll": true
+	},
+	{
+		"class": "Objective_EndTurnInRegion",
+		"objectiveId": "Objective_EndTurnInRegion.M_villain_summoners_1_1_keystone.killEnemies",
+		"feedback": [
+			{ "mission": "FRIENDLY_EFFECT_SUGGESTION", "role": "focus" }
+		],
+		"onSuccess": [
+			{ "class": "Step_SetPlotResult", "resultPriority": 10 }
+		],
+		"anyHero": false,
+		"anyFoe": true,
+		"region": {
+			"class": "TileSpec.ExactTiles",
+			"offsetX": 55,
+			"offsetY": 10,
+			"xs": [ 27, 28, 29, 30, 31, 32, 33, 33, 31, 32, 30, 29, 28, 27, 27, 28, 29, 30, 31, 32, 33 ],
+			"ys": [ 20, 20, 20, 20, 20, 20, 20, 19, 19, 19, 19, 19, 19, 19, 18, 18, 18, 18, 18, 18, 18 ]
+		},
+		"endTurnNotInRegion": true,
 		"requireAll": true
 	}
 ],

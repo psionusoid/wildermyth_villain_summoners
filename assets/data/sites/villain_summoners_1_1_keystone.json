@@ -1,4 +1,5 @@
 {
+"declaredRoles": [ "volunteer" ],
 "declaredEncounterResults": [],
 "structure": "custom",
 "skipDefaultPlots": true,
