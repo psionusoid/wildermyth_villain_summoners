@@ -13,12 +13,6 @@
 		"class": "Objective_ActionsEachTurn",
 		"objectiveId": "Objective_ActionsEachTurn.M_villain_summoners_0_1_intro.thrixl",
 		"visible": true,
-		"onSuccess": [
-			{
-				"class": "Step_AddObjectives",
-				"objectives": [ "Objective_ActionsEachTurn.M_villain_summoners_0_1_intro.gorgon" ]
-			}
-		],
 		"actions": [
 			{
 				"class": "Step_TestImmediate",
@@ -118,12 +112,6 @@
 		"class": "Objective_ActionsEachTurn",
 		"objectiveId": "Objective_ActionsEachTurn.M_villain_summoners_0_1_intro.gorgon",
 		"visible": true,
-		"onSuccess": [
-			{
-				"class": "Step_AddObjectives",
-				"objectives": [ "Objective_ActionsEachTurn.M_villain_summoners_0_1_intro.morthagi" ]
-			}
-		],
 		"actions": [
 			{
 				"class": "Step_TestImmediate",
@@ -222,12 +210,6 @@
 		"class": "Objective_ActionsEachTurn",
 		"objectiveId": "Objective_ActionsEachTurn.M_villain_summoners_0_1_intro.morthagi",
 		"visible": true,
-		"onSuccess": [
-			{
-				"class": "Step_AddObjectives",
-				"objectives": [ "Objective_ActionsEachTurn.M_villain_summoners_0_1_intro.drauven" ]
-			}
-		],
 		"actions": [
 			{
 				"class": "Step_TestImmediate",
@@ -326,12 +308,6 @@
 		"class": "Objective_ActionsEachTurn",
 		"objectiveId": "Objective_ActionsEachTurn.M_villain_summoners_0_1_intro.drauven",
 		"visible": true,
-		"onSuccess": [
-			{
-				"class": "Step_AddObjectives",
-				"objectives": [ "Objective_ActionsEachTurn.M_villain_summoners_0_1_intro.cultist" ]
-			}
-		],
 		"actions": [
 			{
 				"class": "Step_TestImmediate",
@@ -430,12 +406,6 @@
 		"class": "Objective_ActionsEachTurn",
 		"objectiveId": "Objective_ActionsEachTurn.M_villain_summoners_0_1_intro.cultist",
 		"visible": true,
-		"onSuccess": [
-			{
-				"class": "Step_AddObjectives",
-				"objectives": [ "Objective_KillAllEnemies" ]
-			}
-		],
 		"actions": [
 			{
 				"class": "Step_TestImmediate",
@@ -890,6 +860,46 @@
 	{
 		"class": "Step_AddObjectives",
 		"objectives": [ "Objective_ActionsEachTurn.M_villain_summoners_0_1_intro.thrixl" ]
+	},
+	{
+		"class": "Step_WaitForObjectives",
+		"objectives": [ "Objective_ActionsEachTurn.M_villain_summoners_0_1_intro.thrixl" ]
+	},
+	{
+		"class": "Step_AddObjectives",
+		"objectives": [ "Objective_ActionsEachTurn.M_villain_summoners_0_1_intro.gorgon" ]
+	},
+	{
+		"class": "Step_WaitForObjectives",
+		"objectives": [ "Objective_ActionsEachTurn.M_villain_summoners_0_1_intro.gorgon" ]
+	},
+	{
+		"class": "Step_AddObjectives",
+		"objectives": [ "Objective_ActionsEachTurn.M_villain_summoners_0_1_intro.morthagi" ]
+	},
+	{
+		"class": "Step_WaitForObjectives",
+		"objectives": [ "Objective_ActionsEachTurn.M_villain_summoners_0_1_intro.morthagi" ]
+	},
+	{
+		"class": "Step_AddObjectives",
+		"objectives": [ "Objective_ActionsEachTurn.M_villain_summoners_0_1_intro.drauven" ]
+	},
+	{
+		"class": "Step_WaitForObjectives",
+		"objectives": [ "Objective_ActionsEachTurn.M_villain_summoners_0_1_intro.drauven" ]
+	},
+	{
+		"class": "Step_AddObjectives",
+		"objectives": [ "Objective_ActionsEachTurn.M_villain_summoners_0_1_intro.cultist" ]
+	},
+	{
+		"class": "Step_WaitForObjectives",
+		"objectives": [ "Objective_ActionsEachTurn.M_villain_summoners_0_1_intro.cultist" ]
+	},
+	{
+		"class": "Step_AddObjectives",
+		"objectives": [ "Objective_KillAllEnemies" ]
 	}
 ]
 }
