@@ -1,0 +1,112 @@
+{
+"id": "plot_villain_summoners_1_1_keystone_midMission_2",
+"info": {
+	"dataVersion": 1,
+	"sourceFile": "villain_summoners_1_1_keystone_midMission_2",
+	"modId": "villain_summoners",
+	"author": "psionusoid",
+	"STUB": "Victories occur at the end of missions. No choice is needed in most cases, we can just tell a brief story."
+},
+"type": "PLOT_MISSION_EVENT",
+"verb": "MANEUVER",
+"ability": { "icon": "utility", "category": "attack", "priority": "1" },
+"targets": [
+	{ "template": "EVENT" },
+	{ "template": "COMPANY", "choose": "ANY" },
+	{ "template": "INJECTED_SITE" },
+	{ "template": "INJECTED_TILE" },
+	{
+		"role": "threat",
+		"template": "INJECTED_THREAT",
+		"choose": "ANY",
+		"injectedRole": "threat"
+	},
+	{ "template": "INJECTED_PARTY", "choose": "ANY" },
+	{ "template": "DEAD_HEROES" },
+	{ "template": "MAIMED_HEROES" },
+	{
+		"role": "escapedHero",
+		"template": "MAIMED_HEROES",
+		"injectedRole": "escapedHero"
+	},
+	{ "template": "LIVING_FOES" },
+	{ "template": "DEAD_FOES" },
+	{
+		"role": "hero",
+		"template": "PICK_BY_SCORE",
+		"type": "HERO",
+		"scoreFunction": null,
+		"aspects": null,
+		"notAlreadyMatchedAs": []
+	},
+	{
+		"role": "hero2",
+		"template": "PICK_BY_SCORE",
+		"type": "HERO",
+		"choose": "BY_SCORE_OPTIONAL",
+		"scoreFunction": null,
+		"aspects": null,
+		"notAlreadyMatchedAs": [ "hero" ]
+	},
+	{
+		"role": "hero3",
+		"template": "PICK_BY_SCORE",
+		"type": "HERO",
+		"choose": "BY_SCORE_OPTIONAL",
+		"scoreFunction": null,
+		"aspects": null,
+		"notAlreadyMatchedAs": [ "hero", "hero2" ]
+	}
+],
+"outcomes": [
+	{
+		"class": "Description",
+		"script": [
+			{
+				"class": "comicNode_Panel",
+				"panel": {
+					"size": "twoThirds",
+					"showNameTags": false,
+					"actorSlots": [
+						{
+							"role": "hero",
+							"equipment": {},
+							"anchor": { "x": 0.508, "y": 0.448 },
+							"size": 0.8955224
+						},
+						{
+							"role": "hero2",
+							"facing": "left",
+							"equipment": {},
+							"anchor": { "x": 0.862, "y": 0.464 },
+							"size": 0.8955224
+						},
+						{
+							"role": "hero3",
+							"equipment": {},
+							"anchor": { "x": 0.157, "y": 0.524 },
+							"size": 0.6587,
+							"nameTag": "none"
+						}
+					],
+					"textSlots": [
+						{
+							"textSourceFile": "villain_summoners_1_1_keystone_midMission_2",
+							"textKey": "~01~~panel_001~1_narration",
+							"style": "narration"
+						},
+						{
+							"textSourceFile": "villain_summoners_1_1_keystone_midMission_2",
+							"textKey": "~01~~panel_001~2_hero",
+							"pointerOwner": "hero",
+							"padXFraction": 0.602,
+							"padYFraction": 0.134,
+							"shrinkToFitText": true
+						}
+					]
+				}
+			}
+		]
+	}
+]
+}

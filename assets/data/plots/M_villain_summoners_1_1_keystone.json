@@ -1703,6 +1703,11 @@
 		"objectives": [ "Objective_EndTurnInRegion.M_villain_summoners_1_1_keystone" ]
 	},
 	{
+		"class": "StepM_Event",
+		"roles": null,
+		"eventIds": [ "plot_villain_summoners_1_1_keystone_midMission_2" ]
+	},
+	{
 		"class": "StepM_UpdateDoor",
 		"byRole": [ "door" ],
 		"setOpen": false,
