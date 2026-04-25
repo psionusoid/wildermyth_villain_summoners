@@ -1710,6 +1710,56 @@
 		"setMonstersIgnore": true
 	},
 	{
+		"class": "Step_UpdateObjective",
+		"objectiveId": "Objective_ActionsEachTurn.M_villain_summoners_1_1_keystone.cultist1",
+		"newStatus": "complete"
+	},
+	{
+		"class": "Step_UpdateObjective",
+		"objectiveId": "Objective_ActionsEachTurn.M_villain_summoners_1_1_keystone.cultist2",
+		"newStatus": "complete"
+	},
+	{
+		"class": "Step_UpdateObjective",
+		"objectiveId": "Objective_ActionsEachTurn.M_villain_summoners_1_1_keystone.drauven1",
+		"newStatus": "complete"
+	},
+	{
+		"class": "Step_UpdateObjective",
+		"objectiveId": "Objective_ActionsEachTurn.M_villain_summoners_1_1_keystone.drauven2",
+		"newStatus": "complete"
+	},
+	{
+		"class": "Step_UpdateObjective",
+		"objectiveId": "Objective_ActionsEachTurn.M_villain_summoners_1_1_keystone.gorgon1",
+		"newStatus": "complete"
+	},
+	{
+		"class": "Step_UpdateObjective",
+		"objectiveId": "Objective_ActionsEachTurn.M_villain_summoners_1_1_keystone.drauven2",
+		"newStatus": "complete"
+	},
+	{
+		"class": "Step_UpdateObjective",
+		"objectiveId": "Objective_ActionsEachTurn.M_villain_summoners_1_1_keystone.morthagi1",
+		"newStatus": "complete"
+	},
+	{
+		"class": "Step_UpdateObjective",
+		"objectiveId": "Objective_ActionsEachTurn.M_villain_summoners_1_1_keystone.morthagi2",
+		"newStatus": "complete"
+	},
+	{
+		"class": "Step_UpdateObjective",
+		"objectiveId": "Objective_ActionsEachTurn.M_villain_summoners_1_1_keystone.thrixl1",
+		"newStatus": "complete"
+	},
+	{
+		"class": "Step_UpdateObjective",
+		"objectiveId": "Objective_ActionsEachTurn.M_villain_summoners_1_1_keystone.thrixl2",
+		"newStatus": "complete"
+	},
+	{
 		"class": "Step_AddObjectives",
 		"objectives": [ "Objective_EndTurnInRegion.M_villain_summoners_1_1_keystone.killEnemies" ]
 	}
