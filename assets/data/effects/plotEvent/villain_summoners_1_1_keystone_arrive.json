@@ -49,7 +49,7 @@
 	{
 		"role": "town",
 		"template": "POST",
-		"STUB": "Book of Stars town site",
+		"STUB": "Summoners chapter 1 starting town",
 		"choose": "BY_SCORE_OPTIONAL",
 		"scoreFunction": "summoners_startingTown",
 		"aspects": [ "town", "VISIBLE_TILE" ],

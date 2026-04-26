@@ -127,11 +127,22 @@
 	}
 ],
 "steps": [
-	{ "class": "StepC_BeginChapter", "chapter": "introduction" },
+	{
+		"class": "StepC_BeginChapter",
+		"chapter": "introduction",
+		"sitesFromOtherChapters": [
+			{ "chapter": "one", "fromRole": "site2", "toRole": "site2" }
+		]
+	},
 	{
 		"class": "Step_AddRemoveAspects",
 		"targets": [ "town" ],
 		"add": [ "summoners_startingTown" ]
+	},
+	{
+		"class": "Step_AddRemoveAspects",
+		"targets": [ "site2" ],
+		"add": [ "summoners_library" ]
 	},
 	{ "class": "Step_WaitForPlayer" },
 	{
