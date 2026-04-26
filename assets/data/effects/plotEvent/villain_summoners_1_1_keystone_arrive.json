@@ -16,7 +16,46 @@
 	{ "template": "INJECTED_TILE" },
 	{ "template": "INJECTED_SITE" },
 	{ "template": "INJECTED_PARTY" },
-	{ "template": "INJECTED_THREAT" }
+	{ "template": "INJECTED_THREAT" },
+	{
+		"role": "hero",
+		"template": "PICK_BY_SCORE",
+		"type": "HERO",
+		"scoreFunction": "summoners_startingHero",
+		"aspects": null,
+		"notAlreadyMatchedAs": []
+	},
+	{
+		"role": "hero2",
+		"template": "PICK_BY_SCORE",
+		"type": "HERO",
+		"scoreFunction": "summoners_startingHero",
+		"aspects": null,
+		"notAlreadyMatchedAs": [ "hero" ]
+	},
+	{
+		"role": "hero4",
+		"template": "PICK_BY_SCORE",
+		"type": "HERO",
+		"scoreFunction": "1-summoners_startingHero",
+		"aspects": null,
+		"notAlreadyMatchedAs": [ "hero", "hero2" ]
+	},
+	{
+		"role": "hero3",
+		"template": "PICK_BY_SCORE",
+		"type": "HERO",
+		"choose": "BY_SCORE_OPTIONAL",
+		"scoreFunction": null,
+		"aspects": null,
+		"notAlreadyMatchedAs": [ "hero", "hero2", "hero4" ]
+	},
+	{
+		"role": "subPlot",
+		"template": "INJECTED_SITE",
+		"STUB": "Starting town for chapter 1",
+		"injectedRole": "town"
+	}
 ],
 "outcomes": [
 	{
@@ -26,22 +65,31 @@
 				"class": "comicNode_Panel",
 				"panel": {
 					"size": "full",
+					"showNameTags": false,
 					"actorSlots": [
 						{
-							"role": "party",
+							"role": "hero",
 							"equipment": {},
-							"anchor": { "x": 0.251, "y": 0.557 },
-							"size": 0.5823668
+							"anchor": { "x": 0.533, "y": 0.471 }
+						},
+						{
+							"role": "hero2",
+							"equipment": {},
+							"anchor": { "x": 0.798, "y": 0.43 }
+						},
+						{
+							"role": "hero4",
+							"equipment": {},
+							"anchor": { "x": 0.209, "y": 0.476 }
 						}
 					],
 					"textSlots": [
 						{
 							"textSourceFile": "plotEvent/villain_summoners_1_1_keystone_arrive",
-							"textKey": "~01~~panel_001~1_party",
-							"pointerOwner": "party",
-							"padXFraction": 0.34,
-							"padYFraction": 0.054,
-							"widthFraction": 0.3980158,
+							"textKey": "~01~~panel_001~1_hero",
+							"pointerOwner": "hero",
+							"padXFraction": 0.584,
+							"padYFraction": 0.095,
 							"shrinkToFitText": true
 						}
 					]
