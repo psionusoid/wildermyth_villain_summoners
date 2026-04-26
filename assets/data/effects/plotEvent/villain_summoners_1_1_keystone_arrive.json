@@ -22,7 +22,6 @@
 		"template": "PICK_BY_SCORE",
 		"type": "HERO",
 		"scoreFunction": "summoners_startingHero",
-		"aspects": null,
 		"notAlreadyMatchedAs": []
 	},
 	{
@@ -30,7 +29,6 @@
 		"template": "PICK_BY_SCORE",
 		"type": "HERO",
 		"scoreFunction": "summoners_startingHero",
-		"aspects": null,
 		"notAlreadyMatchedAs": [ "hero" ]
 	},
 	{
@@ -38,7 +36,6 @@
 		"template": "PICK_BY_SCORE",
 		"type": "HERO",
 		"scoreFunction": "1-summoners_startingHero",
-		"aspects": null,
 		"notAlreadyMatchedAs": [ "hero", "hero2" ]
 	},
 	{
@@ -47,14 +44,16 @@
 		"type": "HERO",
 		"choose": "BY_SCORE_OPTIONAL",
 		"scoreFunction": null,
-		"aspects": null,
 		"notAlreadyMatchedAs": [ "hero", "hero2", "hero4" ]
 	},
 	{
-		"role": "subPlot",
-		"template": "INJECTED_SITE",
-		"STUB": "Starting town for chapter 1",
-		"injectedRole": "town"
+		"role": "town",
+		"template": "POST",
+		"STUB": "Book of Stars town site",
+		"choose": "BY_SCORE_OPTIONAL",
+		"scoreFunction": "summoners_startingTown",
+		"aspects": [ "town", "VISIBLE_TILE" ],
+		"relativeTo": "company"
 	}
 ],
 "outcomes": [

@@ -128,6 +128,11 @@
 ],
 "steps": [
 	{ "class": "StepC_BeginChapter", "chapter": "introduction" },
+	{
+		"class": "Step_AddRemoveAspects",
+		"targets": [ "town" ],
+		"add": [ "summoners_startingTown" ]
+	},
 	{ "class": "Step_WaitForPlayer" },
 	{
 		"class": "Step_Encounter",
