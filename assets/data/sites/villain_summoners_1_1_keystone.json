@@ -1,6 +1,6 @@
 {
 "declaredRoles": [ "volunteer" ],
-"declaredEncounterResults": [],
+"declaredEncounterResults": [ "victory" ],
 "structure": "custom",
 "skipDefaultPlots": true,
 "details": [
@@ -99,18 +99,6 @@
 			"isBoundary": true,
 			"joinWithOtherStyles": false
 		}
-	},
-	{
-		"class": "MapDetail_Door",
-		"style": "door_GorgonDouble",
-		"locations": {
-			"class": "TileSpec.ExactTiles",
-			"offsetX": 55,
-			"offsetY": 10,
-			"xs": [ 57, 57, 57 ],
-			"ys": [ 22, 21, 20 ]
-		},
-		"locked": true
 	},
 	{
 		"class": "MapDetail_Door",

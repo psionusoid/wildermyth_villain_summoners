@@ -69,7 +69,7 @@
 						{
 							"role": "hero",
 							"equipment": {},
-							"anchor": { "x": 0.533, "y": 0.471 }
+							"anchor": { "x": 0.551, "y": 0.344 }
 						},
 						{
 							"role": "hero2",
@@ -80,6 +80,13 @@
 							"role": "hero4",
 							"equipment": {},
 							"anchor": { "x": 0.209, "y": 0.476 }
+						},
+						{
+							"role": "hero3",
+							"equipment": {},
+							"anchor": { "x": 0.389, "y": 0.49 },
+							"size": 0.5316,
+							"nameTag": "none"
 						}
 					],
 					"textSlots": [
@@ -87,9 +94,295 @@
 							"textSourceFile": "plotEvent/villain_summoners_1_1_keystone_arrive",
 							"textKey": "~01~~panel_001~1_hero",
 							"pointerOwner": "hero",
+							"padXFraction": 0.573,
+							"padYFraction": 0.056,
+							"shrinkToFitText": true
+						},
+						{
+							"textSourceFile": "plotEvent/villain_summoners_1_1_keystone_arrive",
+							"textKey": "~01~~panel_001~2_hero2",
+							"pointerOwner": "hero2",
+							"shrinkToFitText": true
+						},
+						{
+							"textSourceFile": "plotEvent/villain_summoners_1_1_keystone_arrive",
+							"textKey": "~01~~panel_001~3_hero4",
+							"pointerOwner": "hero4",
+							"shrinkToFitText": true
+						},
+						{
+							"textSourceFile": "plotEvent/villain_summoners_1_1_keystone_arrive",
+							"textKey": "~01~~panel_001~4_hero3",
+							"pointerOwner": "hero3",
+							"shrinkToFitText": true
+						}
+					]
+				}
+			},
+			{
+				"class": "comicNode_Panel",
+				"panel": {
+					"size": "full",
+					"showNameTags": false,
+					"actorSlots": [
+						{
+							"role": "hero",
+							"equipment": {},
+							"anchor": { "x": 0.576, "y": 0.409 }
+						},
+						{
+							"role": "hero2",
+							"equipment": {},
+							"anchor": { "x": 0.835, "y": 0.317 }
+						},
+						{
+							"role": "hero4",
+							"equipment": {},
+							"anchor": { "x": 0.111, "y": 0.383 }
+						},
+						{
+							"role": "hero3",
+							"equipment": {},
+							"anchor": { "x": 0.344, "y": 0.438 },
+							"size": 0.6391,
+							"nameTag": "none"
+						}
+					],
+					"textSlots": [
+						{
+							"textSourceFile": "plotEvent/villain_summoners_1_1_keystone_arrive",
+							"textKey": "~01~~panel_002~1_hero",
+							"pointerOwner": "hero",
 							"padXFraction": 0.584,
 							"padYFraction": 0.095,
 							"shrinkToFitText": true
+						},
+						{
+							"textSourceFile": "plotEvent/villain_summoners_1_1_keystone_arrive",
+							"textKey": "~01~~panel_002~2_hero2",
+							"pointerOwner": "hero2",
+							"padXFraction": 0.414,
+							"padYFraction": 0.029,
+							"shrinkToFitText": true
+						},
+						{
+							"textSourceFile": "plotEvent/villain_summoners_1_1_keystone_arrive",
+							"textKey": "~01~~panel_002~3_hero4",
+							"pointerOwner": "hero4",
+							"shrinkToFitText": true
+						},
+						{
+							"textSourceFile": "plotEvent/villain_summoners_1_1_keystone_arrive",
+							"textKey": "~01~~panel_002~4_hero3",
+							"pointerOwner": "hero3",
+							"padXFraction": 0.355,
+							"padYFraction": 0.825,
+							"shrinkToFitText": true,
+							"pointerAdjust": { "dX": 12.24956, "dY": 72.77677, "pointerOrientV": "down" }
+						}
+					]
+				}
+			},
+			{
+				"class": "comicNode_Panel",
+				"panel": {
+					"size": "full",
+					"showNameTags": false,
+					"actorSlots": [
+						{
+							"role": "hero",
+							"equipment": {},
+							"anchor": { "x": 0.576, "y": 0.409 }
+						},
+						{
+							"role": "hero2",
+							"facing": "left",
+							"equipment": {},
+							"anchor": { "x": 0.873, "y": 0.298 }
+						},
+						{
+							"role": "hero4",
+							"equipment": {},
+							"anchor": { "x": 0.111, "y": 0.383 }
+						},
+						{
+							"role": "hero3",
+							"equipment": {},
+							"anchor": { "x": 0.344, "y": 0.438 },
+							"size": 0.6391,
+							"nameTag": "none"
+						}
+					],
+					"textSlots": [
+						{
+							"textSourceFile": "plotEvent/villain_summoners_1_1_keystone_arrive",
+							"textKey": "~01~~panel_003~1_hero",
+							"pointerOwner": "hero",
+							"padXFraction": 0.461,
+							"padYFraction": 0.057,
+							"shrinkToFitText": true
+						},
+						{
+							"textSourceFile": "plotEvent/villain_summoners_1_1_keystone_arrive",
+							"textKey": "~01~~panel_003~2_hero2",
+							"pointerOwner": "hero2",
+							"padXFraction": 0.337,
+							"padYFraction": 0.846,
+							"shrinkToFitText": true,
+							"pointerAdjust": { "dX": -12.970123, "dY": 71.33576, "pointerOrientV": "down" }
+						},
+						{
+							"textSourceFile": "plotEvent/villain_summoners_1_1_keystone_arrive",
+							"textKey": "~01~~panel_003~3_hero4",
+							"pointerOwner": "hero4",
+							"padXFraction": 0.225,
+							"padYFraction": 0.839,
+							"shrinkToFitText": true,
+							"pointerAdjust": { "dX": 17.293552, "dY": 76.37966, "pointerOrientV": "down" }
+						},
+						{
+							"textSourceFile": "plotEvent/villain_summoners_1_1_keystone_arrive",
+							"textKey": "~01~~panel_003~4_hero3",
+							"pointerOwner": "hero3",
+							"padXFraction": 0.355,
+							"padYFraction": 0.825,
+							"shrinkToFitText": true,
+							"pointerAdjust": { "dX": 12.24956, "dY": 72.77677, "pointerOrientV": "down" }
+						}
+					]
+				}
+			},
+			{
+				"class": "comicNode_Panel",
+				"panel": {
+					"size": "full",
+					"showNameTags": false,
+					"actorSlots": [
+						{
+							"role": "hero",
+							"equipment": {},
+							"anchor": { "x": 0.576, "y": 0.409 }
+						},
+						{
+							"role": "hero2",
+							"equipment": {},
+							"anchor": { "x": 0.835, "y": 0.317 }
+						},
+						{
+							"role": "hero4",
+							"equipment": {},
+							"anchor": { "x": 0.111, "y": 0.383 }
+						},
+						{
+							"role": "hero3",
+							"equipment": {},
+							"anchor": { "x": 0.344, "y": 0.438 },
+							"size": 0.6391,
+							"nameTag": "none"
+						}
+					],
+					"textSlots": [
+						{
+							"textSourceFile": "plotEvent/villain_summoners_1_1_keystone_arrive",
+							"textKey": "~01~~panel_004~1_hero",
+							"pointerOwner": "hero",
+							"padXFraction": 0.441,
+							"padYFraction": 0.045,
+							"widthFraction": 0.5603564,
+							"shrinkToFitText": true
+						},
+						{
+							"textSourceFile": "plotEvent/villain_summoners_1_1_keystone_arrive",
+							"textKey": "~01~~panel_004~2_hero2",
+							"pointerOwner": "hero2",
+							"padXFraction": 0.414,
+							"padYFraction": 0.029,
+							"shrinkToFitText": true
+						},
+						{
+							"textSourceFile": "plotEvent/villain_summoners_1_1_keystone_arrive",
+							"textKey": "~01~~panel_004~3_hero4",
+							"pointerOwner": "hero4",
+							"padXFraction": 0.225,
+							"padYFraction": 0.839,
+							"shrinkToFitText": true,
+							"pointerAdjust": { "dX": 17.293552, "dY": 76.37966, "pointerOrientV": "down" }
+						},
+						{
+							"textSourceFile": "plotEvent/villain_summoners_1_1_keystone_arrive",
+							"textKey": "~01~~panel_004~4_hero3",
+							"pointerOwner": "hero3",
+							"padXFraction": 0.355,
+							"padYFraction": 0.825,
+							"shrinkToFitText": true,
+							"pointerAdjust": { "dX": 12.24956, "dY": 72.77677, "pointerOrientV": "down" }
+						}
+					]
+				}
+			},
+			{
+				"class": "comicNode_Panel",
+				"panel": {
+					"size": "full",
+					"showNameTags": false,
+					"actorSlots": [
+						{
+							"role": "hero",
+							"equipment": {},
+							"anchor": { "x": 0.576, "y": 0.409 }
+						},
+						{
+							"role": "hero2",
+							"equipment": {},
+							"anchor": { "x": 0.835, "y": 0.317 }
+						},
+						{
+							"role": "hero4",
+							"equipment": {},
+							"anchor": { "x": 0.111, "y": 0.383 }
+						},
+						{
+							"role": "hero3",
+							"equipment": {},
+							"anchor": { "x": 0.344, "y": 0.438 },
+							"size": 0.6391,
+							"nameTag": "none"
+						}
+					],
+					"textSlots": [
+						{
+							"textSourceFile": "plotEvent/villain_summoners_1_1_keystone_arrive",
+							"textKey": "~01~~panel_005~1_hero",
+							"pointerOwner": "hero",
+							"padXFraction": 0.461,
+							"padYFraction": 0.057,
+							"shrinkToFitText": true
+						},
+						{
+							"textSourceFile": "plotEvent/villain_summoners_1_1_keystone_arrive",
+							"textKey": "~01~~panel_005~2_hero2",
+							"pointerOwner": "hero2",
+							"padXFraction": 0.404,
+							"padYFraction": 0.199,
+							"shrinkToFitText": true
+						},
+						{
+							"textSourceFile": "plotEvent/villain_summoners_1_1_keystone_arrive",
+							"textKey": "~01~~panel_005~3_hero4",
+							"pointerOwner": "hero4",
+							"padXFraction": 0.181,
+							"padYFraction": 0.124,
+							"shrinkToFitText": true,
+							"pointerAdjust": { "dX": -21.616858, "dY": -3.6027174, "pointerOrientV": "up" }
+						},
+						{
+							"textSourceFile": "plotEvent/villain_summoners_1_1_keystone_arrive",
+							"textKey": "~01~~panel_005~4_hero3",
+							"pointerOwner": "hero3",
+							"padXFraction": 0.355,
+							"padYFraction": 0.825,
+							"shrinkToFitText": true,
+							"pointerAdjust": { "dX": 12.24956, "dY": 72.77677, "pointerOrientV": "down" }
 						}
 					]
 				}
