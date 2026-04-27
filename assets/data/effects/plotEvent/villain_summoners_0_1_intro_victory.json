@@ -87,21 +87,158 @@
 			{
 				"class": "comicNode_Panel",
 				"panel": {
+					"size": "threeFourths",
 					"actorSlots": [
 						{
+							"role": "leader",
+							"equipment": {},
+							"anchor": { "x": 0.548, "y": 0.392 },
+							"nameTag": "none",
+							"head": { "scaleY": -1 }
+						},
+						{
 							"role": "target2",
-							"equipment": {}
+							"facing": "left",
+							"equipment": {},
+							"anchor": { "x": 0.863, "y": 0.437 },
+							"nameTag": "none",
+							"head": { "scaleY": 1 }
+						},
+						{
+							"role": "target3",
+							"equipment": {},
+							"anchor": { "x": 0.138, "y": 0.301 },
+							"nameTag": "none"
 						}
 					],
 					"textSlots": [
 						{
 							"textSourceFile": "plotEvent/villain_summoners_0_1_intro_victory",
-							"textKey": "~01~prompt~panel_002~1_target2",
+							"textKey": "~01~prompt~panel_002~1_target3",
+							"pointerOwner": "target3",
+							"shrinkToFitText": true
+						},
+						{
+							"textSourceFile": "plotEvent/villain_summoners_0_1_intro_victory",
+							"textKey": "~01~prompt~panel_002~2_leader",
+							"pointerOwner": "leader",
+							"padXFraction": 0.597,
+							"padYFraction": 0.077,
+							"shrinkToFitText": true
+						},
+						{
+							"textSourceFile": "plotEvent/villain_summoners_0_1_intro_victory",
+							"textKey": "~01~prompt~panel_002~3_target2",
 							"pointerOwner": "target2",
-							"padXFraction": 0.045,
-							"padYFraction": 0.047,
-							"shrinkToFitText": true,
-							"pointerAdjust": { "pointerOrientH": "onLeft", "pointerOrientV": "up" }
+							"shrinkToFitText": true
+						}
+					]
+				}
+			},
+			{
+				"class": "comicNode_Panel",
+				"panel": {
+					"size": "threeFourths",
+					"showNameTags": false,
+					"actorSlots": [
+						{
+							"role": "leader",
+							"equipment": {},
+							"anchor": { "x": 0.548, "y": 0.392 },
+							"nameTag": "none",
+							"head": { "scaleY": -1 }
+						},
+						{
+							"role": "target2",
+							"facing": "left",
+							"equipment": {},
+							"anchor": { "x": 0.863, "y": 0.437 },
+							"nameTag": "none",
+							"head": { "scaleY": 1 }
+						},
+						{
+							"role": "target3",
+							"equipment": {},
+							"anchor": { "x": 0.138, "y": 0.301 },
+							"nameTag": "none"
+						}
+					],
+					"textSlots": [
+						{
+							"textSourceFile": "plotEvent/villain_summoners_0_1_intro_victory",
+							"textKey": "~01~prompt~panel_003~1_target3",
+							"pointerOwner": "target3",
+							"shrinkToFitText": true
+						},
+						{
+							"textSourceFile": "plotEvent/villain_summoners_0_1_intro_victory",
+							"textKey": "~01~prompt~panel_003~2_leader",
+							"pointerOwner": "leader",
+							"padXFraction": 0.597,
+							"padYFraction": 0.077,
+							"shrinkToFitText": true
+						},
+						{
+							"textSourceFile": "plotEvent/villain_summoners_0_1_intro_victory",
+							"textKey": "~01~prompt~panel_003~3_target2",
+							"pointerOwner": "target2",
+							"padXFraction": 0.563,
+							"padYFraction": 0.125,
+							"shrinkToFitText": true
+						}
+					]
+				}
+			},
+			{
+				"class": "comicNode_Panel",
+				"panel": {
+					"size": "threeFourths",
+					"showNameTags": false,
+					"actorSlots": [
+						{
+							"role": "leader",
+							"equipment": {},
+							"anchor": { "x": 0.548, "y": 0.392 },
+							"nameTag": "none",
+							"head": { "scaleY": -1 }
+						},
+						{
+							"role": "target2",
+							"facing": "left",
+							"equipment": {},
+							"anchor": { "x": 0.863, "y": 0.437 },
+							"nameTag": "none",
+							"head": { "scaleY": 1 }
+						},
+						{
+							"role": "target3",
+							"equipment": {},
+							"anchor": { "x": 0.138, "y": 0.301 },
+							"nameTag": "none"
+						}
+					],
+					"textSlots": [
+						{
+							"textSourceFile": "plotEvent/villain_summoners_0_1_intro_victory",
+							"textKey": "~01~prompt~panel_004~1_target3",
+							"pointerOwner": "target3",
+							"shrinkToFitText": true
+						},
+						{
+							"textSourceFile": "plotEvent/villain_summoners_0_1_intro_victory",
+							"textKey": "~01~prompt~panel_004~2_leader",
+							"pointerOwner": "leader",
+							"padXFraction": 0.597,
+							"padYFraction": 0.077,
+							"shrinkToFitText": true
+						},
+						{
+							"textSourceFile": "plotEvent/villain_summoners_0_1_intro_victory",
+							"textKey": "~01~prompt~panel_004~3_target2",
+							"pointerOwner": "target2",
+							"padXFraction": 0.352,
+							"padYFraction": 0.083,
+							"shrinkToFitText": true
 						}
 					]
 				}
@@ -114,27 +251,39 @@
 					"actorSlots": [
 						{
 							"role": "leader",
-							"facing": "left",
 							"equipment": {},
-							"anchor": { "x": 0.346, "y": 0.366 },
-							"size": 0.8955224
+							"anchor": { "x": 0.5541455, "y": 0.392 },
+							"nameTag": "none",
+							"head": { "scaleY": -1 }
 						},
 						{
 							"role": "target3",
-							"facing": "left",
 							"equipment": {},
-							"anchor": { "x": 0.709, "y": 0.517 },
-							"size": 0.8955224,
-							"head": { "scaleY": 1 }
+							"anchor": { "x": 0.091652304, "y": 0.301 },
+							"nameTag": "none"
 						}
 					],
 					"textSlots": [
 						{
 							"textSourceFile": "plotEvent/villain_summoners_0_1_intro_victory",
-							"textKey": "~01~prompt~panel_003~1_leader",
+							"textKey": "~01~prompt~panel_005~1_target3",
+							"pointerOwner": "target3",
+							"shrinkToFitText": true
+						},
+						{
+							"textSourceFile": "plotEvent/villain_summoners_0_1_intro_victory",
+							"textKey": "~01~prompt~panel_005~2_leader",
 							"pointerOwner": "leader",
-							"padXFraction": 0.027,
-							"padYFraction": 0.051,
+							"padXFraction": 0.172,
+							"padYFraction": 0.033,
+							"shrinkToFitText": true
+						},
+						{
+							"textSourceFile": "plotEvent/villain_summoners_0_1_intro_victory",
+							"textKey": "~01~prompt~panel_005~3_target2",
+							"pointerOwner": "target2",
+							"padXFraction": 0.352,
+							"padYFraction": 0.083,
 							"shrinkToFitText": true
 						}
 					]
@@ -143,37 +292,81 @@
 			{
 				"class": "comicNode_Panel",
 				"panel": {
-					"size": "full",
-					"showNameTags": false,
 					"actorSlots": [
 						{
-							"role": "leader",
-							"facing": "left",
-							"equipment": {},
-							"anchor": { "x": 0.534, "y": 0.366 },
-							"size": 0.8955224
-						},
-						{
-							"role": "target3",
-							"facing": "left",
-							"equipment": {},
-							"anchor": { "x": 0.867, "y": 0.524 },
-							"size": 0.8955224,
-							"head": { "scaleY": 1 }
-						},
-						{
 							"role": "target2",
+							"facing": "left",
 							"equipment": {},
-							"anchor": { "x": 0.171, "y": 0.43 }
+							"anchor": { "x": 0.503, "y": 0.442 }
 						}
 					],
 					"textSlots": [
 						{
 							"textSourceFile": "plotEvent/villain_summoners_0_1_intro_victory",
-							"textKey": "~01~prompt~panel_004~1_target2",
+							"textKey": "~01~prompt~panel_006~1_target2",
 							"pointerOwner": "target2",
-							"padXFraction": 0.063,
-							"padYFraction": 0.044,
+							"padXFraction": 0.025,
+							"padYFraction": 0.144,
+							"shrinkToFitText": true,
+							"pointerAdjust": { "pointerOrientH": "onLeft", "pointerOrientV": "up" }
+						}
+					]
+				}
+			},
+			{
+				"class": "comicNode_Panel",
+				"panel": {
+					"size": "half",
+					"showNameTags": false,
+					"actorSlots": [
+						{
+							"role": "leader",
+							"equipment": {},
+							"anchor": { "x": 0.427, "y": 0.301 },
+							"size": 0.8955224,
+							"head": { "scaleY": 1 }
+						},
+						{
+							"role": "target3",
+							"equipment": {},
+							"anchor": { "x": 0.109, "y": 0.348 },
+							"size": 0.8955224,
+							"head": { "scaleY": 1 }
+						}
+					],
+					"textSlots": [
+						{
+							"textSourceFile": "plotEvent/villain_summoners_0_1_intro_victory",
+							"textKey": "~01~prompt~panel_007~1_leader",
+							"pointerOwner": "leader",
+							"padXFraction": 0.655,
+							"padYFraction": 0.099,
+							"shrinkToFitText": true,
+							"pointerAdjust": {}
+						}
+					]
+				}
+			},
+			{
+				"class": "comicNode_Panel",
+				"panel": {
+					"size": "half",
+					"showNameTags": false,
+					"actorSlots": [
+						{
+							"role": "target2",
+							"facing": "left",
+							"equipment": {},
+							"anchor": { "x": 0.413, "y": 0.334 }
+						}
+					],
+					"textSlots": [
+						{
+							"textSourceFile": "plotEvent/villain_summoners_0_1_intro_victory",
+							"textKey": "~01~prompt~panel_008~1_target2",
+							"pointerOwner": "target2",
+							"padXFraction": 0.03,
+							"padYFraction": 0.068,
 							"shrinkToFitText": true
 						}
 					]
@@ -229,7 +422,7 @@
 					"textSlots": [
 						{
 							"textSourceFile": "plotEvent/villain_summoners_0_1_intro_victory",
-							"textKey": "~01~prompt~panel_005~1_narration",
+							"textKey": "~01~prompt~panel_009~1_narration",
 							"style": "narration",
 							"backgroundColor": { "r": "0.26977199", "g": "0.403557", "b": "0.83427423", "a": "0.54335225" },
 							"padXFraction": 0.015,
@@ -239,7 +432,7 @@
 						},
 						{
 							"textSourceFile": "plotEvent/villain_summoners_0_1_intro_victory",
-							"textKey": "~01~prompt~panel_005~2_narration",
+							"textKey": "~01~prompt~panel_009~2_narration",
 							"style": "narration",
 							"backgroundColor": { "r": "0.26977199", "g": "0.403557", "b": "0.83427423", "a": "0.54335225" },
 							"padXFraction": 0.252,
@@ -249,7 +442,7 @@
 						},
 						{
 							"textSourceFile": "plotEvent/villain_summoners_0_1_intro_victory",
-							"textKey": "~01~prompt~panel_005~3_narration",
+							"textKey": "~01~prompt~panel_009~3_narration",
 							"style": "narration",
 							"backgroundColor": { "r": "0.26977199", "g": "0.403557", "b": "0.83427423", "a": "0.54335225" },
 							"padXFraction": 0.343,
@@ -259,7 +452,7 @@
 						},
 						{
 							"textSourceFile": "plotEvent/villain_summoners_0_1_intro_victory",
-							"textKey": "~01~prompt~panel_005~4_narration",
+							"textKey": "~01~prompt~panel_009~4_narration",
 							"style": "narration",
 							"backgroundColor": { "r": "0.12734894", "g": "0.55477887", "b": "0.09261924", "a": "0.48843929" },
 							"location": "bottomLeft",
