@@ -1,13 +1,1042 @@
 {
 "objectives": [
 	{
-		"class": "Objective_KillAllEnemies",
+		"class": "Objective_OpenDoor",
+		"objectiveId": "Objective_OpenDoor.M_villain_summoners_1_1_keystone",
+		"showBanner": true,
+		"plotDoors": null,
+		"nearestDoor": {
+			"class": "TileSpec.ExactTiles",
+			"offsetX": 55,
+			"offsetY": 10,
+			"xs": [ 36 ],
+			"ys": [ 11 ]
+		}
+	},
+	{
+		"class": "Objective_EndTurnInRegion",
+		"objectiveId": "Objective_EndTurnInRegion.M_villain_summoners_1_1_keystone.door",
+		"showBanner": true,
+		"feedback": [
+			{ "mission": "FRIENDLY_EFFECT_SUGGESTION", "role": "focus" }
+		],
+		"region": {
+			"class": "TileSpec.ExactTiles",
+			"offsetX": 55,
+			"offsetY": 10,
+			"xs": [ 28, 29, 30, 31, 32 ],
+			"ys": [ 16, 16, 16, 16, 16 ]
+		},
+		"rememberTriggeringEntityAs": "volunteer"
+	},
+	{
+		"class": "Objective_ActionsEachTurn",
+		"objectiveId": "Objective_ActionsEachTurn.M_villain_summoners_1_1_keystone.cultist1",
+		"visible": true,
+		"feedbackVisibleAnyway": true,
+		"uiSort": 10,
+		"actions": [
+			{
+				"class": "Step_TestImmediate",
+				"then": [
+					{
+						"class": "StepM_SpawnExact",
+						"location": {
+							"class": "TileSpec.ExactTiles",
+							"offsetX": 55,
+							"offsetY": 10,
+							"xs": [ 61, 60, 59, 59, 59, 60, 61, 61, 60 ],
+							"ys": [ 12, 12, 12, 13, 14, 14, 14, 13, 13 ]
+						},
+						"randomCards": { "group": "cultist", "numberOfCards": "3" }
+					}
+				],
+				"otherwise": [
+					{
+						"class": "Step_CombatDifficultyImmediate",
+						"easy": [
+							{
+								"class": "StepM_SpawnExact",
+								"location": {
+									"class": "TileSpec.ExactTiles",
+									"offsetX": 55,
+									"offsetY": 10,
+									"xs": [ 61, 60, 59, 59, 59, 60, 61, 61, 60 ],
+									"ys": [ 12, 12, 12, 13, 14, 14, 14, 13, 13 ]
+								},
+								"randomCards": { "group": "cultist", "numberOfCards": "1" }
+							}
+						],
+						"medium": [
+							{
+								"class": "StepM_SpawnExact",
+								"location": {
+									"class": "TileSpec.ExactTiles",
+									"offsetX": 55,
+									"offsetY": 10,
+									"xs": [ 61, 60, 59, 59, 59, 60, 61, 61, 60 ],
+									"ys": [ 12, 12, 12, 13, 14, 14, 14, 13, 13 ]
+								},
+								"randomCards": { "group": "cultist", "numberOfCards": "1" }
+							}
+						],
+						"classic": [
+							{
+								"class": "StepM_SpawnExact",
+								"location": {
+									"class": "TileSpec.ExactTiles",
+									"offsetX": 55,
+									"offsetY": 10,
+									"xs": [ 61, 60, 59, 59, 59, 60, 61, 61, 60 ],
+									"ys": [ 12, 12, 12, 13, 14, 14, 14, 13, 13 ]
+								},
+								"randomCards": { "group": "cultist", "numberOfCards": "1" }
+							}
+						],
+						"hard": [
+							{
+								"class": "StepM_SpawnExact",
+								"location": {
+									"class": "TileSpec.ExactTiles",
+									"offsetX": 55,
+									"offsetY": 10,
+									"xs": [ 61, 60, 59, 59, 59, 60, 61, 61, 60 ],
+									"ys": [ 12, 12, 12, 13, 14, 14, 14, 13, 13 ]
+								},
+								"randomCards": { "group": "cultist", "numberOfCards": "2" }
+							}
+						]
+					}
+				],
+				"value": "company.summoners_extremeDifficulty",
+				"threshold": "1"
+			}
+		],
+		"everyNTurns": 5,
+		"skipFirstNTurns": "0",
+		"atStartOfMonsterTurn": false,
+		"warnings": [
+			{
+				"where": {
+					"class": "TileSpec.ExactTiles",
+					"offsetX": 55,
+					"offsetY": 10,
+					"xs": [ 61, 60, 59, 59, 60, 61, 61, 60, 59 ],
+					"ys": [ 12, 12, 12, 13, 13, 13, 14, 14, 14 ]
+				},
+				"feedback": "ENEMY_SPAWN"
+			}
+		]
+	},
+	{
+		"class": "Objective_ActionsEachTurn",
+		"objectiveId": "Objective_ActionsEachTurn.M_villain_summoners_1_1_keystone.drauven1",
+		"feedbackVisibleAnyway": true,
+		"actions": [
+			{
+				"class": "Step_TestImmediate",
+				"then": [
+					{
+						"class": "StepM_SpawnExact",
+						"location": {
+							"class": "TileSpec.ExactTiles",
+							"offsetX": 55,
+							"offsetY": 10,
+							"xs": [ 61, 60, 59, 59, 59, 60, 61, 61, 60 ],
+							"ys": [ 12, 12, 12, 13, 14, 14, 14, 13, 13 ]
+						},
+						"randomCards": { "group": "drauven", "numberOfCards": "3" }
+					}
+				],
+				"otherwise": [
+					{
+						"class": "Step_CombatDifficultyImmediate",
+						"easy": [
+							{
+								"class": "StepM_SpawnExact",
+								"location": {
+									"class": "TileSpec.ExactTiles",
+									"offsetX": 55,
+									"offsetY": 10,
+									"xs": [ 61, 60, 59, 59, 59, 60, 61, 61, 60 ],
+									"ys": [ 12, 12, 12, 13, 14, 14, 14, 13, 13 ]
+								},
+								"randomCards": { "group": "drauven", "numberOfCards": "1" }
+							}
+						],
+						"medium": [
+							{
+								"class": "StepM_SpawnExact",
+								"location": {
+									"class": "TileSpec.ExactTiles",
+									"offsetX": 55,
+									"offsetY": 10,
+									"xs": [ 61, 60, 59, 59, 59, 60, 61, 61, 60 ],
+									"ys": [ 12, 12, 12, 13, 14, 14, 14, 13, 13 ]
+								},
+								"randomCards": { "group": "drauven", "numberOfCards": "1" }
+							}
+						],
+						"classic": [
+							{
+								"class": "StepM_SpawnExact",
+								"location": {
+									"class": "TileSpec.ExactTiles",
+									"offsetX": 55,
+									"offsetY": 10,
+									"xs": [ 61, 60, 59, 59, 59, 60, 61, 61, 60 ],
+									"ys": [ 12, 12, 12, 13, 14, 14, 14, 13, 13 ]
+								},
+								"randomCards": { "group": "drauven", "numberOfCards": "1" }
+							}
+						],
+						"hard": [
+							{
+								"class": "StepM_SpawnExact",
+								"location": {
+									"class": "TileSpec.ExactTiles",
+									"offsetX": 55,
+									"offsetY": 10,
+									"xs": [ 61, 60, 59, 59, 59, 60, 61, 61, 60 ],
+									"ys": [ 12, 12, 12, 13, 14, 14, 14, 13, 13 ]
+								},
+								"randomCards": { "group": "drauven", "numberOfCards": "2" }
+							}
+						]
+					}
+				],
+				"value": "company.summoners_extremeDifficulty",
+				"threshold": "1"
+			}
+		],
+		"everyNTurns": 5,
+		"skipFirstNTurns": "1",
+		"atStartOfMonsterTurn": false,
+		"warnings": [
+			{
+				"where": {
+					"class": "TileSpec.ExactTiles",
+					"offsetX": 55,
+					"offsetY": 10,
+					"xs": [ 61, 60, 59, 59, 60, 61, 61, 60, 59 ],
+					"ys": [ 12, 12, 12, 13, 13, 13, 14, 14, 14 ]
+				},
+				"feedback": "ENEMY_SPAWN"
+			}
+		]
+	},
+	{
+		"class": "Objective_ActionsEachTurn",
+		"objectiveId": "Objective_ActionsEachTurn.M_villain_summoners_1_1_keystone.morthagi1",
+		"feedbackVisibleAnyway": true,
+		"actions": [
+			{
+				"class": "Step_TestImmediate",
+				"then": [
+					{
+						"class": "StepM_SpawnExact",
+						"location": {
+							"class": "TileSpec.ExactTiles",
+							"offsetX": 55,
+							"offsetY": 10,
+							"xs": [ 61, 60, 59, 59, 59, 60, 61, 61, 60 ],
+							"ys": [ 12, 12, 12, 13, 14, 14, 14, 13, 13 ]
+						},
+						"randomCards": { "group": "morthagi", "numberOfCards": "3" }
+					}
+				],
+				"otherwise": [
+					{
+						"class": "Step_CombatDifficultyImmediate",
+						"easy": [
+							{
+								"class": "StepM_SpawnExact",
+								"location": {
+									"class": "TileSpec.ExactTiles",
+									"offsetX": 55,
+									"offsetY": 10,
+									"xs": [ 61, 60, 59, 59, 59, 60, 61, 61, 60 ],
+									"ys": [ 12, 12, 12, 13, 14, 14, 14, 13, 13 ]
+								},
+								"randomCards": { "group": "morthagi", "numberOfCards": "1" }
+							}
+						],
+						"medium": [
+							{
+								"class": "StepM_SpawnExact",
+								"location": {
+									"class": "TileSpec.ExactTiles",
+									"offsetX": 55,
+									"offsetY": 10,
+									"xs": [ 61, 60, 59, 59, 59, 60, 61, 61, 60 ],
+									"ys": [ 12, 12, 12, 13, 14, 14, 14, 13, 13 ]
+								},
+								"randomCards": { "group": "morthagi", "numberOfCards": "1" }
+							}
+						],
+						"classic": [
+							{
+								"class": "StepM_SpawnExact",
+								"location": {
+									"class": "TileSpec.ExactTiles",
+									"offsetX": 55,
+									"offsetY": 10,
+									"xs": [ 61, 60, 59, 59, 59, 60, 61, 61, 60 ],
+									"ys": [ 12, 12, 12, 13, 14, 14, 14, 13, 13 ]
+								},
+								"randomCards": { "group": "morthagi", "numberOfCards": "1" }
+							}
+						],
+						"hard": [
+							{
+								"class": "StepM_SpawnExact",
+								"location": {
+									"class": "TileSpec.ExactTiles",
+									"offsetX": 55,
+									"offsetY": 10,
+									"xs": [ 61, 60, 59, 59, 59, 60, 61, 61, 60 ],
+									"ys": [ 12, 12, 12, 13, 14, 14, 14, 13, 13 ]
+								},
+								"randomCards": { "group": "morthagi", "numberOfCards": "2" }
+							}
+						]
+					}
+				],
+				"value": "company.summoners_extremeDifficulty",
+				"threshold": "1"
+			}
+		],
+		"everyNTurns": 5,
+		"skipFirstNTurns": "2",
+		"atStartOfMonsterTurn": false,
+		"warnings": [
+			{
+				"where": {
+					"class": "TileSpec.ExactTiles",
+					"offsetX": 55,
+					"offsetY": 10,
+					"xs": [ 61, 60, 59, 59, 60, 61, 61, 60, 59 ],
+					"ys": [ 12, 12, 12, 13, 13, 13, 14, 14, 14 ]
+				},
+				"feedback": "ENEMY_SPAWN"
+			}
+		]
+	},
+	{
+		"class": "Objective_ActionsEachTurn",
+		"objectiveId": "Objective_ActionsEachTurn.M_villain_summoners_1_1_keystone.thrixl1",
+		"feedbackVisibleAnyway": true,
+		"actions": [
+			{
+				"class": "Step_TestImmediate",
+				"then": [
+					{
+						"class": "StepM_SpawnExact",
+						"location": {
+							"class": "TileSpec.ExactTiles",
+							"offsetX": 55,
+							"offsetY": 10,
+							"xs": [ 61, 60, 59, 59, 59, 60, 61, 61, 60 ],
+							"ys": [ 12, 12, 12, 13, 14, 14, 14, 13, 13 ]
+						},
+						"randomCards": { "group": "thrixl", "numberOfCards": "3" }
+					}
+				],
+				"otherwise": [
+					{
+						"class": "Step_CombatDifficultyImmediate",
+						"easy": [
+							{
+								"class": "StepM_SpawnExact",
+								"location": {
+									"class": "TileSpec.ExactTiles",
+									"offsetX": 55,
+									"offsetY": 10,
+									"xs": [ 61, 60, 59, 59, 59, 60, 61, 61, 60 ],
+									"ys": [ 12, 12, 12, 13, 14, 14, 14, 13, 13 ]
+								},
+								"randomCards": { "group": "thrixl", "numberOfCards": "1" }
+							}
+						],
+						"medium": [
+							{
+								"class": "StepM_SpawnExact",
+								"location": {
+									"class": "TileSpec.ExactTiles",
+									"offsetX": 55,
+									"offsetY": 10,
+									"xs": [ 61, 60, 59, 59, 59, 60, 61, 61, 60 ],
+									"ys": [ 12, 12, 12, 13, 14, 14, 14, 13, 13 ]
+								},
+								"randomCards": { "group": "thrixl", "numberOfCards": "1" }
+							}
+						],
+						"classic": [
+							{
+								"class": "StepM_SpawnExact",
+								"location": {
+									"class": "TileSpec.ExactTiles",
+									"offsetX": 55,
+									"offsetY": 10,
+									"xs": [ 61, 60, 59, 59, 59, 60, 61, 61, 60 ],
+									"ys": [ 12, 12, 12, 13, 14, 14, 14, 13, 13 ]
+								},
+								"randomCards": { "group": "thrixl", "numberOfCards": "1" }
+							}
+						],
+						"hard": [
+							{
+								"class": "StepM_SpawnExact",
+								"location": {
+									"class": "TileSpec.ExactTiles",
+									"offsetX": 55,
+									"offsetY": 10,
+									"xs": [ 61, 60, 59, 59, 59, 60, 61, 61, 60 ],
+									"ys": [ 12, 12, 12, 13, 14, 14, 14, 13, 13 ]
+								},
+								"randomCards": { "group": "thrixl", "numberOfCards": "2" }
+							}
+						]
+					}
+				],
+				"value": "company.summoners_extremeDifficulty",
+				"threshold": "1"
+			}
+		],
+		"everyNTurns": 5,
+		"skipFirstNTurns": "3",
+		"atStartOfMonsterTurn": false,
+		"warnings": [
+			{
+				"where": {
+					"class": "TileSpec.ExactTiles",
+					"offsetX": 55,
+					"offsetY": 10,
+					"xs": [ 61, 60, 59, 59, 60, 61, 61, 60, 59 ],
+					"ys": [ 12, 12, 12, 13, 13, 13, 14, 14, 14 ]
+				},
+				"feedback": "ENEMY_SPAWN"
+			}
+		]
+	},
+	{
+		"class": "Objective_ActionsEachTurn",
+		"objectiveId": "Objective_ActionsEachTurn.M_villain_summoners_1_1_keystone.gorgon1",
+		"feedbackVisibleAnyway": true,
+		"actions": [
+			{
+				"class": "Step_TestImmediate",
+				"then": [
+					{
+						"class": "StepM_SpawnExact",
+						"location": {
+							"class": "TileSpec.ExactTiles",
+							"offsetX": 55,
+							"offsetY": 10,
+							"xs": [ 61, 60, 59, 59, 59, 60, 61, 61, 60 ],
+							"ys": [ 12, 12, 12, 13, 14, 14, 14, 13, 13 ]
+						},
+						"randomCards": { "group": "gorgon", "numberOfCards": "3" }
+					}
+				],
+				"otherwise": [
+					{
+						"class": "Step_CombatDifficultyImmediate",
+						"easy": [
+							{
+								"class": "StepM_SpawnExact",
+								"location": {
+									"class": "TileSpec.ExactTiles",
+									"offsetX": 55,
+									"offsetY": 10,
+									"xs": [ 61, 60, 59, 59, 59, 60, 61, 61, 60 ],
+									"ys": [ 12, 12, 12, 13, 14, 14, 14, 13, 13 ]
+								},
+								"randomCards": { "group": "gorgon", "numberOfCards": "1" }
+							}
+						],
+						"medium": [
+							{
+								"class": "StepM_SpawnExact",
+								"location": {
+									"class": "TileSpec.ExactTiles",
+									"offsetX": 55,
+									"offsetY": 10,
+									"xs": [ 61, 60, 59, 59, 59, 60, 61, 61, 60 ],
+									"ys": [ 12, 12, 12, 13, 14, 14, 14, 13, 13 ]
+								},
+								"randomCards": { "group": "gorgon", "numberOfCards": "1" }
+							}
+						],
+						"classic": [
+							{
+								"class": "StepM_SpawnExact",
+								"location": {
+									"class": "TileSpec.ExactTiles",
+									"offsetX": 55,
+									"offsetY": 10,
+									"xs": [ 61, 60, 59, 59, 59, 60, 61, 61, 60 ],
+									"ys": [ 12, 12, 12, 13, 14, 14, 14, 13, 13 ]
+								},
+								"randomCards": { "group": "gorgon", "numberOfCards": "1" }
+							}
+						],
+						"hard": [
+							{
+								"class": "StepM_SpawnExact",
+								"location": {
+									"class": "TileSpec.ExactTiles",
+									"offsetX": 55,
+									"offsetY": 10,
+									"xs": [ 61, 60, 59, 59, 59, 60, 61, 61, 60 ],
+									"ys": [ 12, 12, 12, 13, 14, 14, 14, 13, 13 ]
+								},
+								"randomCards": { "group": "gorgon", "numberOfCards": "2" }
+							}
+						]
+					}
+				],
+				"value": "company.summoners_extremeDifficulty",
+				"threshold": "1"
+			}
+		],
+		"everyNTurns": 5,
+		"skipFirstNTurns": "4",
+		"atStartOfMonsterTurn": false,
+		"warnings": [
+			{
+				"where": {
+					"class": "TileSpec.ExactTiles",
+					"offsetX": 55,
+					"offsetY": 10,
+					"xs": [ 61, 60, 59, 59, 60, 61, 61, 60, 59 ],
+					"ys": [ 12, 12, 12, 13, 13, 13, 14, 14, 14 ]
+				},
+				"feedback": "ENEMY_SPAWN"
+			}
+		]
+	},
+	{
+		"class": "Objective_ActionsEachTurn",
+		"objectiveId": "Objective_ActionsEachTurn.M_villain_summoners_1_1_keystone.gorgon2",
+		"feedbackVisibleAnyway": true,
+		"actions": [
+			{
+				"class": "Step_TestImmediate",
+				"then": [
+					{
+						"class": "StepM_SpawnExact",
+						"location": {
+							"class": "TileSpec.ExactTiles",
+							"offsetX": 55,
+							"offsetY": 10,
+							"xs": [ 31, 30, 29, 29, 30, 31, 31, 30, 29 ],
+							"ys": [ 6, 6, 6, 7, 7, 7, 8, 8, 8 ]
+						},
+						"randomCards": { "group": "gorgon", "numberOfCards": "3" }
+					}
+				],
+				"otherwise": [
+					{
+						"class": "Step_CombatDifficultyImmediate",
+						"easy": [
+							{
+								"class": "StepM_SpawnExact",
+								"location": {
+									"class": "TileSpec.ExactTiles",
+									"offsetX": 55,
+									"offsetY": 10,
+									"xs": [ 31, 31, 31, 30, 30, 30, 29, 29, 29 ],
+									"ys": [ 6, 7, 8, 8, 7, 6, 6, 7, 8 ]
+								},
+								"randomCards": { "group": "gorgon", "numberOfCards": "1" }
+							}
+						],
+						"medium": [
+							{
+								"class": "StepM_SpawnExact",
+								"location": {
+									"class": "TileSpec.ExactTiles",
+									"offsetX": 55,
+									"offsetY": 10,
+									"xs": [ 31, 30, 29, 29, 30, 31, 31, 30, 29 ],
+									"ys": [ 6, 6, 6, 7, 7, 7, 8, 8, 8 ]
+								},
+								"randomCards": { "group": "gorgon", "numberOfCards": "1" }
+							}
+						],
+						"classic": [
+							{
+								"class": "StepM_SpawnExact",
+								"location": {
+									"class": "TileSpec.ExactTiles",
+									"offsetX": 55,
+									"offsetY": 10,
+									"xs": [ 31, 30, 29, 29, 30, 31, 31, 30, 29 ],
+									"ys": [ 6, 6, 6, 7, 7, 7, 8, 8, 8 ]
+								},
+								"randomCards": { "group": "gorgon", "numberOfCards": "1" }
+							}
+						],
+						"hard": [
+							{
+								"class": "StepM_SpawnExact",
+								"location": {
+									"class": "TileSpec.ExactTiles",
+									"offsetX": 55,
+									"offsetY": 10,
+									"xs": [ 31, 30, 29, 29, 30, 31, 31, 30, 29 ],
+									"ys": [ 6, 6, 6, 7, 7, 7, 8, 8, 8 ]
+								},
+								"randomCards": { "group": "gorgon", "numberOfCards": "2" }
+							}
+						]
+					}
+				],
+				"value": "company.summoners_extremeDifficulty",
+				"threshold": "1"
+			}
+		],
+		"everyNTurns": 5,
+		"skipFirstNTurns": "1",
+		"atStartOfMonsterTurn": false,
+		"warnings": [
+			{
+				"where": {
+					"class": "TileSpec.ExactTiles",
+					"offsetX": 55,
+					"offsetY": 10,
+					"xs": [ 31, 31, 31, 30, 30, 30, 29, 29, 29 ],
+					"ys": [ 6, 7, 8, 8, 7, 6, 6, 7, 8 ]
+				},
+				"feedback": "ENEMY_SPAWN"
+			}
+		]
+	},
+	{
+		"class": "Objective_ActionsEachTurn",
+		"objectiveId": "Objective_ActionsEachTurn.M_villain_summoners_1_1_keystone.thrixl2",
+		"feedbackVisibleAnyway": true,
+		"actions": [
+			{
+				"class": "Step_TestImmediate",
+				"then": [
+					{
+						"class": "StepM_SpawnExact",
+						"location": {
+							"class": "TileSpec.ExactTiles",
+							"offsetX": 55,
+							"offsetY": 10,
+							"xs": [ 31, 30, 29, 29, 30, 31, 31, 30, 29 ],
+							"ys": [ 6, 6, 6, 7, 7, 7, 8, 8, 8 ]
+						},
+						"randomCards": { "group": "thrixl", "numberOfCards": "3" }
+					}
+				],
+				"otherwise": [
+					{
+						"class": "Step_CombatDifficultyImmediate",
+						"easy": [
+							{
+								"class": "StepM_SpawnExact",
+								"location": {
+									"class": "TileSpec.ExactTiles",
+									"offsetX": 55,
+									"offsetY": 10,
+									"xs": [ 31, 31, 31, 30, 30, 30, 29, 29, 29 ],
+									"ys": [ 6, 7, 8, 8, 7, 6, 6, 7, 8 ]
+								},
+								"randomCards": { "group": "thrixl", "numberOfCards": "1" }
+							}
+						],
+						"medium": [
+							{
+								"class": "StepM_SpawnExact",
+								"location": {
+									"class": "TileSpec.ExactTiles",
+									"offsetX": 55,
+									"offsetY": 10,
+									"xs": [ 31, 30, 29, 29, 30, 31, 31, 30, 29 ],
+									"ys": [ 6, 6, 6, 7, 7, 7, 8, 8, 8 ]
+								},
+								"randomCards": { "group": "thrixl", "numberOfCards": "1" }
+							}
+						],
+						"classic": [
+							{
+								"class": "StepM_SpawnExact",
+								"location": {
+									"class": "TileSpec.ExactTiles",
+									"offsetX": 55,
+									"offsetY": 10,
+									"xs": [ 31, 30, 29, 29, 30, 31, 31, 30, 29 ],
+									"ys": [ 6, 6, 6, 7, 7, 7, 8, 8, 8 ]
+								},
+								"randomCards": { "group": "thrixl", "numberOfCards": "1" }
+							}
+						],
+						"hard": [
+							{
+								"class": "StepM_SpawnExact",
+								"location": {
+									"class": "TileSpec.ExactTiles",
+									"offsetX": 55,
+									"offsetY": 10,
+									"xs": [ 31, 30, 29, 29, 30, 31, 31, 30, 29 ],
+									"ys": [ 6, 6, 6, 7, 7, 7, 8, 8, 8 ]
+								},
+								"randomCards": { "group": "thrixl", "numberOfCards": "2" }
+							}
+						]
+					}
+				],
+				"value": "company.summoners_extremeDifficulty",
+				"threshold": "1"
+			}
+		],
+		"everyNTurns": 5,
+		"skipFirstNTurns": "2",
+		"atStartOfMonsterTurn": false,
+		"warnings": [
+			{
+				"where": {
+					"class": "TileSpec.ExactTiles",
+					"offsetX": 55,
+					"offsetY": 10,
+					"xs": [ 31, 31, 31, 30, 30, 30, 29, 29, 29 ],
+					"ys": [ 6, 7, 8, 8, 7, 6, 6, 7, 8 ]
+				},
+				"feedback": "ENEMY_SPAWN"
+			}
+		]
+	},
+	{
+		"class": "Objective_ActionsEachTurn",
+		"objectiveId": "Objective_ActionsEachTurn.M_villain_summoners_1_1_keystone.drauven2",
+		"feedbackVisibleAnyway": true,
+		"actions": [
+			{
+				"class": "Step_TestImmediate",
+				"then": [
+					{
+						"class": "StepM_SpawnExact",
+						"location": {
+							"class": "TileSpec.ExactTiles",
+							"offsetX": 55,
+							"offsetY": 10,
+							"xs": [ 31, 30, 29, 29, 30, 31, 31, 30, 29 ],
+							"ys": [ 6, 6, 6, 7, 7, 7, 8, 8, 8 ]
+						},
+						"randomCards": { "group": "drauven", "numberOfCards": "3" }
+					}
+				],
+				"otherwise": [
+					{
+						"class": "Step_CombatDifficultyImmediate",
+						"easy": [
+							{
+								"class": "StepM_SpawnExact",
+								"location": {
+									"class": "TileSpec.ExactTiles",
+									"offsetX": 55,
+									"offsetY": 10,
+									"xs": [ 31, 31, 31, 30, 30, 30, 29, 29, 29 ],
+									"ys": [ 6, 7, 8, 8, 7, 6, 6, 7, 8 ]
+								},
+								"randomCards": { "group": "drauven", "numberOfCards": "1" }
+							}
+						],
+						"medium": [
+							{
+								"class": "StepM_SpawnExact",
+								"location": {
+									"class": "TileSpec.ExactTiles",
+									"offsetX": 55,
+									"offsetY": 10,
+									"xs": [ 31, 30, 29, 29, 30, 31, 31, 30, 29 ],
+									"ys": [ 6, 6, 6, 7, 7, 7, 8, 8, 8 ]
+								},
+								"randomCards": { "group": "drauven", "numberOfCards": "1" }
+							}
+						],
+						"classic": [
+							{
+								"class": "StepM_SpawnExact",
+								"location": {
+									"class": "TileSpec.ExactTiles",
+									"offsetX": 55,
+									"offsetY": 10,
+									"xs": [ 31, 30, 29, 29, 30, 31, 31, 30, 29 ],
+									"ys": [ 6, 6, 6, 7, 7, 7, 8, 8, 8 ]
+								},
+								"randomCards": { "group": "drauven", "numberOfCards": "1" }
+							}
+						],
+						"hard": [
+							{
+								"class": "StepM_SpawnExact",
+								"location": {
+									"class": "TileSpec.ExactTiles",
+									"offsetX": 55,
+									"offsetY": 10,
+									"xs": [ 31, 30, 29, 29, 30, 31, 31, 30, 29 ],
+									"ys": [ 6, 6, 6, 7, 7, 7, 8, 8, 8 ]
+								},
+								"randomCards": { "group": "drauven", "numberOfCards": "2" }
+							}
+						]
+					}
+				],
+				"value": "company.summoners_extremeDifficulty",
+				"threshold": "1"
+			}
+		],
+		"everyNTurns": 5,
+		"skipFirstNTurns": "3",
+		"atStartOfMonsterTurn": false,
+		"warnings": [
+			{
+				"where": {
+					"class": "TileSpec.ExactTiles",
+					"offsetX": 55,
+					"offsetY": 10,
+					"xs": [ 31, 31, 31, 30, 30, 30, 29, 29, 29 ],
+					"ys": [ 6, 7, 8, 8, 7, 6, 6, 7, 8 ]
+				},
+				"feedback": "ENEMY_SPAWN"
+			}
+		]
+	},
+	{
+		"class": "Objective_ActionsEachTurn",
+		"objectiveId": "Objective_ActionsEachTurn.M_villain_summoners_1_1_keystone.morthagi2",
+		"feedbackVisibleAnyway": true,
+		"actions": [
+			{
+				"class": "Step_TestImmediate",
+				"then": [
+					{
+						"class": "StepM_SpawnExact",
+						"location": {
+							"class": "TileSpec.ExactTiles",
+							"offsetX": 55,
+							"offsetY": 10,
+							"xs": [ 31, 30, 29, 29, 30, 31, 31, 30, 29 ],
+							"ys": [ 6, 6, 6, 7, 7, 7, 8, 8, 8 ]
+						},
+						"randomCards": { "group": "morthagi", "numberOfCards": "3" }
+					}
+				],
+				"otherwise": [
+					{
+						"class": "Step_CombatDifficultyImmediate",
+						"easy": [
+							{
+								"class": "StepM_SpawnExact",
+								"location": {
+									"class": "TileSpec.ExactTiles",
+									"offsetX": 55,
+									"offsetY": 10,
+									"xs": [ 31, 31, 31, 30, 30, 30, 29, 29, 29 ],
+									"ys": [ 6, 7, 8, 8, 7, 6, 6, 7, 8 ]
+								},
+								"randomCards": { "group": "morthagi", "numberOfCards": "1" }
+							}
+						],
+						"medium": [
+							{
+								"class": "StepM_SpawnExact",
+								"location": {
+									"class": "TileSpec.ExactTiles",
+									"offsetX": 55,
+									"offsetY": 10,
+									"xs": [ 31, 30, 29, 29, 30, 31, 31, 30, 29 ],
+									"ys": [ 6, 6, 6, 7, 7, 7, 8, 8, 8 ]
+								},
+								"randomCards": { "group": "morthagi", "numberOfCards": "1" }
+							}
+						],
+						"classic": [
+							{
+								"class": "StepM_SpawnExact",
+								"location": {
+									"class": "TileSpec.ExactTiles",
+									"offsetX": 55,
+									"offsetY": 10,
+									"xs": [ 31, 30, 29, 29, 30, 31, 31, 30, 29 ],
+									"ys": [ 6, 6, 6, 7, 7, 7, 8, 8, 8 ]
+								},
+								"randomCards": { "group": "morthagi", "numberOfCards": "1" }
+							}
+						],
+						"hard": [
+							{
+								"class": "StepM_SpawnExact",
+								"location": {
+									"class": "TileSpec.ExactTiles",
+									"offsetX": 55,
+									"offsetY": 10,
+									"xs": [ 31, 30, 29, 29, 30, 31, 31, 30, 29 ],
+									"ys": [ 6, 6, 6, 7, 7, 7, 8, 8, 8 ]
+								},
+								"randomCards": { "group": "morthagi", "numberOfCards": "2" }
+							}
+						]
+					}
+				],
+				"value": "company.summoners_extremeDifficulty",
+				"threshold": "1"
+			}
+		],
+		"everyNTurns": 5,
+		"skipFirstNTurns": "4",
+		"atStartOfMonsterTurn": false,
+		"warnings": [
+			{
+				"where": {
+					"class": "TileSpec.ExactTiles",
+					"offsetX": 55,
+					"offsetY": 10,
+					"xs": [ 31, 31, 31, 30, 30, 30, 29, 29, 29 ],
+					"ys": [ 6, 7, 8, 8, 7, 6, 6, 7, 8 ]
+				},
+				"feedback": "ENEMY_SPAWN"
+			}
+		]
+	},
+	{
+		"class": "Objective_ActionsEachTurn",
+		"objectiveId": "Objective_ActionsEachTurn.M_villain_summoners_1_1_keystone.cultist2",
+		"feedbackVisibleAnyway": true,
+		"actions": [
+			{
+				"class": "Step_TestImmediate",
+				"then": [
+					{
+						"class": "StepM_SpawnExact",
+						"location": {
+							"class": "TileSpec.ExactTiles",
+							"offsetX": 55,
+							"offsetY": 10,
+							"xs": [ 31, 30, 29, 29, 30, 31, 31, 30, 29 ],
+							"ys": [ 6, 6, 6, 7, 7, 7, 8, 8, 8 ]
+						},
+						"randomCards": { "group": "cultist", "numberOfCards": "3" }
+					}
+				],
+				"otherwise": [
+					{
+						"class": "Step_CombatDifficultyImmediate",
+						"easy": [
+							{
+								"class": "StepM_SpawnExact",
+								"location": {
+									"class": "TileSpec.ExactTiles",
+									"offsetX": 55,
+									"offsetY": 10,
+									"xs": [ 31, 31, 31, 30, 30, 30, 29, 29, 29 ],
+									"ys": [ 6, 7, 8, 8, 7, 6, 6, 7, 8 ]
+								},
+								"randomCards": { "group": "cultist", "numberOfCards": "1" }
+							}
+						],
+						"medium": [
+							{
+								"class": "StepM_SpawnExact",
+								"location": {
+									"class": "TileSpec.ExactTiles",
+									"offsetX": 55,
+									"offsetY": 10,
+									"xs": [ 31, 30, 29, 29, 30, 31, 31, 30, 29 ],
+									"ys": [ 6, 6, 6, 7, 7, 7, 8, 8, 8 ]
+								},
+								"randomCards": { "group": "cultist", "numberOfCards": "1" }
+							}
+						],
+						"classic": [
+							{
+								"class": "StepM_SpawnExact",
+								"location": {
+									"class": "TileSpec.ExactTiles",
+									"offsetX": 55,
+									"offsetY": 10,
+									"xs": [ 31, 30, 29, 29, 30, 31, 31, 30, 29 ],
+									"ys": [ 6, 6, 6, 7, 7, 7, 8, 8, 8 ]
+								},
+								"randomCards": { "group": "cultist", "numberOfCards": "1" }
+							}
+						],
+						"hard": [
+							{
+								"class": "StepM_SpawnExact",
+								"location": {
+									"class": "TileSpec.ExactTiles",
+									"offsetX": 55,
+									"offsetY": 10,
+									"xs": [ 31, 30, 29, 29, 30, 31, 31, 30, 29 ],
+									"ys": [ 6, 6, 6, 7, 7, 7, 8, 8, 8 ]
+								},
+								"randomCards": { "group": "cultist", "numberOfCards": "2" }
+							}
+						]
+					}
+				],
+				"value": "company.summoners_extremeDifficulty",
+				"threshold": "1"
+			}
+		],
+		"everyNTurns": 5,
+		"skipFirstNTurns": "5",
+		"atStartOfMonsterTurn": false,
+		"warnings": [
+			{
+				"where": {
+					"class": "TileSpec.ExactTiles",
+					"offsetX": 55,
+					"offsetY": 10,
+					"xs": [ 31, 31, 31, 30, 30, 30, 29, 29, 29 ],
+					"ys": [ 6, 7, 8, 8, 7, 6, 6, 7, 8 ]
+				},
+				"feedback": "ENEMY_SPAWN"
+			}
+		]
+	},
+	{
+		"class": "Objective_EndTurnInRegion",
+		"objectiveId": "Objective_EndTurnInRegion.M_villain_summoners_1_1_keystone",
+		"showBanner": true,
+		"feedback": [
+			{ "mission": "FRIENDLY_EFFECT_SUGGESTION", "role": "focus" }
+		],
+		"region": {
+			"class": "TileSpec.ExactTiles",
+			"offsetX": 55,
+			"offsetY": 10,
+			"xs": [ 27, 28, 29, 30, 31, 32, 33, 33, 31, 32, 30, 29, 28, 27, 27, 28, 29, 30, 31, 32, 33 ],
+			"ys": [ 20, 20, 20, 20, 20, 20, 20, 19, 19, 19, 19, 19, 19, 19, 18, 18, 18, 18, 18, 18, 18 ]
+		},
+		"requireAll": true
+	},
+	{
+		"class": "Objective_EndTurnInRegion",
+		"objectiveId": "Objective_EndTurnInRegion.M_villain_summoners_1_1_keystone.killEnemies",
+		"showBanner": true,
+		"feedback": [
+			{ "mission": "FRIENDLY_EFFECT_SUGGESTION", "role": "focus" }
+		],
 		"onSuccess": [
 			{ "class": "Step_SetPlotResult", "resultPriority": 10 }
 		],
-		"onFail": [
-			{ "class": "Step_SetPlotResult", "result": "defeat", "resultPriority": 100 }
-		]
+		"anyHero": false,
+		"anyFoe": true,
+		"region": {
+			"class": "TileSpec.ExactTiles",
+			"offsetX": 55,
+			"offsetY": 10,
+			"xs": [ 27, 28, 29, 30, 31, 32, 33, 33, 31, 32, 30, 29, 28, 27, 27, 28, 29, 30, 31, 32, 33 ],
+			"ys": [ 20, 20, 20, 20, 20, 20, 20, 19, 19, 19, 19, 19, 19, 19, 18, 18, 18, 18, 18, 18, 18 ]
+		},
+		"endTurnNotInRegion": true
 	}
 ],
 "steps": [
@@ -36,17 +1065,708 @@
 		"combatantCards": true
 	},
 	{
-		"class": "StepM_SpawnExact",
-		"location": {
-			"class": "TileSpec.ExactTiles",
-			"xs": [ 5 ],
-			"ys": [ 8 ]
-		},
-		"combatantCards": true
+		"class": "Step_TestImmediate",
+		"then": [
+			{
+				"class": "StepM_SpawnExact",
+				"location": {
+					"class": "TileSpec.ExactTiles",
+					"offsetX": 55,
+					"offsetY": 10,
+					"xs": [ 62, 61, 60, 61, 61, 60, 60, 61, 62, 59, 59, 58, 58, 58, 59, 62, 62, 60, 59, 58, 62, 61, 60, 59, 58 ],
+					"ys": [ 21, 21, 21, 19, 20, 20, 19, 18, 20, 20, 21, 21, 20, 19, 19, 19, 18, 18, 18, 18, 17, 17, 17, 17, 17 ]
+				},
+				"randomCards": { "group": "drauven", "numberOfCards": "4" }
+			},
+			{
+				"class": "StepM_SpawnExact",
+				"location": {
+					"class": "TileSpec.ExactTiles",
+					"offsetX": 55,
+					"offsetY": 10,
+					"xs": [ 55, 55, 55, 54, 54, 54, 54, 53, 53, 53, 52, 52, 51, 51, 50, 50, 51, 50, 50, 51, 51, 50, 51, 50 ],
+					"ys": [ 14, 13, 12, 12, 13, 14, 15, 15, 14, 13, 15, 14, 15, 14, 15, 14, 13, 13, 12, 12, 11, 11, 10, 10 ]
+				},
+				"randomCards": { "group": "thrixl", "numberOfCards": "4" }
+			},
+			{
+				"class": "StepM_SpawnExact",
+				"location": {
+					"class": "TileSpec.ExactTiles",
+					"offsetX": 55,
+					"offsetY": 10,
+					"xs": [ 50, 50, 49, 49, 48, 48, 47, 47, 46, 46, 45, 45, 44, 44, 43, 43, 42, 42, 51, 51, 52, 52 ],
+					"ys": [ 6, 5, 5, 6, 6, 5, 5, 6, 6, 5, 6, 5, 6, 5, 5, 6, 6, 5, 6, 5, 5, 6 ]
+				},
+				"randomCards": { "group": "morthagi", "numberOfCards": "4" }
+			},
+			{
+				"class": "StepM_SpawnExact",
+				"location": {
+					"class": "TileSpec.ExactTiles",
+					"offsetX": 55,
+					"offsetY": 10,
+					"xs": [ 46, 45, 45, 46, 46, 45, 46, 45, 44, 44, 43, 43, 42, 42, 41, 41, 46, 45, 44, 43, 42, 41 ],
+					"ys": [ 11, 11, 12, 12, 13, 13, 14, 14, 14, 13, 13, 14, 13, 14, 13, 14, 15, 15, 15, 15, 15, 15 ]
+				},
+				"randomCards": { "group": "gorgon", "numberOfCards": "4" }
+			},
+			{
+				"class": "StepM_SpawnExact",
+				"location": {
+					"class": "TileSpec.ExactTiles",
+					"offsetX": 55,
+					"offsetY": 10,
+					"xs": [ 38, 37, 37, 38, 38, 37, 37, 38, 38, 37, 37, 38, 38, 37, 37, 38 ],
+					"ys": [ 12, 12, 11, 11, 10, 10, 9, 9, 8, 8, 7, 7, 6, 6, 5, 5 ]
+				},
+				"randomCards": { "group": "cultist", "numberOfCards": "4" }
+			}
+		],
+		"otherwise": [
+			{
+				"class": "Step_CombatDifficultyImmediate",
+				"easy": [
+					{
+						"class": "StepM_SpawnExact",
+						"location": {
+							"class": "TileSpec.ExactTiles",
+							"offsetX": 55,
+							"offsetY": 10,
+							"xs": [ 62, 61, 60, 61, 61, 60, 60, 61, 62, 59, 59, 58, 58, 58, 59, 62, 62, 60, 59, 58, 62, 61, 60, 59, 58 ],
+							"ys": [ 21, 21, 21, 19, 20, 20, 19, 18, 20, 20, 21, 21, 20, 19, 19, 19, 18, 18, 18, 18, 17, 17, 17, 17, 17 ]
+						},
+						"randomCards": { "group": "drauven", "numberOfCards": "1" }
+					},
+					{
+						"class": "StepM_SpawnExact",
+						"location": {
+							"class": "TileSpec.ExactTiles",
+							"offsetX": 55,
+							"offsetY": 10,
+							"xs": [ 55, 55, 55, 54, 54, 54, 54, 53, 53, 53, 52, 52, 51, 51, 50, 50, 51, 50, 50, 51, 51, 50, 51, 50 ],
+							"ys": [ 14, 13, 12, 12, 13, 14, 15, 15, 14, 13, 15, 14, 15, 14, 15, 14, 13, 13, 12, 12, 11, 11, 10, 10 ]
+						},
+						"randomCards": { "group": "thrixl", "numberOfCards": "1" }
+					},
+					{
+						"class": "StepM_SpawnExact",
+						"location": {
+							"class": "TileSpec.ExactTiles",
+							"offsetX": 55,
+							"offsetY": 10,
+							"xs": [ 50, 50, 49, 49, 48, 48, 47, 47, 46, 46, 45, 45, 44, 44, 43, 43, 42, 42, 51, 51, 52, 52 ],
+							"ys": [ 6, 5, 5, 6, 6, 5, 5, 6, 6, 5, 6, 5, 6, 5, 5, 6, 6, 5, 6, 5, 5, 6 ]
+						},
+						"randomCards": { "group": "morthagi", "numberOfCards": "1" }
+					},
+					{
+						"class": "StepM_SpawnExact",
+						"location": {
+							"class": "TileSpec.ExactTiles",
+							"offsetX": 55,
+							"offsetY": 10,
+							"xs": [ 46, 45, 45, 46, 46, 45, 46, 45, 44, 44, 43, 43, 42, 42, 41, 41, 46, 45, 44, 43, 42, 41 ],
+							"ys": [ 11, 11, 12, 12, 13, 13, 14, 14, 14, 13, 13, 14, 13, 14, 13, 14, 15, 15, 15, 15, 15, 15 ]
+						},
+						"randomCards": { "group": "gorgon", "numberOfCards": "1" }
+					},
+					{
+						"class": "StepM_SpawnExact",
+						"location": {
+							"class": "TileSpec.ExactTiles",
+							"offsetX": 55,
+							"offsetY": 10,
+							"xs": [ 38, 37, 37, 38, 38, 37, 37, 38, 38, 37, 37, 38, 38, 37, 37, 38 ],
+							"ys": [ 12, 12, 11, 11, 10, 10, 9, 9, 8, 8, 7, 7, 6, 6, 5, 5 ]
+						},
+						"randomCards": { "group": "cultist", "numberOfCards": "1" }
+					}
+				],
+				"medium": [
+					{
+						"class": "StepM_SpawnExact",
+						"location": {
+							"class": "TileSpec.ExactTiles",
+							"offsetX": 55,
+							"offsetY": 10,
+							"xs": [ 62, 61, 60, 61, 61, 60, 60, 61, 62, 59, 59, 58, 58, 58, 59, 62, 62, 60, 59, 58, 62, 61, 60, 59, 58 ],
+							"ys": [ 21, 21, 21, 19, 20, 20, 19, 18, 20, 20, 21, 21, 20, 19, 19, 19, 18, 18, 18, 18, 17, 17, 17, 17, 17 ]
+						},
+						"randomCards": { "group": "drauven", "numberOfCards": "1" }
+					},
+					{
+						"class": "StepM_SpawnExact",
+						"location": {
+							"class": "TileSpec.ExactTiles",
+							"offsetX": 55,
+							"offsetY": 10,
+							"xs": [ 55, 55, 55, 54, 54, 54, 54, 53, 53, 53, 52, 52, 51, 51, 50, 50, 51, 50, 50, 51, 51, 50, 51, 50 ],
+							"ys": [ 14, 13, 12, 12, 13, 14, 15, 15, 14, 13, 15, 14, 15, 14, 15, 14, 13, 13, 12, 12, 11, 11, 10, 10 ]
+						},
+						"randomCards": { "group": "thrixl", "numberOfCards": "1" }
+					},
+					{
+						"class": "StepM_SpawnExact",
+						"location": {
+							"class": "TileSpec.ExactTiles",
+							"offsetX": 55,
+							"offsetY": 10,
+							"xs": [ 50, 50, 49, 49, 48, 48, 47, 47, 46, 46, 45, 45, 44, 44, 43, 43, 42, 42, 51, 51, 52, 52 ],
+							"ys": [ 6, 5, 5, 6, 6, 5, 5, 6, 6, 5, 6, 5, 6, 5, 5, 6, 6, 5, 6, 5, 5, 6 ]
+						},
+						"randomCards": { "group": "morthagi", "numberOfCards": "1" }
+					},
+					{
+						"class": "StepM_SpawnExact",
+						"location": {
+							"class": "TileSpec.ExactTiles",
+							"offsetX": 55,
+							"offsetY": 10,
+							"xs": [ 46, 45, 45, 46, 46, 45, 46, 45, 44, 44, 43, 43, 42, 42, 41, 41, 46, 45, 44, 43, 42, 41 ],
+							"ys": [ 11, 11, 12, 12, 13, 13, 14, 14, 14, 13, 13, 14, 13, 14, 13, 14, 15, 15, 15, 15, 15, 15 ]
+						},
+						"randomCards": { "group": "gorgon", "numberOfCards": "1" }
+					},
+					{
+						"class": "StepM_SpawnExact",
+						"location": {
+							"class": "TileSpec.ExactTiles",
+							"offsetX": 55,
+							"offsetY": 10,
+							"xs": [ 38, 37, 37, 38, 38, 37, 37, 38, 38, 37, 37, 38, 38, 37, 37, 38 ],
+							"ys": [ 12, 12, 11, 11, 10, 10, 9, 9, 8, 8, 7, 7, 6, 6, 5, 5 ]
+						},
+						"randomCards": { "group": "cultist", "numberOfCards": "1" }
+					}
+				],
+				"classic": [
+					{
+						"class": "StepM_SpawnExact",
+						"location": {
+							"class": "TileSpec.ExactTiles",
+							"offsetX": 55,
+							"offsetY": 10,
+							"xs": [ 62, 61, 60, 61, 61, 60, 60, 61, 62, 59, 59, 58, 58, 58, 59, 62, 62, 60, 59, 58, 62, 61, 60, 59, 58 ],
+							"ys": [ 21, 21, 21, 19, 20, 20, 19, 18, 20, 20, 21, 21, 20, 19, 19, 19, 18, 18, 18, 18, 17, 17, 17, 17, 17 ]
+						},
+						"randomCards": { "group": "drauven", "numberOfCards": "2" }
+					},
+					{
+						"class": "StepM_SpawnExact",
+						"location": {
+							"class": "TileSpec.ExactTiles",
+							"offsetX": 55,
+							"offsetY": 10,
+							"xs": [ 55, 55, 55, 54, 54, 54, 54, 53, 53, 53, 52, 52, 51, 51, 50, 50, 51, 50, 50, 51, 51, 50, 51, 50 ],
+							"ys": [ 14, 13, 12, 12, 13, 14, 15, 15, 14, 13, 15, 14, 15, 14, 15, 14, 13, 13, 12, 12, 11, 11, 10, 10 ]
+						},
+						"randomCards": { "group": "thrixl", "numberOfCards": "2" }
+					},
+					{
+						"class": "StepM_SpawnExact",
+						"location": {
+							"class": "TileSpec.ExactTiles",
+							"offsetX": 55,
+							"offsetY": 10,
+							"xs": [ 50, 50, 49, 49, 48, 48, 47, 47, 46, 46, 45, 45, 44, 44, 43, 43, 42, 42, 51, 51, 52, 52 ],
+							"ys": [ 6, 5, 5, 6, 6, 5, 5, 6, 6, 5, 6, 5, 6, 5, 5, 6, 6, 5, 6, 5, 5, 6 ]
+						},
+						"randomCards": { "group": "morthagi", "numberOfCards": "2" }
+					},
+					{
+						"class": "StepM_SpawnExact",
+						"location": {
+							"class": "TileSpec.ExactTiles",
+							"offsetX": 55,
+							"offsetY": 10,
+							"xs": [ 46, 45, 45, 46, 46, 45, 46, 45, 44, 44, 43, 43, 42, 42, 41, 41, 46, 45, 44, 43, 42, 41 ],
+							"ys": [ 11, 11, 12, 12, 13, 13, 14, 14, 14, 13, 13, 14, 13, 14, 13, 14, 15, 15, 15, 15, 15, 15 ]
+						},
+						"randomCards": { "group": "gorgon", "numberOfCards": "2" }
+					},
+					{
+						"class": "StepM_SpawnExact",
+						"location": {
+							"class": "TileSpec.ExactTiles",
+							"offsetX": 55,
+							"offsetY": 10,
+							"xs": [ 38, 37, 37, 38, 38, 37, 37, 38, 38, 37, 37, 38, 38, 37, 37, 38 ],
+							"ys": [ 12, 12, 11, 11, 10, 10, 9, 9, 8, 8, 7, 7, 6, 6, 5, 5 ]
+						},
+						"randomCards": { "group": "cultist", "numberOfCards": "2" }
+					}
+				],
+				"hard": [
+					{
+						"class": "StepM_SpawnExact",
+						"location": {
+							"class": "TileSpec.ExactTiles",
+							"offsetX": 55,
+							"offsetY": 10,
+							"xs": [ 62, 61, 60, 61, 61, 60, 60, 61, 62, 59, 59, 58, 58, 58, 59, 62, 62, 60, 59, 58, 62, 61, 60, 59, 58 ],
+							"ys": [ 21, 21, 21, 19, 20, 20, 19, 18, 20, 20, 21, 21, 20, 19, 19, 19, 18, 18, 18, 18, 17, 17, 17, 17, 17 ]
+						},
+						"randomCards": { "group": "drauven", "numberOfCards": "2" }
+					},
+					{
+						"class": "StepM_SpawnExact",
+						"location": {
+							"class": "TileSpec.ExactTiles",
+							"offsetX": 55,
+							"offsetY": 10,
+							"xs": [ 55, 55, 55, 54, 54, 54, 54, 53, 53, 53, 52, 52, 51, 51, 50, 50, 51, 50, 50, 51, 51, 50, 51, 50 ],
+							"ys": [ 14, 13, 12, 12, 13, 14, 15, 15, 14, 13, 15, 14, 15, 14, 15, 14, 13, 13, 12, 12, 11, 11, 10, 10 ]
+						},
+						"randomCards": { "group": "thrixl", "numberOfCards": "2" }
+					},
+					{
+						"class": "StepM_SpawnExact",
+						"location": {
+							"class": "TileSpec.ExactTiles",
+							"offsetX": 55,
+							"offsetY": 10,
+							"xs": [ 50, 50, 49, 49, 48, 48, 47, 47, 46, 46, 45, 45, 44, 44, 43, 43, 42, 42, 51, 51, 52, 52 ],
+							"ys": [ 6, 5, 5, 6, 6, 5, 5, 6, 6, 5, 6, 5, 6, 5, 5, 6, 6, 5, 6, 5, 5, 6 ]
+						},
+						"randomCards": { "group": "morthagi", "numberOfCards": "2" }
+					},
+					{
+						"class": "StepM_SpawnExact",
+						"location": {
+							"class": "TileSpec.ExactTiles",
+							"offsetX": 55,
+							"offsetY": 10,
+							"xs": [ 46, 45, 45, 46, 46, 45, 46, 45, 44, 44, 43, 43, 42, 42, 41, 41, 46, 45, 44, 43, 42, 41 ],
+							"ys": [ 11, 11, 12, 12, 13, 13, 14, 14, 14, 13, 13, 14, 13, 14, 13, 14, 15, 15, 15, 15, 15, 15 ]
+						},
+						"randomCards": { "group": "gorgon", "numberOfCards": "2" }
+					},
+					{
+						"class": "StepM_SpawnExact",
+						"location": {
+							"class": "TileSpec.ExactTiles",
+							"offsetX": 55,
+							"offsetY": 10,
+							"xs": [ 38, 37, 37, 38, 38, 37, 37, 38, 38, 37, 37, 38, 38, 37, 37, 38 ],
+							"ys": [ 12, 12, 11, 11, 10, 10, 9, 9, 8, 8, 7, 7, 6, 6, 5, 5 ]
+						},
+						"randomCards": { "group": "cultist", "numberOfCards": "2" }
+					}
+				]
+			}
+		],
+		"value": "company.summoners_extremeDifficulty",
+		"threshold": "1"
 	},
 	{
 		"class": "Step_AddObjectives",
-		"objectives": [ "Objective_KillAllEnemies" ]
+		"objectives": [
+			"Objective_OpenDoor.M_villain_summoners_1_1_keystone",
+			"Objective_ActionsEachTurn.M_villain_summoners_1_1_keystone.gorgon1",
+			"Objective_ActionsEachTurn.M_villain_summoners_1_1_keystone.morthagi1",
+			"Objective_ActionsEachTurn.M_villain_summoners_1_1_keystone.cultist1",
+			"Objective_ActionsEachTurn.M_villain_summoners_1_1_keystone.thrixl1",
+			"Objective_ActionsEachTurn.M_villain_summoners_1_1_keystone.drauven1"
+		]
+	},
+	{
+		"class": "Step_WaitForObjectives",
+		"objectives": [ "Objective_OpenDoor.M_villain_summoners_1_1_keystone" ]
+	},
+	{
+		"class": "Step_TestImmediate",
+		"then": [
+			{
+				"class": "StepM_SpawnExact",
+				"location": {
+					"class": "TileSpec.ExactTiles",
+					"offsetX": 55,
+					"offsetY": 10,
+					"xs": [ 33, 32, 31, 31, 31, 32, 32, 33, 33 ],
+					"ys": [ 13, 13, 13, 14, 15, 15, 14, 14, 15 ]
+				},
+				"randomCards": { "group": "gorgon", "numberOfCards": "3" }
+			},
+			{
+				"class": "StepM_SpawnExact",
+				"location": {
+					"class": "TileSpec.ExactTiles",
+					"offsetX": 55,
+					"offsetY": 10,
+					"xs": [ 23, 22, 22, 22, 23, 23, 24, 24, 24 ],
+					"ys": [ 12, 12, 11, 10, 10, 11, 12, 11, 10 ]
+				},
+				"randomCards": { "group": "morthagi", "numberOfCards": "3" }
+			},
+			{
+				"class": "StepM_SpawnExact",
+				"location": {
+					"class": "TileSpec.ExactTiles",
+					"offsetX": 55,
+					"offsetY": 10,
+					"xs": [ 33, 32, 31, 31, 32, 33, 33, 32, 31 ],
+					"ys": [ 10, 10, 10, 9, 9, 9, 8, 8, 8 ]
+				},
+				"randomCards": { "group": "cultist", "numberOfCards": "3" }
+			},
+			{
+				"class": "StepM_SpawnExact",
+				"location": {
+					"class": "TileSpec.ExactTiles",
+					"offsetX": 55,
+					"offsetY": 10,
+					"xs": [ 29, 28, 28, 29, 29, 28, 27, 27, 27 ],
+					"ys": [ 16, 16, 15, 15, 14, 14, 16, 15, 14 ]
+				},
+				"randomCards": { "group": "thrixl", "numberOfCards": "3" }
+			},
+			{
+				"class": "StepM_SpawnExact",
+				"location": {
+					"class": "TileSpec.ExactTiles",
+					"offsetX": 55,
+					"offsetY": 10,
+					"xs": [ 27, 27, 27, 28, 28, 28, 26, 26, 26 ],
+					"ys": [ 10, 9, 8, 8, 9, 10, 8, 9, 10 ]
+				},
+				"randomCards": { "group": "drauven", "numberOfCards": "3" }
+			}
+		],
+		"otherwise": [
+			{
+				"class": "Step_CombatDifficultyImmediate",
+				"easy": [
+					{
+						"class": "StepM_SpawnExact",
+						"location": {
+							"class": "TileSpec.ExactTiles",
+							"offsetX": 55,
+							"offsetY": 10,
+							"xs": [ 33, 32, 31, 31, 31, 32, 32, 33, 33 ],
+							"ys": [ 13, 13, 13, 14, 15, 15, 14, 14, 15 ]
+						},
+						"randomCards": { "group": "gorgon", "numberOfCards": "1" }
+					},
+					{
+						"class": "StepM_SpawnExact",
+						"location": {
+							"class": "TileSpec.ExactTiles",
+							"offsetX": 55,
+							"offsetY": 10,
+							"xs": [ 23, 22, 22, 22, 23, 23, 24, 24, 24 ],
+							"ys": [ 12, 12, 11, 10, 10, 11, 12, 11, 10 ]
+						},
+						"randomCards": { "group": "morthagi", "numberOfCards": "1" }
+					},
+					{
+						"class": "StepM_SpawnExact",
+						"location": {
+							"class": "TileSpec.ExactTiles",
+							"offsetX": 55,
+							"offsetY": 10,
+							"xs": [ 33, 32, 31, 31, 32, 33, 33, 32, 31 ],
+							"ys": [ 10, 10, 10, 9, 9, 9, 8, 8, 8 ]
+						},
+						"randomCards": { "group": "cultist", "numberOfCards": "1" }
+					},
+					{
+						"class": "StepM_SpawnExact",
+						"location": {
+							"class": "TileSpec.ExactTiles",
+							"offsetX": 55,
+							"offsetY": 10,
+							"xs": [ 29, 28, 28, 29, 29, 28, 27, 27, 27 ],
+							"ys": [ 16, 16, 15, 15, 14, 14, 16, 15, 14 ]
+						},
+						"randomCards": { "group": "thrixl", "numberOfCards": "1" }
+					},
+					{
+						"class": "StepM_SpawnExact",
+						"location": {
+							"class": "TileSpec.ExactTiles",
+							"offsetX": 55,
+							"offsetY": 10,
+							"xs": [ 27, 27, 27, 28, 28, 28, 26, 26, 26 ],
+							"ys": [ 10, 9, 8, 8, 9, 10, 8, 9, 10 ]
+						},
+						"randomCards": { "group": "drauven", "numberOfCards": "1" }
+					}
+				],
+				"medium": [
+					{
+						"class": "StepM_SpawnExact",
+						"location": {
+							"class": "TileSpec.ExactTiles",
+							"offsetX": 55,
+							"offsetY": 10,
+							"xs": [ 33, 32, 31, 31, 31, 32, 32, 33, 33 ],
+							"ys": [ 13, 13, 13, 14, 15, 15, 14, 14, 15 ]
+						},
+						"randomCards": { "group": "gorgon", "numberOfCards": "1" }
+					},
+					{
+						"class": "StepM_SpawnExact",
+						"location": {
+							"class": "TileSpec.ExactTiles",
+							"offsetX": 55,
+							"offsetY": 10,
+							"xs": [ 23, 22, 22, 22, 23, 23, 24, 24, 24 ],
+							"ys": [ 12, 12, 11, 10, 10, 11, 12, 11, 10 ]
+						},
+						"randomCards": { "group": "morthagi", "numberOfCards": "1" }
+					},
+					{
+						"class": "StepM_SpawnExact",
+						"location": {
+							"class": "TileSpec.ExactTiles",
+							"offsetX": 55,
+							"offsetY": 10,
+							"xs": [ 33, 32, 31, 31, 32, 33, 33, 32, 31 ],
+							"ys": [ 10, 10, 10, 9, 9, 9, 8, 8, 8 ]
+						},
+						"randomCards": { "group": "cultist", "numberOfCards": "1" }
+					},
+					{
+						"class": "StepM_SpawnExact",
+						"location": {
+							"class": "TileSpec.ExactTiles",
+							"offsetX": 55,
+							"offsetY": 10,
+							"xs": [ 29, 28, 28, 29, 29, 28, 27, 27, 27 ],
+							"ys": [ 16, 16, 15, 15, 14, 14, 14, 15, 16 ]
+						},
+						"randomCards": { "group": "thrixl", "numberOfCards": "1" }
+					},
+					{
+						"class": "StepM_SpawnExact",
+						"location": {
+							"class": "TileSpec.ExactTiles",
+							"offsetX": 55,
+							"offsetY": 10,
+							"xs": [ 27, 27, 27, 28, 28, 28, 26, 26, 26 ],
+							"ys": [ 10, 9, 8, 8, 9, 10, 8, 9, 10 ]
+						},
+						"randomCards": { "group": "drauven", "numberOfCards": "1" }
+					}
+				],
+				"classic": [
+					{
+						"class": "StepM_SpawnExact",
+						"location": {
+							"class": "TileSpec.ExactTiles",
+							"offsetX": 55,
+							"offsetY": 10,
+							"xs": [ 33, 32, 31, 31, 31, 32, 32, 33, 33 ],
+							"ys": [ 13, 13, 13, 14, 15, 15, 14, 14, 15 ]
+						},
+						"randomCards": { "group": "gorgon", "numberOfCards": "2" }
+					},
+					{
+						"class": "StepM_SpawnExact",
+						"location": {
+							"class": "TileSpec.ExactTiles",
+							"offsetX": 55,
+							"offsetY": 10,
+							"xs": [ 23, 22, 22, 22, 23, 23, 24, 24, 24 ],
+							"ys": [ 12, 12, 11, 10, 10, 11, 12, 11, 10 ]
+						},
+						"randomCards": { "group": "morthagi", "numberOfCards": "2" }
+					},
+					{
+						"class": "StepM_SpawnExact",
+						"location": {
+							"class": "TileSpec.ExactTiles",
+							"offsetX": 55,
+							"offsetY": 10,
+							"xs": [ 33, 32, 31, 31, 32, 33, 33, 32, 31 ],
+							"ys": [ 10, 10, 10, 9, 9, 9, 8, 8, 8 ]
+						},
+						"randomCards": { "group": "cultist", "numberOfCards": "2" }
+					},
+					{
+						"class": "StepM_SpawnExact",
+						"location": {
+							"class": "TileSpec.ExactTiles",
+							"offsetX": 55,
+							"offsetY": 10,
+							"xs": [ 29, 28, 28, 29, 29, 28, 27, 27, 27 ],
+							"ys": [ 16, 16, 15, 15, 14, 14, 14, 15, 16 ]
+						},
+						"randomCards": { "group": "thrixl", "numberOfCards": "2" }
+					},
+					{
+						"class": "StepM_SpawnExact",
+						"location": {
+							"class": "TileSpec.ExactTiles",
+							"offsetX": 55,
+							"offsetY": 10,
+							"xs": [ 27, 27, 27, 28, 28, 28, 26, 26, 26 ],
+							"ys": [ 10, 9, 8, 8, 9, 10, 8, 9, 10 ]
+						},
+						"randomCards": { "group": "drauven", "numberOfCards": "2" }
+					}
+				],
+				"hard": [
+					{
+						"class": "StepM_SpawnExact",
+						"location": {
+							"class": "TileSpec.ExactTiles",
+							"offsetX": 55,
+							"offsetY": 10,
+							"xs": [ 33, 32, 31, 31, 31, 32, 32, 33, 33 ],
+							"ys": [ 13, 13, 13, 14, 15, 15, 14, 14, 15 ]
+						},
+						"randomCards": { "group": "gorgon", "numberOfCards": "2" }
+					},
+					{
+						"class": "StepM_SpawnExact",
+						"location": {
+							"class": "TileSpec.ExactTiles",
+							"offsetX": 55,
+							"offsetY": 10,
+							"xs": [ 23, 22, 22, 22, 23, 23, 24, 24, 24 ],
+							"ys": [ 12, 12, 11, 10, 10, 11, 12, 11, 10 ]
+						},
+						"randomCards": { "group": "morthagi", "numberOfCards": "2" }
+					},
+					{
+						"class": "StepM_SpawnExact",
+						"location": {
+							"class": "TileSpec.ExactTiles",
+							"offsetX": 55,
+							"offsetY": 10,
+							"xs": [ 33, 32, 31, 31, 32, 33, 33, 32, 31 ],
+							"ys": [ 10, 10, 10, 9, 9, 9, 8, 8, 8 ]
+						},
+						"randomCards": { "group": "cultist", "numberOfCards": "2" }
+					},
+					{
+						"class": "StepM_SpawnExact",
+						"location": {
+							"class": "TileSpec.ExactTiles",
+							"offsetX": 55,
+							"offsetY": 10,
+							"xs": [ 29, 28, 28, 29, 29, 28, 27, 27, 27 ],
+							"ys": [ 16, 16, 15, 15, 14, 14, 14, 15, 16 ]
+						},
+						"randomCards": { "group": "thrixl", "numberOfCards": "2" }
+					},
+					{
+						"class": "StepM_SpawnExact",
+						"location": {
+							"class": "TileSpec.ExactTiles",
+							"offsetX": 55,
+							"offsetY": 10,
+							"xs": [ 27, 27, 27, 28, 28, 28, 26, 26, 26 ],
+							"ys": [ 10, 9, 8, 8, 9, 10, 8, 9, 10 ]
+						},
+						"randomCards": { "group": "drauven", "numberOfCards": "2" }
+					}
+				]
+			}
+		],
+		"value": "company.summoners_extremeDifficulty",
+		"threshold": "1"
+	},
+	{
+		"class": "Step_AddObjectives",
+		"objectives": [
+			"Objective_ActionsEachTurn.M_villain_summoners_1_1_keystone.gorgon2",
+			"Objective_ActionsEachTurn.M_villain_summoners_1_1_keystone.morthagi2",
+			"Objective_ActionsEachTurn.M_villain_summoners_1_1_keystone.cultist2",
+			"Objective_ActionsEachTurn.M_villain_summoners_1_1_keystone.thrixl2",
+			"Objective_ActionsEachTurn.M_villain_summoners_1_1_keystone.drauven2",
+			"Objective_EndTurnInRegion.M_villain_summoners_1_1_keystone.door"
+		]
+	},
+	{
+		"class": "Step_WaitForObjectives",
+		"objectives": [ "Objective_EndTurnInRegion.M_villain_summoners_1_1_keystone.door" ]
+	},
+	{
+		"class": "StepM_Event",
+		"roles": [ "volunteer" ],
+		"eventIds": [ "plot_villain_summoners_1_1_keystone_midMission_1" ]
+	},
+	{
+		"class": "StepM_UpdateDoor",
+		"byRole": [ "door" ],
+		"setOpen": true
+	},
+	{
+		"class": "Step_AddObjectives",
+		"objectives": [ "Objective_EndTurnInRegion.M_villain_summoners_1_1_keystone" ]
+	},
+	{
+		"class": "Step_WaitForObjectives",
+		"objectives": [ "Objective_EndTurnInRegion.M_villain_summoners_1_1_keystone" ]
+	},
+	{
+		"class": "StepM_Event",
+		"roles": null,
+		"eventIds": [ "plot_villain_summoners_1_1_keystone_midMission_2" ]
+	},
+	{
+		"class": "StepM_UpdateDoor",
+		"byRole": [ "door" ],
+		"setOpen": false,
+		"setLocked": true,
+		"setMonstersIgnore": true
+	},
+	{
+		"class": "Step_UpdateObjective",
+		"objectiveId": "Objective_ActionsEachTurn.M_villain_summoners_1_1_keystone.cultist1",
+		"newStatus": "complete"
+	},
+	{
+		"class": "Step_UpdateObjective",
+		"objectiveId": "Objective_ActionsEachTurn.M_villain_summoners_1_1_keystone.cultist2",
+		"newStatus": "complete"
+	},
+	{
+		"class": "Step_UpdateObjective",
+		"objectiveId": "Objective_ActionsEachTurn.M_villain_summoners_1_1_keystone.drauven1",
+		"newStatus": "complete"
+	},
+	{
+		"class": "Step_UpdateObjective",
+		"objectiveId": "Objective_ActionsEachTurn.M_villain_summoners_1_1_keystone.drauven2",
+		"newStatus": "complete"
+	},
+	{
+		"class": "Step_UpdateObjective",
+		"objectiveId": "Objective_ActionsEachTurn.M_villain_summoners_1_1_keystone.gorgon1",
+		"newStatus": "complete"
+	},
+	{
+		"class": "Step_UpdateObjective",
+		"objectiveId": "Objective_ActionsEachTurn.M_villain_summoners_1_1_keystone.drauven2",
+		"newStatus": "complete"
+	},
+	{
+		"class": "Step_UpdateObjective",
+		"objectiveId": "Objective_ActionsEachTurn.M_villain_summoners_1_1_keystone.morthagi1",
+		"newStatus": "complete"
+	},
+	{
+		"class": "Step_UpdateObjective",
+		"objectiveId": "Objective_ActionsEachTurn.M_villain_summoners_1_1_keystone.morthagi2",
+		"newStatus": "complete"
+	},
+	{
+		"class": "Step_UpdateObjective",
+		"objectiveId": "Objective_ActionsEachTurn.M_villain_summoners_1_1_keystone.thrixl1",
+		"newStatus": "complete"
+	},
+	{
+		"class": "Step_UpdateObjective",
+		"objectiveId": "Objective_ActionsEachTurn.M_villain_summoners_1_1_keystone.thrixl2",
+		"newStatus": "complete"
+	},
+	{
+		"class": "Step_AddObjectives",
+		"objectives": [ "Objective_EndTurnInRegion.M_villain_summoners_1_1_keystone.killEnemies" ]
 	}
 ]
 }

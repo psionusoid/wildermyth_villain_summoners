@@ -50,7 +50,7 @@
 	{
 		"role": "hook",
 		"template": "PICK_BY_SCORE",
-		"STUB": "Legacy Hero, stored as vultureLord_legacyHero_join for ch2 omen",
+		"STUB": "Legacy Hero, stored as summoners_instructor",
 		"type": "LEGACY_HERO_PLAYABLE",
 		"choose": "BY_SCORE_OPTIONAL",
 		"scoreFunction": "((100*legacyTier)+LEVEL)+[0,5]",
